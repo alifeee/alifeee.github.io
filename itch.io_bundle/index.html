@@ -10,5 +10,47 @@
 Video games are listed under 'genres' and non-games (e.g. sprite packs, tabletop rpgs) are listed under 'categories'
 </p>
 
+<p><a href="details-example.html">Example page</a></p>
+
+<div id="summaries">
+<div id="genres"></div>
+<div id="categories"></div>
+</div>
+
+<script>
+var genres = {"Action":{"Game 1":"link 2", "Game 2":"link 2"}, "Adventure":{"Game 3":"link 3", "Game 4":"link 4"}};
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var gcats = JSON.parse(this.responseText);
+  }
+};
+xmlhttp.open("GET", "genres-categories.json", true);
+xmlhttp.send();
+
+document.write(JSON.stringify(gcats));
+
+var games = ""
+var genre_expandable = "";
+for (var genre in genres) {
+  genre_expandable += "<details>";
+  genre_expandable += "<summary>" + genre + "</summary>";
+
+  for (var game in genres[genre]) {
+    genre_expandable += "<details>";
+    genre_expandable += "<summary>" + game + "</summary>";
+    genre_expandable += genres[genre][game];
+    genre_expandable += "</details>";
+    games += game
+  }
+  genre_expandable += "</details>";
+}
+var parent = document.getElementById("genres");
+parent.innerHTML = genre_expandable;
+<!--document.write(games);-->
+
+</script>
+
 </body>
 </html> 
