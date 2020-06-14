@@ -1,55 +1,87 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+
+details > summary {
+  padding: "5px 5px";
+  cursor: "pointer";
+}
+
+.first > summary{
+  background-color: #ddd;
+  color: red;
+}
+</style>
+</head>
 <body>
 
 <h1><a href="../">alifeee<a></h1>
 <h2>Itch.io's <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a></h2>
 
-<h3><a href="genres-categories.json">Genres and categories</a></h3>
-<p>
-Video games are listed under 'genres' and non-games (e.g. sprite packs, tabletop rpgs) are listed under 'categories'
-</p>
-
-<p><a href="details-example.html">Example page</a></p>
 
 <div id="summaries">
+<h4>Games</h4>
 <div id="genres"></div>
+<h4>Non-Games</h4>
 <div id="categories"></div>
 </div>
 
 <script>
-var genres = {"Action":{"Game 1":"link 2", "Game 2":"link 2"}, "Adventure":{"Game 3":"link 3", "Game 4":"link 4"}};
-
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var gcats = JSON.parse(this.responseText);
+    var genres = gcats["genres"];
+    var cats = gcats["categories"];
+    var genre_expandable = "";
+    var cats_expandable = "";
+    for (var genre in genres) {
+      genre_expandable += "<details>";
+      genre_expandable += "<summary>" + genre + "</summary>";
+
+      for (var game in genres[genre]) {
+        genre_expandable += "<details>";
+        genre_expandable += "<summary><span style='color:#870000'>" + game + "</span></summary>";
+        genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
+        genre_expandable += genres[genre][game]["short_text"] + "<br>";
+        genre_expandable += "</a>";
+        if (genres[genre][game]["rating"] != null) {
+          genre_expandable += genres[genre][game]["rating"].toString() + "/5<br>";
+        }
+        genre_expandable += "</details>";
+      }
+      genre_expandable += "</details>";
+    }
+
+    for (var cat in cats) {
+      cats_expandable += "<details>";
+      cats_expandable += "<summary>" + cat + "</summary>";
+
+      for (var game in cats[cat]) {
+        cats_expandable += "<details>";
+        cats_expandable += "<summary><span style='color:#870000'>" + game + "</span></summary>";
+        cats_expandable += "<a href=" + cats[cat][game]['url'] + ">";
+        cats_expandable += cats[cat][game]["short_text"] + "<br>";
+        cats_expandable += "</a>";
+        if (cats[cat][game]["rating"] != null) {
+          cats_expandable += cats[cat][game]["rating"].toString() + "/5<br>";
+        }
+
+        cats_expandable += "</details>";
+      }
+      cats_expandable += "</details>";
+    }
+    
+    var genres_parent = document.getElementById("genres");
+    var cats_parent = document.getElementById("categories");
+    genres_parent.innerHTML = genre_expandable;
+    cats_parent.innerHTML = cats_expandable;
   }
 };
-xmlhttp.open("GET", "genres-categories.json", true);
+<!--xmlhttp.open("GET", "genres-categories.json", true);-->
+xmlhttp.open("GET", "https://alifeee.github.io/itch.io_bundle/genres-categories.json", true);
 xmlhttp.send();
-
-document.write(JSON.stringify(gcats));
-
-var games = ""
-var genre_expandable = "";
-for (var genre in genres) {
-  genre_expandable += "<details>";
-  genre_expandable += "<summary>" + genre + "</summary>";
-
-  for (var game in genres[genre]) {
-    genre_expandable += "<details>";
-    genre_expandable += "<summary>" + game + "</summary>";
-    genre_expandable += genres[genre][game];
-    genre_expandable += "</details>";
-    games += game
-  }
-  genre_expandable += "</details>";
-}
-var parent = document.getElementById("genres");
-parent.innerHTML = genre_expandable;
-<!--document.write(games);-->
-
 </script>
 
 </body>
