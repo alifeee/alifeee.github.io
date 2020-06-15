@@ -3,15 +3,8 @@
 <head>
   <title>Itch.io Bundle</title>
 <style>
-
-details > summary {
-  padding: "5px 5px";
-  cursor: "pointer";
-}
-
-.first > summary{
-  background-color: #ddd;
-  color: red;
+.clickme {
+  cursor:pointer;
 }
 </style>
 </head>
@@ -20,6 +13,7 @@ details > summary {
 <h1><a href="../">alifeee<a></h1>
 <h2>Itch.io's <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a></h2>
 
+<h3>alifeee's <a href="https://docs.google.com/spreadsheets/d/19JXvTurvx7XRic9jU_ntsYkh9GLxSU3gDoJIbdxnngI/edit?usp=sharing">Game-a-Day</a></h3>
 
 <div id="summaries">
 <h4>Computer Games</h4>
@@ -39,11 +33,11 @@ xmlhttp.onreadystatechange = function() {
     var cats_expandable = "";
     for (var genre in genres) {
       genre_expandable += "<details>";
-      genre_expandable += "<summary>" + genre + "</summary>";
+      genre_expandable += "<summary><span class='clickme'>" + genre + "</span></summary>";
 
       for (var game in genres[genre]) {
         genre_expandable += "<details>";
-        genre_expandable += "<summary><span style='color:#870000'>" + game + "</span></summary>";
+        genre_expandable += "<summary><span class='clickme' style='color:#870000'>" + game + "</span></summary>";
         genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
         genre_expandable += genres[genre][game]["short_text"] + "<br>";
         genre_expandable += "</a>";
