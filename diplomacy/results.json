@@ -1,0 +1,108 @@
+{"games":{
+"256214":{
+  "map":
+    {"name":"Classic", "id":1},
+  "results":
+    {"Alex":"survive", "Alfie":"survive", "Dan":"survive", "Freya":"death", "James":"win", "Luke":"death", "Sam":"death"}
+},
+"40453":{
+  "map":
+    {"name":"Sengoku", "id":27},
+  "results":
+    {"Alex":"draw", "Alfie":"death", "Bobby":"death", "Dan":"death", "Freya":"draw", "James":"death", "Kyle":"draw", "Luke":"death"}
+},
+"40647":{
+  "map":
+    {"name":"Colonial Diplomacy", "id":12},
+  "results":
+    {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Freya":"death", "James":"survive", "Luke":"survive", "Sam":"survive"}
+},
+"40939":{
+  "map":
+    {"name":"Classic - Fog of War", "id":30},
+  "results":
+    {"Alex":"death", "Alfie":"draw", "Dan":"draw", "Freya":"death", "James":"draw", "Kyle":"death", "Sam":"death"}
+},
+"41100":{
+  "map":
+    {"name":"South American Supremacy", "id":24},
+  "results":
+    {"Alex":"survive", "Alfie":"survive", "Dan":"death", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"win", "Sam":"survive"}
+},
+"41193":{
+  "map":
+    {"name":"Fall of the American Empire IV", "id":20},
+  "results":
+    {"Alex":"survive", "Alfie":"win", "Dan":"death", "Dylan":"survive", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"survive", "Sam":"death", "Sean":"death"}
+},
+"41517":{
+  "map":
+    {"name":"Scottish Clan Wars", "id":141},
+  "results":
+    {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Dylan":"survive", "James":"death", "Kyle":"death", "Sam":"death"}
+},
+"42904":{
+  "map":
+    {"name":"Africa", "id":83},
+  "results":
+    {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"death"}
+}
+},
+"players":{
+"Alex":{
+  "id":13569,
+  "username":"somebody909",
+  "results":{"deaths":1, "survives":5, "draws":2, "wins":0}
+},
+"Alfie":{
+  "id":13568,
+  "username":"alifeee",
+  "results":{"deaths":1, "survives":2, "draws":2, "wins":3}
+},
+"Bobby":{
+  "id":13622,
+  "username":"bobster117",
+  "results":{"deaths":1, "survives":0, "draws":0, "wins":0}
+},
+"Dan":{
+  "id":13619,
+  "username":"Quirky",
+  "results":{"deaths":3, "survives":3, "draws":2, "wins":0}
+},
+"Dylan":{
+  "id":13644,
+  "username":"heyfreyathisbottlesmellsofgin",
+  "results":{"deaths":0, "survives":2, "draws":1, "wins":0}
+},
+"Freya":{
+  "id":13620,
+  "username":"Nanofreya",
+  "results":{"deaths":3, "survives":2, "draws":2, "wins":0}
+},
+"James":{
+  "id":8722,
+  "username":"jfiddy",
+  "results":{"deaths":2, "survives":3, "draws":2, "wins":1}
+},
+"Kyle":{
+  "id":13617,
+  "username":"bobross420",
+  "results":{"deaths":4, "survives":0, "draws":1, "wins":0}
+},
+"Luke":{
+  "id":13621,
+  "username":"Copperbonk",
+  "results":{"deaths":3, "survives":2, "draws":0, "wins":1}
+},
+"Sam":{
+  "id":13623,
+  "username":"Samthenone",
+  "results":{"deaths":4, "survives":2, "draws":1, "wins":0}
+},
+"Sean":{
+  "id":14114,
+  "username":"Seany Boi",
+  "results":{"deaths":1, "survives":0, "draws":0, "wins":0}
+}
+}
+}
