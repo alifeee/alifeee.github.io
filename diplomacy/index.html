@@ -77,10 +77,20 @@ xmlhttp.onreadystatechange = function () {
 
     var performance = "<tr>";
     performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>"
-    performance += "<td></td>";
+    performance += "<td>-</td>";
+    for (player in players) {
+      var score = 0;
+      score += players[player]['results']['wins'] * 10;
+      score += players[player]['results']['draws'] * 5;
+      score += players[player]['results']['survives'] * 1;
+      score = score / (players[player]['results']['wins'] + players[player]['results']['draws'] + players[player]['results']['survives'] + players[player]['results']['deaths']);
+      score = score.toFixed(2);
+      performance += "<td>"+score+"</td>";
+    }
 
     tab += headers;
     tab += data;
+    tab += performance;
     var table = document.getElementById("results");
     table.innerHTML = tab;
   }
