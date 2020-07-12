@@ -27,10 +27,6 @@ a {
 
 <table id="results"></table>
 
-<table><tr><td style="background-color:#223344">
-Look!
-</td></tr></table>
-
 <script>
 var xmlhttp = new XMLHttpRequest();
 var lgreen = "#548235";
@@ -52,11 +48,15 @@ xmlhttp.onreadystatechange = function () {
     headers += "</tr>";
     
     data = "";
-    for (game in games) {
+    for (game of games) {
       data += "<tr>";
-      console.log(game);
       data += "<td><a href='https://vdiplomacy.com/variants.php?variantID="+game['map']['id']+"'>"+game['map']['name']+"</a></td>";
-      data += "<td><a href='https://vdiplomacy.com/board.php?gameID="+game+"'>game['id']</a></td>";
+      if (game['id'] == 256214) {
+                data += "<td><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'>game</a></td>";
+      }
+      else {
+        data += "<td><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'>game</a></td>";
+      }
       for (player in players) {
         var color = ""
         switch(game['results'][player]) {
@@ -66,8 +66,6 @@ xmlhttp.onreadystatechange = function () {
           case "draw": color = green; break;
           default: color = "blue";
         }
-        console.log(game['results'][player]);
-        console.log(color);
         if (game['results'][player] == undefined) {
           data += "<td>-</td>";
           continue;
@@ -76,6 +74,11 @@ xmlhttp.onreadystatechange = function () {
       }
       data += "</tr>";
     }
+
+    var performance = "<tr>";
+    performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>"
+    performance += "<td></td>";
+
     tab += headers;
     tab += data;
     var table = document.getElementById("results");
