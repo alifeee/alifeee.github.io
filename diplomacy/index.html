@@ -52,10 +52,10 @@ xmlhttp.onreadystatechange = function () {
       data += "<tr>";
       data += "<td><a href='https://vdiplomacy.com/variants.php?variantID="+game['map']['id']+"'>"+game['map']['name']+"</a></td>";
       if (game['id'] == 256214) {
-                data += "<td><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'>game</a></td>";
+                data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
       }
       else {
-        data += "<td><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'>game</a></td>";
+        data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
       }
       for (player in players) {
         var color = ""
