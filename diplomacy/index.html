@@ -208,5 +208,49 @@ $(document).ready(function(){
   </tr>
 </table>
 
+<table><table>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    var games_players = JSON.parse(this.responseText);
+    var games = games_players['games'];
+    var players = games_players['players'];
+    tab = "";
+    
+    headers = "<tr>";
+    headers += "<th>Map</th><th>Game</th>";
+    for player in players {
+      headers += "<th>"+player+"</th>";
+    }
+    headers += "</tr>";
+    
+    data = "";
+    for game in games {
+      data += "<tr>"
+      data += "<td><a href='"+game['+ +game['map']['name']</td>
+    }
+    var table = document.getElementById("results");
+    table.innerHTML = tab;
+  }
+};
+xmlhttp.open("GET", "https://alifeee.github.io/diplomacy/results.json", true);
+xmlhttp.send()
+</script>
+
 </body>
 </html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
