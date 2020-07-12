@@ -1,53 +1,52 @@
-{"games":{
-"256214":{
+{"games":[{
+  "id":256214,
   "map":
     {"name":"Classic", "id":1},
   "results":
     {"Alex":"survive", "Alfie":"survive", "Dan":"survive", "Freya":"death", "James":"win", "Luke":"death", "Sam":"death"}
-},
-"40453":{
+},{
+  "id":40453,
   "map":
     {"name":"Sengoku", "id":27},
   "results":
     {"Alex":"draw", "Alfie":"death", "Bobby":"death", "Dan":"death", "Freya":"draw", "James":"death", "Kyle":"draw", "Luke":"death"}
-},
-"40647":{
+},{
+  "id":40647,
   "map":
     {"name":"Colonial Diplomacy", "id":12},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Freya":"death", "James":"survive", "Luke":"survive", "Sam":"survive"}
-},
-"40939":{
+},{
+  "id":40939,
   "map":
     {"name":"Classic - Fog of War", "id":30},
   "results":
     {"Alex":"death", "Alfie":"draw", "Dan":"draw", "Freya":"death", "James":"draw", "Kyle":"death", "Sam":"death"}
-},
-"41100":{
+},{
+  "id":41100,
   "map":
     {"name":"South American Supremacy", "id":24},
   "results":
     {"Alex":"survive", "Alfie":"survive", "Dan":"death", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"win", "Sam":"survive"}
-},
-"41193":{
+},{
+  "id":41193,
   "map":
     {"name":"Fall of the American Empire IV", "id":20},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"death", "Dylan":"survive", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"survive", "Sam":"death", "Sean":"death"}
-},
-"41517":{
+},{
+  "id":41517,
   "map":
     {"name":"Scottish Clan Wars", "id":141},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Dylan":"survive", "James":"death", "Kyle":"death", "Sam":"death"}
-},
-"42904":{
+},{
+  "id":42904,
   "map":
     {"name":"Africa", "id":83},
   "results":
     {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"death"}
-}
-},
+}],
 "players":{
 "Alex":{
   "id":13569,

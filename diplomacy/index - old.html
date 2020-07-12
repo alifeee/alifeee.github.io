@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diplomacy</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+}
+.named {
+  width : "50px";
+  background-color : "red";
+}
+</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#results_table td').each(function(){
+        if ($(this).text() == 'win') {
+            $(this).css('background-color','#548235');
+        }
+        else if ($(this).text() == 'death') {
+            $(this).css('background-color','#ffc1c1');
+        }
+        else if ($(this).text() == 'survive') {
+            $(this).css('background-color','#ffe699');
+        }
+        else if ($(this).text() == 'draw') {
+            $(this).css('background-color','#c6e0b4');
+        }
+    });
+});
+</script>
+</head>
+
+<body style="background-color:#ddffff">
+<h1><a href="../" style="text-decoration:underline">alifeee<a></h1>
+<h2>Diplomacy Results</h2>
+
+<table id="results_table">
+  <tr>
+    <th>Map</th>
+    <th>Game</th>
+    <th>Gif</th>
+    <th class="name">Alex</th>
+    <th class="named">Alfie</th>
+    <th class="name">Bobby</th>
+    <th class="name">Dan</th>
+    <th class="name">Dylan</th>
+    <th class="name">Freya</th>
+    <th class="name">James</th>
+    <th class="name">Kyle</th>
+    <th class="name">Luke</th>
+    <th class="name">Sam</th>
+    <th class="name">Sean</th>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=1>Classic</a></td>
+    <td><a href="https://webdiplomacy.net/board.php?gameID=256214">game</a></td>
+    <td><a href="">gif</a></td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>death</td>
+    <td>win</td>
+    <td>-</td>
+    <td>death</td>
+    <td>death</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=27>Sengoku</a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=40453">game</a></td>
+    <td><a href="https://imgur.com/a/C4hr1x2">gif</a></td>
+    <td>draw</td>
+    <td>death</td>
+    <td>death</td>
+    <td>death</td>
+    <td>-</td>
+    <td>draw</td>
+    <td>death</td>
+    <td>draw</td>
+    <td>death</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=12>Colonial Diplomacy </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=40647#gamePanel">game</a></td>
+    <td><a href="https://imgur.com/a/TaCfvNj">gif</a></td>
+    <td>survive</td>
+    <td>win</td>
+    <td>-</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>death</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=30>Classic - Fog of War </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=40939#gamePanel">game</a></td>
+    <td><a href="https://imgur.com/a/733sw0W">gif</a></td>
+    <td>death</td>
+    <td>draw</td>
+    <td>-</td>
+    <td>draw</td>
+    <td>-</td>
+    <td>death</td>
+    <td>draw</td>
+    <td>death</td>
+    <td>-</td>
+    <td>death</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=24>South American Supremacy </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=41100#gamePanel">game</a></td>
+    <td><a href="https://imgur.com/a/9CjRmj2">gif</a></td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>death</td>
+    <td>-</td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>death</td>
+    <td>win</td>
+    <td>survive</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=20>Fall of the American Empire IV </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=41193#gamePanel">game</a></td>
+    <td><a href="https://imgur.com/a/gVBNPQk">gif</a></td>
+    <td>survive</td>
+    <td>win</td>
+    <td>-</td>
+    <td>death</td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>death</td>
+    <td>survive</td>
+    <td>death</td>
+    <td>death</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=141>Scottish Clan Wars </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=41571#gamePanel">game</a></td>
+    <td><a href="https://imgur.com/a/9N4Gg1T">gif</a></td>
+    <td>survive</td>
+    <td>win</td>
+    <td>-</td>
+    <td>survive</td>
+    <td>survive</td>
+    <td>-</td>
+    <td>death</td>
+    <td>death</td>
+    <td>-</td>
+    <td>death</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td><a href=https://vdiplomacy.com/variants.php?variantID=83>Africa </a></td>
+    <td><a href="https://vdiplomacy.com/board.php?gameID=42904#gamePanel">game</a></td>
+    <td><a href="">gif</a></td>
+    <td>draw</td>
+    <td>draw</td>
+    <td>-</td>
+    <td>draw</td>
+    <td>draw</td>
+    <td>draw</td>
+    <td>draw</td>
+    <td>-</td>
+    <td>death</td>
+    <td>draw</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td title="10, 5, and 1 points for a win, draw, and survive, divided by total number of games">Performance</td>
+    <td>-</td>
+    <td>-</td>
+    <td>1.88</td>
+    <td>5.25</td>
+    <td>0.00</td>
+    <td>1.63</td>
+    <td>2.33</td>
+    <td>1.71</td>
+    <td>2.88</td>
+    <td>1.00</td>
+    <td>2.00</td>
+    <td>1.00</td>
+    <td>0.00</td>
+  </tr>
+</table>
+
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
