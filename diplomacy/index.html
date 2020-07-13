@@ -14,10 +14,6 @@ th, td {
 a {
   text-decoration: none;
 }
-.named {
-  width : "50px";
-  background-color : "red";
-}
 </style>
 </head>
 
@@ -25,80 +21,136 @@ a {
 <h1><a href="../" style="text-decoration:underline">alifeee<a></h1>
 <h2>Diplomacy Results</h2>
 
+<div>
 <table id="results"></table>
+</div>
+<br>
 
+<div style="width:50%">
+<canvas id="myChart" width="5" height="190"></canvas>
+</div>
+
+<script src="https://alifeee.github.io/Chart.js"></script>
 <script>
-var xmlhttp = new XMLHttpRequest();
 var lgreen = "#548235";
 var red = "#ffc1c1";
 var yellow = "#ffe699";
 var green = "#c6e0b4";
+var scores = {};
+var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    var games_players = JSON.parse(this.responseText);
-    var games = games_players['games'];
-    var players = games_players['players'];
-    var tab = "";
-    
-    var headers = "<tr>";
-    headers += "<th>Map</th><th>Game</th>";
-    for (player in players) {
-      headers += "<th>"+player+"</th>";
-    }
-    headers += "</tr>";
-    
-    data = "";
-    for (game of games) {
-      data += "<tr>";
-      data += "<td><a href='https://vdiplomacy.com/variants.php?variantID="+game['map']['id']+"'>"+game['map']['name']+"</a></td>";
-      if (game['id'] == 256214) {
-                data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
-      }
-      else {
-        data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
-      }
-      for (player in players) {
-        var color = ""
-        switch(game['results'][player]) {
-          case "win": color = lgreen; break;
-          case "death": color = red; break;
-          case "survive": color = yellow; break;
-          case "draw": color = green; break;
-          default: color = "blue";
-        }
-        if (game['results'][player] == undefined) {
-          data += "<td>-</td>";
-          continue;
-        }
-        data += "<td style='background-color:"+color+"'>"+game['results'][player]+"</td>";
-      }
-      data += "</tr>";
-    }
+if (this.readyState == 4 && this.status == 200) {
 
-    var performance = "<tr>";
-    performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>"
-    performance += "<td>-</td>";
-    for (player in players) {
-      var score = 0;
-      score += players[player]['results']['wins'] * 10;
-      score += players[player]['results']['draws'] * 5;
-      score += players[player]['results']['survives'] * 1;
-      score = score / (players[player]['results']['wins'] + players[player]['results']['draws'] + players[player]['results']['survives'] + players[player]['results']['deaths']);
-      score = score.toFixed(2);
-      performance += "<td>"+score+"</td>";
-    }
+var games_players = JSON.parse(this.responseText);
+var games = games_players['games'];
+var players = games_players['players'];
 
-    tab += headers;
-    tab += data;
-    tab += performance;
-    var table = document.getElementById("results");
-    table.innerHTML = tab;
+
+
+var tab = "";
+
+var headers = "<tr>";
+headers += "<th>Map</th><th>Game</th>";
+for (player in players) {
+  headers += "<th>"+player+"</th>";
+}
+headers += "</tr>";
+    
+data = "";
+for (game of games) {
+  data += "<tr>";
+  data += "<td><a href='https://vdiplomacy.com/variants.php?variantID="+game['map']['id']+"'>"+game['map']['name']+"</a></td>";
+  if (game['id'] == 256214) {
+    data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
+  }
+  else {
+    data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
+  }
+  for (player in players) {
+    var color = ""
+    switch(game['results'][player]) {
+      case "win": color = lgreen; break;
+      case "death": color = red; break;
+      case "survive": color = yellow; break;
+      case "draw": color = green; break;
+      default: color = "blue";
+    }
+    if (game['results'][player] == undefined) {
+      data += "<td>-</td>";
+      continue;
+    }
+    data += "<td style='background-color:"+color+"'>"+game['results'][player]+"</td>";
+  }
+  data += "</tr>";
+}
+
+  var performance = "<tr>";
+  performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>"
+  performance += "<td>-</td>";
+  for (player in players) {
+    var score = 0;
+    score += players[player]['results']['wins'] * 10;
+    score += players[player]['results']['draws'] * 5;
+    score += players[player]['results']['survives'] * 1;
+    score = score / (players[player]['results']['wins'] + players[player]['results']['draws'] + players[player]['results']['survives'] + players[player]['results']['deaths']);
+    score = score.toFixed(2);
+    scores[player] = score;
+    performance += "<td>"+score+"</td>";
+  }
+
+  tab += headers;
+  tab += data;
+  tab += performance;
+  var table = document.getElementById("results");
+  table.innerHTML = tab;
+
+
+
+var labs = [];
+var dats = [];
+for (player in scores) {
+  labs.push(player);
+  dats.push(scores[player]);
+}
+console.log(labs);
+console.log(dats);
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labs,
+        datasets: [{
+            label: 'Performance',
+            data: dats,
+            borderWidth: 1,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)'
+        }]
+    },
+    options: {
+        responsiveness: true,
+        maintainAspectRatio: false,
+        legend: {
+          display:false
+        },
+        scales: {
+            yAxes: [{
+              scaleLabel: {
+                beginAtZero: true,
+                display:true,
+                labelString: 'Performance'
+              }
+            }]
+        }
+    }
+});
+
+
   }
 };
 xmlhttp.open("GET", "https://alifeee.github.io/diplomacy/results.json", true);
 xmlhttp.send()
 </script>
-
 </body>
 </html> 
 
