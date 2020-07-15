@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Diplomacy</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../_extras/stylesheet.css">
 <style>
 table, th, td {
   border: 1px solid black;
@@ -11,24 +13,23 @@ th, td {
   padding: 5px;
   text-align: left;
 }
-a {
-  text-decoration: none;
-}
 </style>
 </head>
 
-<body style="background-color:#ddffff">
-<h1><a href="../" style="text-decoration:underline">alifeee<a></h1>
+<body>
+<h1><a href="../">alifeee<a></h1>
 <h2>Diplomacy Results</h2>
 
 <div>
-<table id="results"></table>
+<table id="results" style="margin-left:auto;margin-right:auto;">
+</table>
 </div>
 <br>
 
-<div style="width:50%">
+<div style="width:100%">
 <canvas id="myChart" width="5" height="190"></canvas>
 </div>
+</body>
 
 <script src="https://alifeee.github.io/Chart.js"></script>
 <script>
@@ -56,15 +57,19 @@ for (player in players) {
 }
 headers += "</tr>";
     
-data = "";
+var data = "";
 for (game of games) {
   data += "<tr>";
-  data += "<td><a href='https://vdiplomacy.com/variants.php?variantID="+game['map']['id']+"'>"+game['map']['name']+"</a></td>";
+  data += "<td><a style='text-decoration:none' href='https://vdiplomacy.com/variants.php?variantID="
+      +game['map']['id']+"'>"
+      +game['map']['name']+"</a></td>";
   if (game['id'] == 256214) {
-    data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
+    data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="
+        +game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
   }
   else {
-    data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="+game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
+    data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="
+        +game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
   }
   for (player in players) {
     var color = ""
@@ -79,20 +84,24 @@ for (game of games) {
       data += "<td>-</td>";
       continue;
     }
-    data += "<td style='background-color:"+color+"'>"+game['results'][player]+"</td>";
+    data += "<td style='background-color:"+color+";color:black'>"
+        +game['results'][player]+"</td>";
   }
   data += "</tr>";
 }
 
   var performance = "<tr>";
-  performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>"
+  performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>";
   performance += "<td>-</td>";
   for (player in players) {
     var score = 0;
     score += players[player]['results']['wins'] * 10;
     score += players[player]['results']['draws'] * 5;
     score += players[player]['results']['survives'] * 1;
-    score = score / (players[player]['results']['wins'] + players[player]['results']['draws'] + players[player]['results']['survives'] + players[player]['results']['deaths']);
+    score = score / (players[player]['results']['wins'] 
+        + players[player]['results']['draws'] 
+        + players[player]['results']['survives'] 
+        + players[player]['results']['deaths']);
     score = score.toFixed(2);
     scores[player] = score;
     performance += "<td>"+score+"</td>";
@@ -112,8 +121,6 @@ for (player in scores) {
   labs.push(player);
   dats.push(scores[player]);
 }
-console.log(labs);
-console.log(dats);
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
