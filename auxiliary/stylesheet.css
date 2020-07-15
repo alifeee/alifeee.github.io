@@ -14,8 +14,8 @@ h1,h2,h3{
 
 @media (orientation:portrait) {
   body{
-    max-width:2000px;
-    margin:10px auto
+    max-width:none;
+    margin:10px
   }
 }
 
