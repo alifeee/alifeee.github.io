@@ -2,13 +2,15 @@
 <html>
 <head>
   <title>Itch.io Bundle</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../auxiliary/stylesheet.css">
 <style>
 .clickme {
   cursor:pointer;
 }
 </style>
 </head>
-<body style="background-color:#ddffff">
+<body>
 
 <h1><a href="../">alifeee<a></h1>
 <h2>Itch.io's <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a></h2>
@@ -37,7 +39,7 @@ xmlhttp.onreadystatechange = function() {
 
       for (var game in genres[genre]) {
         genre_expandable += "<details>";
-        genre_expandable += "<summary><span class='clickme' style='color:#870000'>" + game + "</span></summary>";
+        genre_expandable += "<summary><span class='clickme' style='color:#888'>" + game + "</span></summary>";
         genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
         genre_expandable += genres[genre][game]["short_text"] + "<br>";
         genre_expandable += "</a>";
@@ -55,7 +57,7 @@ xmlhttp.onreadystatechange = function() {
 
       for (var game in cats[cat]) {
         cats_expandable += "<details>";
-        cats_expandable += "<summary><span style='color:#870000'>" + game + "</span></summary>";
+        cats_expandable += "<summary><span style='color:#888'>" + game + "</span></summary>";
         cats_expandable += "<a href=" + cats[cat][game]['url'] + ">";
         cats_expandable += cats[cat][game]["short_text"] + "<br>";
         cats_expandable += "</a>";
