@@ -8,6 +8,10 @@ body{
       "Segoe UI Symbol", "Noto Color Emoji";color:#444
 }
 
+h1{
+  text-align:center
+}
+
 h1,h2,h3{
   line-height:1.2
 }

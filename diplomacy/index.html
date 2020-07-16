@@ -12,6 +12,14 @@ table, th, td {
 th, td {
   padding: 5px;
   text-align: left;
+  white-space:nowrap;
+}
+.graphTable{
+  border:none;
+}
+body{
+  max-width:1000px;
+  width:1000px
 }
 </style>
 </head>
@@ -26,9 +34,15 @@ th, td {
 </div>
 <br>
 
-<div style="width:100%">
+<table class="graphTable" width="100%">
+<tr class="graphTable"><td class="graphTable" width="50%"><div style="width:100%">
 <canvas id="myChart" width="5" height="190"></canvas>
-</div>
+</div></td>
+
+<td class="graphTable" width="50%"><div style="width:100%">
+<canvas id="alexChart" width="5" height="190"></canvas>
+</div></td></tr>
+</table>
 </body>
 
 <script src="https://alifeee.github.io/Chart.js"></script>
@@ -122,6 +136,7 @@ for (player in scores) {
   dats.push(scores[player]);
 }
 var ctx = document.getElementById('myChart').getContext('2d');
+Chart.defaults.global.defaultFontColor = '#888';
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
