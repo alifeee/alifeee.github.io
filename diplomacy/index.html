@@ -24,6 +24,8 @@ body{
 </style>
 </head>
 
+
+
 <body>
 <h1><a href="../">alifeee<a></h1>
 <h2>Diplomacy Results</h2>
@@ -44,6 +46,8 @@ body{
 </div></td></tr>
 </table>
 </body>
+
+
 
 <script src="https://alifeee.github.io/Chart.js"></script>
 <script>
@@ -104,26 +108,63 @@ for (game of games) {
   data += "</tr>";
 }
 
-  var performance = "<tr>";
-  performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>";
-  performance += "<td>-</td>";
-  for (player in players) {
-    var score = 0;
-    score += players[player]['results']['wins'] * 10;
-    score += players[player]['results']['draws'] * 5;
-    score += players[player]['results']['survives'] * 1;
-    score = score / (players[player]['results']['wins'] 
-        + players[player]['results']['draws'] 
-        + players[player]['results']['survives'] 
-        + players[player]['results']['deaths']);
-    score = score.toFixed(2);
-    scores[player] = score;
-    performance += "<td>"+score+"</td>";
+var performance = "<tr>";
+performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>";
+performance += "<td>-</td>";
+for (player in players) {
+  var score = 0;
+  score += players[player]['results']['wins'] * 10;
+  score += players[player]['results']['draws'] * 5;
+  score += players[player]['results']['survives'] * 1;
+  score = score / (players[player]['results']['wins'] 
+      + players[player]['results']['draws'] 
+      + players[player]['results']['survives'] 
+      + players[player]['results']['deaths']);
+  score = score.toFixed(2);
+  scores[player] = score;
+  performance += "<td>"+score+"</td>";
+}
+
+var alex_performance = "<tr><td>Alex's Performance</td><td>-</td>";
+var alex_scores = {};
+for (player in players) {
+  alex_scores[player] = 0;
+}
+for (game of games) {
+  var localScore = {};
+  var result = game["results"];
+  draws = 0;
+  victory = Object.keys(result).length;
+  for (player in result) {
+    switch(result[player]) {
+      case "death": localScore[player]=0;break;
+      case "survive": localScore[player]=1;break;
+      case "win": localScore[player]=victory;break;
+      case "draw": draws+=1;break;
+      default: console.log("Error in Alex Performance");
+    }
   }
+  for (player in result) {
+    if (result[player]=="draw") {
+      localScore[player] = victory/draws;
+    }
+  }
+  for (player in alex_scores) {
+    if (typeof localScore[player]=="number") {
+      alex_scores[player] = alex_scores[player] + localScore[player];
+    }
+  }
+}
+for (player in players) {
+  alex_performance += "<td>"+alex_scores[player].toFixed(2)+"</td>";
+}
+
+  
 
   tab += headers;
   tab += data;
   tab += performance;
+  tab += alex_performance;
   var table = document.getElementById("results");
   table.innerHTML = tab;
 
@@ -161,6 +202,42 @@ var myChart = new Chart(ctx, {
                 beginAtZero: true,
                 display:true,
                 labelString: 'Performance'
+              }
+            }]
+        }
+    }
+});
+
+var alex_dats = [];
+for (player in alex_scores) {
+  alex_dats.push(alex_scores[player].toFixed(2));
+}
+console.log(alex_dats);
+var alex_ctx = document.getElementById('alexChart').getContext('2d');
+var alex_myChart = new Chart(alex_ctx, {
+    type: 'bar',
+    data: {
+        labels: labs,
+        datasets: [{
+            label: 'Alex\'s Performance',
+            data: alex_dats,
+            borderWidth: 1,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)'
+        }]
+    },
+    options: {
+        responsiveness: true,
+        maintainAspectRatio: false,
+        legend: {
+          display:false
+        },
+        scales: {
+            yAxes: [{
+              scaleLabel: {
+                beginAtZero: true,
+                display:true,
+                labelString: 'Alex\'s Performance'
               }
             }]
         }
