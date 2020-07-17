@@ -61,12 +61,9 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
 if (this.readyState == 4 && this.status == 200) {
 
-var games_players = JSON.parse(this.responseText);
-var games = games_players['games'];
-var players = games_players['players'];
+var games = JSON.parse(this.responseText);
 
-console.log(players);
-<!--players=verify_players(games, players);-->
+players=verify_players(games, players);
 console.log(players);
 
 var tab = "";

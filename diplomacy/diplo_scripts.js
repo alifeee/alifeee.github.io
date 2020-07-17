@@ -3,9 +3,16 @@ var red = "#ffc1c1";
 var yellow = "#ffe699";
 var green = "#c6e0b4";
 
-function verify_players(games, players) {
-  <!--games[7]["results"]["Sam"] = "draw";-->
-  var verif_players = JSON.parse(JSON.stringify(players));
+function create_players(games) {
+  var players = {}
+  for (game of games) {
+    for (player in game["results"]) {
+      if (player in players) {
+        console.log(player+" not in list, adding...");
+        players[player]={"deaths":0,"survives":0,"draws":0,"wins":0};
+      }
+    }
+  }
   for (game of games) {
     for (player in game["results"]) {
       switch (game["results"][player]) {
@@ -23,7 +30,7 @@ function verify_players(games, players) {
         console.log(player+":"+result+": incorrect! fixing...");
       }
       players[player]["results"][result]
-          +=verif_players[player]["results"][result];
+          -=verif_players[player]["results"][result];
     }
   }
   return players;

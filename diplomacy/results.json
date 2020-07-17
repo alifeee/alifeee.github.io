@@ -1,4 +1,4 @@
-{"games":[{
+[{
   "id":256214,
   "map":
     {"name":"Classic", "id":1},
@@ -46,62 +46,4 @@
     {"name":"Africa", "id":83},
   "results":
     {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"draw"}
-}],
-"players":{
-"Alex":{
-  "id":13569,
-  "username":"somebody909",
-  "results":{"deaths":1, "survives":5, "draws":2, "wins":0}
-},
-"Alfie":{
-  "id":13568,
-  "username":"alifeee",
-  "results":{"deaths":1, "survives":2, "draws":2, "wins":3}
-},
-"Bobby":{
-  "id":13622,
-  "username":"bobster117",
-  "results":{"deaths":1, "survives":0, "draws":0, "wins":0}
-},
-"Dan":{
-  "id":13619,
-  "username":"Quirky",
-  "results":{"deaths":3, "survives":3, "draws":2, "wins":0}
-},
-"Dylan":{
-  "id":13644,
-  "username":"heyfreyathisbottlesmellsofgin",
-  "results":{"deaths":0, "survives":2, "draws":1, "wins":0}
-},
-"Freya":{
-  "id":13620,
-  "username":"Nanofreya",
-  "results":{"deaths":3, "survives":2, "draws":2, "wins":0}
-},
-"James":{
-  "id":8722,
-  "username":"jfiddy",
-  "results":{"deaths":2, "survives":3, "draws":2, "wins":1}
-},
-"Kyle":{
-  "id":13617,
-  "username":"bobross420",
-  "results":{"deaths":4, "survives":0, "draws":1, "wins":0}
-},
-"Luke":{
-  "id":13621,
-  "username":"Copperbonk",
-  "results":{"deaths":3, "survives":2, "draws":0, "wins":1}
-},
-"Sam":{
-  "id":13623,
-  "username":"Samthenone",
-  "results":{"deaths":5, "survives":2, "draws":0, "wins":0}
-},
-"Sean":{
-  "id":14114,
-  "username":"Seany Boi",
-  "results":{"deaths":1, "survives":0, "draws":0, "wins":0}
-}
-}
-}
+}]
