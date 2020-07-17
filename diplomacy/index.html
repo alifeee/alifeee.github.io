@@ -63,108 +63,15 @@ if (this.readyState == 4 && this.status == 200) {
 
 var games = JSON.parse(this.responseText);
 
-players=verify_players(games, players);
-console.log(players);
+players =     create_players(games);
+scores =      create_performance(players);
+alex_scores = create_alex_performance(games, players);
 
 var tab = "";
-
-var headers = "<tr>";
-headers += "<th>Map</th><th>Game</th>";
-for (player in players) {
-  headers += "<th>"+player+"</th>";
-}
-headers += "</tr>";
-    
-var data = "";
-for (game of games) {
-  data += "<tr>";
-  data += "<td><a style='text-decoration:none' href='https://vdiplomacy.com/variants.php?variantID="
-      +game['map']['id']+"'>"
-      +game['map']['name']+"</a></td>";
-  if (game['id'] == 256214) {
-    data += "<td style='text-align:center'><a href='https://webdiplomacy.net/board.php?gameID="
-        +game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
-  }
-  else {
-    data += "<td style='text-align:center'><a href='https://vdiplomacy.com/board.php?gameID="
-        +game['id']+"'><img src='https://alifeee.github.io/diplomacy/vdip.png'></img></a></td>";
-  }
-  for (player in players) {
-    var color = ""
-    switch(game['results'][player]) {
-      case "win": color = lgreen; break;
-      case "death": color = red; break;
-      case "survive": color = yellow; break;
-      case "draw": color = green; break;
-      default: color = "blue";
-    }
-    if (game['results'][player] == undefined) {
-      data += "<td>-</td>";
-      continue;
-    }
-    data += "<td style='background-color:"+color+";color:black'>"
-        +game['results'][player]+"</td>";
-  }
-  data += "</tr>";
-}
-
-var performance = "<tr>";
-performance += "<td title='10, 5, and 1 points for a win, draw, and survive, divided by total number of games'>Performance</td>";
-performance += "<td>-</td>";
-for (player in players) {
-  var score = 0;
-  score += players[player]['results']['wins'] * 10;
-  score += players[player]['results']['draws'] * 5;
-  score += players[player]['results']['survives'] * 1;
-  score = score / (players[player]['results']['wins'] 
-      + players[player]['results']['draws'] 
-      + players[player]['results']['survives'] 
-      + players[player]['results']['deaths']);
-  score = score.toFixed(2);
-  scores[player] = score;
-  performance += "<td>"+score+"</td>";
-}
-
-var alex_performance = "<tr><td>Alex's Performance</td><td>-</td>";
-var alex_scores = {};
-for (player in players) {
-  alex_scores[player] = 0;
-}
-for (game of games) {
-  var localScore = {};
-  var result = game["results"];
-  draws = 0;
-  victory = Object.keys(result).length;
-  for (player in result) {
-    switch(result[player]) {
-      case "death": localScore[player]=0;break;
-      case "survive": localScore[player]=1;break;
-      case "win": localScore[player]=victory;break;
-      case "draw": draws+=1;break;
-      default: console.log("Error in Alex Performance");
-    }
-  }
-  for (player in result) {
-    if (result[player]=="draw") {
-      localScore[player] = victory/draws;
-    }
-  }
-  for (player in alex_scores) {
-    if (typeof localScore[player]=="number") {
-      alex_scores[player] = alex_scores[player] + localScore[player];
-    }
-  }
-}
-for (player in players) {
-  alex_performance += "<td>"+alex_scores[player].toFixed(2)+"</td>";
-}
-
-  
-
-  tab += headers;
-  tab += data;
-  tab += performance;
-  tab += alex_performance;
+  tab += table_headers(players);
+  tab += table_data(games, players);
+  tab += table_performance(players, scores);
+  tab += table_alex_performance(players, alex_scores);
   var table = document.getElementById("results");
   table.innerHTML = tab;
 
