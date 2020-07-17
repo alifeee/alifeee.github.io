@@ -45,7 +45,7 @@
   "map":
     {"name":"Africa", "id":83},
   "results":
-    {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"death"}
+    {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"draw"}
 }],
 "players":{
 "Alex":{
