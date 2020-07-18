@@ -129,7 +129,7 @@ function table_data(games, players) {
   var text = "";
   for (game of games) {
     text += "<tr>";
-    text += "<td><a target='_blank' style='text-decoration:none' href='https://vdiplomacy.com/variants.php?variantID="
+    text += "<td><a target='_blank' href='https://vdiplomacy.com/variants.php?variantID="
         +game['map']['id']+"'>"
         +game['map']['name']+"</a></td>";
     var site = "v";
@@ -166,7 +166,7 @@ function table_performance(players, scores) {
   /* Create the performance row */
   var text = "";
   text += "<tr>";
-  text += "<td>Performance</td>";
+  text += "<td>Performance <a target='_blank' href='performance_explained.html'>(?)</a></td>";
   text += "<td>-</td>";
   for (player in scores) {
     text += "<td>"+scores[player].toFixed(2)+"</td>";
@@ -180,7 +180,7 @@ function table_alex_performance(players, alex_scores) {
   /* Create the 'Alex' performance row */
   var text = "";
   text += "<tr>"
-  text += "<td>Alex's Performance</td>";
+  text += "<td>Alex's Performance <a target='_blank' href='performance_explained.html'>(?)</a></td>";
   text += "<td>-</td>";
   for (player in players) {
     text += "<td>"+alex_scores[player].toFixed(2)+"</td>";
@@ -231,7 +231,6 @@ function bar_graph(x, y, location, y_title) {
 
 function doughnut_graph(data, labels, colors, location, title) {
   var ctx = document.getElementById(location).getContext("2d");
-  console.log(colors);
   var myChart = new Chart(ctx, {
       type: 'doughnut',
       data: {
