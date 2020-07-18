@@ -1,9 +1,6 @@
-var lgreen = "#548235";
-var red = "#ffc1c1";
-var yellow = "#ffe699";
-var green = "#c6e0b4";
-
 function create_players(games) {
+  /* Create a dictionary of players as keys and values are dictionaries
+   * of results */
   var all_names = [];
   for (game of games) {
     for (player in game["results"]) {
@@ -32,6 +29,7 @@ function create_players(games) {
 
 
 function create_performance(players) {
+  /* Create a dictionary of player keys and performance values */
   var scores = {}
   for (player in players) {
     scores[player] = 0;
@@ -48,6 +46,7 @@ function create_performance(players) {
 
 
 function create_alex_performance(games, players) {
+  /* Create performance values based on Alex's criteria */
   var alex_scores = {};
   for (player in players) {
     alex_scores[player] = 0;
@@ -78,19 +77,17 @@ function create_alex_performance(games, players) {
     }
   }
   for (player in alex_scores) {
-    console.log(player+": "+alex_scores[player]);
     alex_scores[player] = alex_scores[player] / (players[player]['wins'] 
         + players[player]['draws'] 
         + players[player]['survives'] 
         + players[player]['deaths']);
   }
-  console.log(alex_scores);
-  console.log(localScore);
   return alex_scores;
 }
 
 
 function table_headers(players) {
+  /* Create html for the top of the results table */
   var text = "";
   text += "<tr>";
   text += "<th>Map</th>";
@@ -104,6 +101,8 @@ function table_headers(players) {
 
 
 function table_data(games, players) {
+  /* Create html for the data of the results table, including links
+   * to games as well as colouring the cells based on the result */
   var text = "";
   for (game of games) {
     text += "<tr>";
@@ -141,6 +140,7 @@ function table_data(games, players) {
 
 
 function table_performance(players, scores) {
+  /* Create the performance row */
   var text = "";
   text += "<tr>";
   text += "<td>Performance</td>";
@@ -154,6 +154,7 @@ function table_performance(players, scores) {
 
 
 function table_alex_performance(players, alex_scores) {
+  /* Create the 'Alex' performance row */
   var text = "";
   text += "<tr>"
   text += "<td>Alex's Performance</td>";
@@ -164,6 +165,76 @@ function table_alex_performance(players, alex_scores) {
   text += "</tr>";
   return text;
 }
+
+
+function bar_graph(x, y, location, y_title) {
+  /* Create a bar chart with x as labels, y as heights, location
+   * is the id of the canvas container, and y_title is the y-axis
+   * title */
+  var ctx = document.getElementById(location).getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: x,
+          datasets: [{
+              label: y_title,
+              data: y,
+              borderWidth: 1,
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)'
+          }]
+      },
+      options: {
+          responsiveness: true,
+          maintainAspectRatio: false,
+          legend: {
+            display:false
+          },
+          scales: {
+              yAxes: [{
+                scaleLabel: {
+                  display:true,
+                  labelString: y_title
+                },
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+          }
+      }
+  });
+}
+
+
+function sort_by_second(arr_a, arr_b, direction) {
+  /* Input two lists and this function will sort the second
+   * list in the direction specified (1 = smallest to largest, -1
+   * = largest to smallest), and return that sorted list as well 
+   * as a second list in the same order as the sorted first */
+
+  arr1 = JSON.parse(JSON.stringify(arr_a));
+  arr2 = JSON.parse(JSON.stringify(arr_b));
+  var list = [];
+  for (var j = 0; j < arr1.length; j++) {
+    list.push({"one":arr1[j], "two":arr2[j]});
+  }
+  list.sort(function(a, b) {
+    return ((a.two < b.two) ? 1 : ((a.two == b.two) ? 0 : -1))
+  });
+  for (var k = 0; k < list.length; k++) {
+    arr1[k] = list[k].one;
+    arr2[k] = list[k].two;
+  }
+  return [arr1, arr2];
+}
+
+
+
+
+
+
+
+
 
 
 

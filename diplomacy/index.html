@@ -9,13 +9,13 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+.graphTable, .graphTable *{
+  border:none;
+}
 th, td {
   padding: 5px;
   text-align: left;
   white-space:nowrap;
-}
-.graphTable{
-  border:none;
 }
 body{
   max-width:1000px;
@@ -33,41 +33,54 @@ body{
 <div>
 <table id="results" style="margin-left:auto;margin-right:auto;">
 </table>
-</div>
-<br>
+</div><br>
 
+<div>
 <table class="graphTable" width="100%">
-<tr class="graphTable"><td class="graphTable" width="50%"><div style="width:100%">
-<canvas id="myChart" width="5" height="190"></canvas>
-</div></td>
-
-<td class="graphTable" width="50%"><div style="width:100%">
-<canvas id="alexChart" width="5" height="190"></canvas>
-</div></td></tr>
+  <tr>
+    <td  width="50%">
+      <div style="width:100%">
+        <canvas id="performance_chart" width="5" height="190"></canvas>
+      </div>
+    </td>
+    <td  width="50%">
+      <div style="width:100%">
+        <canvas id="alex_performance_chart" width="5" height="190"></canvas>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td  width="50%">
+      <div style="width:100%">
+        <canvas id="total_games_chart" width="5" height="190"></canvas>
+      </div>
+    </td>
+    <td  width="50%">
+      <div style="width:100%">
+        <canvas id="4" width="5" height="190"></canvas>
+      </div>
+    </td>
+  </tr>
 </table>
+</div>
+
 </body>
-
-
 
 <script src="https://alifeee.github.io/Chart.js"></script>
 <script src="diplo_scripts.js"></script>
 <script>
-var lgreen = "#548235";
-var red = "#ffc1c1";
-var yellow = "#ffe699";
-var green = "#c6e0b4";
-var scores = {};
+Chart.defaults.global.defaultFontColor = '#888';
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
 if (this.readyState == 4 && this.status == 200) {
 
-var games = JSON.parse(this.responseText);
+  var games = JSON.parse(this.responseText);
 
-players =     create_players(games);
-scores =      create_performance(players);
-alex_scores = create_alex_performance(games, players);
+  players =     create_players(games);
+  scores =      create_performance(players);
+  alex_scores = create_alex_performance(games, players);
 
-var tab = "";
+  var tab = "";
   tab += table_headers(players);
   tab += table_data(games, players);
   tab += table_performance(players, scores);
@@ -75,83 +88,37 @@ var tab = "";
   var table = document.getElementById("results");
   table.innerHTML = tab;
 
-
-
-var labs = [];
-var dats = [];
-for (player in scores) {
-  labs.push(player);
-  dats.push(scores[player]);
-}
-var ctx = document.getElementById('myChart').getContext('2d');
-Chart.defaults.global.defaultFontColor = '#888';
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labs,
-        datasets: [{
-            label: 'Performance',
-            data: dats,
-            borderWidth: 1,
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)'
-        }]
-    },
-    options: {
-        responsiveness: true,
-        maintainAspectRatio: false,
-        legend: {
-          display:false
-        },
-        scales: {
-            yAxes: [{
-              scaleLabel: {
-                beginAtZero: true,
-                display:true,
-                labelString: 'Performance'
-              }
-            }]
-        }
-    }
-});
-
-var alex_dats = [];
-for (player in alex_scores) {
-  alex_dats.push(alex_scores[player].toFixed(2));
-}
-var alex_ctx = document.getElementById('alexChart').getContext('2d');
-var alex_myChart = new Chart(alex_ctx, {
-    type: 'bar',
-    data: {
-        labels: labs,
-        datasets: [{
-            label: 'Alex\'s Performance',
-            data: alex_dats,
-            borderWidth: 1,
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)'
-        }]
-    },
-    options: {
-        responsiveness: true,
-        maintainAspectRatio: false,
-        legend: {
-          display:false
-        },
-        scales: {
-            yAxes: [{
-              scaleLabel: {
-                beginAtZero: true,
-                display:true,
-                labelString: 'Alex\'s Performance'
-              }
-            }]
-        }
-    }
-});
-
-
+  var player_names = [];
+  var performances = [];
+  var alex_performances = [];
+  var total_games = [];
+  for (player in scores) {
+    player_names.push(player);
+    performances.push(scores[player].toFixed(2));
+    alex_performances.push(alex_scores[player].toFixed(2));
+    total_games.push(Object.keys(players[player]).reduce((sum,key)=>sum+parseFloat(players[player][key]||0),0));
   }
+
+  var combined = sort_by_second(player_names, total_games, -1);
+  total_games_names = combined[0];
+  total_games = combined[1];
+
+  var combined = sort_by_second(player_names, performances, -1);
+  performances_names = combined[0];
+  performances = combined[1];
+
+  var combined = sort_by_second(player_names, alex_performances, -1);
+  alex_performances_names = combined[0];
+  alex_performances = combined[1];
+  
+  bar_graph(performances_names, performances, 
+      "performance_chart", "Performance");
+  bar_graph(alex_performances_names, alex_performances, 
+      "alex_performance_chart", "Alex\'s Performance");
+  bar_graph(total_games_names, total_games,
+      "total_games_chart", "Total Games Played");
+
+}
 };
 xmlhttp.open("GET", "https://alifeee.github.io/diplomacy/results.json", true);
 xmlhttp.send()
