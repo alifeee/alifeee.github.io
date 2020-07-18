@@ -99,9 +99,6 @@ if (this.readyState == 4 && this.status == 200) {
     total_games.push(Object.keys(players[player]).reduce((sum,key)=>sum+parseFloat(players[player][key]||0),0));
   }
 
-  var combined = sort_by_second(player_names, total_games, -1);
-  total_games_names = combined[0];
-  total_games = combined[1];
 
   var combined = sort_by_second(player_names, performances, -1);
   performances_names = combined[0];
@@ -110,7 +107,11 @@ if (this.readyState == 4 && this.status == 200) {
   var combined = sort_by_second(player_names, alex_performances, -1);
   alex_performances_names = combined[0];
   alex_performances = combined[1];
-  
+
+  var combined = sort_by_second(player_names, total_games, -1);
+  total_games_names = combined[0];
+  total_games = combined[1];
+
   bar_graph(performances_names, performances, 
       "performance_chart", "Performance");
   bar_graph(alex_performances_names, alex_performances, 

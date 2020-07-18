@@ -106,7 +106,7 @@ function table_data(games, players) {
   var text = "";
   for (game of games) {
     text += "<tr>";
-    text += "<td><a style='text-decoration:none' href='https://vdiplomacy.com/variants.php?variantID="
+    text += "<td><a target='_blank' style='text-decoration:none' href='https://vdiplomacy.com/variants.php?variantID="
         +game['map']['id']+"'>"
         +game['map']['name']+"</a></td>";
     var site = "v";
@@ -114,8 +114,8 @@ function table_data(games, players) {
     var game_link = "https://"+site+"diplomacy.com/board.php?gameID="
         +game["id"];
     var img_link = "https://alifeee.github.io/diplomacy/vdip.png";
-    text += "<td style='text-align:center'><a href="+game_link
-        +"'><img src='"+img_link+"'></img></a></td>";
+    text += "<td style='text-align:center'><a target='_blank' href="+
+        game_link +"'><img src='"+img_link+"'></img></a></td>";
     var color = "";
     for (player in players) {
       if (!(player in game["results"])) {
