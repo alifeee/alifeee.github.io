@@ -66,7 +66,7 @@ body{
 
 </body>
 
-<script src="https://alifeee.github.io/Chart.js"></script>
+<script src="../auxiliary/Chart.js"></script>
 <script src="diplo_scripts.js"></script>
 <script>
 Chart.defaults.global.defaultFontColor = '#888';
@@ -131,7 +131,7 @@ if (this.readyState == 4 && this.status == 200) {
   bar_graph(total_games_names, total_games,
       "total_games_chart", "Total Games Played");
   doughnut_graph(wins_draws, wins_draws_labels, 
-      ["#548235", "c6e0b4"], "wins_draws_chart", "Wins vs. Draws");
+      ["#548235", "#c6e0b4"], "wins_draws_chart", "Wins vs. Draws");
 
 }
 };
