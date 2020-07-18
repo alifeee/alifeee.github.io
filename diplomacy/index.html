@@ -40,24 +40,24 @@ body{
   <tr>
     <td  width="50%">
       <div style="width:100%">
-        <canvas id="performance_chart" width="5" height="190"></canvas>
+        <canvas id="performance_chart" height="190"></canvas>
       </div>
     </td>
     <td  width="50%">
       <div style="width:100%">
-        <canvas id="alex_performance_chart" width="5" height="190"></canvas>
+        <canvas id="alex_performance_chart" height="190"></canvas>
       </div>
     </td>
   </tr>
   <tr>
     <td  width="50%">
       <div style="width:100%">
-        <canvas id="total_games_chart" width="5" height="190"></canvas>
+        <canvas id="total_games_chart" height="190"></canvas>
       </div>
     </td>
     <td  width="50%">
       <div style="width:100%">
-        <canvas id="4" width="5" height="190"></canvas>
+        <canvas id="wins_draws_chart" height="150"></canvas>
       </div>
     </td>
   </tr>
@@ -92,13 +92,25 @@ if (this.readyState == 4 && this.status == 200) {
   var performances = [];
   var alex_performances = [];
   var total_games = [];
+  var wins_draws = [0,0];
+  var wins_draws_labels = ["Wins", "Draws"];
   for (player in scores) {
     player_names.push(player);
     performances.push(scores[player].toFixed(2));
     alex_performances.push(alex_scores[player].toFixed(2));
     total_games.push(Object.keys(players[player]).reduce((sum,key)=>sum+parseFloat(players[player][key]||0),0));
   }
-
+  for (game of games) {
+    for (player in game["results"]) {
+      if (game["results"][player]=="win") {
+        wins_draws[0] += 1;
+      }
+      if (game["results"][player]=="draw") {
+        wins_draws[1] += 1;
+        break;
+      }
+    }
+  }
 
   var combined = sort_by_second(player_names, performances, -1);
   performances_names = combined[0];
@@ -118,6 +130,8 @@ if (this.readyState == 4 && this.status == 200) {
       "alex_performance_chart", "Alex\'s Performance");
   bar_graph(total_games_names, total_games,
       "total_games_chart", "Total Games Played");
+  doughnut_graph(wins_draws, wins_draws_labels, 
+      ["#548235", "c6e0b4"], "wins_draws_chart", "Wins vs. Draws");
 
 }
 };
