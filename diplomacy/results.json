@@ -1,49 +1,65 @@
-[{
+[
+{
   "id":256214,
   "map":
     {"name":"Classic", "id":1},
   "results":
     {"Alex":"survive", "Alfie":"survive", "Dan":"survive", "Freya":"death", "James":"win", "Luke":"death", "Sam":"death"}
-},{
+},
+{
   "id":40453,
   "map":
     {"name":"Sengoku", "id":27},
   "results":
     {"Alex":"draw", "Alfie":"death", "Bobby":"death", "Dan":"death", "Freya":"draw", "James":"death", "Kyle":"draw", "Luke":"death"}
-},{
+},
+{
   "id":40647,
   "map":
     {"name":"Colonial Diplomacy", "id":12},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Freya":"death", "James":"survive", "Luke":"survive", "Sam":"survive"}
-},{
+},
+{
   "id":40939,
   "map":
     {"name":"Classic - Fog of War", "id":30},
   "results":
     {"Alex":"death", "Alfie":"draw", "Dan":"draw", "Freya":"death", "James":"draw", "Kyle":"death", "Sam":"death"}
-},{
+},
+{
   "id":41100,
   "map":
     {"name":"South American Supremacy", "id":24},
   "results":
     {"Alex":"survive", "Alfie":"survive", "Dan":"death", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"win", "Sam":"survive"}
-},{
+},
+{
   "id":41193,
   "map":
     {"name":"Fall of the American Empire IV", "id":20},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"death", "Dylan":"survive", "Freya":"survive", "James":"survive", "Kyle":"death", "Luke":"survive", "Sam":"death", "Sean":"death"}
-},{
+},
+{
   "id":41517,
   "map":
     {"name":"Scottish Clan Wars", "id":141},
   "results":
     {"Alex":"survive", "Alfie":"win", "Dan":"survive", "Dylan":"survive", "James":"death", "Kyle":"death", "Sam":"death"}
-},{
+},
+{
   "id":42904,
   "map":
     {"name":"Africa", "id":83},
   "results":
     {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Luke":"death", "Sam":"draw"}
-}]
+},
+{
+  "id":44491,
+  "map":
+    {"name":"Mate Against Mate", "id":37},
+  "results":
+    {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Kyle":"draw", "Sam":"death"}
+}
+]
