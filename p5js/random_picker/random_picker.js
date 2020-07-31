@@ -1,4 +1,4 @@
-/*let choices = ["This one", "That one", "Such one", "Much one", "The last one"];*/
+let choices = ["This one", "That one", "Such one", "Much one", "The last one"];
 let bbox;
 let fontsize = 20;
 let spinner_space = fontsize + 5;
@@ -8,7 +8,7 @@ let spinning = false;
 let button_loc, mouse_loc, button_hover = false;
 let speed;
 
-if (!choices) {
+if (choices.length == 0) {
   choices = ["No choices loaded!"];
 }
 
@@ -21,16 +21,11 @@ function setup() {
   textAlign(CENTER, CENTER);
   textSize(fontsize);
   textFont("Courier New");
-  for (var i = 0; i < (bbox[3]-bbox[1])/spinner_space + 1; i++) {
-    spinners.push(new Spinner(chooseItem(choices, label_index), 0, -spinner_space * (i - (bbox[3]-bbox[1])/spinner_space+ 1), 0));
-    label_index += 1;
-  }
-
+  draw_new();
 }
 
 function draw() {
   background(220);
-
 
   translate((bbox[2] + bbox[0]) / 2, (bbox[3] + bbox[1]) / 2);
 
@@ -90,6 +85,16 @@ function mousePressed() {
   if (button_hover) {
     spinning = true;
     speed = 20 + random(10);
+  }
+}
+
+function draw_new() {
+  spinners = [];
+  let user_entry = document.getElementById("choices_entry").value;
+  choices = user_entry.split(/\r?\n/);
+  for (var i = 0; i < (bbox[3]-bbox[1])/spinner_space + 1; i++) {
+    spinners.push(new Spinner(chooseItem(choices, label_index), 0, -spinner_space * (i - (bbox[3]-bbox[1])/spinner_space+ 1), 0));
+    label_index += 1;
   }
 }
 
