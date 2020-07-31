@@ -7,14 +7,30 @@
 </head>
 <body>
 
-<div>
 <h1><a href="../../">alifeee</a></h1>
-<h2>Random Picker (Placeholder - not functional)</h2>
+<h2>Random Picker</h2>
 
-<p>Attempt: Using <a href="https://p5js.org/get-started/">p5.js</a>, and try to cache with <a href="https://www.w3schools.com/js/js_cookies.asp">cookies</a></p>
+<p>Enter some choices to pick between in the box below and press the button to refresh the spinner!</p>
+
+<div id="p5_container"></div>
+
+<div>
+<textarea id="choices_entry" rows="15" cols="50">Choice 1
+Choice 2
+Choice 3</textarea>
+<br>
+<button onclick="window.location.reload()">Update choices</button>
+</div>
 
 <h2><a href="../">Back to p5js</a></h2>
 
+<script src="../../auxiliary/p5.min.js"></script>
+
+<script>
+let user_entry = document.getElementById("choices_entry").value;
+choices = user_entry.split(/\r?\n/);
+</script>
+<script src="random_picker.js"></script>
 </body>
 </html> 
 
