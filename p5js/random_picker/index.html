@@ -25,7 +25,20 @@ Mango</textarea>
 
 <h2><a href="../">Back to p5js</a></h2>
 
+<script>
+let old_data = decodeURIComponent(document.cookie);
+console.log("cookie loaded as ", document.cookie);
+let old_data_parsed = old_data.match(/(?<=(box=)).*/gms)[0]
+document.getElementById("choices_entry").innerHTML = old_data_parsed;
+</script>
 <script src="../../auxiliary/p5.min.js"></script>
 <script src="random_picker.js"></script>
 </body>
-</html> 
+</html>
+
+
+
+
+
+
+ 

@@ -91,11 +91,14 @@ function mousePressed() {
 function draw_new() {
   spinners = [];
   let user_entry = document.getElementById("choices_entry").value;
+  document.cookie = "box=" + encodeURIComponent(user_entry) + "; expires=Sat, 01 Jan 2022 00:00:00 UTC";
+  console.log("cookie saved as ", "box=" + encodeURIComponent(user_entry) + "; expires=Sat, 01 Jan 2022 00:00:00 UTC");
   choices = user_entry.split(/\r?\n/);
   for (var i = 0; i < (bbox[3]-bbox[1])/spinner_space + 1; i++) {
     spinners.push(new Spinner(chooseItem(choices, label_index), 0, -spinner_space * (i - (bbox[3]-bbox[1])/spinner_space+ 1), 0));
     label_index += 1;
   }
+  
 }
 
 function find_middlest() {
