@@ -58,7 +58,7 @@ function mouseReleased() {
 
 function dashed_line(x1, y1, x2, y2) {
   let distance = Math.sqrt((x2-x1)**2 + (y2-y1)**2);
-  let num_lines = distance / 20;
+  let num_lines = distance / 5;
   let xfrac = (x2-x1)/num_lines;
   let yfrac = (y2-y1)/num_lines;
   for (let i = 0; i < num_lines; i+= 2) {
