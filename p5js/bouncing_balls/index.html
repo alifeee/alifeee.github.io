@@ -64,6 +64,7 @@ var acc_x_info = document.getElementById("acc_x_span");
 acc_x_info.innerHTML = acc_x_slider.value;
 acc_x_slider.oninput = function() {
   acc_x_info.innerHTML = acc_x_slider.value;
+  acceleration.x = acc_x_slider.value;
 }
 
 var acc_y_slider = document.getElementById("acc_y_slider");
@@ -71,17 +72,11 @@ var acc_y_info = document.getElementById("acc_y_span");
 acc_y_info.innerHTML = acc_y_slider.value;
 acc_y_slider.oninput = function() {
   acc_y_info.innerHTML = acc_y_slider.value;
+  acceleration.y = acc_y_slider.value;
 }
 
 </script>
 <script src="bouncing_balls.js"></script>
-<script>
-function add_random_n(num) {
-  for (i = 0; i < num; i++) {
-    bouncers.push(new Bouncer(random(0, width), random(0, height), random(-2000, 2000), random(-2000, 2000), random(5, 50), color(random(100, 255), random(100, 255), random(100,255))));
-  }
-}
-</script>
 </body>
 </html> 
 

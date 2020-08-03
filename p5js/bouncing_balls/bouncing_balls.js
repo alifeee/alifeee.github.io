@@ -14,9 +14,8 @@ function setup() {
 function draw() {
   background(240);
   fill(0);
-  acceleration.x = acc_x_slider.value;
-  acceleration.y = acc_y_slider.value;
   if (draw_line) {
+    /*'If the mouse if being held', draw the dashed line and fake ball*/
     dashed_line(oldX, oldY, mouseX, mouseY, 50);
     fill(random_color);
     ellipse(oldX, oldY, diameter_slider.value);
@@ -25,18 +24,19 @@ function draw() {
     bouncer.update_vel(deltaTime);
     bouncer.update_pos(deltaTime / 1000);
     bouncer.wall_collision()
+    bouncer.draw();
   }
   for (collision of find_colliders()) {
     update_colliders(bouncers[collision[0]], bouncers[collision[1]]);
   }
-  for (bouncer of bouncers) {
-    bouncer.draw();
-  }
 }
 
 function mousePressed() {
+  /*Record mouse position, this is where the ball spawns and where the
+    line is drawn from*/
   oldX = mouseX;
   oldY = mouseY;
+  /*Only draw if the mouse is within the canvas*/
   if (mouse_in_box(0, 0, width, height)) {
     draw_line = true;
     random_color = color(random(100, 255), random(100, 255), random(100, 255));
@@ -44,6 +44,7 @@ function mousePressed() {
 }
 
 function mouseReleased() {
+  /*Create a new ball on mouse release*/
   if (draw_line) {
     let vx = (oldX - mouseX) / 1;
     let vy = (oldY - mouseY) / 1;
@@ -53,6 +54,8 @@ function mouseReleased() {
 }
 
 function mouse_in_box(x1, y1, x2, y2) {
+  /*Returns true if the mouse is within the rectangle specified
+    x1, y1 is top left, x2, y2 is bottom right*/
   if (mouseX > x1 && mouseX < x2 &&
     mouseY > y1 && mouseY < y2) {
     return true;
@@ -61,6 +64,8 @@ function mouse_in_box(x1, y1, x2, y2) {
 }
 
 function dashed_line(x1, y1, x2, y2, small_length) {
+  /*Draw a dashed line with dashes of length small_length
+    between two points*/
   fill(0);
   let distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
   let num_lines = distance / small_length * 2;
@@ -74,6 +79,7 @@ function dashed_line(x1, y1, x2, y2, small_length) {
 }
 
 function find_colliders() {
+  /*Find pairs of indices of colliding objects*/
   let colliders = [];
   for (i = 0; i < bouncers.length; i++) {
     for (j = i + 1; j < bouncers.length; j++) {
@@ -86,6 +92,7 @@ function find_colliders() {
 }
 
 function update_colliders(c1, c2) {
+  /*Update velocities based on momentum considerations*/
   let vCollision = p5.Vector.sub(c2.pos, c1.pos);
   let vRelativeVelocity = p5.Vector.sub(c1.vel, c2.vel);
   let speed = p5.Vector.dot(vRelativeVelocity, vCollision);
@@ -102,6 +109,7 @@ function update_colliders(c1, c2) {
 }
 
 function circle_collision(c1, c2) {
+  /*Returns true if two circles are colliding*/
   let threshold = (c1.radius + c2.radius) ** 2;
   let sep_vec = p5.Vector.sub(c1.pos, c2.pos);
   let dist_sq = sep_vec.magSq();
@@ -109,6 +117,13 @@ function circle_collision(c1, c2) {
     return true;
   }
   return false;
+}
+
+function add_random_n(num) {
+  /*Creates n random balls*/
+  for (i = 0; i < num; i++) {
+    bouncers.push(new Bouncer(random(0, width), random(0, height), random(-2000, 2000), random(-2000, 2000), random(5, 50), color(random(100, 255), random(100, 255), random(100,255))));
+  }
 }
 
 class Bouncer {
