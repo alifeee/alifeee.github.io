@@ -23,6 +23,9 @@
  <td>
   Diameter: <span id="diameter_span"></span>
  </td>
+ <td>
+  <button type="button" onclick="add_random_n(20)">Add 20 random balls</button>
+ <td>
 </tr>
 <tr>
  <td>
@@ -30,6 +33,9 @@
  </td>
  <td>
   Horizontal Acceleration: <span id="acc_x_span"></span>
+ </td>
+ <td>
+  <button type="button" onclick="bouncers = []">Delete all balls</button>
  </td>
 </tr>
 <tr>
@@ -69,7 +75,13 @@ acc_y_slider.oninput = function() {
 
 </script>
 <script src="bouncing_balls.js"></script>
-
+<script>
+function add_random_n(num) {
+  for (i = 0; i < num; i++) {
+    bouncers.push(new Bouncer(random(0, width), random(0, height), random(-2000, 2000), random(-2000, 2000), random(5, 50), color(random(100, 255), random(100, 255), random(100,255))));
+  }
+}
+</script>
 </body>
 </html> 
 
