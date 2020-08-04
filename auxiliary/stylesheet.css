@@ -8,6 +8,10 @@ body{
       "Segoe UI Symbol", "Noto Color Emoji";color:#444
 }
 
+.lighter{
+  color:#333;
+}
+
 h1{
   text-align:center
 }
@@ -34,5 +38,9 @@ h1,h2,h3{
   }
   a:visited{
     color:#ccf
+  }
+
+  .lighter{
+    color:#ccc;
   }
 }
