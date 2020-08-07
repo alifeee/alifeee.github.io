@@ -39,7 +39,7 @@ xmlhttp.onreadystatechange = function() {
 
       for (var game in genres[genre]) {
         genre_expandable += "<details>";
-        genre_expandable += "<summary><span class='clickme' class='lighter'>" + game + "</span></summary>";
+        genre_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
         genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
         genre_expandable += genres[genre][game]["short_text"] + "<br>";
         genre_expandable += "</a>";
@@ -57,7 +57,7 @@ xmlhttp.onreadystatechange = function() {
 
       for (var game in cats[cat]) {
         cats_expandable += "<details>";
-        cats_expandable += "<summary><span class='clickme' class='lighter'>" + game + "</span></summary>";
+        cats_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
         cats_expandable += "<a href=" + cats[cat][game]['url'] + ">";
         cats_expandable += cats[cat][game]["short_text"] + "<br>";
         cats_expandable += "</a>";

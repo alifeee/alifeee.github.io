@@ -17,10 +17,10 @@ th, td {
   text-align: left;
   white-space:nowrap;
 }
-body{
+/*body{
   max-width:1000px;
   width:1000px
-}
+}*/
 a{
   text-decoration:none;
 }
@@ -70,6 +70,7 @@ a{
 </body>
 
 <script src="../auxiliary/Chart.js"></script>
+<script src="../auxiliary/jquery-3.5.1.min.js"></script>
 <script src="diplo_scripts.js"></script>
 <script>
 Chart.defaults.global.defaultFontColor = '#888';
@@ -140,6 +141,16 @@ if (this.readyState == 4 && this.status == 200) {
 };
 xmlhttp.open("GET", "https://alifeee.github.io/diplomacy/results.json", true);
 xmlhttp.send()
+
+
+</script>
+<script>
+let tableWidth = document.getElementById("results");
+/* .getBoundingClientRect(); */
+console.log(tableWidth.offsetWidth);
+console.log(document.getElementById("results").offsetWidth);
+console.log(tableWidth.getBoundingClientRect());
+
 </script>
 </body>
 </html> 
