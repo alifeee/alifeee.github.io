@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conway's Game of Life</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../../auxiliary/stylesheet.css">
+  <script src="../../auxiliary/p5.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
+  <script src="../../auxiliary/google-analytics.js"></script>
+
+</head>
+<body>
+  <h1><a href="../../">alifeee</a></h1>
+
+  <div id="p5_container"></div>
+  <table>
+   <tr>
+    <td>Speed: <span id="speedSliderInfo"></span> ms</td>
+    <td>Size: <span id="sizeSliderInfo"></span> px</td>
+   </tr>
+   <tr>
+    <td>
+     <input type="range" min="100" max="1000" value="100" step="50" id="speedSlider">
+    </td>
+    <td>
+     <input type="range" min="10" max="100" value="20" step="1" id="sizeSlider">
+    </td>
+   </tr>
+  </table>
+
+  <script src="conway.js"></script>
+
+  <script>
+    var speedSlider = document.getElementById("speedSlider");
+    var speedInfo = document.getElementById("speedSliderInfo");
+    speedInfo.innerHTML = speedSlider.value;
+    speedSlider.oninput = function() {
+      speedInfo.innerHTML = speedSlider.value;
+    }
+
+    var sizeSlider = document.getElementById("sizeSlider");
+    var sizeInfo = document.getElementById("sizeSliderInfo");
+    sizeInfo.innerHTML = sizeSlider.value;
+    sizeSlider.oninput = function() {
+      sizeInfo.innerHTML = sizeSlider.value;
+    }
+  </script>
+</body>
+</html> 
