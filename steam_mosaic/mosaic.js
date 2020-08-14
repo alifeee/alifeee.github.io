@@ -4,10 +4,10 @@ function createMosaic(steamID) {
   if (!isNaN(id)) {
     link = "https://steamcommunity.com/profiles/" + id + "/games/?tab=all";
   }
-  $.ajax({
+  /*$.ajax({
     url: link,
     success: function(data) {getGamesList(data);}
-  });
+  });*/
 }
 
 function getGamesList(htmlStr) {
