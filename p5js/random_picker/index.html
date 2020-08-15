@@ -24,24 +24,33 @@ Pineapple
 Mango</textarea>
 <br>
 <button onclick="draw_new()">Update choices</button>
+<br>
+<div id="url_box"></div>
+<br>
+<button onclick="copyURL()">Copy URL to choices</button>
 </div>
 
 <h2><a href="../">Back to p5js</a></h2>
 
-<script>
-let old_data = decodeURIComponent(document.cookie);
-console.log("cookie loaded as ", document.cookie);
-let old_data_parsed = old_data.match(/(?<=(box=)).*/gms)[0]
-document.getElementById("choices_entry").innerHTML = old_data_parsed;
-</script>
+<!-- <script>
+let url_loc = document.getElementById("url_box");
+let params = new URLSearchParams(location.search);
+let choices_entry = decodeURIComponent(params.get('choices'));
+let choice_box = document.getElementById("choices_entry");
+console.log(choices_entry);
+if (choices_entry == null) {
+  console.log("iffed");
+  choice_box.innerHTML = choices_entry;
+}
+
+let user_entry = document.getElementById("choices_entry").value;
+let url = "alifeee.github.io/p5js/random_picker/" + encodeURIComponent(user_entry);
+
+
+
+
+</script> -->
 <script src="../../auxiliary/p5.min.js"></script>
 <script src="random_picker.js"></script>
 </body>
 </html>
-
-
-
-
-
-
- 
