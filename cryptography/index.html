@@ -12,10 +12,36 @@
  <h2>Cryptography</h2>
 
  <h3>Ciphers</h3>
- <ul>
-  <li><a href="">Caeser cipher</a></li>
-  <li><a href="">Other cipher</a></li>
- </ul>
+ <h4>Caesar Cipher</h4>
+ <table>
+   <tr>
+     <td colspan="2">
+       <table style="width:100%"><tr>
+         <td style="width:20%">Shift: <span id="caesar_shift_label">0</span></td>
+         <td>
+           <input id="caesar_slider" type="range" min="0" max="26" value="0" step="1" style="width:100%" oninput="Caesar.sliderShift()" onchange="Caesar.sliderShift()">
+         </td>
+       </t></table>
+     </td>
+   </tr>
+   <tr>
+      <p style="font-family:'Lucida Console', monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓<br><span id="caesar_alphabet"></span></p>
+   </tr>
+   <tr>
+     <td><label for="caesar_raw">Raw/Unencoded Text</label></td>
+     <td><label for="caesar_encoded">Encoded Text</label></td>
+   </tr>
+   <tr>
+     <td><textarea id="caesar_raw" rows="3" cols="25"></textarea></td>
+     <td><textarea id="caesar_encoded" rows="3" cols="25"></textarea></td>
+   </tr>
+   <tr>
+     <td><button type="button" onClick="Caesar.buttonEncode()">Encode →</button></td>
+     <td><button type="button" onClick="Caesar.buttonDecode()">← Decode</button></td>
+   </tr>
+ </table>
 
+<script src="commons.js"></script>
+<script src="caesar.js"></script>
 </body>
-</html> 
+</html>
