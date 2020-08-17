@@ -5,6 +5,7 @@
 // %% Common cryptography functions
 var Common = {};
 
+// %% Pure Functions - Letter functions
 Common.shiftLetter = function(letter, shift = 0) {
   let min, max;
   ind = letter.charCodeAt(0);
@@ -33,4 +34,43 @@ Common.isUppercase = function(letter) {
 
 Common.isAlphabetic = function(letter) {
   return (this.isLowercase(letter) || this.isUppercase(letter));
+}
+
+
+
+// %% Pure Functions - Trigram statistics
+Common.evalTrigrams = function(message, trigrams) {
+  return [...Array(message.length - 2).keys()]
+  .map(x => message.slice(x, x+3))
+  .map(x => Math.log10((trigrams[x] || 0.1) / trigrams.total))
+  .reduce((a, b) => a + b);
+}
+
+
+
+// %% Impure functions - Trigram statistics
+Common.loadTrigrams = function() {
+  if (Common.trigrams) {
+    return Common.trigrams;
+  }
+  else {
+    return $.getJSON("trigrams.json", function(json) {
+      json.total = Object.values(json).reduce((a,b) => parseInt(a) + parseInt(b));
+      return json;
+    })
+  }
+}
+
+// %% Impure functions
+Common.clear = function(box) {
+  toClear = document.getElementById(box);
+  toClear.value = "";
+}
+
+Common.copy = function(box) {
+  toCopy = document.getElementById(box);
+  toCopy.select();
+  toCopy.setSelectionRange(0, 99999);
+
+  document.execCommand("copy")
 }

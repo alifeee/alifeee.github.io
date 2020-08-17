@@ -6,6 +6,12 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="../auxiliary/google-analytics.js"></script>
 
+  <style>
+  table {
+    border-collapse: collapse;
+  }
+  </style>
+
 </head>
 <body>
  <h1><a href="../">alifeee</a></h1>
@@ -13,6 +19,7 @@
 
  <h3>Ciphers</h3>
  <h4>Caesar Cipher</h4>
+ <p style="font-family:'Lucida Console', monospace">|ABCDEFGHIJKLMNOPQRSTUVWXYZ|<br>|<span id="caesar_alphabet"></span>|</p>
  <table>
    <tr>
      <td colspan="2">
@@ -21,11 +28,11 @@
          <td>
            <input id="caesar_slider" type="range" min="0" max="26" value="0" step="1" style="width:100%" oninput="Caesar.sliderShift()" onchange="Caesar.sliderShift()">
          </td>
-       </t></table>
+       </tr></table>
      </td>
    </tr>
    <tr>
-      <p style="font-family:'Lucida Console', monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓<br><span id="caesar_alphabet"></span></p>
+
    </tr>
    <tr>
      <td><label for="caesar_raw">Raw/Unencoded Text</label></td>
@@ -36,11 +43,29 @@
      <td><textarea id="caesar_encoded" rows="3" cols="25"></textarea></td>
    </tr>
    <tr>
-     <td><button type="button" onClick="Caesar.buttonEncode()">Encode →</button></td>
-     <td><button type="button" onClick="Caesar.buttonDecode()">← Decode</button></td>
+     <td><table style="width:100%"><tr>
+       <td><button type="button" onClick="Caesar.buttonEncode()">Encode →</button></td>
+       <td><button type="button" onClick="Common.clear('caesar_raw')">Clear</button></td>
+       <td><button type="button" onClick="Common.copy('caesar_raw')">Copy</button></td>
+     </tr></table></td>
+     <td><table style="width:100%">
+       <tr>
+         <td>
+           <button type="button" onClick="Caesar.buttonDecode()">← Decode</button>
+         </td>
+         <td><button type="button" onClick="Common.clear('caesar_encoded')">Clear</button></td>
+         <td><button type="button" onClick="Common.copy('caesar_encoded')">Copy</button></td>
+       </tr>
+     </table></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td><button type="button" onClick="Caesar.buttonAutoDecode()">Auto Decrypt</button></td>
    </tr>
  </table>
 
+
+<script src="../auxiliary/jquery-3.5.1.min.js"></script>
 <script src="commons.js"></script>
 <script src="caesar.js"></script>
 </body>

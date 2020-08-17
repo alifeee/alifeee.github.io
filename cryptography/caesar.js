@@ -19,8 +19,6 @@ Caesar.decode = function(message, shift) {
 
 
 
-
-
 // %% HTML Embedding
 Caesar.shiftSlider = document.getElementById("caesar_slider");
 Caesar.shiftInfo = document.getElementById("caesar_shift_label");
@@ -55,4 +53,26 @@ Caesar.buttonDecode = function() {
   let toDecode = this.encodedTextBox.value;
   this.rawTextBox.value = this.decode(toDecode, this.shift);
   this.sliderMode = "decoding";
+}
+
+Caesar.buttonAutoDecode = async function() {
+  if (!Common.trigrams) {
+    Common.trigrams = await Common.loadTrigrams();
+  }
+
+  let toDecode = this.encodedTextBox.value
+  .split("")
+  .filter(x => Common.isAlphabetic(x))
+  .map(x => x.toUpperCase())
+  .join("");
+
+  let triVals = [...Array(26).keys()]
+    .map(x => this.decode(toDecode, x))
+    .map(x => Common.evalTrigrams(x, Common.trigrams));
+
+  let shift = triVals.indexOf(Math.max(...triVals));
+
+  Caesar.shiftSlider.value = shift;
+  Caesar.sliderShift();
+  Caesar.rawTextBox.value = this.decode(this.encodedTextBox.value, shift);
 }
