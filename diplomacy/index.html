@@ -3,6 +3,7 @@
 <head>
   <title>Diplomacy</title>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../auxiliary/stylesheet.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="../auxiliary/google-analytics.js"></script>
@@ -129,13 +130,13 @@ if (this.readyState == 4 && this.status == 200) {
   total_games_names = combined[0];
   total_games = combined[1];
 
-  bar_graph(performances_names, performances, 
+  bar_graph(performances_names, performances,
       "performance_chart", "Performance");
-  bar_graph(alex_performances_names, alex_performances, 
+  bar_graph(alex_performances_names, alex_performances,
       "alex_performance_chart", "Alex\'s Performance");
   bar_graph(total_games_names, total_games,
       "total_games_chart", "Total Games Played");
-  doughnut_graph(wins_draws, wins_draws_labels, 
+  doughnut_graph(wins_draws, wins_draws_labels,
       ["#548235", "#c6e0b4"], "wins_draws_chart", "Wins vs. Draws");
 
 }
@@ -144,17 +145,4 @@ xmlhttp.open("GET", "https://alifeee.github.io/diplomacy/results.json", true);
 xmlhttp.send()
 </script>
 </body>
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

@@ -3,6 +3,7 @@
 <head>
   <title>Itch.io Bundle</title>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../auxiliary/stylesheet.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="../auxiliary/google-analytics.js"></script>
@@ -72,7 +73,7 @@ xmlhttp.onreadystatechange = function() {
       }
       cats_expandable += "</details>";
     }
-    
+
     var genres_parent = document.getElementById("genres");
     var cats_parent = document.getElementById("categories");
     genres_parent.innerHTML = genre_expandable;
@@ -85,4 +86,4 @@ xmlhttp.send();
 </script>
 
 </body>
-</html> 
+</html>
