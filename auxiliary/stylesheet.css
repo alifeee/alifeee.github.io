@@ -13,6 +13,9 @@ body{
   color:white;
   background:#444;
 }
+html {
+  overflow-y:scroll;
+}
 
 a:link{
   color:#5bf
