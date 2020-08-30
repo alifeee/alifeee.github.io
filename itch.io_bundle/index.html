@@ -13,6 +13,13 @@
 .clickme {
   cursor:pointer;
 }
+details > details {
+  margin-left: 15px;
+}
+details > a, details > span {
+  margin-left: 15px;
+}
+
 </style>
 </head>
 <body>
@@ -52,7 +59,7 @@ xmlhttp.onreadystatechange = function() {
         genre_expandable += genres[genre][game]["short_text"] + "<br>";
         genre_expandable += "</a>";
         if (genres[genre][game]["rating"] != null) {
-          genre_expandable += genres[genre][game]["rating"].toString() + "/5<br>";
+          genre_expandable += "<span>" + genres[genre][game]["rating"].toString() + "/5</span><br>";
         }
         genre_expandable += "</details>";
       }
@@ -70,7 +77,7 @@ xmlhttp.onreadystatechange = function() {
         cats_expandable += cats[cat][game]["short_text"] + "<br>";
         cats_expandable += "</a>";
         if (cats[cat][game]["rating"] != null) {
-          cats_expandable += cats[cat][game]["rating"].toString() + "/5<br>";
+          cats_expandable += "<span>" + cats[cat][game]["rating"].toString() + "/5</span><br>";
         }
 
         cats_expandable += "</details>";
