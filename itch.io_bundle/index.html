@@ -25,9 +25,17 @@ details > a, details > span {
 <body>
 
 <h1><a href="/">alifeee<a></h1><hr>
-<h2>Itch.io's <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a></h2>
+<h2>Itch.io's Bundle for Racial Justice and Equality</h2>
+<p>
+  A while ago <a href="https://itch.io/docs/general/about">Itch.io</a> released their <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a>. It got massively popular and ended up with over 1700 games/comics/RPG rules. Sorting through this content proved troublesome. This is an attempt to categorise those games.
+</p>
+<p>
+  This project used <a href="https://www.python.org/">Python</a> to access the webpage of each game, which was then scraped for more data using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, a Python module for parsing HTML. The review scores, category, and a few other useful data were saved to a local file, which is also hosted here and displayed sorted by category below.
+</p>
 
-<h3>alifeee's <a href="https://docs.google.com/spreadsheets/d/19JXvTurvx7XRic9jU_ntsYkh9GLxSU3gDoJIbdxnngI/edit?usp=sharing">Game-a-Day</a></h3>
+<hr>
+
+<!-- <h3>alifeee's <a href="https://docs.google.com/spreadsheets/d/19JXvTurvx7XRic9jU_ntsYkh9GLxSU3gDoJIbdxnngI/edit?usp=sharing">Game-a-Day</a></h3> -->
 
 <div id="summaries">
 <h4>Computer Games</h4>
@@ -50,7 +58,10 @@ xmlhttp.onreadystatechange = function() {
     var cats_expandable = "";
     for (var genre in genres) {
       genre_expandable += "<details>";
-      genre_expandable += "<summary><span class='clickme'><b>" + genre + "</b></span></summary>";
+      genre_expandable += "<summary><span class='clickme'><b>"
+        + genre + "</b>"
+        + " (" + Object.keys(genres[genre]).length + ")"
+        + "</span></summary>";
 
       for (var game in genres[genre]) {
         genre_expandable += "<details>";
@@ -68,7 +79,10 @@ xmlhttp.onreadystatechange = function() {
 
     for (var cat in cats) {
       cats_expandable += "<details>";
-      cats_expandable += "<summary><span class='clickme'><b>" + cat + "</b></span></summary>";
+      cats_expandable += "<summary><span class='clickme'><b>"
+        + cat + "</b>"
+        + " (" + Object.keys(cats[cat]).length + ")"
+        + "</span></summary>";
 
       for (var game in cats[cat]) {
         cats_expandable += "<details>";
