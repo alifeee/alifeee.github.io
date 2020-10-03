@@ -36,9 +36,9 @@ function create_performance(players) {
     scores[player] += players[player]["wins"]     * 10;
     scores[player] += players[player]["draws"]    * 5;
     scores[player] += players[player]["survives"] * 1;
-    scores[player] = scores[player] / (players[player]['wins'] 
-        + players[player]['draws'] 
-        + players[player]['survives'] 
+    scores[player] = scores[player] / (players[player]['wins']
+        + players[player]['draws']
+        + players[player]['survives']
         + players[player]['deaths']);
   }
   return scores;
@@ -77,9 +77,9 @@ function create_alex_performance(games, players) {
     }
   }
   for (player in alex_scores) {
-    alex_scores[player] = alex_scores[player] / (players[player]['wins'] 
-        + players[player]['draws'] 
-        + players[player]['survives'] 
+    alex_scores[player] = alex_scores[player] / (players[player]['wins']
+        + players[player]['draws']
+        + players[player]['survives']
         + players[player]['deaths']);
   }
   return alex_scores;
@@ -89,7 +89,7 @@ function create_alex_performance(games, players) {
 function sort_by_second(arr_a, arr_b, direction) {
   /* Input two lists and this function will sort the second
    * list in the direction specified (1 = smallest to largest, -1
-   * = largest to smallest), and return that sorted list as well 
+   * = largest to smallest), and return that sorted list as well
    * as a second list in the same order as the sorted first */
 
   arr1 = JSON.parse(JSON.stringify(arr_a));
@@ -166,7 +166,7 @@ function table_performance(players, scores) {
   /* Create the performance row */
   var text = "";
   text += "<tr>";
-  text += "<td>Performance <a target='_blank' href='performance_explained.html'>(?)</a></td>";
+  text += "<td>Performance <a href='performance_explained.html'>(?)</a></td>";
   text += "<td>-</td>";
   for (player in scores) {
     text += "<td>"+scores[player].toFixed(2)+"</td>";
@@ -180,7 +180,7 @@ function table_alex_performance(players, alex_scores) {
   /* Create the 'Alex' performance row */
   var text = "";
   text += "<tr>"
-  text += "<td>Alex's Performance <a target='_blank' href='performance_explained.html'>(?)</a></td>";
+  text += "<td>Alex's Performance <a href='performance_explained.html'>(?)</a></td>";
   text += "<td>-</td>";
   for (player in players) {
     text += "<td>"+alex_scores[player].toFixed(2)+"</td>";
@@ -258,23 +258,3 @@ function doughnut_graph(data, labels, colors, location, title) {
       }
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

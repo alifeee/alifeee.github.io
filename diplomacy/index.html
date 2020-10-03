@@ -26,7 +26,7 @@ body{
   max-width:1046px;
   width:1046px
 }
-a{
+#results a{
   text-decoration:none;
 }
 </style>
@@ -35,8 +35,22 @@ a{
 
 
 <body>
-<h1><a style="text-decoration:underline" href="/">alifeee<a></h1><hr>
+<h1><a href="/">alifeee<a></h1><hr>
 <h2>Diplomacy Results</h2>
+
+<h3>What is Diplomacy?</h3>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Diplomacy_(game)">Diplomacy</a> is a diceless strategic war game where each player controls several territories of a larger geographic area, and must plan ahead and use skills of communication and coercion to eventually control the entire board, using tanks and boats to capture new territories, as well as making alliances and enemies along the way.
+</p>
+<p>
+  Diplomacy was originally a board game, and was played either in-person or via post. The games the following statistics come from were played online, mostly using <a href="https://vdiplomacy.com/">vDipomacy</a>, a popular diplomacy website. <a href="https://webdiplomacy.net/">webDiplomacy</a> is another popular website which has a good explanation of the game on its <a href="https://webdiplomacy.net/">homepage</a>.
+</p>
+<p>
+  <i><q>Luck plays no part in Diplomacy. Cunning and cleverness, honesty and perfectly-timed betrayal are the tools needed to outwit your fellow players. The most skillful negotiator will climb to victory over the backs of both enemies and friends. <br>Who do you trust?</q></i> - <a href="https://avalonhill.wizards.com/games/diplomacy">Avalon Hill</a>
+</p>
+
+<hr>
+<h3>The Results</h3>
 
 <div>
 <table id="results" style="margin-left:auto;margin-right:auto;">
@@ -80,7 +94,7 @@ a{
 <script src="../auxiliary/Chart.js"></script>
 <script src="diplo_scripts.js"></script>
 <script>
-Chart.defaults.global.defaultFontColor = '#888';
+Chart.defaults.global.defaultFontColor = '#fff';
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
 if (this.readyState == 4 && this.status == 200) {
