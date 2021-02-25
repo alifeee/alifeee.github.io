@@ -46,6 +46,10 @@
     .tab button.active {
       background-color: #aaa;
     }
+    .tab button:focus {
+      outline: 1px dotted #212121;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
     .tabContent {
       display: none;
     }
@@ -273,12 +277,12 @@
   </header>
   <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1mpj">Prof M. P. A. Jones</a> and others</h4>
   <p><span style="color:red">COVID-19 information:</span><br>The module PHYS3601 Advanced Laboratory will take place entirely on-site (subject to government rules), with students working individually on experiments, and having greater flexibility over their hours to mitigate against further lockdowns.  It will be necessary to place a cap on student numbers taking this module.  Even after expansion into all the available rooms (including Level 2 laboratories), the lab leaders have calculated that the maximum number of students that can be accommodated whilst meeting social distancing requirements is 58.  If more than 58 students choose this module then the selection of students will occur on the same basis as the long-standing cap for PHYS3581 Team Project, i.e., based on marks in the Level 2 lab module, PHYS2641.<br>We have had a lot of discussion about this and have had to make some difficult decisions in order to reduce the likelihood that the cap is exceeded, without being unfair on students.  In 2020/21:
-<ul>
-  <li>The Advanced Lab module will be unavailable to visiting exchange students.</li>
-  <li>MPhys students will not be able to take both Advanced Lab and Team Project.  This is a change to the information previously published.  After much discussion it was decided not to apply this change to BSc students, who will of course be in their final year; MPhys students have the Level 4 project to look forward to.</li>
-  <li>For MPhys Physics and MPhys Physics & Astronomy students, we have removed the requirement to take either PHYS3601 Advanced Laboratory or PHYS3591 Maths Workshop.  These modules have been added to the list of optional modules.  This is a change to the information previously published.</li>
-</ul></p>
-<hr><p>During the module, students will plan and execute an extended laboratory project at an advanced level in either astrophysics, modern optics, high energy physics or condensed matter physics.</p>
+    <ul>
+      <li>The Advanced Lab module will be unavailable to visiting exchange students.</li>
+      <li>MPhys students will not be able to take both Advanced Lab and Team Project.  This is a change to the information previously published.  After much discussion it was decided not to apply this change to BSc students, who will of course be in their final year; MPhys students have the Level 4 project to look forward to.</li>
+      <li>For MPhys Physics and MPhys Physics & Astronomy students, we have removed the requirement to take either PHYS3601 Advanced Laboratory or PHYS3591 Maths Workshop.  These modules have been added to the list of optional modules.  This is a change to the information previously published.</li>
+    </ul></p>
+  <hr><p>During the module, students will plan and execute an extended laboratory project at an advanced level in either astrophysics, modern optics, high energy physics or condensed matter physics.</p>
 </div>
 
 <div id="TP" class="tabContent">
@@ -322,12 +326,14 @@
         document.getElementsByClassName("tabContent"),
         x => x.style.display="none");
 
+        let active = evt.currentTarget.className.includes("active");
       [].forEach.call(
         document.getElementsByClassName("tabLink"),
         x => x.className = x.className.replace(" active", ""));
 
-      document.getElementById(moduleName).style.display = "block";
-      evt.currentTarget.className += " active";
+      // console.log(evt.currentTarget.attributes.onclick.value);
+      document.getElementById(moduleName).style.display = active ? "none" : "block";
+      evt.currentTarget.className += active ? "" : " active";
     }
   </script>
 </body>
