@@ -61,5 +61,12 @@
     {"name":"Mate Against Mate", "id":37},
   "results":
     {"Alex":"draw", "Alfie":"draw", "Dan":"draw", "Dylan":"draw", "Freya":"draw", "James":"draw", "Kyle":"draw", "Sam":"death"}
+},
+{
+  "id":46476,
+  "map":
+    {"name":"Classic", "id":1},
+  "results":
+    {"Alex":"draw", "Alfie":"draw", "Dan":"death", "Freya":"draw", "James":"death", "Luke":"death","Sam":"death"}
 }
 ]
