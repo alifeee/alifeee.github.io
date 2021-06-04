@@ -1,0 +1,31 @@
+/* Tab (button container) */
+.tab {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+}
+/* Tab buttons */
+.tab button {
+  background-color: #666;
+  font-size: .9em;
+  color: white;
+  border: 1px solid #333;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+}
+/* When a button is hovered */
+.tab button:hover {
+  background-color: #777;
+}
+/* When a button is active */
+.tab button.active {
+  background-color: #aaa;
+}
+.tab button:focus {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.tabContent {
+  display: none;
+}

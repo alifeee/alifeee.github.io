@@ -9,16 +9,44 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
+  <link rel="stylesheet" href="./tab-buttons.css">
+  <script src="./tab-buttons.js"></script>
+
+  <style>
+    .center {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .tabContent {
+      padding-top: 20px;
+    }
+  </style>
+
 </head>
+
 <body>
   <h1><a href="/">alifeee</a></h1><hr>
 
-  <div class="wrapper">
-  <iframe id="frame" style="overflow:hidden" width="100%" height=700 frameBorder=0 scrolling="no"
-    src="https://script.google.com/macros/s/AKfycbyiukhLvNQGPgt7L-ARrbi9MbufQ4bz12WV4TgW_GZecxXPeLKC7dANA4MQFxQNGbIJzQ/exec"></iframe>
+  <div class="tab">
+    <div class="center">
+      <button class="tabLink" onclick="openModule(event, 'Deckwise')" >Deckwise</button>
+      <button class="tabLink" onclick="openModule(event, 'Playerwise')" >Playerwise</button>
+    </div>
   </div>
 
-  <hr><h2 style="text-align:center"><a href="/">Back to main page</a></h2>
+  <div class="tabContent" id="Deckwise">
+    <iframe id="deckFrame" width="100%" height=700 frameBorder=0
+      src="https://script.google.com/macros/s/AKfycbyiukhLvNQGPgt7L-ARrbi9MbufQ4bz12WV4TgW_GZecxXPeLKC7dANA4MQFxQNGbIJzQ/exec"></iframe>
+  </div>
+
+  <div class="tabContent" id="Playerwise">
+    <iframe id="playerFrame" width="100%" height=700 frameBorder=0
+      src="https://script.google.com/macros/s/AKfycbzB0PMm7b2dbqxSMfGPx07KbNYwWr5e6J1e2K6z6he40DMbrr4PrcgESIjrCms1XbRXVw/exec"></iframe>
+  </div>
+
 
 </body>
 </html>
