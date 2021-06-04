@@ -32,7 +32,7 @@
 
   <div class="tab">
     <div class="center">
-      <button class="tabLink" onclick="openModule(event, 'Deckwise')" >Deckwise</button>
+      <button class="tabLink" onclick="openModule(event, 'Deckwise')" id="b1">Deckwise</button>
       <button class="tabLink" onclick="openModule(event, 'Playerwise')" >Playerwise</button>
     </div>
   </div>
@@ -48,5 +48,10 @@
   </div>
 
 
+  <script>
+    //turn on the first button by default
+    document.getElementById("Deckwise").style.display = "block";
+    document.getElementById("b1").className += " active";
+  </script>
 </body>
 </html>
