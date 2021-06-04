@@ -9,39 +9,16 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
-  <style>
-    .wrapper {
-      position:relative;
-      padding-bottom: 200%;
-    }
-    iframe {
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-    }
-  </style>
-
 </head>
 <body>
   <h1><a href="/">alifeee</a></h1><hr>
 
   <div class="wrapper">
-  <iframe id="frame" style="overflow:hidden" frameBorder=0 scrolling="no" onload="calcHeight()"
-    src="https://script.google.com/macros/s/AKfycbzaREhIvXPAw6F9BPTon3Nzh61ezbJqe1F9KKXfQljDjOgZX0v3WkO0GyOCmVcnHapI6Q/exec"></iframe>
+  <iframe id="frame" style="overflow:hidden" width="100%" height=700 frameBorder=0 scrolling="no"
+    src="https://script.google.com/macros/s/AKfycbyiukhLvNQGPgt7L-ARrbi9MbufQ4bz12WV4TgW_GZecxXPeLKC7dANA4MQFxQNGbIJzQ/exec"></iframe>
   </div>
 
   <hr><h2 style="text-align:center"><a href="/">Back to main page</a></h2>
-
-  <script>
-    function calcHeight() {
-      var height = document.getElementById("frame").contentWindow.document.body.scrollHeight;
-      console.log(document.getElementById("frame").contentWindow.document.body.scrollHeight);
-      console.log(document.getElementById("frame").height);
-      document.getElementByID("frame").height = height;
-    }
-  </script>
 
 </body>
 </html>
