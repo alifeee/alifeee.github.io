@@ -1,0 +1,123 @@
+{
+  "tokipona>english": {
+    "ijo": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "thing",
+        "something",
+        "being",
+        "phenomenon",
+        "object",
+        "matter"
+      ]
+    },
+    "jan": {
+      "type": ["noun"],
+      "translations": [
+        "person",
+        "human",
+        "somebody"
+      ]
+    },
+    "kili": {
+      "type": ["noun"],
+      "translations": [
+        "fruit",
+        "vegetable",
+        "mushroom"
+      ]
+    },
+    "lipu": {
+      "type": ["noun"],
+      "translations": [
+        "document",
+        "flat object",
+        "book",
+        "card",
+        "paper",
+        "record",
+        "website"
+      ]
+    },
+    "meli": {
+      "type": ["noun"],
+      "translations": [
+        "woman",
+        "female",
+        "feminine person",
+        "wife"
+      ]
+    },
+    "ni": {
+      "type": ["adjective"],
+      "translations": [
+        "this",
+        "that"
+      ]
+    },
+    "soweli": {
+      "type": ["noun"],
+      "translations": [
+        "animal",
+        "land mammal",
+        "beast"
+      ]
+    },
+    "telo": {
+      "type": ["noun"],
+      "translations": [
+        "water",
+        "liquid",
+        "fluid",
+        "wet substance",
+        "beverage"
+      ]
+    },
+    "tomo": {
+      "type": ["noun"],
+      "translations": [
+        "house",
+        "building",
+        "room",
+        "indoor space",
+        "home"
+      ]
+    },
+    "lili": {
+      "type": ["adjective"],
+      "translations": [
+        "little",
+        "small",
+        "short",
+        "few",
+        "a bit",
+        "young"
+      ]
+    },
+    "pona": {
+      "type": ["adjective"],
+      "translations": [
+        "good",
+        "simple",
+        "friendly",
+        "positive",
+        "useful",
+        "peaceful"
+      ]
+    },
+    "suli": {
+      "type": ["adjective"],
+      "translations": [
+        "big",
+        "heavy",
+        "large",
+        "long",
+        "tall",
+        "important",
+        "adult"
+      ]
+    }
+  }
+}
