@@ -14,7 +14,9 @@
       ]
     },
     "jan": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "person",
         "human",
@@ -22,7 +24,9 @@
       ]
     },
     "kili": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "fruit",
         "vegetable",
@@ -30,7 +34,9 @@
       ]
     },
     "lipu": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "document",
         "flat object",
@@ -42,7 +48,9 @@
       ]
     },
     "meli": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "woman",
         "female",
@@ -51,14 +59,18 @@
       ]
     },
     "ni": {
-      "type": ["adjective"],
+      "type": [
+        "adjective"
+      ],
       "translations": [
         "this",
         "that"
       ]
     },
     "soweli": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "animal",
         "land mammal",
@@ -66,7 +78,9 @@
       ]
     },
     "telo": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "water",
         "liquid",
@@ -76,7 +90,9 @@
       ]
     },
     "tomo": {
-      "type": ["noun"],
+      "type": [
+        "noun"
+      ],
       "translations": [
         "house",
         "building",
@@ -86,7 +102,9 @@
       ]
     },
     "lili": {
-      "type": ["adjective"],
+      "type": [
+        "adjective"
+      ],
       "translations": [
         "little",
         "small",
@@ -97,7 +115,9 @@
       ]
     },
     "pona": {
-      "type": ["adjective"],
+      "type": [
+        "adjective"
+      ],
       "translations": [
         "good",
         "simple",
@@ -108,7 +128,9 @@
       ]
     },
     "suli": {
-      "type": ["adjective"],
+      "type": [
+        "adjective"
+      ],
       "translations": [
         "big",
         "heavy",
@@ -117,6 +139,76 @@
         "tall",
         "important",
         "adult"
+      ]
+    },
+    "mi": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "I",
+        "me",
+        "we",
+        "us"
+      ]
+    },
+    "mije": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "man",
+        "male",
+        "masculine",
+        "person",
+        "husband"
+      ]
+    },
+    "sina": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "you"
+      ]
+    },
+    "kulupu": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "community",
+        "company",
+        "group",
+        "nation",
+        "society",
+        "tribe"
+      ]
+    },
+    "sin": {
+      "type": [
+        "adjective"
+      ],
+      "translations": [
+        "new",
+        "another",
+        "fresh",
+        "additional",
+        "extra"
+      ]
+    },
+    "wawa": {
+      "type": [
+        "adjective"
+      ],
+      "translations": [
+        "strong",
+        "confident",
+        "dependable",
+        "powerful",
+        "sure",
+        "energetic",
+        "intense"
       ]
     }
   }
