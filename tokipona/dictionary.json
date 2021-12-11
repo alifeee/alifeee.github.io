@@ -266,6 +266,198 @@
         "to speak",
         "to communicate"
       ]
+    },
+    "ala": {
+      "type": [
+        "adjective"
+      ],
+      "translations": [
+        "not",
+        "no",
+        "zero"
+      ]
+    },
+    "ike": {
+      "type": [
+        "adjective"
+      ],
+      "translations": [
+        "bad",
+        "negative",
+        "non-essential",
+        "irrelevant"
+      ]
+    },
+    "mute": {
+      "type": [
+        "adjective",
+        "noun"
+      ],
+      "translations": [
+        "many",
+        "very",
+        "a lot",
+        "more",
+        "much",
+        "several",
+        "quantity (noun)"
+      ]
+    },
+    "pu": {
+      "type": [
+        "adjective"
+      ],
+      "translations": [
+        "interacting with the official Toki Pona book"
+      ]
+    },
+    "sewi": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "area above",
+        "highest part",
+        "something elevated"
+      ]
+    },
+    "wan": {
+      "type": [
+        "adjective",
+        "number"
+      ],
+      "translations": [
+        "united",
+        "unique",
+        "one"
+      ]
+    },
+    "mama": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "parent",
+        "ancestor",
+        "creator",
+        "originator",
+        "caretaker",
+        "sustainer"
+      ]
+    },
+    "ilo": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "tool",
+        "implement",
+        "machine",
+        "device"
+      ]
+    },
+    "kala": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "fish",
+        "marine animal",
+        "sea creature"
+      ]
+    },
+    "ona": {
+      "type": [
+        "noun"
+      ],
+      "translations": [
+        "he",
+        "she",
+        "it",
+        "they"
+      ]
+    },
+    "anu": {
+      "type": [
+        "particle"
+      ],
+      "translations": [
+        "or"
+      ]
+    },
+    "seme": {
+      "type": [
+        "particle"
+      ],
+      "translations": [
+        "what?",
+        "which?"
+      ]
+    },
+    "pana": {
+      "type": [
+        "verb"
+      ],
+      "translations": [
+        "to give",
+        "to send",
+        "to emit",
+        "to provide",
+        "to put",
+        "to release"
+      ]
+    },
+    "tawa": {
+      "type": [
+        "preposition",
+        "adjective"
+      ],
+      "translations": [
+        "to",
+        "for",
+        "moving to",
+        "going to",
+        "toward",
+        "from the perspective of",
+        "moving (adj)"
+      ]
+    },
+    "lon": {
+      "type": [
+        "preposition",
+        "verb"
+      ],
+      "translations": [
+        "at",
+        "with",
+        "in",
+        "present at",
+        "real",
+        "true",
+        "existing",
+        "to be present (vb)"
+      ]
+    },
+    "kepeken": {
+      "type": [
+        "preposition"
+      ],
+      "translations": [
+        "using",
+        "to use",
+        "with",
+        "by means of"
+      ]
+    },
+    "tan": {
+      "type": [
+        "preposition"
+      ],
+      "translations": [
+        "from",
+        "because of",
+        "by"
+      ]
     }
   }
 }
