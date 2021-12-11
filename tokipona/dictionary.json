@@ -212,39 +212,59 @@
       ]
     },
     "jo": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
-        "to have", "to contain", "to carry"
+        "to have",
+        "to contain",
+        "to carry"
       ]
     },
     "kute": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
-        "to listen to", "to obey"
+        "to listen to",
+        "to obey"
       ]
     },
     "moku": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
-        "to eat", "to drink"
+        "to eat",
+        "to drink"
       ]
     },
     "pali": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
-        "to make", "to do", "to work on"
+        "to make",
+        "to do",
+        "to work on"
       ]
     },
     "sona": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
         "to know"
       ]
     },
     "toki": {
-      "type": ["verb"],
+      "type": [
+        "verb"
+      ],
       "translations": [
-        "to talk", "to speak", "to communicate"
+        "to talk",
+        "to speak",
+        "to communicate"
       ]
     }
   }
