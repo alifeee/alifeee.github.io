@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bundle for Racial Justice</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
+  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
+  <script src="/auxiliary/google-analytics.js"></script>
+
+<style>
+.clickme {
+  cursor:pointer;
+}
+details > details {
+  margin-left: 15px;
+}
+details > a, details > span {
+  margin-left: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<h1><a href="/">alifeee<a></h1><hr>
+<h2>Itch.io's Bundle for Racial Justice and Equality</h2>
+
+<!-- <h3>alifeee's <a href="https://docs.google.com/spreadsheets/d/19JXvTurvx7XRic9jU_ntsYkh9GLxSU3gDoJIbdxnngI/edit?usp=sharing">Game-a-Day</a></h3> -->
+
+<div id="summaries">
+<h4>Computer Games</h4>
+<div id="genres"></div>
+<hr>
+<h4>Non-Games/Tabletop Games</h4>
+<div id="categories"></div>
+</div>
+
+  <hr><h2 style="text-align:center"><a href="../">Back to itch.io page</a></h2>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var gcats = JSON.parse(this.responseText);
+    var genres = gcats["genres"];
+    var cats = gcats["categories"];
+    var genre_expandable = "";
+    var cats_expandable = "";
+    for (var genre in genres) {
+      genre_expandable += "<details>";
+      genre_expandable += "<summary><span class='clickme'><b>"
+        + genre + "</b>"
+        + " (" + Object.keys(genres[genre]).length + ")"
+        + "</span></summary>";
+
+      for (var game in genres[genre]) {
+        genre_expandable += "<details>";
+        genre_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
+        genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
+        genre_expandable += genres[genre][game]["short_text"] + "<br>";
+        genre_expandable += "</a>";
+        if (genres[genre][game]["rating"] != null) {
+          genre_expandable += "<span>" + genres[genre][game]["rating"].toString() + "/5</span><br>";
+        }
+        genre_expandable += "</details>";
+      }
+      genre_expandable += "</details>";
+    }
+
+    for (var cat in cats) {
+      cats_expandable += "<details>";
+      cats_expandable += "<summary><span class='clickme'><b>"
+        + cat + "</b>"
+        + " (" + Object.keys(cats[cat]).length + ")"
+        + "</span></summary>";
+
+      for (var game in cats[cat]) {
+        cats_expandable += "<details>";
+        cats_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
+        cats_expandable += "<a href=" + cats[cat][game]['url'] + ">";
+        cats_expandable += cats[cat][game]["short_text"] + "<br>";
+        cats_expandable += "</a>";
+        if (cats[cat][game]["rating"] != null) {
+          cats_expandable += "<span>" + cats[cat][game]["rating"].toString() + "/5</span><br>";
+        }
+
+        cats_expandable += "</details>";
+      }
+      cats_expandable += "</details>";
+    }
+
+    var genres_parent = document.getElementById("genres");
+    var cats_parent = document.getElementById("categories");
+    genres_parent.innerHTML = genre_expandable;
+    cats_parent.innerHTML = cats_expandable;
+  }
+};
+<!--xmlhttp.open("GET", "genres-categories.json", true);-->
+xmlhttp.open("GET", "https://alifeee.co.uk/itch.io_bundle\racial_justice\genres-categories.json", true);
+xmlhttp.send();
+</script>
+
+</body>
+</html>

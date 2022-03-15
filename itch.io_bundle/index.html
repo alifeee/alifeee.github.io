@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Itch.io Bundle</title>
+  <title>alifeee</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
@@ -9,106 +9,26 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
-<style>
-.clickme {
-  cursor:pointer;
-}
-details > details {
-  margin-left: 15px;
-}
-details > a, details > span {
-  margin-left: 15px;
-}
-
-</style>
 </head>
 <body>
+  <h1><a href="/">alifeee<a></h1><hr>
+  <h2>Itch.io's Bundle for Racial Justice and Equality</h2>
+  <p>
+    In 2020 <a href="https://itch.io/docs/general/about">Itch.io</a> released their <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a>. It got massively popular and ended up with over 1700 games/comics/RPG rules. Sorting through this content proved troublesome. This is an attempt to categorise those games.
+  </p>
+  <p>
+    In 2022, <a href="https://itch.io/docs/general/about">Itch.io</a> also released the <a href="https://itch.io/b/1316/bundle-for-ukraine">Bundle for Ukraine</a>, supporting charities helping to stop the war in Ukraine.
+  </p>
+  <p>
+    This project used <a href="https://www.python.org/">Python</a> to access the webpage of each game, which was then scraped for more data using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, a Python module for parsing HTML. The review scores, category, and a few other useful data were saved to a local file, which is also hosted here and displayed sorted by category on each bundle page below.
+  </p>
+  
+  <hr>
+  <ul>
+    <li><h3><a href="./racial_justice">Bundle for Racial Justice and Equality</a></h3></li>
+    <li><h3><a href="./ukraine">Bundle for Ukraine</a></h3></li>
+  </ul>
 
-<h1><a href="/">alifeee<a></h1><hr>
-<h2>Itch.io's Bundle for Racial Justice and Equality</h2>
-<p>
-  A while ago <a href="https://itch.io/docs/general/about">Itch.io</a> released their <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a>. It got massively popular and ended up with over 1700 games/comics/RPG rules. Sorting through this content proved troublesome. This is an attempt to categorise those games.
-</p>
-<p>
-  This project used <a href="https://www.python.org/">Python</a> to access the webpage of each game, which was then scraped for more data using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, a Python module for parsing HTML. The review scores, category, and a few other useful data were saved to a local file, which is also hosted here and displayed sorted by category below.
-</p>
-
-<hr>
-
-<!-- <h3>alifeee's <a href="https://docs.google.com/spreadsheets/d/19JXvTurvx7XRic9jU_ntsYkh9GLxSU3gDoJIbdxnngI/edit?usp=sharing">Game-a-Day</a></h3> -->
-
-<div id="summaries">
-<h4>Computer Games</h4>
-<div id="genres"></div>
-<hr>
-<h4>Non-Games/Tabletop Games</h4>
-<div id="categories"></div>
-</div>
-
-  <hr><h2 style="text-align:center"><a href="../">Back to main page</a></h2>
-
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var gcats = JSON.parse(this.responseText);
-    var genres = gcats["genres"];
-    var cats = gcats["categories"];
-    var genre_expandable = "";
-    var cats_expandable = "";
-    for (var genre in genres) {
-      genre_expandable += "<details>";
-      genre_expandable += "<summary><span class='clickme'><b>"
-        + genre + "</b>"
-        + " (" + Object.keys(genres[genre]).length + ")"
-        + "</span></summary>";
-
-      for (var game in genres[genre]) {
-        genre_expandable += "<details>";
-        genre_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
-        genre_expandable += "<a href=" + genres[genre][game]['url'] + ">";
-        genre_expandable += genres[genre][game]["short_text"] + "<br>";
-        genre_expandable += "</a>";
-        if (genres[genre][game]["rating"] != null) {
-          genre_expandable += "<span>" + genres[genre][game]["rating"].toString() + "/5</span><br>";
-        }
-        genre_expandable += "</details>";
-      }
-      genre_expandable += "</details>";
-    }
-
-    for (var cat in cats) {
-      cats_expandable += "<details>";
-      cats_expandable += "<summary><span class='clickme'><b>"
-        + cat + "</b>"
-        + " (" + Object.keys(cats[cat]).length + ")"
-        + "</span></summary>";
-
-      for (var game in cats[cat]) {
-        cats_expandable += "<details>";
-        cats_expandable += "<summary><span class='clickme' style='color:#ccc'>" + game + "</span></summary>";
-        cats_expandable += "<a href=" + cats[cat][game]['url'] + ">";
-        cats_expandable += cats[cat][game]["short_text"] + "<br>";
-        cats_expandable += "</a>";
-        if (cats[cat][game]["rating"] != null) {
-          cats_expandable += "<span>" + cats[cat][game]["rating"].toString() + "/5</span><br>";
-        }
-
-        cats_expandable += "</details>";
-      }
-      cats_expandable += "</details>";
-    }
-
-    var genres_parent = document.getElementById("genres");
-    var cats_parent = document.getElementById("categories");
-    genres_parent.innerHTML = genre_expandable;
-    cats_parent.innerHTML = cats_expandable;
-  }
-};
-<!--xmlhttp.open("GET", "genres-categories.json", true);-->
-xmlhttp.open("GET", "https://alifeee.co.uk/itch.io_bundle/genres-categories.json", true);
-xmlhttp.send();
-</script>
-
+  <hr><h2 style="text-align:center"><a href="/">Back to main page</a></h2>
 </body>
 </html>
