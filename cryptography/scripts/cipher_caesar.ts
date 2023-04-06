@@ -1,18 +1,16 @@
 // functions to encode, decode and crack Caesar ciphers
-// functions:
-// encode(message, shift)
-// decode(message, shift)
-// crack(message)
 
-// import * as trigrams_untyped from "../stats/trigrams.json";
-// type Trigrams = {
-//   [key: string]: number;
-// };
-// const trigrams: Trigrams = trigrams_untyped;
 import trigrams_json from "../stats/trigrams.json";
 const default_trigrams: Record<string, number> = trigrams_json;
 
 export function encode(message: string, shift: number): string {
+  /**
+   * Encodes a message by shifting each letter by a specified number of positions in the alphabet.
+   *
+   * @param {string} message - The message to encode.
+   * @param {number} shift - The number of positions to shift each letter by.
+   * @returns {string} The encoded message.
+   */
   const regex = /[a-z]/i;
 
   return message
@@ -34,8 +32,16 @@ export function encode(message: string, shift: number): string {
     .join("");
 }
 
+encode("hello", 3);
+
 export function decode(message: string, shift: number): string {
-  // To decode, we simply use the negative of the shift value
+  /**
+   * Decodes an encoded message by shifting each letter back by a specified number of positions in the alphabet.
+   *
+   * @param {string} message - The encoded message to decode.
+   * @param {number} shift - The number of positions the original message was shifted by.
+   * @returns {string} The decoded message.
+   */
   const decodedMessage = encode(message, -shift);
   return decodedMessage;
 }
@@ -44,7 +50,13 @@ export function trigramScore(
   message: string,
   trigrams: Record<string, number>
 ): number {
-  // remove non-alphabetic characters
+  /**
+   * Computes the trigram score of a message based on a given trigram frequency table.
+   *
+   * @param {string} message - The message to compute the trigram score of.
+   * @param {Record<string, number>} trigrams - A frequency table of trigrams.
+   * @returns {number} The trigram score of the message.
+   */
   message = message.replace(/[^a-z]/gi, "");
   const trigramsCount = message.length - 2;
   let score = 0;
@@ -65,19 +77,19 @@ export function crack(
   message: string,
   trigrams: Record<string, number>
 ): string {
-  // Decode the message with all possible shifts
-  // the message with the highest trigram score is the most likely to be the correct one
+  /**
+   * Cracks an encoded message by brute force, using trigram frequency analysis to find the most likely decryption.
+   *
+   * @param {string} message - The encoded message to crack.
+   * @param {Record<string, number>} trigrams - A frequency table of trigrams.
+   * @returns {string} The decrypted message.
+   */
   const decodedMessages = [...Array(26).keys()].map((shift) =>
     decode(message, shift)
   );
   const trigramScores = decodedMessages.map((decodedMessage) =>
     trigramScore(decodedMessage, trigrams)
   );
-  // for (let i = 0; i < 26; i++) {
-  // console.log(
-  //   `Shift: ${i}, Score: ${trigramScores[i]}, Message: ${decodedMessages[i]}`
-  // );
-  // }
 
   const maxScore = Math.max(...trigramScores);
   const maxScoreIndex = trigramScores.indexOf(maxScore);
