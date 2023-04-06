@@ -1,0 +1,29 @@
+{
+  "name": "alifeee.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alifeee/alifeee.github.io.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Alfred Renn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alifeee/alifeee.github.io/issues"
+  },
+  "homepage": "https://github.com/alifeee/alifeee.github.io#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.3"
+  }
+}
