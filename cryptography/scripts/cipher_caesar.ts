@@ -1,7 +1,6 @@
 // functions to encode, decode and crack Caesar ciphers
-
-import trigrams_json from "../stats/trigrams.json";
-const default_trigrams: Record<string, number> = trigrams_json;
+// to import trigrams, use:
+// import trigrams_json from "../stats/trigrams.json";
 
 export function encode(message: string, shift: number): string {
   /**
