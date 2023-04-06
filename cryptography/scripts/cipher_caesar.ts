@@ -40,19 +40,17 @@ export function decode(message: string, shift: number): string {
   return decodedMessage;
 }
 
-function trigramScore(
+export function trigramScore(
   message: string,
   trigrams: Record<string, number>
 ): number {
+  // remove non-alphabetic characters
+  message = message.replace(/[^a-z]/gi, "");
   const trigramsCount = message.length - 2;
   let score = 0;
 
-  console.log(`Trigrams: ${trigrams}`);
-
   for (let i = 0; i < trigramsCount; i++) {
-    const trigram = message.slice(i, i + 3);
-    console.log(`Trigram: ${trigram}`);
-    console.log(`Trigram Frequency: ${trigrams[trigram]}`);
+    const trigram = message.slice(i, i + 3).toUpperCase();
 
     const trigramFrequency = trigrams[trigram] ?? 0.1;
     const trigramScore = Math.log10(trigramFrequency / trigrams.total);
