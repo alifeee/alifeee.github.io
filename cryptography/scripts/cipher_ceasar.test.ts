@@ -1,4 +1,4 @@
-import { encode, decode, crack } from "./cipher_caesar";
+import { encode, decode, trigramScore, crack } from "./cipher_caesar";
 import * as trigrams from "../stats/trigrams.json";
 
 describe("encode", () => {
@@ -17,6 +17,31 @@ describe("decode", () => {
     expect(decode("KHOOR", 3)).toBe("HELLO");
     expect(decode("gur dhvpx oebja sbk whzcf bire gur ynml qbt", 13)).toBe(
       "the quick brown fox jumps over the lazy dog"
+    );
+  });
+});
+
+describe("trigramScore", () => {
+  it("should score a single trigram", () => {
+    const trigram = "THE";
+    expect(trigramScore(trigram, trigrams)).toBe(
+      Math.log10(trigrams[trigram] / trigrams.total)
+    );
+  });
+  it("should score three trigrams", () => {
+    const message = "wheel";
+    expect(trigramScore(message, trigrams)).toBe(
+      Math.log10(trigrams.WHE / trigrams.total) +
+        Math.log10(trigrams.HEE / trigrams.total) +
+        Math.log10(trigrams.EEL / trigrams.total)
+    );
+  });
+  it("should ignore non-alphabetic characters", () => {
+    const message = "wh!e  #el$";
+    expect(trigramScore(message, trigrams)).toBe(
+      Math.log10(trigrams.WHE / trigrams.total) +
+        Math.log10(trigrams.HEE / trigrams.total) +
+        Math.log10(trigrams.EEL / trigrams.total)
     );
   });
 });
