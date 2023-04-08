@@ -118,7 +118,7 @@ view model =
             [ input [ type_ "text", value model.message, onInput ChangeMessage ] []
             , input [ type_ "number", value (String.fromInt model.shift), onInput ChangeShift ] []
         ]
-        , div [ class "text-output" ] [ text actedUponMessage ]
+        , div [ class "text-output", style "min-height" "1rem" ] [ text actedUponMessage ]
         , div [ class "automatic-output" ] [ case model.trigramCounts of
             Loading ->
                 text "Loading trigram counts..."
@@ -129,7 +129,7 @@ view model =
             Success _ ->
                 div [] 
                     [ text ("Most likely shift: " ++ String.fromInt autoShift), 
-                    div [ style "min-height" "1rem" ] [ text autoMessage ]
+                    div [ style "min-height" "1rem" ] [ text ("Most likely message: " ++ autoMessage) ]
                     ]
             ]
         ]
