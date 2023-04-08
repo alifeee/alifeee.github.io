@@ -27,3 +27,16 @@ Currently, this page is not used in the project, so build instructions are provi
 cd ./cryptography/elm
 elm make src/CaesarCipher.elm --output=elm.js
 ```
+
+## Try Online
+
+You can try the page online at <https://elm-lang.org/try>, by:
+
+1. Copying the contents of [src/try-online.txt](src/try-online.txt) into the editor
+2. In the "Packages" section, add the `elm/html`, `elm/http`, `elm/json`, and `elm-community/list-extra` packages
+
+  ![Screenshot of installed packages](images/packages.png)
+
+The page should look like this:
+
+![Screenshot of the app](images/elm-app.png)
