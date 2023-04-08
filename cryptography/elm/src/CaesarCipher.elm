@@ -1,0 +1,245 @@
+module CaesarCipher exposing (main)
+
+import Browser
+import Html exposing (Html, div, input, text, label)
+import Html.Attributes exposing (type_, value, name, checked, for, id,  style, class)
+import Html.Events exposing (onInput, onClick)
+import Json.Decode as Decode
+import Http
+import Dict exposing (Dict)
+import List.Extra exposing (maximumBy)
+
+
+-- MAIN
+
+main : Program () Model Msg
+main =
+    Browser.element
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = always Sub.none
+        }
+
+-- MODEL
+
+type Mode
+    = Encode
+    | Decode
+
+
+type alias TrigramCounts =
+    Dict String Int
+
+type Trigrams
+    = Loading
+    | Failure
+    | Success TrigramCounts
+
+type alias Model
+    = { message: String
+        , shift: Int
+        , mode: Mode
+        , trigramCounts : Trigrams
+    }
+
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( Model "" 0 Encode Loading
+    , loadTrigramCounts
+    )
+
+-- UPDATE
+
+type Msg
+    = LoadTrigrams
+    | LoadedTrigrams (Result Http.Error TrigramCounts)
+    | ChangeShift String
+    | ChangeMessage String
+    | ChangeMode Mode
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        LoadTrigrams ->
+            ( model, loadTrigramCounts )
+
+        LoadedTrigrams result ->
+            case result of
+                Ok trigramCounts ->
+                    ( { model | trigramCounts = Success trigramCounts }, Cmd.none )
+
+                Err _ ->
+                    ( { model | trigramCounts = Failure }, Cmd.none )
+
+        ChangeShift newShift ->
+            ( { model | shift = parseShift model.shift newShift }, Cmd.none )
+
+        ChangeMessage newMessage ->
+            ( { model | message = newMessage }, Cmd.none )
+
+        ChangeMode newMode ->
+            ( { model | mode = newMode }, Cmd.none )
+
+parseShift : Int -> String -> Int
+parseShift initialShift newShift  =
+    case Decode.decodeString Decode.int newShift of
+        Ok shift ->
+            shift
+
+        Err _ ->
+            initialShift
+    
+
+-- VIEW
+
+view : Model -> Html Msg
+view model =
+    let 
+        actedUponMessage = caesar model.mode model.shift model.message
+        autoShift = 
+            case model.trigramCounts of
+                Success trigrams -> 
+                    mostLikelyShift trigrams model.message
+
+                _ ->
+                    0
+        autoMessage = caesar Decode autoShift model.message
+    in
+    div [ class "caesar-cipher" ]
+        [ div [ class "mode-input" ] 
+            [ input [ type_ "radio", id "encode", name "mode", value "encode", checked (model.mode == Encode), onClick (ChangeMode Encode) ] []
+            , label [ for "encode" ] [ text "Encode" ]
+            , input [ type_ "radio", id "decode", name "mode", value "decode", checked (model.mode == Decode), onClick (ChangeMode Decode) ] []
+            , label [ for "decode" ] [ text "Decode" ]
+            ]
+        , div [ class "text-input" ] 
+            [ input [ type_ "text", value model.message, onInput ChangeMessage ] []
+            , input [ type_ "number", value (String.fromInt model.shift), onInput ChangeShift ] []
+        ]
+        , div [ class "text-output" ] [ text actedUponMessage ]
+        , div [ class "automatic-output" ] [ case model.trigramCounts of
+            Loading ->
+                text "Loading trigram counts..."
+
+            Failure ->
+                text "Failed to load trigram counts"
+
+            Success _ ->
+                div [] 
+                    [ text ("Most likely shift: " ++ String.fromInt autoShift), 
+                    div [ style "min-height" "1rem" ] [ text autoMessage ]
+                    ]
+            ]
+        ]
+
+
+caesar : Mode -> Int -> String -> String
+caesar mode shift message =
+    case mode of
+        Encode ->
+            encode shift message
+
+        Decode ->
+            decode shift message
+
+encode: Int -> String -> String
+encode shift message =
+    String.map (shiftChar shift) message
+
+decode: Int -> String -> String
+decode shift message =
+    String.map (shiftChar (-shift)) message
+
+shiftChar : Int -> Char -> Char
+shiftChar shift char =
+    let
+        code =
+            Char.toCode char
+
+        shiftedCode =
+            code + shift
+    in
+    if Char.isLower char then
+        Char.fromCode ((shiftedCode - 97) |> modBy 26 |> (+) 97)
+
+    else if Char.isUpper char then
+        Char.fromCode ((shiftedCode - 65) |> modBy 26 |> (+) 65)
+
+    else
+        char
+
+mostLikelyShift : TrigramCounts -> String -> Int
+mostLikelyShift trigrams message =
+    let
+        shiftScores =
+            List.map (\shift -> (shift, score trigrams (decode shift message))) (List.range 0 25)
+    in
+    findMaxInt shiftScores
+
+findMaxInt : List (Int, Float) -> Int
+findMaxInt tuples =
+    let
+        getMax (_, float) =
+            float
+        maxTuple =
+            List.Extra.maximumBy getMax tuples
+    in
+    case maxTuple of
+        Just (maxInt, _) ->
+            maxInt
+        Nothing ->
+            -- handle case where list is empty
+            0 -- or any other default value you choose
+
+score : TrigramCounts -> String -> Float
+score trigrams message =
+    let
+        substrings = substringsBy3 message
+    in
+    List.foldl (\substring score1 -> score1 + scoreSubstring trigrams substring) 0 substrings
+
+
+substringsBy3 : String -> List String
+substringsBy3 inputString =
+    let
+        alphabeticInput = String.filter Char.isAlpha inputString
+        numSubstrings = String.length alphabeticInput - 3
+    in
+    List.map
+        (\i -> String.slice i (i+3) alphabeticInput)
+        (List.range 0 numSubstrings)
+
+scoreSubstring : TrigramCounts -> String -> Float
+scoreSubstring trigrams substring =
+    let 
+        frequency =
+            case Dict.get (String.toUpper substring) trigrams of
+            Just count ->
+                toFloat count
+
+            Nothing ->
+                0.1
+        total_frequency =
+            Dict.get "total" trigrams
+                |> Maybe.withDefault 1
+                |> toFloat
+    in
+    frequency / total_frequency
+        |> Basics.logBase 10
+    
+
+
+-- HTTP
+
+loadTrigramCounts : Cmd Msg
+loadTrigramCounts =
+    Http.get
+        { url = "./trigrams.json"
+        , expect = Http.expectJson LoadedTrigrams trigramDecoder
+        }
+
+trigramDecoder : Decode.Decoder TrigramCounts
+trigramDecoder =
+    Decode.dict Decode.int

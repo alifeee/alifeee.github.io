@@ -1,0 +1,7 @@
+# .gitignore
+
+# elm
+elm-stuff/
+
+# node
+node_modules/
