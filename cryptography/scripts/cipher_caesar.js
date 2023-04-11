@@ -43,10 +43,7 @@ function decode(message, shift) {
   return decodedMessage;
 }
 
-function trigramScore(
-  message,
-  trigrams
-) {
+function trigramScore(message, trigrams) {
   /**
    * Computes the trigram score of a message based on a given trigram frequency table.
    *
@@ -70,10 +67,7 @@ function trigramScore(
   return score;
 }
 
-function crack(
-  message,
-  trigrams
-) {
+function crack(message, trigrams) {
   /**
    * Cracks an encoded message by brute force, using trigram frequency analysis to find the most likely decryption.
    *
