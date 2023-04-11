@@ -2,7 +2,7 @@
 // to import trigrams, use:
 // import trigrams_json from "../stats/trigrams.json";
 
-export function encode(message: string, shift: number): string {
+function encode(message, shift) {
   /**
    * Encodes a message by shifting each letter by a specified number of positions in the alphabet.
    *
@@ -31,9 +31,7 @@ export function encode(message: string, shift: number): string {
     .join("");
 }
 
-encode("hello", 3);
-
-export function decode(message: string, shift: number): string {
+function decode(message, shift) {
   /**
    * Decodes an encoded message by shifting each letter back by a specified number of positions in the alphabet.
    *
@@ -45,10 +43,10 @@ export function decode(message: string, shift: number): string {
   return decodedMessage;
 }
 
-export function trigramScore(
-  message: string,
-  trigrams: Record<string, number>
-): number {
+function trigramScore(
+  message,
+  trigrams
+) {
   /**
    * Computes the trigram score of a message based on a given trigram frequency table.
    *
@@ -72,10 +70,10 @@ export function trigramScore(
   return score;
 }
 
-export function crack(
-  message: string,
-  trigrams: Record<string, number>
-): string {
+function crack(
+  message,
+  trigrams
+) {
   /**
    * Cracks an encoded message by brute force, using trigram frequency analysis to find the most likely decryption.
    *
@@ -95,3 +93,10 @@ export function crack(
   const crackedMessage = decodedMessages[maxScoreIndex];
   return crackedMessage;
 }
+
+module.exports = {
+  encode,
+  decode,
+  trigramScore,
+  crack,
+};
