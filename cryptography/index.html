@@ -182,19 +182,24 @@
   <div id="caesar-app" class="caesar app" v-scope>
     <div class="caesar input">
       <textarea v-model="message"></textarea>
+      <div class="shift control">
+        <span>A -> {{ letterAEncoded }}</span>
         <input type="range" min="0" max="25" value="0" step="1" style="width: 100%" v-model.number="shift" />
+      </div>
     </div>
     <div class="caesar output">
       <p class="encode">
         <span class="label">Encoded Message (&#8593; {{shift}}):</span>
         <span class="copyable" onclick="copyToClipboard(this)">
-          {{ encodedMessage }}
+          <span class="message">{{ encodedMessage }}</span>
+          <span class="copy dialog">Copied!</span>
         </span>
       </p>
       <p class="decode">
         <span class="label">Decoded Message (&#8595; {{shift}}):</span>
         <span class="copyable" onclick="copyToClipboard(this)">
-          {{ decodedMessage }}
+          <span class="message">{{ decodedMessage }}</span>
+          <span class="copy dialog">Copied!</span>
         </span>
       </p>
     </div>
@@ -212,6 +217,9 @@
     createApp({
       message: "default",
       shift: 1,
+      get letterAEncoded() {
+        return encode("A", this.shift)
+      },
       trigrams: null,
       get encodedMessage() {
         return encode(this.message, this.shift)
@@ -235,18 +243,18 @@
             this.trigrams = data
           })
       }
-    }).mount('#caesar-app')
+    })
+      .mount('#caesar-app')
   </script>
   <script>
     function copyToClipboard(element) {
-      const text = element.innerText
-      const input = document.createElement('input')
-      input.setAttribute('value', text)
-      document.body.appendChild(input)
-      input.select()
-      const result = document.execCommand('copy')
-      document.body.removeChild(input)
-      return result
+      const text = element.querySelector(".message").innerText
+      navigator.clipboard.writeText(text)
+      const dialog = element.querySelector(".copy.dialog")
+      dialog.classList.add("active")
+      setTimeout(() => {
+        dialog.classList.remove("active")
+      }, 1000)
     }
   </script>
   <hr />
@@ -262,6 +270,29 @@
   .caesar.app>* {
     min-width: 15rem;
     flex: 1;
+  }
+
+  .copyable {
+    position: relative;
+  }
+
+  .copy.dialog {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    transition: visibility 0.5s, opacity 0.5s ease;
+  }
+
+  .copy.dialog.active {
+    visibility: visible;
+    opacity: 1;
   }
 </style>
 
