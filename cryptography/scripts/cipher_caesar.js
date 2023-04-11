@@ -10,6 +10,13 @@ function encode(message, shift) {
    * @param {number} shift - The number of positions to shift each letter by.
    * @returns {string} The encoded message.
    */
+  if (typeof message !== "string") {
+    throw new TypeError("message must be a string");
+  }
+  if (typeof shift !== "number") {
+    throw new TypeError("shift must be a number");
+  }
+
   const regex = /[a-z]/i;
 
   return message

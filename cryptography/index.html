@@ -182,7 +182,7 @@
   <div id="caesar-app" class="caesar app" v-scope>
     <div class="caesar input">
       <textarea v-model="message"></textarea>
-      <input type="range" min="0" max="26" value="0" step="1" style="width: 100%" v-model="shift" />
+        <input type="range" min="0" max="25" value="0" step="1" style="width: 100%" v-model.number="shift" />
     </div>
     <div class="caesar output">
       <p class="encode">
