@@ -18,104 +18,65 @@
 
 <body>
   <h1><a href="/">alifeee</a></h1>
-  <hr />
   <h2>Cryptography</h2>
 
-  <h4>Caesar Cipher</h4>
+  <h3>Caesar Cipher</h3>
 
   <p>
     The
     <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> is
     a simple substitution cipher. The substitution is shown below. Of note is
-    the auto-decrypt button, which uses
+    the auto-decoded message, which uses
     <a href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/">trigram statistics</a>
     to attempt to guess the correct shift, with a high success rate.
   </p>
 
-  <p style="font-family: 'Lucida Console', monospace">
-    |ABCDEFGHIJKLMNOPQRSTUVWXYZ|<br />|<span id="caesar_alphabet"></span>|
-  </p>
-  <table>
-    <tr>
-      <td colspan="2">
-        <table style="width: 100%">
-          <tr>
-            <td style="width: 20%">
-              Shift: <span id="caesar_shift_label">0</span>
-            </td>
-            <td>
-              <input id="caesar_slider" type="range" min="0" max="26" value="0" step="1" style="width: 100%"
-                oninput="Caesar.sliderShift()" onchange="Caesar.sliderShift()" />
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td><label for="caesar_raw">Raw/Unencoded Text</label></td>
-      <td><label for="caesar_encoded">Encoded Text</label></td>
-    </tr>
-    <tr>
-      <td><textarea id="caesar_raw" rows="3" cols="25"></textarea></td>
-      <td><textarea id="caesar_encoded" rows="3" cols="25"></textarea></td>
-    </tr>
-    <tr>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Caesar.buttonEncode()">
-                Encode →
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('caesar_raw')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('caesar_raw')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Caesar.buttonDecode()">
-                ← Decode
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('caesar_encoded')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('caesar_encoded')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        <button type="button" onClick="Caesar.buttonAutoDecode()">
-          Auto Decrypt
-        </button>
-      </td>
-    </tr>
-  </table>
+  <div id="caesar-app" class="caesar app" v-scope>
+    <div class="caesar input">
+      <span class="label">Message</span>
+      <textarea v-model="message" rows="3"></textarea>
+      <div class="shift control">
+        <span>A -> {{ letterAEncoded }}</span>
+        <input type="range" min="0" max="25" value="0" step="1" v-model.number="shift" />
+      </div>
+    </div>
+    <div class="caesar output">
+      <p class="encode">
+        <span class="label">Encoded Message</span>
+        <span class="shift">(&#8593; {{shift}})</span>
+        <br />
+        <span class="copyable" onclick="copyToClipboard(this)">
+          <span class="message">{{ encodedMessage }}</span>
+          <span class="copy dialog">Copied!</span>
+          <img src="./copy.svg" class="copy icon" />
+        </span>
+      </p>
+      <p class="decode">
+        <span class="label">Decoded Message</span>
+        <span class="shift">(&#8595; {{shift}})</span>
+        <br />
+        <span class="copyable" onclick="copyToClipboard(this)">
+          <span class="message">{{ decodedMessage }}</span>
+          <span class="copy dialog">Copied!</span>
+          <img src="./copy.svg" class="copy icon" />
+        </span>
+      </p>
+    </div>
+    <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
+      <p class="auto">
+        <span class="label">Auto Decoded Message</span>
+        <span class="shift">(&#8595; {{autoshift}})</span>
+        <br />
+        <span class="copyable" onclick="copyToClipboard(this)">
+          <span class="message">{{ autoMessage }}</span>
+          <span class="copy dialog">Copied!</span>
+          <img src="./copy.svg" class="copy icon" />
+        </span>
+      </p>
+    </div>
+  </div>
 
-  <hr />
-  <h4>Binary Encoding</h4>
+  <h3>Binary Encoding</h3>
   <p>
     <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">Binary Encoding</a>
     is writing a message as the binary representation as is used for ASCII or
@@ -177,39 +138,8 @@
     </tr>
   </table>
 
-  <!-- vue app -->
-  <h4>Vue</h4>
-  <div id="caesar-app" class="caesar app" v-scope>
-    <div class="caesar input">
-      <textarea v-model="message"></textarea>
-      <div class="shift control">
-        <span>A -> {{ letterAEncoded }}</span>
-        <input type="range" min="0" max="25" value="0" step="1" style="width: 100%" v-model.number="shift" />
-      </div>
-    </div>
-    <div class="caesar output">
-      <p class="encode">
-        <span class="label">Encoded Message (&#8593; {{shift}}):</span>
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ encodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-        </span>
-      </p>
-      <p class="decode">
-        <span class="label">Decoded Message (&#8595; {{shift}}):</span>
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ decodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-        </span>
-      </p>
-    </div>
-    <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
-      <p class="auto">
-        <span class="label">Most likely shift (&#8595; {{ autoshift }}):</span>
-        {{ autoMessage }}
-      </p>
-    </div>
-  </div>
+  <h2 style="text-align: center"><a href="../">Back to main page</a></h2>
+
   <script type="module">
     import { encode, decode, crack } from "./scripts/cipher_caesar.js";
     import { createApp } from 'https://unpkg.com/petite-vue?module'
@@ -257,23 +187,106 @@
       }, 1000)
     }
   </script>
-  <hr />
-  <h2 style="text-align: center"><a href="../">Back to main page</a></h2>
 </body>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   .caesar.app {
     display: flex;
     flex-wrap: wrap;
+    align-items: start;
   }
 
   .caesar.app>* {
     min-width: 15rem;
     flex: 1;
+    padding: 0.5rem;
   }
+
+  /* input area */
+
+  .caesar.input>textarea {
+    width: 100%;
+  }
+
+  .shift.control {
+    display: flex;
+  }
+
+  .shift.control>input {
+    flex: 1;
+  }
+
+  .shift.control>span {
+    min-width: 4rem;
+  }
+
+  /* output area */
+
+  .caesar.output {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caesar.output>p {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .caesar.output>p:last-child {
+    margin-bottom: 0;
+  }
+
+  .caesar.output>p * {
+    margin-bottom: 0.25rem;
+    display: inline-block;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
+  .caesar.output .message {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .caesar.output .message:hover {
+    cursor: pointer;
+    background-color: #999;
+  }
+
+  .caesar.output .encode .shift {
+    color: #f77;
+  }
+
+  .caesar.output .decode .shift {
+    color: #4af;
+  }
+
+  .caesar.output .auto .shift {
+    color: #aaf;
+  }
+
+  /* copy dialog */
 
   .copyable {
     position: relative;
+    width: 100%;
+  }
+
+  .copyable .copy.icon {
+    position: absolute;
+    inset: 0 0 0 auto;
+    height: 1rem;
+    pointer-events: none;
   }
 
   .copy.dialog {
@@ -287,7 +300,7 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     z-index: 1;
-    transition: visibility 0.5s, opacity 0.5s ease;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
   }
 
   .copy.dialog.active {
