@@ -43,7 +43,7 @@
     <div class="caesar output">
       <p class="encode">
         <span class="label">Encoded Message</span>
-        <span class="shift">(&#8593; {{shift}})</span>
+        <span class="shift" :title="shiftTooltip">(&#8593; {{shift}})</span>
         <br />
         <span class="copyable" onclick="copyToClipboard(this)">
           <span class="message">{{ encodedMessage }}</span>
@@ -53,7 +53,7 @@
       </p>
       <p class="decode">
         <span class="label">Decoded Message</span>
-        <span class="shift">(&#8595; {{shift}})</span>
+        <span class="shift" :title="shiftTooltip">(&#8595; {{shift}})</span>
         <br />
         <span class="copyable" onclick="copyToClipboard(this)">
           <span class="message">{{ decodedMessage }}</span>
@@ -65,7 +65,7 @@
     <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
       <p class="auto">
         <span class="label">Auto Decoded Message</span>
-        <span class="shift">(&#8595; {{autoshift}})</span>
+        <span class="shift" :title="shiftTooltip">(&#8595; {{autoshift}})</span>
         <br />
         <span class="copyable" onclick="copyToClipboard(this)">
           <span class="message">{{ autoMessage }}</span>
@@ -145,8 +145,9 @@
     import { createApp } from 'https://unpkg.com/petite-vue?module'
 
     createApp({
-      message: "default",
+      message: "Dszquphsbqiz jt gvo!",
       shift: 1,
+      shiftTooltip: "Shifts each letter by this amount in the alphabet",
       get letterAEncoded() {
         return encode("A", this.shift)
       },
