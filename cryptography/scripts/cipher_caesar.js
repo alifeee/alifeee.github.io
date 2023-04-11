@@ -73,7 +73,7 @@ function crack(message, trigrams) {
    *
    * @param {string} message - The encoded message to crack.
    * @param {Record<string, number>} trigrams - A frequency table of trigrams.
-   * @returns {string} The decrypted message.
+   * @returns {[number, string]} - An array containing the shift used to decrypt the message and the decrypted message.
    */
   const decodedMessages = [...Array(26).keys()].map((shift) =>
     decode(message, shift)
@@ -85,7 +85,7 @@ function crack(message, trigrams) {
   const maxScore = Math.max(...trigramScores);
   const maxScoreIndex = trigramScores.indexOf(maxScore);
   const crackedMessage = decodedMessages[maxScoreIndex];
-  return crackedMessage;
+  return [maxScoreIndex, crackedMessage];
 }
 
 export { encode, decode, trigramScore, crack };
