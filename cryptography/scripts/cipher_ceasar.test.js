@@ -47,12 +47,31 @@ describe("trigramScore", () => {
 });
 
 describe("crack", () => {
-  it("should crack a message", () => {
+  it("should have access to the trigrams frequency table", () => {
     expect(trigrams).not.toBeNull();
-    expect(crack("khoor", trigrams)).toStrictEqual([3, "hello"]);
-    expect(crack("KHOOR", trigrams)).toStrictEqual([3, "HELLO"]);
-    expect(
-      crack("gur dhvpx oebja sbk whzcf bire gur ynml qbt", trigrams)
-    ).toStrictEqual([13, "the quick brown fox jumps over the lazy dog"]);
+  });
+
+  it("should crack a simple message", () => {
+    const { shift, message } = crack("khoor", trigrams);
+
+    expect(shift).toBe(3);
+    expect(message).toBe("hello");
+  });
+
+  it("should be case-insensitive", () => {
+    const { shift, message } = crack("KHOOR", trigrams);
+
+    expect(shift).toBe(3);
+    expect(message).toBe("HELLO");
+  });
+
+  it("should crack a longer message", () => {
+    const { shift, message } = crack(
+      "gur dhvpx oebja sbk whzcf bire gur ynml qbt",
+      trigrams
+    );
+
+    expect(shift).toBe(13);
+    expect(message).toBe("the quick brown fox jumps over the lazy dog");
   });
 });
