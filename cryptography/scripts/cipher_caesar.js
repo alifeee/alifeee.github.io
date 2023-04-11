@@ -94,9 +94,4 @@ function crack(
   return crackedMessage;
 }
 
-module.exports = {
-  encode,
-  decode,
-  trigramScore,
-  crack,
-};
+export { encode, decode, trigramScore, crack };

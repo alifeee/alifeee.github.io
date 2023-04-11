@@ -1,5 +1,5 @@
-const { encode, decode, trigramScore, crack } = require('./cipher_caesar');
-const trigrams = require("../stats/trigrams.json");
+import { encode, decode, trigramScore, crack } from "./cipher_caesar";
+import trigrams from "../stats/trigrams.json";
 
 describe("encode", () => {
   it("should encode a message with a given shift", () => {
