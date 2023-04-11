@@ -85,7 +85,10 @@ function crack(message, trigrams) {
   const maxScore = Math.max(...trigramScores);
   const maxScoreIndex = trigramScores.indexOf(maxScore);
   const crackedMessage = decodedMessages[maxScoreIndex];
-  return [maxScoreIndex, crackedMessage];
+  return {
+    shift: maxScoreIndex,
+    message: crackedMessage,
+  };
 }
 
 export { encode, decode, trigramScore, crack };
