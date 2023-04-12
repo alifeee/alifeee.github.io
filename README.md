@@ -2,6 +2,13 @@
 
 You can visit the website by visiting <https://alifeee.co.uk/> or <https://alifeee.github.io/>
 
+## Colour Scheme
+
+- Primary: #709
+- Secondary: #d44
+- Alternate: #14d
+- Surface: #444
+
 ## Jest testing
 
 ### Running tests - simple
