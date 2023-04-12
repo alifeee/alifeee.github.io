@@ -17,129 +17,133 @@
 </head>
 
 <body>
-  <h1><a href="/">alifeee</a></h1>
-  <h2>Cryptography</h2>
 
-  <h3>Caesar Cipher</h3>
+  <main>
+    <h1><a href="/">alifeee</a></h1>
+    <h2>Cryptography</h2>
 
-  <p>
-    The
-    <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> is
-    a simple substitution cipher. The substitution is shown below. Of note is
-    the auto-decoded message, which uses
-    <a href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/">trigram statistics</a>
-    to attempt to guess the correct shift, with a high success rate.
-  </p>
+    <h3>Caesar Cipher</h3>
 
-  <div id="caesar-app" class="caesar app" v-scope>
-    <div class="caesar input">
-      <span class="label">Message</span>
-      <textarea v-model="message" rows="3"></textarea>
-      <div class="shift control">
-        <span>A -> {{ letterAEncoded }}</span>
-        <input type="range" min="0" max="25" value="0" step="1" v-model.number="shift" />
+    <p>
+      The
+      <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> is
+      a simple substitution cipher. The substitution is shown below. Of note is
+      the auto-decoded message, which uses
+      <a href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/">trigram statistics</a>
+      to attempt to guess the correct shift, with a high success rate.
+    </p>
+
+    <div id="caesar-app" class="caesar app" v-scope>
+      <div class="caesar input">
+        <span class="label">Message</span>
+        <textarea v-model="message" rows="3"></textarea>
+        <div class="shift control">
+          <span>A -> {{ letterAEncoded }}</span>
+          <input type="range" min="0" max="25" value="0" step="1" v-model.number="shift" />
+        </div>
+      </div>
+      <div class="caesar output">
+        <p class="encode">
+          <span class="label">Encoded Message</span>
+          <span class="shift" :title="shiftTooltip">(&#8593; {{shift}})</span>
+          <br />
+          <span class="copyable" onclick="copyToClipboard(this)">
+            <span class="message">{{ encodedMessage }}</span>
+            <span class="copy dialog">Copied!</span>
+            <img src="./copy.svg" class="copy icon" />
+          </span>
+        </p>
+        <p class="decode">
+          <span class="label">Decoded Message</span>
+          <span class="shift" :title="shiftTooltip">(&#8595; {{shift}})</span>
+          <br />
+          <span class="copyable" onclick="copyToClipboard(this)">
+            <span class="message">{{ decodedMessage }}</span>
+            <span class="copy dialog">Copied!</span>
+            <img src="./copy.svg" class="copy icon" />
+          </span>
+        </p>
+      </div>
+      <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
+        <p class="auto">
+          <span class="label">Auto Decoded Message</span>
+          <span class="shift" :title="shiftTooltip">(&#8595; {{autoshift}})</span>
+          <br />
+          <span class="copyable" onclick="copyToClipboard(this)">
+            <span class="message">{{ autoMessage }}</span>
+            <span class="copy dialog">Copied!</span>
+            <img src="./copy.svg" class="copy icon" />
+          </span>
+        </p>
       </div>
     </div>
-    <div class="caesar output">
-      <p class="encode">
-        <span class="label">Encoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8593; {{shift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ encodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-      <p class="decode">
-        <span class="label">Decoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8595; {{shift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ decodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-    </div>
-    <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
-      <p class="auto">
-        <span class="label">Auto Decoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8595; {{autoshift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ autoMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-    </div>
-  </div>
 
-  <h3>Binary Encoding</h3>
-  <p>
-    <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">Binary Encoding</a>
-    is writing a message as the binary representation as is used for ASCII or
-    Unicode.
-  </p>
+    <h3>Binary Encoding</h3>
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">Binary Encoding</a>
+      is writing a message as the binary representation as is used for ASCII or
+      Unicode.
+    </p>
 
-  <table>
-    <tr>
-      <td><label for="binary_raw">Raw text</label></td>
-      <td><label for="binary_encoded">Encoded Text</label></td>
-    </tr>
-    <tr>
-      <td><textarea id="binary_raw" rows="3" cols="25"></textarea></td>
-      <td><textarea id="binary_encoded" rows="3" cols="25"></textarea></td>
-    </tr>
-    <tr>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Binary.buttonEncode()">
-                Encode →
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('binary_raw')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('binary_raw')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Binary.buttonDecode()">
-                ← Decode
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('binary_encoded')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('binary_encoded')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <td><label for="binary_raw">Raw text</label></td>
+        <td><label for="binary_encoded">Encoded Text</label></td>
+      </tr>
+      <tr>
+        <td><textarea id="binary_raw" rows="3" cols="25"></textarea></td>
+        <td><textarea id="binary_encoded" rows="3" cols="25"></textarea></td>
+      </tr>
+      <tr>
+        <td>
+          <table style="width: 100%">
+            <tr>
+              <td>
+                <button type="button" onClick="Binary.buttonEncode()">
+                  Encode →
+                </button>
+              </td>
+              <td>
+                <button type="button" onClick="Common.clear('binary_raw')">
+                  Clear
+                </button>
+              </td>
+              <td>
+                <button type="button" onClick="Common.copy('binary_raw')">
+                  Copy
+                </button>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table style="width: 100%">
+            <tr>
+              <td>
+                <button type="button" onClick="Binary.buttonDecode()">
+                  ← Decode
+                </button>
+              </td>
+              <td>
+                <button type="button" onClick="Common.clear('binary_encoded')">
+                  Clear
+                </button>
+              </td>
+              <td>
+                <button type="button" onClick="Common.copy('binary_encoded')">
+                  Copy
+                </button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+  </main>
+
 
   <h2 style="text-align: center"><a href="../">Back to main page</a></h2>
-
   <script type="module">
     import { encode, decode, crack } from "./scripts/cipher_caesar.js";
     import { createApp } from 'https://unpkg.com/petite-vue?module'

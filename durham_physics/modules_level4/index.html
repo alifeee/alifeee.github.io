@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Level 4 Physics</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
   <style>
-    th, td {
+    th,
+    td {
       padding: 5px;
     }
+
     header {
-      margin:0;
+      margin: 0;
       margin-top: 20px;
       display: flex;
       justify-content: space-between;
     }
-    header > h3 {
-      margin:0;
+
+    header>h3 {
+      margin: 0;
     }
+
     /* Tab (button container) */
     .tab {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
     }
+
     /* Tab buttons */
     .tab button {
       background-color: #666;
@@ -38,23 +44,28 @@
       padding: 10px 10px;
       transition: 0.3s;
     }
+
     /* When a button is hovered */
     .tab button:hover {
       background-color: #777;
     }
+
     /* When a button is active */
     .tab button.active {
       background-color: #aaa;
     }
+
     .tab button:focus {
       outline: 1px dotted #212121;
       outline: 5px auto -webkit-focus-ring-color;
     }
+
     .tabContent {
       display: none;
     }
+
     .tabContent h4 {
-      padding:0;
+      padding: 0;
     }
   </style>
 
@@ -62,347 +73,528 @@
 </head>
 
 <body>
-  <h1><a href="/">alifeee</a></h1><hr>
+  <main>
 
-  <h2>Level 4 Physics Module Choices</h2>
-  <p>Why not also try <a href="http://duphysics.co.uk/">beta-decay's website</a>?</p>
-  <p>
-    The following table is accurate for the <a href="https://www.dur.ac.uk/courses/info/?id=26318&code=f301">F301 MPhys Physics</a> program. For <a href="https://www.dur.ac.uk/courses/info/?id=26320&code=ff3n">FF3N MPhys Physics and Astronomy</a> or <a href="https://www.dur.ac.uk/courses/info/?id=26319&code=f344">F344 MPhys Theoretical Physics</a> move the respective modules (i.e. Advanced & Theoretical Astrophysics or Advanced Theoretical Physics and Particle Theory) to the first column and only pick one from the third column.
-  </p>
-  <p>
-    Check out the <a href="../f301.pdf">MPhys Physics Course handbook</a> (<a href="https://www.dur.ac.uk/faculty.handbook/programme_search/?year=2020&deptCode=PHYS">other programs</a>) for more information about module choices.
-  </p>
-  <p>
-    Note that some modules, notably both theoretical and one astrophysics module have level 3 prerequisites. You can see these on the <a href="../prerequisites">prerequisite module diagrams</a>.
-  </p>
+    <h1><a href="/">alifeee</a></h1>
+    <hr>
 
-  <!-- Table of modules -->
-  <h2>Module choices:</h2>
-  <table style="width:100%">
-    <tr>
-      <th>Required</th>
-      <th>Pick three</th>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4213/" title="MPhys Project">MPhys Project</a></li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4121/" title="Laser Physics, Quantum Information and Computing">Atoms, Lasers and Qubits</a></li>
-          <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4151/" title="Standard Models of Condensed Matter Physics, Low Dimensional Physics, Order and Dynamics in Soft Matter and Biophysics">Advanced Condensed Matter Physics</a></li>
-          <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4141/" title="Quantum Optics, Quantum Theory in Condensed Matter">Advanced Theoretical Physics</a> or <a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4181/" title="Relativistic Quantum Mechanics, Gauge Field Theories, Phenomenology">Particle Theory</a></li>
-          <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4161/" title="Astronomical Techniques and Advanced Imaging, Radiative Processes in Astrophysics">Advanced Astrophysics</a> or <a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4201/" title="Cosmic Structure Formation, General Relativity">Theoretical Astrophysics</a></li>
-          <li>Up to two level 3 optional physics modules</li>
-          <li>Elective module worth 20 credits</li>
-        </ul>
-      </td>
-    </tr>
-  </table><br>
-
-  <hr>
-  <h2 style="text-align:center"><a href="../prerequisites">Prerequisite Module Diagram</a></h2>
-  <h2 style="text-align:center"><a href="../">Back to physics hub</a></h2>
-
-  <!-- Module selectors -->
-  <hr><h2>More information</h2>
-  <div class="tab">
-    <button class="tabLink" onclick="openModule(event, 'PROJECT')" >MPhys Project</button>
-    <button class="tabLink" onclick="openModule(event, 'ALQ')" >Atoms, Lasers, and Qubits</button>
-    <button class="tabLink" onclick="openModule(event, 'ACMP')" >Advanced Condensed Matter Physics</button>
-    <button class="tabLink" onclick="openModule(event, 'ATP')" >Advanced Theoretical Physics</button>
-    <button class="tabLink" onclick="openModule(event, 'PT')" >Particle Theory</button>
-    <button class="tabLink" onclick="openModule(event, 'AA')" >Advanced Astrophysics</button>
-    <button class="tabLink" onclick="openModule(event, 'TA')" >Theoretical Astrophysics</button>
-
-    <button class="tabLink" onclick="openModule(event, 'PAC3')" >Planets and Cosmology 3</button>
-    <button class="tabLink" onclick="openModule(event, 'TP3')" >Theoretical Physics 3</button>
-    <button class="tabLink" onclick="openModule(event, 'CMP3')" >Condensed Matter Physics 3</button>
-    <button class="tabLink" onclick="openModule(event, 'MAOP3')" >Modern Atomic and Optical Physics 3</button>
-  </div>
-
-
-
-  <!-- Module content -->
-  <div id="PAC3" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3651">Planets and Cosmology 3</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Cosmology</h3>
-      <span>18 lectures, 8 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wvpg74">Dr R. J. Wilman</a> and <a href="https://www.dur.ac.uk/physics/staff/profiles/?username=shpd91">Prof B. Li</a></h4>
-    <p>Observational overview and the expansion of the Universe, the cosmological principle (homogeneity and isotropy), Newtonian gravity and the Friedmann equation, the geometry of the Universe, solutions of Friedmannʼs equations, the age of the Universe, weighing the Universe, the cosmological constant, general relativistic cosmology (the metric and Einstein equations), classic cosmology (distances and luminosities), type Ia SNe and galaxy number counts, the cosmic microwave background, the thermal history of the Universe, primordial nucleosynthesis, dark matter, problems with the hot big bang, inflation, current constraints on cosmological parameters.</p>
-    <hr><header>
-      <h3>Planetary Systems</h3>
-      <span>18 lectures, 9 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1vre">Dr V. Eke</a></h4>
-    <p>Overview of the Solar System, orbital dynamics, planetary interiors, planetary atmospheres, formation of the Solar System, extrasolar planets.</p>
-  </div>
-
-  <div id="TP3" class="tabContent">
-  <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3661">Theoretical Physics 3</a></h2>
-  <hr><h3>Summative Assessment</h3>
-  <ul><li>Written Examination (100%)</li></ul>
-  <hr><header>
-    <h3>Relativistic Electrodynamics</h3>
-    <span>18 lectures, 8 workshops</span>
-  </header>
-  <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=kghw23">Dr J. Andersen</a></h4>
-  <p>Einstein’s postulates, the geometry of relativity, Lorentz transformations, structure of space-time, proper time and proper velocity, relativistic energy and momentum, relativistic kinematics, relativistic dynamics, magnetism as a relativistic phenomenon, how the fields transform, the field tensor, electrodynamics in tensor notation, relativistic potentials, scalar and vector potentials, gauge transformations, Coulomb gauge, retarded potentials, fields of a moving point charge, dipole radiation, radiation from point charges.</p>
-  <hr><header>
-    <h3>Quantum Theory 3</h3>
-    <span>18 lectures, 9 workshops</span>
-  </header>
-  <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0pr">Prof P. Richardson</a></h4>
-  <p>Scattering experiments and cross sections; potential scattering (general features); spherical Bessel functions (application: the bound states of a spherical square well); the method of partial waves (scattering phase shift, scattering length, resonances, applications); the integral equation of potential scattering; the Born approximation; collisions between identical particles, introduction to multichannel scattering; the density matrix (ensemble averages, the density matrix for a spin-1/2 system and spin-polarization); quantum mechanical ensembles and applications to single-particle systems; systems of non-interacting particles (Maxwell-Boltzmann, Fermi-Dirac and Bose-Einstein statistics, ideal Fermi-Dirac and Bose-Einstein gases); the Klein-Gordon equation; the Dirac equation; covariant formulation of Dirac theory; plane wave solutions of the Dirac equation; solutions of the Dirac equation for a central potential; negative energy states and hole theory; non-relativistic limit of the Dirac equation; measurements and interpretation (hidden variables, the EPR paradox, Bell’s theorem, the problem of measurement).</p>
-</div>
-
-  <div id="CMP3" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3711">Condensed Matter Physics 3</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Symmetry, Structure and Excitations</h3>
-      <span>12 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0mrch">Dr M. R. C. Hunt</a></h4>
-    <p>Overview of energy, length and time scales in different areas of CMP. Comparison of hard CMP and soft CMP. Cohesion in solids. Introduction to symmetry and its influence on physical properties. The symmetry of crystals. Measuring structure using diffraction. Elementary excitations from a ground state: single particles and collective excitations in solids. Phonons in a system with a two atom basis: acoustic and optic branches. Anharmonic effects, soft modes. Measuring excitations using scattering and spectroscopy.</p>
-    <hr><header>
-      <h3>Broken Symmetry</h3>
-      <span>12 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="¯\_(ツ)_/¯">Dr Bristowe</a></h4>
-    <p>Symmetry breaking at phase transitions as a method of classifying the phenomena studied in CMP. Phase transitions and critical exponents. Excitations in a broken symmetry system. Generalised rigidity and order. Topological defects. How other systems fit into this framework: superconductors and superfluids; classical examples (binary fluids, polymers, liquid crystals etc.); weak interactions in the standard model, cosmological examples. Other topological objects: vortices, monopoles, skyrmions (in outline). Applications of broken symmetry systems.</p>
-    <hr><header>
-      <h3>Introduction to Soft Matter Physics</h3>
-      <span>12 lectures, 5 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wcgj24">Dr H. Kusumaatmaja</a></h4>
-    <p>Introduction to soft matter physics and its basic phenomenology. Polymer physics and scaling. Liquid crystals. Free energies. Diffusion (Einstein diffusion coefficients, Peclet number and Fick’s laws). Elasticity of solids.</p>
-  </div>
-
-  <div id="MAOP3" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3721">Modern Atomic and Optical Physics 3</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Atomic Clocks</h3>
-      <span>18 lectures, 8 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dch0dc1">Dr D. Carty</a></h4>
-    <p>History of precision measurement of time. Principle of atomic clocks, revision of atomic structure, electric and magnetic dipole interactions with electromagnetic fields, selection rules. Visualising electron distributions in atoms during transitions. Spontaneous emission, Einstein A coefficient and relationship with atomic clocks, lifetimes, line widths, line intensities and line shapes. Fine-structure and hyperfine splitting, using degenerate perturbation theory to calculate the ground-state hyperfine splitting of the H atom. Lifetimes of electric dipole forbidden transitions, selection rules and relationship with atomic clocks. Zeeman effect, using degenerate perturbation theory to calculate Zeeman shifts of the hyperfine states of the ground-state of the H atom, relationship with atomic clocks. Derivation of Rabi equation for two-level system, transit-time broadening, relationship with atomic clocks. Light forces, the scattering force. Laser cooling of atoms, optical molasses, Doppler limit. Zeeman slowing and Sisyphus cooling of atoms. Magneto-optical trapping of atoms. Moving molasses, caesium fountain clock, Ramsay Interferometry. Optical frequency standards, laser locking. Optical frequency combs, ion trapping, Lamb-Dicke regime. Aluminium quantum logic clock, Ytterbium ion clock. Strontium optical lattice clock, AC Stark effect, dipole force, optical dipole traps and optical lattices, magic wavelength optical lattice. Systematic effects in optical frequency standards, comparisons between clocks. Applications of atomic clocks, time-variation of fundamental constants, electric-dipole moment of the electron and relativistic geodesy. </p>
-    <hr><header>
-      <h3>Fourier Optics</h3>
-      <span>18 lectures, 9 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0igh">Prof I. G. Hughes</a></h4>
-    <p>Fourier toolkit, angular spectrum, Gaussian beams, lasers and cavities, Fresnel and Fraunhofer, 2D diffraction – letters, circles, Babinet and apodization, lenses, imaging, spatial filtering.</p>
-  </div>
-
-  <div id="PROJECT" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4213/">MPhys Project</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul>
-      <li>Project report (40%)</li>
-      <li>Supervisor assessment (30%)</li>
-      <li>Project seminar (5%)</li>
-      <li>Oral examination (25%)</li>
-    </ul>
-    <hr><header>
-      <h3>Project</h3>
-      <span>18 tutorials, 5 seminars (week 1)</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/">Various</a></h4>
+    <h2>Level 4 Physics Module Choices</h2>
+    <p>Why not also try <a href="http://duphysics.co.uk/">beta-decay's website</a>?</p>
     <p>
-      The project involves the equivalent of four half-days per week of study and research in the Michaelmas and Epiphany Terms, with a seminar presentation in the Epiphany Term and an oral examination of a report in the Easter Term. Normally, students are expected to carry out a research-based project as an appropriate training for a professional physicist. The project will be carried out with a research group in the Department. The list of projects available is published separately.
+      The following table is accurate for the <a href="https://www.dur.ac.uk/courses/info/?id=26318&code=f301">F301
+        MPhys Physics</a> program. For <a href="https://www.dur.ac.uk/courses/info/?id=26320&code=ff3n">FF3N MPhys
+        Physics and Astronomy</a> or <a href="https://www.dur.ac.uk/courses/info/?id=26319&code=f344">F344 MPhys
+        Theoretical Physics</a> move the respective modules (i.e. Advanced & Theoretical Astrophysics or Advanced
+      Theoretical Physics and Particle Theory) to the first column and only pick one from the third column.
     </p>
     <p>
-      Supervisors monitor progress and provide guidance on the development of the project during weekly meetings. Students will be able to obtain further help in their project by approaching their supervisors or other members of the appropriate research group.
+      Check out the <a href="../f301.pdf">MPhys Physics Course handbook</a> (<a
+        href="https://www.dur.ac.uk/faculty.handbook/programme_search/?year=2020&deptCode=PHYS">other programs</a>) for
+      more information about module choices.
     </p>
     <p>
-      Students will complete a preliminary report for supervisors for the beginning of the Epiphany Term. The preliminary report will not be formally assessed, but it is envisaged that, with little alteration, much of the content can be used in the final report. The last week of the Michaelmas Term is free of lectures and offers students an opportunity to work without interruption on their projects.
-    </p>
-    <p>
-      Students will present a seminar on the topic and progress of their project towards the end of the Epiphany Term. These presentations will be before an audience of staff and students, should last for 20 minutes and will form part of the summative assessment. <a href="https://www.dur.ac.uk/physics/staff/profiles/?id=1866">Mr A.M. Skelton</a> manages the arrangement of project seminars.
+      Note that some modules, notably both theoretical and one astrophysics module have level 3 prerequisites. You can
+      see these on the <a href="../prerequisites">prerequisite module diagrams</a>.
     </p>
 
-  </div>
+    <!-- Table of modules -->
+    <h2>Module choices:</h2>
+    <table style="width:100%">
+      <tr>
+        <th>Required</th>
+        <th>Pick three</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4213/" title="MPhys Project">MPhys
+                Project</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4121/"
+                title="Laser Physics, Quantum Information and Computing">Atoms, Lasers and Qubits</a></li>
+            <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4151/"
+                title="Standard Models of Condensed Matter Physics, Low Dimensional Physics, Order and Dynamics in Soft Matter and Biophysics">Advanced
+                Condensed Matter Physics</a></li>
+            <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4141/"
+                title="Quantum Optics, Quantum Theory in Condensed Matter">Advanced Theoretical Physics</a> or <a
+                href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4181/"
+                title="Relativistic Quantum Mechanics, Gauge Field Theories, Phenomenology">Particle Theory</a></li>
+            <li><a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4161/"
+                title="Astronomical Techniques and Advanced Imaging, Radiative Processes in Astrophysics">Advanced
+                Astrophysics</a> or <a href="https://www.dur.ac.uk/internal/physics/modules/2021/phys4201/"
+                title="Cosmic Structure Formation, General Relativity">Theoretical Astrophysics</a></li>
+            <li>Up to two level 3 optional physics modules</li>
+            <li>Elective module worth 20 credits</li>
+          </ul>
+        </td>
+      </tr>
+    </table><br>
 
-  <div id="ALQ" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4121">Atoms, Lasers and Qubits</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Laser Physics</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1kjw">Dr K.J. Weatherill</a></h4>
-    <p>
-      Definition of a laser. Atom-light interactions. Absorption, spontaneous and stimulated emission. Line broadening mechanisms and emission linewidth. Population inversion and gain. Laser oscillator: cavity basics and threshold; gain saturation and output power. Population inversion in 3 and 4-level systems. Laser pumping with case studies of specific laser systems. Cavity modes and cavity stability. Gaussian beams. Cavity effects: single frequency operation. Cavity effects: Q switching and mode locking. Laser spectroscopy and optical frequency combs. Case studies of laser applications.
-    </p>
-    <hr><header>
-      <h3>Quantum Information and Computing</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0csa">Prof C.S. Adams</a></h4>
-    <p>
-      Manipulation of qubits: Limits of classical computing. Feynmanâ€™s insight. Quantum mechanics revision. Projection operators. Pauli matrices. Single-qubit operations: Resonant field, the Rabi solution. The Bloch sphere. The Ramsey technique. Two-qubit states. Tensor products. Correlations. Entanglement. Bell states. Two-qubit gates. The CNOT gate. Physical Realizations: The DiVincenzo criteria. Controlling the centre-of mass motion of atoms - laser cooling. Controlling the internal states of atoms. Trapping and manipulating single atoms. Rydberg states. Decoherence. Case studies of contemporary Quantum Information Processing.
-    </p>
-  </div>
+    <hr>
+    <h2 style="text-align:center"><a href="../prerequisites">Prerequisite Module Diagram</a></h2>
+    <h2 style="text-align:center"><a href="../">Back to physics hub</a></h2>
 
-  <div id="ACMP" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4151">Advanced Condensed Matter Physics</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Standard Models of Condensed Matter Physics</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0it">Dr I. Terry</a></h4>
-    <p>
-      Metals: The Fermi-gas and its predictions. Interactions in metals: adiabatic continuity in outline. Single particle band structure and tight binding. Quantum oscillations and fermiology. Examples of the behaviour of normal and exotic metals; Superfluidity and superconductivity: Superfluids and superconductors as broken symmetry states. Macroscopic quantum coherence. Microscopic description: BCS theory. Superconducting materials. Applications of superconductivity; superconducting devices.
-    </p>
-    <hr><header>
-      <h3>Low Dimensional Physics</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0fmd">Prof F.M.B. Dias</a></h4>
-    <p>
-      Systems in 1D and 2D. Mermin-Wagner theorem. The Ising model in 1D. Polymers. Quantum Hall effect (magnetoresistance in 2D, conductivity and Hall effect; edge states). Topological objects in low dimensional solids. walls, kinks and solitons; vortices, monopoles and skyrmions. Semiconductor (p-n) junctions. Devices using the semiconductor p-n junction. Heterostructures and quantum wells.
-    </p>
-    <hr><header>
-      <h3>Order and Dynamics in Soft Matter and Biophysics</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wpcs59">Prof S. Fielding</a></h4>
-    <p>
-      Dynamics and susceptibilities. The kinetics of phase transitions including liquid-liquid demixing phase separation. Glasses. Self-assembly of micelles and membranes. Soft and biological systems out of equilibrium. Nucleation: crystal growth and self-assembly of molecular systems. Susceptibility, response and the fluctuation-dissipation theorem (in outline).
-    </p>
-  </div>
+    <!-- Module selectors -->
+    <hr>
+    <h2>More information</h2>
+    <div class="tab">
+      <button class="tabLink" onclick="openModule(event, 'PROJECT')">MPhys Project</button>
+      <button class="tabLink" onclick="openModule(event, 'ALQ')">Atoms, Lasers, and Qubits</button>
+      <button class="tabLink" onclick="openModule(event, 'ACMP')">Advanced Condensed Matter Physics</button>
+      <button class="tabLink" onclick="openModule(event, 'ATP')">Advanced Theoretical Physics</button>
+      <button class="tabLink" onclick="openModule(event, 'PT')">Particle Theory</button>
+      <button class="tabLink" onclick="openModule(event, 'AA')">Advanced Astrophysics</button>
+      <button class="tabLink" onclick="openModule(event, 'TA')">Theoretical Astrophysics</button>
 
-  <div id="ATP" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4141">Advanced Theoretical Physics</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Quantum Optics</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=bcsx55">Dr V. Kendon</a></h4>
-    <p>
-      Quantization of light, creation and annihilation operators, Hamiltonian of the field, number states, coherent states, squeezed states, photon bunching and anti-bunching, density operator, pure states, mixed states, entangled states, decoherence, EPR experiments, applications (quantum cryptography, quantum computing, other applications).
-    </p>
-    <hr><header>
-      <h3>Quantum Theory in Condensed Matter</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?id=2360">Prof S.A. Gardiner</a></h4>
-    <p>
-      Revision of electronic structure and Bloch's theorem, many-body Schrodinger equation, Hartree and Hartree-Fock theories, density functional theory, electron exchange and correlation, modern methods of electronic structure calculation. Phonons in three dimensions, beyond the harmonic approximation. Elementary excitations in solids. Superconductivity: historical overview, Meissner effect, Cooper pairs, the superconducting phase transition, supercurrents, the London and Ginzburg-Landau theories, Josephson effects, BCS theory of superconductivity.
-    </p>
-  </div>
-
-  <div id="PT" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4181">Particle Theory</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Relativistic Quantum Mechanics</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0fk">Prof F. Krauss</a></h4>
-    <p>
-      Klein-Gordon equation. Dirac equation. Spin. Free particle and antiparticle solutions of the Dirac equation. Massless fermions. Lagrangian form of classical electromagnetism. Lagrangian form of the Dirac equation. Global gauge invariance. Noether's theorem and conserved current for the Dirac equation. Second quantisation of classical Klein-Gordon field. Local gauge invariance. Lagrangian of Quantum Electrodynamics (QED).
-    </p>
-    <hr><header>
-      <h3>Gauge Field Theories</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?id=541">Prof V.V. Khoze</a></h4>
-    <p>
-      Amplitudes, kinematics, phase space, cross sections and decay widths. Simple processes in quantum electrodynamics. Abelian and non-abelian gauge theories. Spontaneous symmetry breaking. Goldstone phenomenon and Higgs mechanism.
-    </p>
-    <hr><header>
-      <h3>Phenomenology</h3>
-      <span>12 lectures, 4 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=vcgw51">Prof R. Alonso</a></h4>
-    <p>
-      Standard Model of particle physics. Phenomenology of the weak and strong interactions: electron-positron annihilation, Z resonance, parity violation, muon decay, electroweak precision tests, properties of the Higgs boson, deep inelastic scattering, proton-proton scattering. The Large Hadron Collider. Beyond the Standard Model. Supersymmetry.
-    </p>
-  </div>
-
-  <div id="AA" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4161">Advanced Astrophysics</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Astronomical Techniques and Advanced Imaging</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1rww">Dr R.W. Wilson</a></h4>
-    <p>
-       Introduction to astronomical techniques, review of optical theory, propagation of light through the atmosphere, adaptive Optics, interferometry, sectroscopy, non-optical techniques.
-    </p>
-    <hr><header>
-      <h3>Radiative Processes in Astrophysics</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0tpr">Prof T. Roberts</a></h4>
-    <p>
-      Review of radiative transfer, accelerated charges, Compton processes, synchrotron and Bremsstrahlung, photoionisation/recombination, line formation, abundances, dust, plasma effect, RM and group velocity.
-    </p>
-  </div>
-
-  <div id="TA" class="tabContent">
-    <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4201">Theoretical Astrophysics</a></h2>
-    <hr><h3>Summative Assessment</h3>
-    <ul><li>Written Examination (100%)</li></ul>
-    <hr><header>
-      <h3>Cosmic Structure Formation</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1cgl">Prof C.G. Lacey</a></h4>
-    <p>
-       Cosmological perturbations, fluid equations, Jeans theory, non-baryonic dark matter, temperature fluctuations in the cosmic microwave background radiation, spherical collapse model, N-body simulations, statistics of galaxy clustering.
-    </p>
-    <hr><header>
-      <h3>General Relativity</h3>
-      <span>18 lectures, 6 workshops</span>
-    </header>
-    <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0rgb">Prof R.G. Bower</a></h4>
-    <p>
-      Gravity as curvature, tensor algebra, mathematics of curved spacetime, the Einstein equations, the Schwarzschild metric, weak field tests of general relativity, black holes.
-    </p>
-  </div>
-
-
-  <hr><h2 style="text-align:center"><a href="../">Back to physics hub</a></h2>
+      <button class="tabLink" onclick="openModule(event, 'PAC3')">Planets and Cosmology 3</button>
+      <button class="tabLink" onclick="openModule(event, 'TP3')">Theoretical Physics 3</button>
+      <button class="tabLink" onclick="openModule(event, 'CMP3')">Condensed Matter Physics 3</button>
+      <button class="tabLink" onclick="openModule(event, 'MAOP3')">Modern Atomic and Optical Physics 3</button>
+    </div>
 
 
 
+    <!-- Module content -->
+    <div id="PAC3" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3651">Planets and Cosmology 3</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Cosmology</h3>
+        <span>18 lectures, 8 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wvpg74">Dr R. J. Wilman</a> and <a
+          href="https://www.dur.ac.uk/physics/staff/profiles/?username=shpd91">Prof B. Li</a></h4>
+      <p>Observational overview and the expansion of the Universe, the cosmological principle (homogeneity and
+        isotropy), Newtonian gravity and the Friedmann equation, the geometry of the Universe, solutions of Friedmannʼs
+        equations, the age of the Universe, weighing the Universe, the cosmological constant, general relativistic
+        cosmology (the metric and Einstein equations), classic cosmology (distances and luminosities), type Ia SNe and
+        galaxy number counts, the cosmic microwave background, the thermal history of the Universe, primordial
+        nucleosynthesis, dark matter, problems with the hot big bang, inflation, current constraints on cosmological
+        parameters.</p>
+      <hr>
+      <header>
+        <h3>Planetary Systems</h3>
+        <span>18 lectures, 9 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1vre">Dr V. Eke</a></h4>
+      <p>Overview of the Solar System, orbital dynamics, planetary interiors, planetary atmospheres, formation of the
+        Solar System, extrasolar planets.</p>
+    </div>
+
+    <div id="TP3" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3661">Theoretical Physics 3</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Relativistic Electrodynamics</h3>
+        <span>18 lectures, 8 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=kghw23">Dr J. Andersen</a></h4>
+      <p>Einstein’s postulates, the geometry of relativity, Lorentz transformations, structure of space-time, proper
+        time and proper velocity, relativistic energy and momentum, relativistic kinematics, relativistic dynamics,
+        magnetism as a relativistic phenomenon, how the fields transform, the field tensor, electrodynamics in tensor
+        notation, relativistic potentials, scalar and vector potentials, gauge transformations, Coulomb gauge, retarded
+        potentials, fields of a moving point charge, dipole radiation, radiation from point charges.</p>
+      <hr>
+      <header>
+        <h3>Quantum Theory 3</h3>
+        <span>18 lectures, 9 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0pr">Prof P. Richardson</a></h4>
+      <p>Scattering experiments and cross sections; potential scattering (general features); spherical Bessel functions
+        (application: the bound states of a spherical square well); the method of partial waves (scattering phase shift,
+        scattering length, resonances, applications); the integral equation of potential scattering; the Born
+        approximation; collisions between identical particles, introduction to multichannel scattering; the density
+        matrix (ensemble averages, the density matrix for a spin-1/2 system and spin-polarization); quantum mechanical
+        ensembles and applications to single-particle systems; systems of non-interacting particles (Maxwell-Boltzmann,
+        Fermi-Dirac and Bose-Einstein statistics, ideal Fermi-Dirac and Bose-Einstein gases); the Klein-Gordon equation;
+        the Dirac equation; covariant formulation of Dirac theory; plane wave solutions of the Dirac equation; solutions
+        of the Dirac equation for a central potential; negative energy states and hole theory; non-relativistic limit of
+        the Dirac equation; measurements and interpretation (hidden variables, the EPR paradox, Bell’s theorem, the
+        problem of measurement).</p>
+    </div>
+
+    <div id="CMP3" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3711">Condensed Matter Physics 3</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Symmetry, Structure and Excitations</h3>
+        <span>12 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0mrch">Dr M. R. C. Hunt</a></h4>
+      <p>Overview of energy, length and time scales in different areas of CMP. Comparison of hard CMP and soft CMP.
+        Cohesion in solids. Introduction to symmetry and its influence on physical properties. The symmetry of crystals.
+        Measuring structure using diffraction. Elementary excitations from a ground state: single particles and
+        collective excitations in solids. Phonons in a system with a two atom basis: acoustic and optic branches.
+        Anharmonic effects, soft modes. Measuring excitations using scattering and spectroscopy.</p>
+      <hr>
+      <header>
+        <h3>Broken Symmetry</h3>
+        <span>12 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="¯\_(ツ)_/¯">Dr Bristowe</a></h4>
+      <p>Symmetry breaking at phase transitions as a method of classifying the phenomena studied in CMP. Phase
+        transitions and critical exponents. Excitations in a broken symmetry system. Generalised rigidity and order.
+        Topological defects. How other systems fit into this framework: superconductors and superfluids; classical
+        examples (binary fluids, polymers, liquid crystals etc.); weak interactions in the standard model, cosmological
+        examples. Other topological objects: vortices, monopoles, skyrmions (in outline). Applications of broken
+        symmetry systems.</p>
+      <hr>
+      <header>
+        <h3>Introduction to Soft Matter Physics</h3>
+        <span>12 lectures, 5 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wcgj24">Dr H. Kusumaatmaja</a></h4>
+      <p>Introduction to soft matter physics and its basic phenomenology. Polymer physics and scaling. Liquid crystals.
+        Free energies. Diffusion (Einstein diffusion coefficients, Peclet number and Fick’s laws). Elasticity of solids.
+      </p>
+    </div>
+
+    <div id="MAOP3" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys3721">Modern Atomic and Optical Physics 3</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Atomic Clocks</h3>
+        <span>18 lectures, 8 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dch0dc1">Dr D. Carty</a></h4>
+      <p>History of precision measurement of time. Principle of atomic clocks, revision of atomic structure, electric
+        and magnetic dipole interactions with electromagnetic fields, selection rules. Visualising electron
+        distributions in atoms during transitions. Spontaneous emission, Einstein A coefficient and relationship with
+        atomic clocks, lifetimes, line widths, line intensities and line shapes. Fine-structure and hyperfine splitting,
+        using degenerate perturbation theory to calculate the ground-state hyperfine splitting of the H atom. Lifetimes
+        of electric dipole forbidden transitions, selection rules and relationship with atomic clocks. Zeeman effect,
+        using degenerate perturbation theory to calculate Zeeman shifts of the hyperfine states of the ground-state of
+        the H atom, relationship with atomic clocks. Derivation of Rabi equation for two-level system, transit-time
+        broadening, relationship with atomic clocks. Light forces, the scattering force. Laser cooling of atoms, optical
+        molasses, Doppler limit. Zeeman slowing and Sisyphus cooling of atoms. Magneto-optical trapping of atoms. Moving
+        molasses, caesium fountain clock, Ramsay Interferometry. Optical frequency standards, laser locking. Optical
+        frequency combs, ion trapping, Lamb-Dicke regime. Aluminium quantum logic clock, Ytterbium ion clock. Strontium
+        optical lattice clock, AC Stark effect, dipole force, optical dipole traps and optical lattices, magic
+        wavelength optical lattice. Systematic effects in optical frequency standards, comparisons between clocks.
+        Applications of atomic clocks, time-variation of fundamental constants, electric-dipole moment of the electron
+        and relativistic geodesy. </p>
+      <hr>
+      <header>
+        <h3>Fourier Optics</h3>
+        <span>18 lectures, 9 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0igh">Prof I. G. Hughes</a></h4>
+      <p>Fourier toolkit, angular spectrum, Gaussian beams, lasers and cavities, Fresnel and Fraunhofer, 2D diffraction
+        – letters, circles, Babinet and apodization, lenses, imaging, spatial filtering.</p>
+    </div>
+
+    <div id="PROJECT" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4213/">MPhys Project</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Project report (40%)</li>
+        <li>Supervisor assessment (30%)</li>
+        <li>Project seminar (5%)</li>
+        <li>Oral examination (25%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Project</h3>
+        <span>18 tutorials, 5 seminars (week 1)</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/">Various</a></h4>
+      <p>
+        The project involves the equivalent of four half-days per week of study and research in the Michaelmas and
+        Epiphany Terms, with a seminar presentation in the Epiphany Term and an oral examination of a report in the
+        Easter Term. Normally, students are expected to carry out a research-based project as an appropriate training
+        for a professional physicist. The project will be carried out with a research group in the Department. The list
+        of projects available is published separately.
+      </p>
+      <p>
+        Supervisors monitor progress and provide guidance on the development of the project during weekly meetings.
+        Students will be able to obtain further help in their project by approaching their supervisors or other members
+        of the appropriate research group.
+      </p>
+      <p>
+        Students will complete a preliminary report for supervisors for the beginning of the Epiphany Term. The
+        preliminary report will not be formally assessed, but it is envisaged that, with little alteration, much of the
+        content can be used in the final report. The last week of the Michaelmas Term is free of lectures and offers
+        students an opportunity to work without interruption on their projects.
+      </p>
+      <p>
+        Students will present a seminar on the topic and progress of their project towards the end of the Epiphany Term.
+        These presentations will be before an audience of staff and students, should last for 20 minutes and will form
+        part of the summative assessment. <a href="https://www.dur.ac.uk/physics/staff/profiles/?id=1866">Mr A.M.
+          Skelton</a> manages the arrangement of project seminars.
+      </p>
+
+    </div>
+
+    <div id="ALQ" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4121">Atoms, Lasers and Qubits</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Laser Physics</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1kjw">Dr K.J. Weatherill</a></h4>
+      <p>
+        Definition of a laser. Atom-light interactions. Absorption, spontaneous and stimulated emission. Line broadening
+        mechanisms and emission linewidth. Population inversion and gain. Laser oscillator: cavity basics and threshold;
+        gain saturation and output power. Population inversion in 3 and 4-level systems. Laser pumping with case studies
+        of specific laser systems. Cavity modes and cavity stability. Gaussian beams. Cavity effects: single frequency
+        operation. Cavity effects: Q switching and mode locking. Laser spectroscopy and optical frequency combs. Case
+        studies of laser applications.
+      </p>
+      <hr>
+      <header>
+        <h3>Quantum Information and Computing</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0csa">Prof C.S. Adams</a></h4>
+      <p>
+        Manipulation of qubits: Limits of classical computing. Feynmanâ€™s insight. Quantum mechanics revision.
+        Projection operators. Pauli matrices. Single-qubit operations: Resonant field, the Rabi solution. The Bloch
+        sphere. The Ramsey technique. Two-qubit states. Tensor products. Correlations. Entanglement. Bell states.
+        Two-qubit gates. The CNOT gate. Physical Realizations: The DiVincenzo criteria. Controlling the centre-of mass
+        motion of atoms - laser cooling. Controlling the internal states of atoms. Trapping and manipulating single
+        atoms. Rydberg states. Decoherence. Case studies of contemporary Quantum Information Processing.
+      </p>
+    </div>
+
+    <div id="ACMP" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4151">Advanced Condensed Matter Physics</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Standard Models of Condensed Matter Physics</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0it">Dr I. Terry</a></h4>
+      <p>
+        Metals: The Fermi-gas and its predictions. Interactions in metals: adiabatic continuity in outline. Single
+        particle band structure and tight binding. Quantum oscillations and fermiology. Examples of the behaviour of
+        normal and exotic metals; Superfluidity and superconductivity: Superfluids and superconductors as broken
+        symmetry states. Macroscopic quantum coherence. Microscopic description: BCS theory. Superconducting materials.
+        Applications of superconductivity; superconducting devices.
+      </p>
+      <hr>
+      <header>
+        <h3>Low Dimensional Physics</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0fmd">Prof F.M.B. Dias</a></h4>
+      <p>
+        Systems in 1D and 2D. Mermin-Wagner theorem. The Ising model in 1D. Polymers. Quantum Hall effect
+        (magnetoresistance in 2D, conductivity and Hall effect; edge states). Topological objects in low dimensional
+        solids. walls, kinks and solitons; vortices, monopoles and skyrmions. Semiconductor (p-n) junctions. Devices
+        using the semiconductor p-n junction. Heterostructures and quantum wells.
+      </p>
+      <hr>
+      <header>
+        <h3>Order and Dynamics in Soft Matter and Biophysics</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=wpcs59">Prof S. Fielding</a></h4>
+      <p>
+        Dynamics and susceptibilities. The kinetics of phase transitions including liquid-liquid demixing phase
+        separation. Glasses. Self-assembly of micelles and membranes. Soft and biological systems out of equilibrium.
+        Nucleation: crystal growth and self-assembly of molecular systems. Susceptibility, response and the
+        fluctuation-dissipation theorem (in outline).
+      </p>
+    </div>
+
+    <div id="ATP" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4141">Advanced Theoretical Physics</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Quantum Optics</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=bcsx55">Dr V. Kendon</a></h4>
+      <p>
+        Quantization of light, creation and annihilation operators, Hamiltonian of the field, number states, coherent
+        states, squeezed states, photon bunching and anti-bunching, density operator, pure states, mixed states,
+        entangled states, decoherence, EPR experiments, applications (quantum cryptography, quantum computing, other
+        applications).
+      </p>
+      <hr>
+      <header>
+        <h3>Quantum Theory in Condensed Matter</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?id=2360">Prof S.A. Gardiner</a></h4>
+      <p>
+        Revision of electronic structure and Bloch's theorem, many-body Schrodinger equation, Hartree and Hartree-Fock
+        theories, density functional theory, electron exchange and correlation, modern methods of electronic structure
+        calculation. Phonons in three dimensions, beyond the harmonic approximation. Elementary excitations in solids.
+        Superconductivity: historical overview, Meissner effect, Cooper pairs, the superconducting phase transition,
+        supercurrents, the London and Ginzburg-Landau theories, Josephson effects, BCS theory of superconductivity.
+      </p>
+    </div>
+
+    <div id="PT" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4181">Particle Theory</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Relativistic Quantum Mechanics</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0fk">Prof F. Krauss</a></h4>
+      <p>
+        Klein-Gordon equation. Dirac equation. Spin. Free particle and antiparticle solutions of the Dirac equation.
+        Massless fermions. Lagrangian form of classical electromagnetism. Lagrangian form of the Dirac equation. Global
+        gauge invariance. Noether's theorem and conserved current for the Dirac equation. Second quantisation of
+        classical Klein-Gordon field. Local gauge invariance. Lagrangian of Quantum Electrodynamics (QED).
+      </p>
+      <hr>
+      <header>
+        <h3>Gauge Field Theories</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?id=541">Prof V.V. Khoze</a></h4>
+      <p>
+        Amplitudes, kinematics, phase space, cross sections and decay widths. Simple processes in quantum
+        electrodynamics. Abelian and non-abelian gauge theories. Spontaneous symmetry breaking. Goldstone phenomenon and
+        Higgs mechanism.
+      </p>
+      <hr>
+      <header>
+        <h3>Phenomenology</h3>
+        <span>12 lectures, 4 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=vcgw51">Prof R. Alonso</a></h4>
+      <p>
+        Standard Model of particle physics. Phenomenology of the weak and strong interactions: electron-positron
+        annihilation, Z resonance, parity violation, muon decay, electroweak precision tests, properties of the Higgs
+        boson, deep inelastic scattering, proton-proton scattering. The Large Hadron Collider. Beyond the Standard
+        Model. Supersymmetry.
+      </p>
+    </div>
+
+    <div id="AA" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4161">Advanced Astrophysics</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Astronomical Techniques and Advanced Imaging</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1rww">Dr R.W. Wilson</a></h4>
+      <p>
+        Introduction to astronomical techniques, review of optical theory, propagation of light through the atmosphere,
+        adaptive Optics, interferometry, sectroscopy, non-optical techniques.
+      </p>
+      <hr>
+      <header>
+        <h3>Radiative Processes in Astrophysics</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0tpr">Prof T. Roberts</a></h4>
+      <p>
+        Review of radiative transfer, accelerated charges, Compton processes, synchrotron and Bremsstrahlung,
+        photoionisation/recombination, line formation, abundances, dust, plasma effect, RM and group velocity.
+      </p>
+    </div>
+
+    <div id="TA" class="tabContent">
+      <h2><a href="https://www.dur.ac.uk/physics/modules/2021/phys4201">Theoretical Astrophysics</a></h2>
+      <hr>
+      <h3>Summative Assessment</h3>
+      <ul>
+        <li>Written Examination (100%)</li>
+      </ul>
+      <hr>
+      <header>
+        <h3>Cosmic Structure Formation</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph1cgl">Prof C.G. Lacey</a></h4>
+      <p>
+        Cosmological perturbations, fluid equations, Jeans theory, non-baryonic dark matter, temperature fluctuations in
+        the cosmic microwave background radiation, spherical collapse model, N-body simulations, statistics of galaxy
+        clustering.
+      </p>
+      <hr>
+      <header>
+        <h3>General Relativity</h3>
+        <span>18 lectures, 6 workshops</span>
+      </header>
+      <h4><a href="https://www.dur.ac.uk/physics/staff/profiles/?username=dph0rgb">Prof R.G. Bower</a></h4>
+      <p>
+        Gravity as curvature, tensor algebra, mathematics of curved spacetime, the Einstein equations, the Schwarzschild
+        metric, weak field tests of general relativity, black holes.
+      </p>
+    </div>
 
 
-  <script>
-    function openModule(evt, moduleName) {
-      [].forEach.call(
-        document.getElementsByClassName("tabContent"),
-        x => x.style.display="none");
+    <hr>
+    <h2 style="text-align:center"><a href="../">Back to physics hub</a></h2>
+
+
+
+
+
+    <script>
+      function openModule(evt, moduleName) {
+        [].forEach.call(
+          document.getElementsByClassName("tabContent"),
+          x => x.style.display = "none");
 
         let active = evt.currentTarget.className.includes("active");
-      [].forEach.call(
-        document.getElementsByClassName("tabLink"),
-        x => x.className = x.className.replace(" active", ""));
+        [].forEach.call(
+          document.getElementsByClassName("tabLink"),
+          x => x.className = x.className.replace(" active", ""));
 
-      // console.log(evt.currentTarget.attributes.onclick.value);
-      document.getElementById(moduleName).style.display = active ? "none" : "block";
-      evt.currentTarget.className += active ? "" : " active";
-    }
-  </script>
+        // console.log(evt.currentTarget.attributes.onclick.value);
+        document.getElementById(moduleName).style.display = active ? "none" : "block";
+        evt.currentTarget.className += active ? "" : " active";
+      }
+    </script>
+
+  </main>
 </body>
+
 </html>

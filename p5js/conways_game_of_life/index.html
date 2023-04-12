@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Conway's Game of Life</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script src="/auxiliary/p5.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
 </head>
+
 <body>
-  <h1><a href="/">alifeee</a></h1><hr>
+  <main>
 
-  <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> using <a href="https://p5js.org/">p5.js</a>. The Buttons on the bottom right are the control panel buttons with: randomise, reset, pause/play, and step. On the left of these you have the 'brush' buttons, with a simple square as well as some common shapes, an erase button, and a rotate button. For more shapes see the <a href="https://www.conwaylife.com/wiki/Category:Pattern_categories">LifeWiki</a>.
+    <h1><a href="/">alifeee</a></h1>
+    <hr>
 
-There are two sliders below the game, the 'speed' is how often a new generation is calculated, and the 'size' is the size of each square pixel.</p>
-  <div id="p5_container"></div>
-  <table>
-   <tr>
-    <td>Speed: <span id="speedSliderInfo"></span> ms</td>
-    <td>Size: <span id="sizeSliderInfo"></span> px</td>
-   </tr>
-   <tr>
-    <td>
-     <input type="range" min="100" max="1000" value="100" step="50" id="speedSlider">
-    </td>
-    <td>
-     <input type="range" min="10" max="100" value="20" step="1" id="sizeSlider">
-    </td>
-   </tr>
-  </table>
+    <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> using <a
+        href="https://p5js.org/">p5.js</a>. The Buttons on the bottom right are the control panel buttons with:
+      randomise, reset, pause/play, and step. On the left of these you have the 'brush' buttons, with a simple square as
+      well as some common shapes, an erase button, and a rotate button. For more shapes see the <a
+        href="https://www.conwaylife.com/wiki/Category:Pattern_categories">LifeWiki</a>.
 
-  <hr><h2><a href="../">Back to p5js</a></h2>
+      There are two sliders below the game, the 'speed' is how often a new generation is calculated, and the 'size' is
+      the size of each square pixel.</p>
+    <div id="p5_container"></div>
+    <table>
+      <tr>
+        <td>Speed: <span id="speedSliderInfo"></span> ms</td>
+        <td>Size: <span id="sizeSliderInfo"></span> px</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="range" min="100" max="1000" value="100" step="50" id="speedSlider">
+        </td>
+        <td>
+          <input type="range" min="10" max="100" value="20" step="1" id="sizeSlider">
+        </td>
+      </tr>
+    </table>
 
-  <script>
-    var speedSlider = document.getElementById("speedSlider");
-    var speedInfo = document.getElementById("speedSliderInfo");
-    speedInfo.innerHTML = speedSlider.value;
-    speedSlider.oninput = function() {
+    <hr>
+    <h2><a href="../">Back to p5js</a></h2>
+
+    <script>
+      var speedSlider = document.getElementById("speedSlider");
+      var speedInfo = document.getElementById("speedSliderInfo");
       speedInfo.innerHTML = speedSlider.value;
-    }
+      speedSlider.oninput = function () {
+        speedInfo.innerHTML = speedSlider.value;
+      }
 
-    var sizeSlider = document.getElementById("sizeSlider");
-    var sizeInfo = document.getElementById("sizeSliderInfo");
-    sizeInfo.innerHTML = sizeSlider.value;
-    sizeSlider.oninput = function() {
+      var sizeSlider = document.getElementById("sizeSlider");
+      var sizeInfo = document.getElementById("sizeSliderInfo");
       sizeInfo.innerHTML = sizeSlider.value;
-    }
-  </script>
-  <script src="conway.js"></script>
+      sizeSlider.oninput = function () {
+        sizeInfo.innerHTML = sizeSlider.value;
+      }
+    </script>
+    <script src="conway.js"></script>
+
+  </main>
 </body>
+
 </html>

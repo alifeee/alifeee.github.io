@@ -17,3 +17,23 @@ npm test
 ```bash
 npm test -- --watch
 ```
+
+## Refactoring with find and replace
+
+### Wrap body in main
+
+#### Find
+
+```regex
+<body>((?:(?!<main>).|[\r\n])*?)<\/body>
+```
+
+#### Replace
+
+```html
+<body>
+  <main>
+    $1
+  </main>
+</body>
+```

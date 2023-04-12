@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Steam Mosaic</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
@@ -18,29 +19,40 @@
       background-image: url("mosaic.jpeg");
       background-size: cover;
     }
+
     #bg {
       padding: 10px;
       background: #424242;
     }
   </style>
 </head>
+
 <body>
-  <div id="bg">
-  <h1><a href="/">alifeee</a></h1><hr>
+  <main>
 
-  <p>
-    This page is nonfunctional. If you would like to create a steam mosaic like the one on this page, visit <a href="https://github.com/alifeee/steam_collage">https://github.com/alifeee/steam_collage</a>.
-  </p>
-  <label for="sid">Steam ID:</label>
-  <input type="text" id="steamID" name="sid"><br>
-  <button type="button" onclick="createMosaic()">Create Mosaic</button>
+    <div id="bg">
+      <h1><a href="/">alifeee</a></h1>
+      <hr>
 
-  <!-- <img src="mosaic.jpeg" width="100%"> -->
+      <p>
+        This page is nonfunctional. If you would like to create a steam mosaic like the one on this page, visit <a
+          href="https://github.com/alifeee/steam_collage">https://github.com/alifeee/steam_collage</a>.
+      </p>
+      <label for="sid">Steam ID:</label>
+      <input type="text" id="steamID" name="sid"><br>
+      <button type="button" onclick="createMosaic()">Create Mosaic</button>
 
-  <hr><h2 style="text-align:center"><a href="../">Back to main page</a></h2>
+      <!-- <img src="mosaic.jpeg" width="100%"> -->
 
-  </div>
+      <hr>
+      <h2 style="text-align:center"><a href="../">Back to main page</a></h2>
 
-  <script src='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=getGamesList'></script>
+    </div>
+
+    <script
+      src='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=getGamesList'></script>
+
+  </main>
 </body>
+
 </html>

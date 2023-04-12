@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>alifeee</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
@@ -15,45 +16,51 @@
 </head>
 
 <body>
-  <h1><a href="/">alifeee</a></h1><hr>
+  <main>
 
-  <center>
-  <div class="center">
-    <div class="tab" style="padding-bottom:10px;">
-      <button class="tabLink" onclick="openModule(event, 'Deckwise')" id="b1">Deckwise</button>
-      <button class="tabLink" onclick="openModule(event, 'Playerwise')" >Playerwise</button>
-      <button class="tabLink" onclick="openModule(event, 'League')" >League</button>
-      <button class="tabLink" onclick="openModule(event, 'History')" >History</button>
+    <h1><a href="/">alifeee</a></h1>
+    <hr>
+
+    <center>
+      <div class="center">
+        <div class="tab" style="padding-bottom:10px;">
+          <button class="tabLink" onclick="openModule(event, 'Deckwise')" id="b1">Deckwise</button>
+          <button class="tabLink" onclick="openModule(event, 'Playerwise')">Playerwise</button>
+          <button class="tabLink" onclick="openModule(event, 'League')">League</button>
+          <button class="tabLink" onclick="openModule(event, 'History')">History</button>
+        </div>
+      </div>
+    </center>
+
+    <div class="tabContent" id="Deckwise">
+      <iframe id="deckFrame" width="100%" height=700 frameBorder=0
+        src="https://script.google.com/macros/s/AKfycbx0oS3Bq4_ZsbOeSP_4wgEqy5ByO8lufHJ4a-VxJBqWuEI5CH7ZARJQI59TSNqb7VhXzQ/exec"></iframe>
     </div>
-  </div>
-  </center>
 
-  <div class="tabContent" id="Deckwise">
-    <iframe id="deckFrame" width="100%" height=700 frameBorder=0
-      src="https://script.google.com/macros/s/AKfycbx0oS3Bq4_ZsbOeSP_4wgEqy5ByO8lufHJ4a-VxJBqWuEI5CH7ZARJQI59TSNqb7VhXzQ/exec"></iframe>
-  </div>
+    <div class="tabContent" id="Playerwise">
+      <iframe id="playerFrame" width="100%" height=700 frameBorder=0
+        src="https://script.google.com/macros/s/AKfycby4ZbUQATgX5kp1mNbaryQih17ap0XX6qTv6wXfTUmJO2xFpSzizEW99bnO56LCR4i1Ag/exec"></iframe>
+    </div>
 
-  <div class="tabContent" id="Playerwise">
-    <iframe id="playerFrame" width="100%" height=700 frameBorder=0
-      src="https://script.google.com/macros/s/AKfycby4ZbUQATgX5kp1mNbaryQih17ap0XX6qTv6wXfTUmJO2xFpSzizEW99bnO56LCR4i1Ag/exec"></iframe>
-  </div>
+    <div class="tabContent" id="League">
+      View the league on <a target="_blank" href="https://challonge.com/keyforgeleagueforge/">Challonge</a>.
+      <iframe id="playerFrame" width="100%" height=560 frameBorder=0
+        src="https://script.google.com/macros/s/AKfycbxioWZAzOhcusYppi36w7s5KlEAeNPdhb7Urs3k5hc9IZTxnvW2XgAijKJoOdARw1CTpA/exec"></iframe>
+    </div>
 
-  <div class="tabContent" id="League">
-    View the league on <a target="_blank" href="https://challonge.com/keyforgeleagueforge/">Challonge</a>.
-    <iframe id="playerFrame" width="100%" height=560 frameBorder=0
-      src="https://script.google.com/macros/s/AKfycbxioWZAzOhcusYppi36w7s5KlEAeNPdhb7Urs3k5hc9IZTxnvW2XgAijKJoOdARw1CTpA/exec"></iframe>
-  </div>
-
-  <div class="tabContent" id="History">
-    <iframe id="playerFrame" width="100%" height=700 frameBorder=0
-      src="https://script.google.com/macros/s/AKfycbzJmEAVCA3cCUkFloVsTCc1TvDnAjg8kNW3viMMxa0ovihP1YyFPpM_gRXtdY-ASJbJ/exec"></iframe>
-  </div>
+    <div class="tabContent" id="History">
+      <iframe id="playerFrame" width="100%" height=700 frameBorder=0
+        src="https://script.google.com/macros/s/AKfycbzJmEAVCA3cCUkFloVsTCc1TvDnAjg8kNW3viMMxa0ovihP1YyFPpM_gRXtdY-ASJbJ/exec"></iframe>
+    </div>
 
 
-  <script>
-    //turn on the first button by default
-    document.getElementById("Deckwise").style.display = "block";
-    document.getElementById("b1").className += " active";
-  </script>
+    <script>
+      //turn on the first button by default
+      document.getElementById("Deckwise").style.display = "block";
+      document.getElementById("b1").className += " active";
+    </script>
+
+  </main>
 </body>
+
 </html>

@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Random Picker</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
 </head>
+
 <body>
+  <main>
 
-<h1><a href="/">alifeee</a></h1><hr>
-<h2>Random Picker</h2>
 
-<p>Enter some choices to pick between in the box below and press the button to refresh the spinner!</p>
+    <h1><a href="/">alifeee</a></h1>
+    <hr>
+    <h2>Random Picker</h2>
 
-<div id="p5_container"></div>
+    <p>Enter some choices to pick between in the box below and press the button to refresh the spinner!</p>
 
-<div>
-<textarea id="choices_entry" rows="15" cols="50">Banana
+    <div id="p5_container"></div>
+
+    <div>
+      <textarea id="choices_entry" rows="15" cols="50">Banana
 Grapes
 Pineapple
 Mango</textarea>
-<br>
-<button onclick="draw_new()">Update choices</button>
-<!-- <br> -->
-<!-- <div id="url_box"></div> -->
-<!-- <br> -->
-<!-- <button onclick="copyURL()">Copy URL to choices</button> -->
-</div>
+      <br>
+      <button onclick="draw_new()">Update choices</button>
+      <!-- <br> -->
+      <!-- <div id="url_box"></div> -->
+      <!-- <br> -->
+      <!-- <button onclick="copyURL()">Copy URL to choices</button> -->
+    </div>
 
-<hr><h2><a href="../">Back to p5js</a></h2>
+    <hr>
+    <h2><a href="../">Back to p5js</a></h2>
 
-<!-- <script>
+    <!-- <script>
 let url_loc = document.getElementById("url_box");
 let params = new URLSearchParams(location.search);
 let choices_entry = decodeURIComponent(params.get('choices'));
@@ -52,7 +58,10 @@ let url = "alifeee.github.io/p5js/random_picker/" + encodeURIComponent(user_entr
 
 
 </script> -->
-<script src="../../auxiliary/p5.min.js"></script>
-<script src="random_picker.js"></script>
+    <script src="../../auxiliary/p5.min.js"></script>
+    <script src="random_picker.js"></script>
+
+  </main>
 </body>
+
 </html>

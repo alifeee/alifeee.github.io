@@ -1,88 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Orbits</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
+  <link rel="icon" href="/auxiliary/favicon.ico" />
   <script src="/auxiliary/p5.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
   <script src="/auxiliary/google-analytics.js"></script>
 
 </head>
+
 <body>
+  <main>
 
-<h1><a href="/">alifeee</a></h1><hr>
-<h2>Orbits</h2>
-<a>Click and drag to create a planet!</a>
 
-<div id="p5_container"></div>
+    <h1><a href="/">alifeee</a></h1>
+    <hr>
+    <h2>Orbits</h2>
+    <a>Click and drag to create a planet!</a>
 
-<table>
- <tr>
-  <td>
-   <input type="range" min="10" max="100" value="20" step="5" id="diameter_slider">
-  </td>
-  <td>
-   Diameter: <span id="diameter_span"></span>
-  </td>
-  <td>
-   <button type="button" onclick="planets=[]">Delete all planets</button>
-  </td>
-  <td>
-   <button type="button" onclick="pause()">Pause/Resume</button>
-  </td>
- </tr>
- <tr>
-  <td>
-   <input type="range" min="-5" max="10" value="1" step=".1" id="grav_slider">
-  </td>
-  <td>
-   Gravity: <span id="grav_span"></span>
-  </td>
-  <td>
-   <button type="button" onclick="create_solar_system()">Create random system</button>
-  </td>
-  <td>
-   <button type="button" onclick="create_random_planets()">Add 10 random planets</button>
-  </td>
- </tr>
- <tr>
-  <td colspan="2">
-   <div>
-   <input type="checkbox" id="pausing_box">
-   <label for="pausing_box">Pause on planet creation</label>
-   </div>
-  </td>
- </tr>
-</table>
+    <div id="p5_container"></div>
 
-<hr><h2><a href="../">Back to p5js</a></h2>
+    <table>
+      <tr>
+        <td>
+          <input type="range" min="10" max="100" value="20" step="5" id="diameter_slider">
+        </td>
+        <td>
+          Diameter: <span id="diameter_span"></span>
+        </td>
+        <td>
+          <button type="button" onclick="planets=[]">Delete all planets</button>
+        </td>
+        <td>
+          <button type="button" onclick="pause()">Pause/Resume</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="range" min="-5" max="10" value="1" step=".1" id="grav_slider">
+        </td>
+        <td>
+          Gravity: <span id="grav_span"></span>
+        </td>
+        <td>
+          <button type="button" onclick="create_solar_system()">Create random system</button>
+        </td>
+        <td>
+          <button type="button" onclick="create_random_planets()">Add 10 random planets</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div>
+            <input type="checkbox" id="pausing_box">
+            <label for="pausing_box">Pause on planet creation</label>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-<script src="orbits.js"></script>
-<script>
-var diameter_slider = document.getElementById("diameter_slider");
-var diameter_info = document.getElementById("diameter_span");
-diameter_info.innerHTML = diameter_slider.value;
-diameter_slider.oninput = function() {
-  diameter_info.innerHTML = diameter_slider.value;
-}
+    <hr>
+    <h2><a href="../">Back to p5js</a></h2>
 
-var grav_slider = document.getElementById("grav_slider");
-var grav_info = document.getElementById("grav_span");
-grav_info.innerHTML = grav_slider.value;
-grav_slider.oninput = function() {
-  grav_info.innerHTML = grav_slider.value;
-}
+    <script src="orbits.js"></script>
+    <script>
+      var diameter_slider = document.getElementById("diameter_slider");
+      var diameter_info = document.getElementById("diameter_span");
+      diameter_info.innerHTML = diameter_slider.value;
+      diameter_slider.oninput = function () {
+        diameter_info.innerHTML = diameter_slider.value;
+      }
 
-pausing_check = document.getElementById("pausing_box");
+      var grav_slider = document.getElementById("grav_slider");
+      var grav_info = document.getElementById("grav_span");
+      grav_info.innerHTML = grav_slider.value;
+      grav_slider.oninput = function () {
+        grav_info.innerHTML = grav_slider.value;
+      }
 
-function pause() {
-  pausing = !pausing;
-  paused = !paused;
-}
+      pausing_check = document.getElementById("pausing_box");
 
-</script>
+      function pause() {
+        pausing = !pausing;
+        paused = !paused;
+      }
+
+    </script>
+
+  </main>
 </body>
+
 </html>
