@@ -1,32 +1,162 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>alifeee</title>
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+  <head>
+    <title>alifeee</title>
+    <link rel="stylesheet" href="/auxiliary/stylesheet.css" />
+    <link rel="icon" href="/auxiliary/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"
+    ></script>
+    <script src="/auxiliary/google-analytics.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
 
-</head>
-<body>
-  <h1><a href="/"               >alifeee</a></h1><hr>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+      <hr />
+    </header>
 
-  <h2><a href="./p5js"           >p5.js Simulations</a></h2>
-  <h2><a href="./cryptography"   >Cryptography</a></h2>
-  <h2><a href="./itch.io_bundle" >Itch.io games</a></h2>
-  <h2><a href="./durham_physics"        >Durham Physics</a></h2>
-  <h2><a href="./diplomacy"      >Diplomacy</a>
-    <!-- <a href="./keyforge" style="text-decoration:none">🔑</a> -->
-  </h2>
-  <!-- <h2><a href="./dwarf_fortress" >Dwarf Fortress Quick Reference</a></h2> -->
+    <main>
+      <p class="refurb">under refurbishment</p>
+      <p class="bloglink">
+        Why not check out:
+        <br />
+        <a href="https://blog.alifeee.co.uk">blog.alifeee.co.uk</a>
+      </p>
+      <ul class="pages">
+        <li class="page p5js">
+          <img src="./p5js/thumbnail.png" class="cover" />
+          <a href="./p5js">p5.js Simulations</a>
+        </li>
+        <li class="page">
+          <img src="./cryptography/thumbnail.png" class="contain" />
+          <a href="./cryptography">Cryptography</a>
+        </li>
+        <li class="page">
+          <img src="./itch.io_bundle/thumbnail.png" class="cover" />
+          <a href="./itch.io_bundle">Itch.io games</a>
+        </li>
+        <li class="page">
+          <img src="./durham_physics/thumbnail.png" class="cover" />
+          <a href="./durham_physics">Durham Physics</a>
+        </li>
+        <li class="page">
+          <img src="./diplomacy/thumbnail.png" class="cover" />
+          <a href="./diplomacy">Diplomacy</a>
+        </li>
+      </ul>
+    </main>
 
-  <hr>
-  <p style="text-align:center">
-    contact: <a href="mailto: alifeee.web@outlook.com">alifeee.web@outlook.com</a>
-    &middot <a href="sitemap.html">sitemap</a>
-    &middot <a href="https://github.com/alifeee">github</a>
-  </p>
-</body>
+    <footer>
+      <div class="links">
+        <a href="https://blog.alifeee.co.uk">
+          <img alt="pen nib icon" src="./icons/pen-nib-solid.svg" />
+          <span class="text">Blog</span>
+        </a>
+        <a href="./sitemap.html">
+          <img alt="graph icon" src="./icons/sitemap-solid.svg" />
+          <span class="text">Sitemap</span>
+        </a>
+        <a href="https://twitter.com/alifeeeirenn" target="_blank">
+          <img alt="Twitter icon" src="./icons/twitter.svg" />
+          <span class="text">Twitter</span>
+        </a>
+        <a href="https://github.com/alifeee/blog" target="_blank">
+          <img alt="GitHub icon" src="./icons/github.svg" />
+          <span class="text">GitHub</span>
+        </a>
+        <a href="mailto:alifeee.web@outlook.com" target="_blank">
+          <img alt="envelope icon" src="./icons/envelope-solid.svg" />
+          <span class="text">Email</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+
+  <style>
+    .refurb {
+      color: #ff0000;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000,
+        0 0 80px #ff0000, 0 0 120px #ff0000, 0 0 160px #ff0000;
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: monospace;
+    }
+    .bloglink {
+      text-align: center;
+      font-size: 2rem;
+      font-family: "Roboto", sans-serif;
+    }
+    .bloglink a {
+      font-family: "Josefin Sans", sans-serif;
+    }
+    .pages {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .page {
+      position: relative;
+      flex: 1 0 10rem;
+      background-color: var(--primary);
+      outline: 1px solid black;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.5rem black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 7rem;
+    }
+    .page a {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin: auto;
+      font-size: 2rem;
+      font-family: "Josefin Sans", sans-serif;
+      text-decoration: none;
+      text-align: center;
+      color: white;
+    }
+    .page img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      transition: filter 0.1s ease;
+      filter: brightness(0.5);
+    }
+    .cover {
+      object-fit: cover;
+    }
+    .contain {
+      object-fit: contain;
+      margin: 0.25rem 0;
+      height: calc(100% - 0.5rem) !important;
+    }
+    .page a {
+      position: relative;
+      z-index: 1;
+    }
+    .page:hover img {
+      filter: brightness(0.25);
+    }
+  </style>
 </html>
