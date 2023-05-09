@@ -1,316 +1,344 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>alifeee - Cryptography</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <title>Cryptography</title>
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css" />
-  <link rel="icon" href="/auxiliary/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
+    <main>
+      <h2>Cryptography</h2>
+
+      <h3>Caesar Cipher</h3>
+
+      <p>
+        The
+        <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>
+        is a simple substitution cipher. The substitution is shown below. Of
+        note is the auto-decoded message, which uses
+        <a
+          href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/"
+          >trigram statistics</a
+        >
+        to attempt to guess the correct shift, with a high success rate.
+      </p>
+
+      <div id="caesar-app" class="caesar app" v-scope>
+        <div class="caesar input">
+          <span class="label">Message</span>
+          <textarea v-model="message" rows="3"></textarea>
+          <div class="shift control">
+            <span>A -> {{ letterAEncoded }}</span>
+            <input
+              type="range"
+              min="0"
+              max="25"
+              value="0"
+              step="1"
+              v-model.number="shift"
+            />
+          </div>
+        </div>
+        <div class="caesar output">
+          <p class="encode">
+            <span class="label">Encoded Message</span>
+            <span class="shift" :title="shiftTooltip">(&#8593; {{shift}})</span>
+            <br />
+            <span class="copyable" onclick="copyToClipboard(this)">
+              <span class="message">{{ encodedMessage }}</span>
+              <span class="copy dialog">Copied!</span>
+              <img src="./copy.svg" class="copy icon" />
+            </span>
+          </p>
+          <p class="decode">
+            <span class="label">Decoded Message</span>
+            <span class="shift" :title="shiftTooltip">(&#8595; {{shift}})</span>
+            <br />
+            <span class="copyable" onclick="copyToClipboard(this)">
+              <span class="message">{{ decodedMessage }}</span>
+              <span class="copy dialog">Copied!</span>
+              <img src="./copy.svg" class="copy icon" />
+            </span>
+          </p>
+        </div>
+        <div
+          class="caesar output"
+          v-show="trigrams"
+          @vue:mounted="loadTrigrams()"
+        >
+          <p class="auto">
+            <span class="label">Auto Decoded Message</span>
+            <span class="shift" :title="shiftTooltip"
+              >(&#8595; {{autoshift}})</span
+            >
+            <br />
+            <span class="copyable" onclick="copyToClipboard(this)">
+              <span class="message">{{ autoMessage }}</span>
+              <span class="copy dialog">Copied!</span>
+              <img src="./copy.svg" class="copy icon" />
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <h3>Binary Encoding</h3>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding"
+          >Binary Encoding</a
+        >
+        is writing a message as the binary representation as is used for ASCII
+        or Unicode.
+      </p>
+
+      <table>
+        <tr>
+          <td><label for="binary_raw">Raw text</label></td>
+          <td><label for="binary_encoded">Encoded Text</label></td>
+        </tr>
+        <tr>
+          <td><textarea id="binary_raw" rows="3" cols="25"></textarea></td>
+          <td><textarea id="binary_encoded" rows="3" cols="25"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <button type="button" onClick="Binary.buttonEncode()">
+                    Encode →
+                  </button>
+                </td>
+                <td>
+                  <button type="button" onClick="Common.clear('binary_raw')">
+                    Clear
+                  </button>
+                </td>
+                <td>
+                  <button type="button" onClick="Common.copy('binary_raw')">
+                    Copy
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <button type="button" onClick="Binary.buttonDecode()">
+                    ← Decode
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    onClick="Common.clear('binary_encoded')"
+                  >
+                    Clear
+                  </button>
+                </td>
+                <td>
+                  <button type="button" onClick="Common.copy('binary_encoded')">
+                    Copy
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <script type="module">
+        import { encode, decode, crack } from "./scripts/cipher_caesar.js";
+        import { createApp } from "https://unpkg.com/petite-vue?module";
+
+        createApp({
+          message: "Dszquphsbqiz jt gvo!",
+          shift: 1,
+          shiftTooltip: "Shifts each letter by this amount in the alphabet",
+          get letterAEncoded() {
+            return encode("A", this.shift);
+          },
+          trigrams: null,
+          get encodedMessage() {
+            return encode(this.message, this.shift);
+          },
+          get decodedMessage() {
+            return decode(this.message, this.shift);
+          },
+          autoshift: 0,
+          get autoMessage() {
+            if (this.trigrams) {
+              const { shift, message } = crack(this.message, this.trigrams);
+              this.autoshift = shift;
+              return message;
+            }
+          },
+          loadTrigrams() {
+            console.log("loading trigrams");
+            fetch("./stats/trigrams.json")
+              .then((response) => response.json())
+              .then((data) => {
+                this.trigrams = data;
+              });
+          },
+        }).mount("#caesar-app");
+      </script>
+      <script>
+        function copyToClipboard(element) {
+          const text = element.querySelector(".message").innerText;
+          navigator.clipboard.writeText(text);
+          const dialog = element.querySelector(".copy.dialog");
+          dialog.classList.add("active");
+          setTimeout(() => {
+            dialog.classList.remove("active");
+          }, 1000);
+        }
+      </script>
+    </main>
+    <footer>
+      <a class="backlink" href="../">Back to main page</a>
+    </footer>
+  </body>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .caesar.app {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+    }
+
+    .caesar.app > * {
+      min-width: 15rem;
+      flex: 1;
+      padding: 0.5rem;
+    }
+
+    /* input area */
+
+    .caesar.input > textarea {
+      width: 100%;
+    }
+
+    .shift.control {
+      display: flex;
+    }
+
+    .shift.control > input {
+      flex: 1;
+    }
+
+    .shift.control > span {
+      min-width: 4rem;
+    }
+
+    /* output area */
+
+    .caesar.output {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .caesar.output > p {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .caesar.output > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .caesar.output > p * {
+      margin-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .caesar.output .message {
+      background-color: #fff;
+      color: #000;
+      width: 100%;
+      min-height: 2.188rem;
+      border-radius: 0.25rem;
+      padding: 0.25rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .caesar.output .message:hover {
+      cursor: pointer;
+      background-color: #999;
+    }
+
+    .caesar.output .encode .shift {
+      color: #f77;
+    }
+
+    .caesar.output .decode .shift {
+      color: #4af;
+    }
+
+    .caesar.output .auto .shift {
+      color: #aaf;
+    }
+
+    /* copy dialog */
+
+    .copyable {
+      position: relative;
+      width: 100%;
+    }
+
+    .copyable .copy.icon {
+      position: absolute;
+      inset: 0 0 0 auto;
+      height: 1rem;
+      pointer-events: none;
+    }
+
+    .copy.dialog {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      background-color: #000;
+      color: #fff;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      z-index: 1;
+      transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    }
+
+    .copy.dialog.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
     table {
       border-collapse: collapse;
     }
   </style>
-</head>
-
-<body>
-  <h1><a href="/">alifeee</a></h1>
-  <h2>Cryptography</h2>
-
-  <h3>Caesar Cipher</h3>
-
-  <p>
-    The
-    <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> is
-    a simple substitution cipher. The substitution is shown below. Of note is
-    the auto-decoded message, which uses
-    <a href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/">trigram statistics</a>
-    to attempt to guess the correct shift, with a high success rate.
-  </p>
-
-  <div id="caesar-app" class="caesar app" v-scope>
-    <div class="caesar input">
-      <span class="label">Message</span>
-      <textarea v-model="message" rows="3"></textarea>
-      <div class="shift control">
-        <span>A -> {{ letterAEncoded }}</span>
-        <input type="range" min="0" max="25" value="0" step="1" v-model.number="shift" />
-      </div>
-    </div>
-    <div class="caesar output">
-      <p class="encode">
-        <span class="label">Encoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8593; {{shift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ encodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-      <p class="decode">
-        <span class="label">Decoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8595; {{shift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ decodedMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-    </div>
-    <div class="caesar output" v-show="trigrams" @vue:mounted="loadTrigrams()">
-      <p class="auto">
-        <span class="label">Auto Decoded Message</span>
-        <span class="shift" :title="shiftTooltip">(&#8595; {{autoshift}})</span>
-        <br />
-        <span class="copyable" onclick="copyToClipboard(this)">
-          <span class="message">{{ autoMessage }}</span>
-          <span class="copy dialog">Copied!</span>
-          <img src="./copy.svg" class="copy icon" />
-        </span>
-      </p>
-    </div>
-  </div>
-
-  <h3>Binary Encoding</h3>
-  <p>
-    <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding">Binary Encoding</a>
-    is writing a message as the binary representation as is used for ASCII or
-    Unicode.
-  </p>
-
-  <table>
-    <tr>
-      <td><label for="binary_raw">Raw text</label></td>
-      <td><label for="binary_encoded">Encoded Text</label></td>
-    </tr>
-    <tr>
-      <td><textarea id="binary_raw" rows="3" cols="25"></textarea></td>
-      <td><textarea id="binary_encoded" rows="3" cols="25"></textarea></td>
-    </tr>
-    <tr>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Binary.buttonEncode()">
-                Encode →
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('binary_raw')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('binary_raw')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <button type="button" onClick="Binary.buttonDecode()">
-                ← Decode
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.clear('binary_encoded')">
-                Clear
-              </button>
-            </td>
-            <td>
-              <button type="button" onClick="Common.copy('binary_encoded')">
-                Copy
-              </button>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-
-  <h2 style="text-align: center"><a href="../">Back to main page</a></h2>
-
-  <script type="module">
-    import { encode, decode, crack } from "./scripts/cipher_caesar.js";
-    import { createApp } from 'https://unpkg.com/petite-vue?module'
-
-    createApp({
-      message: "Dszquphsbqiz jt gvo!",
-      shift: 1,
-      shiftTooltip: "Shifts each letter by this amount in the alphabet",
-      get letterAEncoded() {
-        return encode("A", this.shift)
-      },
-      trigrams: null,
-      get encodedMessage() {
-        return encode(this.message, this.shift)
-      },
-      get decodedMessage() {
-        return decode(this.message, this.shift)
-      },
-      autoshift: 0,
-      get autoMessage() {
-        if (this.trigrams) {
-          const { shift, message } = crack(this.message, this.trigrams)
-          this.autoshift = shift
-          return message
-        }
-      },
-      loadTrigrams() {
-        console.log("loading trigrams");
-        fetch("./stats/trigrams.json")
-          .then((response) => response.json())
-          .then((data) => {
-            this.trigrams = data
-          })
-      }
-    })
-      .mount('#caesar-app')
-  </script>
-  <script>
-    function copyToClipboard(element) {
-      const text = element.querySelector(".message").innerText
-      navigator.clipboard.writeText(text)
-      const dialog = element.querySelector(".copy.dialog")
-      dialog.classList.add("active")
-      setTimeout(() => {
-        dialog.classList.remove("active")
-      }, 1000)
-    }
-  </script>
-</body>
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  .caesar.app {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: start;
-  }
-
-  .caesar.app>* {
-    min-width: 15rem;
-    flex: 1;
-    padding: 0.5rem;
-  }
-
-  /* input area */
-
-  .caesar.input>textarea {
-    width: 100%;
-  }
-
-  .shift.control {
-    display: flex;
-  }
-
-  .shift.control>input {
-    flex: 1;
-  }
-
-  .shift.control>span {
-    min-width: 4rem;
-  }
-
-  /* output area */
-
-  .caesar.output {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .caesar.output>p {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-
-  .caesar.output>p:last-child {
-    margin-bottom: 0;
-  }
-
-  .caesar.output>p * {
-    margin-bottom: 0.25rem;
-    display: inline-block;
-  }
-
-  .label {
-    font-weight: bold;
-  }
-
-  .caesar.output .message {
-    background-color: #fff;
-    color: #000;
-    width: 100%;
-    min-height: 2.188rem;
-    border-radius: 0.25rem;
-    padding: 0.25rem;
-    white-space: pre-wrap;
-    word-break: break-all;
-  }
-
-  .caesar.output .message:hover {
-    cursor: pointer;
-    background-color: #999;
-  }
-
-  .caesar.output .encode .shift {
-    color: #f77;
-  }
-
-  .caesar.output .decode .shift {
-    color: #4af;
-  }
-
-  .caesar.output .auto .shift {
-    color: #aaf;
-  }
-
-  /* copy dialog */
-
-  .copyable {
-    position: relative;
-    width: 100%;
-  }
-
-  .copyable .copy.icon {
-    position: absolute;
-    inset: 0 0 0 auto;
-    height: 1rem;
-    pointer-events: none;
-  }
-
-  .copy.dialog {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 1rem;
-    left: 0;
-    background-color: #000;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    z-index: 1;
-    transition: visibility 0.2s, opacity 0.2s ease-in-out;
-  }
-
-  .copy.dialog.active {
-    visibility: visible;
-    opacity: 1;
-  }
-</style>
-
 </html>

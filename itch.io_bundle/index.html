@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>alifeee</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+  <head>
+    <title>alifeee - Itch IO Bundles</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-</head>
-<body>
-  <h1><a href="/">alifeee<a></h1><hr>
-  <h2>Itch.io's Bundle for Racial Justice and Equality</h2>
-  <p>
-    In 2020 <a href="https://itch.io/docs/general/about">Itch.io</a> released their <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle for Racial Justice and Equality</a>. It got massively popular and ended up with over 1700 games/comics/RPG rules. Sorting through this content proved troublesome. This is an attempt to categorise those games.
-  </p>
-  <p>
-    In 2022, <a href="https://itch.io/docs/general/about">Itch.io</a> also released the <a href="https://itch.io/b/1316/bundle-for-ukraine">Bundle for Ukraine</a>, supporting charities helping to stop the war in Ukraine.
-  </p>
-  <p>
-    This project used <a href="https://www.python.org/">Python</a> to access the webpage of each game, which was then scraped for more data using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, a Python module for parsing HTML. The review scores, category, and a few other useful data were saved to a local file, which is also hosted here and displayed sorted by category on each bundle page below.
-  </p>
-  
-  <hr>
-  <ul>
-    <li><h3><a href="./racial_justice">Bundle for Racial Justice and Equality</a></h3></li>
-    <li><h3><a href="./ukraine">Bundle for Ukraine</a></h3></li>
-  </ul>
+    <link rel="icon" href="/favicon.ico" />
 
-  <hr><h2 style="text-align:center"><a href="/">Back to main page</a></h2>
-</body>
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
+    <main>
+      <h2>Itch.io's Bundle for Racial Justice and Equality</h2>
+      <p>
+        In 2020
+        <a href="https://itch.io/docs/general/about">Itch.io</a> released their
+        <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality"
+          >Bundle for Racial Justice and Equality</a
+        >. It got massively popular and ended up with over 1700 games/comics/RPG
+        rules. Sorting through this content proved troublesome. This is an
+        attempt to categorise those games.
+      </p>
+      <p>
+        In 2022, <a href="https://itch.io/docs/general/about">Itch.io</a> also
+        released the
+        <a href="https://itch.io/b/1316/bundle-for-ukraine"
+          >Bundle for Ukraine</a
+        >, supporting charities helping to stop the war in Ukraine.
+      </p>
+      <p>
+        This project used <a href="https://www.python.org/">Python</a> to access
+        the webpage of each game, which was then scraped for more data using
+        <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+          >BeautifulSoup</a
+        >, a Python module for parsing HTML. The review scores, category, and a
+        few other useful data were saved to a local file, which is also hosted
+        here and displayed sorted by category on each bundle page below.
+      </p>
+
+      <hr />
+      <ul>
+        <li>
+          <h3>
+            <a href="./racial_justice"
+              >Bundle for Racial Justice and Equality</a
+            >
+          </h3>
+        </li>
+        <li>
+          <h3><a href="./ukraine">Bundle for Ukraine</a></h3>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <a class="backlink" href="/">Back to main page</a>
+    </footer>
+  </body>
 </html>

@@ -1,161 +1,216 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Diplomacy</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+  <head>
+    <title>alifeee - Diplomacy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-.graphTable, .graphTable *{
-  border:none;
-}
-th, td {
-  padding: 5px;
-  text-align: left;
-  white-space:nowrap;
-}
-body{
-  max-width:1046px;
-  width:1046px
-}
-#results a{
-  text-decoration:none;
-}
-</style>
-</head>
+    <link rel="icon" href="/favicon.ico" />
 
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
 
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
 
-<body>
-<h1><a href="/">alifeee<a></h1><hr>
-<h2>Diplomacy Results</h2>
+    <main>
+      <h2>Diplomacy Results</h2>
 
-<h3>What is Diplomacy?</h3>
-<p>
-  <a href="https://en.wikipedia.org/wiki/Diplomacy_(game)">Diplomacy</a> is a diceless strategic war game where each player controls several territories of a larger geographic area, and must plan ahead and use skills of communication and coercion to eventually control the entire board, using tanks and boats to capture new territories, as well as making alliances and enemies along the way.
-</p>
-<p>
-  Diplomacy was originally a board game, and was played either in-person or via post. The games the following statistics come from were played online, mostly using <a href="https://vdiplomacy.com/">vDipomacy</a>, a popular diplomacy website. <a href="https://webdiplomacy.net/">webDiplomacy</a> is another popular website which has a good explanation of the game on its <a href="https://webdiplomacy.net/">homepage</a>.
-</p>
-<p>
-  <i><q>Luck plays no part in Diplomacy. Cunning and cleverness, honesty and perfectly-timed betrayal are the tools needed to outwit your fellow players. The most skillful negotiator will climb to victory over the backs of both enemies and friends. <br>Who do you trust?</q></i> - <a href="https://avalonhill.wizards.com/games/diplomacy">Avalon Hill</a>
-</p>
+      <h3>What is Diplomacy?</h3>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Diplomacy_(game)">Diplomacy</a>
+        is a diceless strategic war game where each player controls several
+        territories of a larger geographic area, and must plan ahead and use
+        skills of communication and coercion to eventually control the entire
+        board, using tanks and boats to capture new territories, as well as
+        making alliances and enemies along the way.
+      </p>
+      <p>
+        Diplomacy was originally a board game, and was played either in-person
+        or via post. The games the following statistics come from were played
+        online, mostly using <a href="https://vdiplomacy.com/">vDipomacy</a>, a
+        popular diplomacy website.
+        <a href="https://webdiplomacy.net/">webDiplomacy</a> is another popular
+        website which has a good explanation of the game on its
+        <a href="https://webdiplomacy.net/">homepage</a>.
+      </p>
+      <p>
+        <i
+          ><q
+            >Luck plays no part in Diplomacy. Cunning and cleverness, honesty
+            and perfectly-timed betrayal are the tools needed to outwit your
+            fellow players. The most skillful negotiator will climb to victory
+            over the backs of both enemies and friends. <br />Who do you
+            trust?</q
+          ></i
+        >
+        -
+        <a href="https://avalonhill.wizards.com/games/diplomacy">Avalon Hill</a>
+      </p>
 
-<hr>
-<h3>The Results</h3>
+      <hr />
+      <h3>The Results</h3>
 
-<div>
-<table id="results" style="margin-left:auto;margin-right:auto;">
-</table>
-</div><br>
-
-<hr>
-
-<h2>Charts</h2>
-<div>
-<table class="graphTable" width="100%">
-  <tr>
-    <td  width="50%">
-      <div style="width:100%">
-        <canvas id="performance_chart" height="190"></canvas>
+      <div>
+        <table
+          id="results"
+          style="margin-left: auto; margin-right: auto"
+        ></table>
       </div>
-    </td>
-    <td  width="50%">
-      <div style="width:100%">
-        <canvas id="alex_performance_chart" height="190"></canvas>
+      <br />
+
+      <hr />
+
+      <h2>Charts</h2>
+      <div>
+        <table class="graphTable" width="100%">
+          <tr>
+            <td width="50%">
+              <div style="width: 100%">
+                <canvas id="performance_chart" height="190"></canvas>
+              </div>
+            </td>
+            <td width="50%">
+              <div style="width: 100%">
+                <canvas id="alex_performance_chart" height="190"></canvas>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%">
+              <div style="width: 100%">
+                <canvas id="total_games_chart" height="190"></canvas>
+              </div>
+            </td>
+            <td width="50%">
+              <div style="width: 100%">
+                <canvas id="wins_draws_chart" height="150"></canvas>
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
-    </td>
-  </tr>
-  <tr>
-    <td  width="50%">
-      <div style="width:100%">
-        <canvas id="total_games_chart" height="190"></canvas>
-      </div>
-    </td>
-    <td  width="50%">
-      <div style="width:100%">
-        <canvas id="wins_draws_chart" height="150"></canvas>
-      </div>
-    </td>
-  </tr>
-</table>
-</div>
 
-  <hr><h2 style="text-align:center"><a href="../">Back to main page</a></h2>
+      <hr />
+    </main>
+    <footer>
+      <a class="backlink" href="../">Back to main page</a>
+    </footer>
 
-<script src="../auxiliary/Chart.js"></script>
-<script src="../auxiliary/jquery-3.5.1.min.js"></script>
-<script src="diplo_scripts.js"></script>
-<script>
-Chart.defaults.global.defaultFontColor = '#fff';
-jqueryJSON = $.getJSON("results.json", function(games) {
+    <script src="../auxiliary/Chart.js"></script>
+    <script src="../auxiliary/jquery-3.5.1.min.js"></script>
+    <script src="diplo_scripts.js"></script>
+    <script>
+      Chart.defaults.global.defaultFontColor = "#fff";
+      jqueryJSON = $.getJSON("results.json", function (games) {
+        players = create_players(games);
+        scores = create_performance(players);
+        alex_scores = create_alex_performance(games, players);
 
-  players =     create_players(games);
-  scores =      create_performance(players);
-  alex_scores = create_alex_performance(games, players);
+        var tab = "";
+        tab += table_headers(players);
+        tab += table_data(games, players);
+        tab += table_performance(players, scores);
+        tab += table_alex_performance(players, alex_scores);
+        var table = document.getElementById("results");
+        table.innerHTML = tab;
 
-  var tab = "";
-  tab += table_headers(players);
-  tab += table_data(games, players);
-  tab += table_performance(players, scores);
-  tab += table_alex_performance(players, alex_scores);
-  var table = document.getElementById("results");
-  table.innerHTML = tab;
+        var player_names = [];
+        var performances = [];
+        var alex_performances = [];
+        var total_games = [];
+        var wins_draws = [0, 0];
+        var wins_draws_labels = ["Wins", "Draws"];
+        for (player in scores) {
+          player_names.push(player);
+          performances.push(scores[player].toFixed(2));
+          alex_performances.push(alex_scores[player].toFixed(2));
+          total_games.push(
+            Object.keys(players[player]).reduce(
+              (sum, key) => sum + parseFloat(players[player][key] || 0),
+              0
+            )
+          );
+        }
+        for (game of games) {
+          for (player in game["results"]) {
+            if (game["results"][player] == "win") {
+              wins_draws[0] += 1;
+            }
+            if (game["results"][player] == "draw") {
+              wins_draws[1] += 1;
+              break;
+            }
+          }
+        }
 
-  var player_names = [];
-  var performances = [];
-  var alex_performances = [];
-  var total_games = [];
-  var wins_draws = [0,0];
-  var wins_draws_labels = ["Wins", "Draws"];
-  for (player in scores) {
-    player_names.push(player);
-    performances.push(scores[player].toFixed(2));
-    alex_performances.push(alex_scores[player].toFixed(2));
-    total_games.push(Object.keys(players[player]).reduce((sum,key)=>sum+parseFloat(players[player][key]||0),0));
-  }
-  for (game of games) {
-    for (player in game["results"]) {
-      if (game["results"][player]=="win") {
-        wins_draws[0] += 1;
-      }
-      if (game["results"][player]=="draw") {
-        wins_draws[1] += 1;
-        break;
-      }
+        var combined = sort_by_second(player_names, performances, -1);
+        performances_names = combined[0];
+        performances = combined[1];
+
+        var combined = sort_by_second(player_names, alex_performances, -1);
+        alex_performances_names = combined[0];
+        alex_performances = combined[1];
+
+        var combined = sort_by_second(player_names, total_games, -1);
+        total_games_names = combined[0];
+        total_games = combined[1];
+
+        bar_graph(
+          performances_names,
+          performances,
+          "performance_chart",
+          "Performance"
+        );
+        bar_graph(
+          alex_performances_names,
+          alex_performances,
+          "alex_performance_chart",
+          "Alex's Performance"
+        );
+        bar_graph(
+          total_games_names,
+          total_games,
+          "total_games_chart",
+          "Total Games Played"
+        );
+        doughnut_graph(
+          wins_draws,
+          wins_draws_labels,
+          ["#548235", "#c6e0b4"],
+          "wins_draws_chart",
+          "Wins vs. Draws"
+        );
+      });
+    </script>
+  </body>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
     }
-  }
-
-  var combined = sort_by_second(player_names, performances, -1);
-  performances_names = combined[0];
-  performances = combined[1];
-
-  var combined = sort_by_second(player_names, alex_performances, -1);
-  alex_performances_names = combined[0];
-  alex_performances = combined[1];
-
-  var combined = sort_by_second(player_names, total_games, -1);
-  total_games_names = combined[0];
-  total_games = combined[1];
-
-  bar_graph(performances_names, performances,
-      "performance_chart", "Performance");
-  bar_graph(alex_performances_names, alex_performances,
-      "alex_performance_chart", "Alex\'s Performance");
-  bar_graph(total_games_names, total_games,
-      "total_games_chart", "Total Games Played");
-  doughnut_graph(wins_draws, wins_draws_labels,
-      ["#548235", "#c6e0b4"], "wins_draws_chart", "Wins vs. Draws");
-
-});
-</script>
-</body>
+    .graphTable,
+    .graphTable * {
+      border: none;
+    }
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    #results a {
+      text-decoration: none;
+    }
+  </style>
 </html>

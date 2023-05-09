@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Steam Mosaic</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+  <head>
+    <title>Steam Mosaic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <script src="/auxiliary/jquery-3.5.1.min.js"></script>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
 
-  <script src="mosaic.js"></script>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
 
+    <main>
+      <p>
+        This page is nonfunctional. If you would like to create a steam mosaic
+        like the one on this page, visit
+        <a href="https://github.com/alifeee/steam_collage"
+          >https://github.com/alifeee/steam_collage</a
+        >.
+      </p>
+      <label for="sid">Steam ID:</label>
+      <input type="text" id="steamID" name="sid" /><br />
+      <button type="button" onclick="createMosaic()">Create Mosaic</button>
+    </main>
+
+    <footer><a class="backlink" href="../">Back to main page</a></footer>
+
+    <script src="/auxiliary/jquery-3.5.1.min.js"></script>
+    <script src="mosaic.js"></script>
+    <script src="http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=getGamesList"></script>
+  </body>
   <style>
     body {
       background-image: url("mosaic.jpeg");
@@ -23,24 +49,4 @@
       background: #424242;
     }
   </style>
-</head>
-<body>
-  <div id="bg">
-  <h1><a href="/">alifeee</a></h1><hr>
-
-  <p>
-    This page is nonfunctional. If you would like to create a steam mosaic like the one on this page, visit <a href="https://github.com/alifeee/steam_collage">https://github.com/alifeee/steam_collage</a>.
-  </p>
-  <label for="sid">Steam ID:</label>
-  <input type="text" id="steamID" name="sid"><br>
-  <button type="button" onclick="createMosaic()">Create Mosaic</button>
-
-  <!-- <img src="mosaic.jpeg" width="100%"> -->
-
-  <hr><h2 style="text-align:center"><a href="../">Back to main page</a></h2>
-
-  </div>
-
-  <script src='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=getGamesList'></script>
-</body>
 </html>

@@ -1,86 +1,116 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bouncing Balls</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/auxiliary/stylesheet.css">
-  <link rel="icon" href="/auxiliary/favicon.ico"/>
-  <script src="/auxiliary/p5.min.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"></script>
-  <script src="/auxiliary/google-analytics.js"></script>
+  <head>
+    <title>p5js - Bouncing Balls</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-</head>
-<body>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
 
-<h1><a href="/">alifeee</a></h1><hr>
-<h2>Bouncing Balls</h2>
-<a>Click and drag to create a ball.</a>
+    <main>
+      <h2>Bouncing Balls</h2>
+      <a>Click and drag to create a ball.</a>
+      <div id="p5_container"></div>
+      <div>
+        <table>
+          <tr>
+            <td>
+              <input
+                type="range"
+                min="5"
+                max="50"
+                value="20"
+                step="5"
+                class="slider"
+                id="diameter_slider"
+              />
+            </td>
+            <td>Diameter: <span id="diameter_span"></span></td>
+            <td>
+              <button type="button" onclick="add_random_n(20)">
+                Add 20 random balls
+              </button>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="range"
+                min="-10"
+                max="10"
+                value="0"
+                step="0.5"
+                class="slider"
+                id="acc_x_slider"
+              />
+            </td>
+            <td>Horizontal Acceleration: <span id="acc_x_span"></span></td>
+            <td>
+              <button type="button" onclick="bouncers = []">
+                Delete all balls
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="range"
+                min="-10"
+                max="10"
+                value="4"
+                step="0.5"
+                class="slider"
+                id="acc_y_slider"
+              />
+            </td>
+            <td>Vertical Acceleration: <span id="acc_y_span"></span></td>
+          </tr>
+        </table>
+      </div>
+    </main>
 
-<div id="p5_container"></div>
+    <footer>
+      <a class="backlink" href="../">Back to p5js</a>
+    </footer>
 
-<div>
-<table>
-<tr>
- <td>
-  <input type="range" min="5" max="50" value="20" step="5" class="slider" id="diameter_slider">
- </td>
- <td>
-  Diameter: <span id="diameter_span"></span>
- </td>
- <td>
-  <button type="button" onclick="add_random_n(20)">Add 20 random balls</button>
- <td>
-</tr>
-<tr>
- <td>
-  <input type="range" min="-10" max="10" value="0" step="0.5" class="slider" id="acc_x_slider">
- </td>
- <td>
-  Horizontal Acceleration: <span id="acc_x_span"></span>
- </td>
- <td>
-  <button type="button" onclick="bouncers = []">Delete all balls</button>
- </td>
-</tr>
-<tr>
- <td>
-  <input type="range" min="-10" max="10" value="4" step="0.5" class="slider" id="acc_y_slider">
- </td>
- <td>
-  Vertical Acceleration: <span id="acc_y_span"></span>
- </td>
-</tr>
-</table>
-</div>
+    <script src="/auxiliary/p5.min.js"></script>
+    <script>
+      var diameter_slider = document.getElementById("diameter_slider");
+      var diameter_info = document.getElementById("diameter_span");
+      diameter_info.innerHTML = diameter_slider.value;
+      diameter_slider.oninput = function () {
+        diameter_info.innerHTML = diameter_slider.value;
+      };
 
-<hr><h2><a href="../">Back to p5js</a></h2>
+      var acc_x_slider = document.getElementById("acc_x_slider");
+      var acc_x_info = document.getElementById("acc_x_span");
+      acc_x_info.innerHTML = acc_x_slider.value;
+      acc_x_slider.oninput = function () {
+        acc_x_info.innerHTML = acc_x_slider.value;
+        acceleration.x = acc_x_slider.value;
+      };
 
-<script>
-var diameter_slider = document.getElementById("diameter_slider");
-var diameter_info = document.getElementById("diameter_span");
-diameter_info.innerHTML = diameter_slider.value;
-diameter_slider.oninput = function() {
-  diameter_info.innerHTML = diameter_slider.value;
-}
-
-var acc_x_slider = document.getElementById("acc_x_slider");
-var acc_x_info = document.getElementById("acc_x_span");
-acc_x_info.innerHTML = acc_x_slider.value;
-acc_x_slider.oninput = function() {
-  acc_x_info.innerHTML = acc_x_slider.value;
-  acceleration.x = acc_x_slider.value;
-}
-
-var acc_y_slider = document.getElementById("acc_y_slider");
-var acc_y_info = document.getElementById("acc_y_span");
-acc_y_info.innerHTML = acc_y_slider.value;
-acc_y_slider.oninput = function() {
-  acc_y_info.innerHTML = acc_y_slider.value;
-  acceleration.y = acc_y_slider.value;
-}
-
-</script>
-<script src="bouncing_balls.js"></script>
-</body>
+      var acc_y_slider = document.getElementById("acc_y_slider");
+      var acc_y_info = document.getElementById("acc_y_span");
+      acc_y_info.innerHTML = acc_y_slider.value;
+      acc_y_slider.oninput = function () {
+        acc_y_info.innerHTML = acc_y_slider.value;
+        acceleration.y = acc_y_slider.value;
+      };
+    </script>
+    <script src="bouncing_balls.js"></script>
+  </body>
 </html>

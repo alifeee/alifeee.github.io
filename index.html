@@ -5,9 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" href="./favicon.ico" />
-
-    <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheet.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
@@ -146,6 +145,7 @@
       text-decoration: none;
       text-align: center;
       color: white;
+      transition: transform 0.1s ease;
     }
     .page img {
       position: absolute;
@@ -160,6 +160,9 @@
     }
     .page:hover img {
       filter: brightness(0.25);
+    }
+    .page:hover {
+      transform: scale(1.05);
     }
     .page a {
       position: relative;
