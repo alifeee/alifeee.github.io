@@ -2,15 +2,12 @@
 <html>
   <head>
     <title>alifeee</title>
-    <link rel="stylesheet" href="/auxiliary/stylesheet.css" />
-    <link rel="icon" href="/auxiliary/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-174930056-1"
-    ></script>
-    <script src="/auxiliary/google-analytics.js"></script>
+
+    <link rel="icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="./stylesheet.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
@@ -22,11 +19,15 @@
       <h1>
         <a href="/">alifeee</a>
       </h1>
-      <hr />
     </header>
 
     <main>
       <p class="refurb">under refurbishment</p>
+      <p class="blurb title">I am alifeee and I make things!</p>
+      <p class="blurb subtitle">
+        Some of those things are here. Some are on GitHub. Some are made of
+        cardboard.
+      </p>
       <p class="bloglink">
         Why not check out:
         <br />
@@ -34,23 +35,23 @@
       </p>
       <ul class="pages">
         <li class="page p5js">
-          <img src="./p5js/thumbnail.png" class="cover" />
+          <img src="./p5js/thumbnail.png" />
           <a href="./p5js">p5.js Simulations</a>
         </li>
         <li class="page">
-          <img src="./cryptography/thumbnail.png" class="contain" />
+          <img src="./cryptography/thumbnail.png" />
           <a href="./cryptography">Cryptography</a>
         </li>
         <li class="page">
-          <img src="./itch.io_bundle/thumbnail.png" class="cover" />
+          <img src="./itch.io_bundle/thumbnail.png" />
           <a href="./itch.io_bundle">Itch.io games</a>
         </li>
         <li class="page">
-          <img src="./durham_physics/thumbnail.png" class="cover" />
+          <img src="./durham_physics/thumbnail.png" />
           <a href="./durham_physics">Durham Physics</a>
         </li>
         <li class="page">
-          <img src="./diplomacy/thumbnail.png" class="cover" />
+          <img src="./diplomacy/thumbnail.png" />
           <a href="./diplomacy">Diplomacy</a>
         </li>
       </ul>
@@ -93,14 +94,27 @@
       font-weight: bold;
       font-family: monospace;
     }
+
+    .blurb.title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0;
+    }
+    .blurb.subtitle {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0;
+      opacity: 0.5;
+    }
+
     .bloglink {
       text-align: center;
       font-size: 2rem;
-      font-family: "Roboto", sans-serif;
     }
     .bloglink a {
       font-family: "Josefin Sans", sans-serif;
     }
+
     .pages {
       list-style-type: none;
       padding: 0;
@@ -142,21 +156,14 @@
       border-radius: 0.5rem;
       transition: filter 0.1s ease;
       filter: brightness(0.5);
-    }
-    .cover {
       object-fit: cover;
     }
-    .contain {
-      object-fit: contain;
-      margin: 0.25rem 0;
-      height: calc(100% - 0.5rem) !important;
+    .page:hover img {
+      filter: brightness(0.25);
     }
     .page a {
       position: relative;
       z-index: 1;
-    }
-    .page:hover img {
-      filter: brightness(0.25);
     }
   </style>
 </html>
