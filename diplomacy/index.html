@@ -56,50 +56,29 @@
         <a href="https://avalonhill.wizards.com/games/diplomacy">Avalon Hill</a>
       </p>
 
-      <hr />
       <h3>The Results</h3>
+    </main>
+    <div class="results-table">
+      <table id="results" style="margin-left: auto; margin-right: auto"></table>
+    </div>
 
-      <div>
-        <table
-          id="results"
-          style="margin-left: auto; margin-right: auto"
-        ></table>
-      </div>
-      <br />
-
-      <hr />
-
+    <main>
       <h2>Charts</h2>
-      <div>
-        <table class="graphTable" width="100%">
-          <tr>
-            <td width="50%">
-              <div style="width: 100%">
-                <canvas id="performance_chart" height="190"></canvas>
-              </div>
-            </td>
-            <td width="50%">
-              <div style="width: 100%">
-                <canvas id="alex_performance_chart" height="190"></canvas>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td width="50%">
-              <div style="width: 100%">
-                <canvas id="total_games_chart" height="190"></canvas>
-              </div>
-            </td>
-            <td width="50%">
-              <div style="width: 100%">
-                <canvas id="wins_draws_chart" height="150"></canvas>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
 
-      <hr />
+      <div class="results-graphs">
+        <div style="width: 100%">
+          <canvas id="performance_chart" height="190"></canvas>
+        </div>
+        <div style="width: 100%">
+          <canvas id="alex_performance_chart" height="190"></canvas>
+        </div>
+        <div style="width: 100%">
+          <canvas id="total_games_chart" height="190"></canvas>
+        </div>
+        <div style="width: 100%">
+          <canvas id="wins_draws_chart" height="150"></canvas>
+        </div>
+      </div>
     </main>
     <footer>
       <a class="backlink" href="../">Back to main page</a>
@@ -199,15 +178,22 @@
       border: 1px solid black;
       border-collapse: collapse;
     }
-    .graphTable,
-    .graphTable * {
-      border: none;
-    }
     th,
     td {
       padding: 5px;
       text-align: left;
       white-space: nowrap;
+    }
+    .results-table {
+      width: 100vw;
+      display: block;
+      overflow-x: auto;
+      padding: 0 1rem 0.5rem;
+    }
+    .results-graphs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 1rem;
     }
     #results a {
       text-decoration: none;
