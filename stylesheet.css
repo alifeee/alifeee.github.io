@@ -10,28 +10,28 @@
   --link-visited: #ccf;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
-  color:white;
-  background:#222;
+  color: white;
+  background: #222;
 }
 main {
-  max-width:40rem;
-  margin:2rem auto;
+  max-width: 40rem;
+  margin: 2rem auto;
   padding: 0 1rem;
 }
 html {
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 a:link {
   color: var(--link);
 }
-a:visited{
+a:visited {
   color: var(--link-visited);
 }
 
@@ -41,8 +41,8 @@ header {
   background-color: var(--primary);
 }
 
-h1{
-  text-align:center;
+h1 {
+  text-align: center;
   margin: 0;
 }
 h1 > a:link {
@@ -53,7 +53,9 @@ h1 > a:visited {
   color: white;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -97,7 +99,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-  footer > .links img {
-    height: 2.5em;
-    color: white;
-  }
+footer > .links img {
+  height: 2.5em;
+  color: white;
+}
