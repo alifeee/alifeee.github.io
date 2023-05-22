@@ -78,15 +78,17 @@ footer .backlink {
 
 footer > .links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0.5rem 0 0;
+  margin: 1rem 0;
 }
 footer > .links > a {
+  width: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 1rem 1rem;
 }
 footer a:link {
   text-decoration: none;
