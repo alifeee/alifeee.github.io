@@ -78,6 +78,7 @@ footer .backlink {
 
 footer > .links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 0.5rem 0 0;
