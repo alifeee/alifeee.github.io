@@ -28,13 +28,12 @@
       <p>
         The
         <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>
-        is a simple substitution cipher. The substitution is shown below. Of
-        note is the auto-decoded message, which uses
+        is a substitution cipher for encoding secret messages. This page uses
         <a
           href="http://practicalcryptography.com/cryptanalysis/text-characterisation/quadgrams/"
           >trigram statistics</a
         >
-        to attempt to guess the correct shift, with a high success rate.
+        to automatically decode any Caesar ciphered message!
       </p>
 
       <div id="caesar-app" class="caesar app" v-scope>
@@ -94,73 +93,6 @@
           </p>
         </div>
       </div>
-
-      <h3>Binary Encoding</h3>
-      <p>
-        <a href="https://en.wikipedia.org/wiki/Binary-to-text_encoding"
-          >Binary Encoding</a
-        >
-        is writing a message as the binary representation as is used for ASCII
-        or Unicode.
-      </p>
-
-      <table>
-        <tr>
-          <td><label for="binary_raw">Raw text</label></td>
-          <td><label for="binary_encoded">Encoded Text</label></td>
-        </tr>
-        <tr>
-          <td><textarea id="binary_raw" rows="3" cols="25"></textarea></td>
-          <td><textarea id="binary_encoded" rows="3" cols="25"></textarea></td>
-        </tr>
-        <tr>
-          <td>
-            <table style="width: 100%">
-              <tr>
-                <td>
-                  <button type="button" onClick="Binary.buttonEncode()">
-                    Encode →
-                  </button>
-                </td>
-                <td>
-                  <button type="button" onClick="Common.clear('binary_raw')">
-                    Clear
-                  </button>
-                </td>
-                <td>
-                  <button type="button" onClick="Common.copy('binary_raw')">
-                    Copy
-                  </button>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td>
-            <table style="width: 100%">
-              <tr>
-                <td>
-                  <button type="button" onClick="Binary.buttonDecode()">
-                    ← Decode
-                  </button>
-                </td>
-                <td>
-                  <button
-                    type="button"
-                    onClick="Common.clear('binary_encoded')"
-                  >
-                    Clear
-                  </button>
-                </td>
-                <td>
-                  <button type="button" onClick="Common.copy('binary_encoded')">
-                    Copy
-                  </button>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
 
       <script type="module">
         import { encode, decode, crack } from "./scripts/cipher_caesar.js";
@@ -236,6 +168,7 @@
 
     .caesar.input > textarea {
       width: 100%;
+      resize: vertical;
     }
 
     .shift.control {
