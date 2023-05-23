@@ -21,9 +21,161 @@
     </header>
 
     <main>
-      <h2>Durham University Physics</h2>
-      <h3>Useful Links:</h3>
+      <h2>Undergraduate written reports</h2>
+    </main>
+    <ul class="reports">
+      <li>
+        <a
+          target="_blank"
+          href="reports/4th year - Machine Learning in Atomic Physics.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/4th year - Machine Learning in Atomic Physics.png"
+            alt="Machine Learning in Atomic Physics"
+          />
+          <h1 class="title">Machine Learning in Atomic Physics</h1>
+          <span class="description">
+            Using Machine Learning to Optimise Atomic Physics Experiments
+          </span>
+          <ul class="chips">
+            <li class="year4">4th year</li>
+            <li class="pages33">33 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/3rd year - AFM Roughness.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/3rd year - AFM Roughness.png"
+            alt="AFM Roughness"
+          />
+          <h1 class="title">Atomic Force Microscopy</h1>
+          <span class="description">
+            Assessing the usefulness of an atomic force microscope in the study
+            of surface roughness
+          </span>
+          <ul class="chips">
+            <li class="year3">3rd year</li>
+            <li class="pages11">11 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/3rd year - Magic Wavelengths.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/3rd year - Magic Wavelengths.png"
+            alt="Magic Wavelengths"
+          />
+          <h1 class="title">Magic Wavelengths</h1>
+          <span class="description">
+            Computing the Magic Wavelengths for a Rubidium Atomic Lattice
+          </span>
+          <ul class="chips">
+            <li class="year3">3rd year</li>
+            <li class="pages7">7 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/2nd year - Optical Rotation.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/2nd year - Optical Rotation.png"
+            alt="Optical Rotation"
+          />
+          <h1 class="title">Optical Rotation</h1>
+          <span class="description">
+            A Demonstration of the Optical Rotatory Dispersion of Sucrose
+          </span>
+          <ul class="chips">
+            <li class="year2">2nd year</li>
+            <li class="pages5">5 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/2nd year - Viscometry.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/2nd year - Viscometry.png"
+            alt="Viscometry"
+          />
+          <h1 class="title">Viscometry</h1>
+          <span class="description">
+            Determining the viscosity of water using the Hagen-Poisseuille
+            relation
+          </span>
+          <ul class="chips">
+            <li class="year2">2nd year</li>
+            <li class="pages3">3 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/1st year - Biot Savart.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/1st year - Biot Savart.png"
+            alt="Biot Savart"
+          />
+          <h1 class="title">Biot Savart</h1>
+          <span class="description">
+            Assessing the Feasibility of Generating a Uniform Magnetic Field
+            with a Helmholtz Coil
+          </span>
+          <ul class="chips">
+            <li class="year1">1st year</li>
+            <li class="pages3">3 pages</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="reports/1st year - Speed of Light.pdf"
+          class="card"
+        >
+          <img
+            class="thumbnail"
+            src="reports_thumbs/1st year - Speed of Light.png"
+            alt="Speed of Light"
+          />
+          <h1 class="title">Speed of Light</h1>
+          <span class="description"></span>
+          <ul class="chips">
+            <li class="year1">1st year</li>
+            <li class="pages3">3 pages</li>
+          </ul>
+        </a>
+      </li>
+    </ul>
 
+    <main>
+      <h3>Durham course links:</h3>
       <ul>
         <li>
           <a href="./f301.pdf">F301 Module handbook</a> (
@@ -61,7 +213,6 @@
         </li>
       </ul>
 
-      <h3><a href="reports">Undergraduate Written Reports</a></h3>
       <h3><a href="modules_level3">Level 3 Module Choices</a></h3>
       <h3><a href="modules_level4">Level 4 Module Choices</a></h3>
       <h3>
@@ -75,4 +226,99 @@
       <h2 style="text-align: center"><a href="../">Back to main page</a></h2>
     </footer>
   </body>
+  <style>
+    ul.reports {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.reports > li {
+      display: flex;
+      border-radius: 0.5rem;
+      background-color: white;
+      margin: 0.25rem;
+    }
+    a.card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: black;
+      width: 16em;
+      height: 100%;
+    }
+    ul.reports > li:hover {
+      opacity: 0.9;
+    }
+    .thumbnail {
+      margin: 0.25rem 0 0;
+      max-height: 10em;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 1rem 1rem 0 0;
+    }
+    .title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0.5em 0 0;
+    }
+    .description {
+      font-size: 0.8em;
+      font-style: italic;
+      text-align: center;
+      margin: 0 0.5rem 0.25rem;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: auto 0 0.5rem;
+    }
+    .chips li {
+      font-size: 0.8em;
+      margin: 0.25rem;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid black;
+      border-radius: 4rem;
+    }
+
+    .year1 {
+      background-color: #dedea7;
+    }
+    .year2 {
+      background-color: #f2b6a0;
+    }
+    .year3 {
+      background-color: #e06469;
+      color: white;
+    }
+    .year4 {
+      background-color: #be5a83;
+      color: white;
+    }
+
+    .pages3 {
+      background-color: #d9e1ec;
+    }
+    .pages5 {
+      background-color: #aebed2;
+    }
+    .pages7 {
+      background-color: #95aac7;
+      color: white;
+    }
+    .pages11 {
+      background-color: #5d748e;
+      color: white;
+    }
+    .pages33 {
+      background-color: #3b4e69;
+      color: white;
+    }
+  </style>
 </html>
