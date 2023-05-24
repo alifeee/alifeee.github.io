@@ -21,16 +21,60 @@
     </header>
 
     <main>
+      <h1>Steam Collage</h1>
       <p>
-        This page is nonfunctional. If you would like to create a steam mosaic
-        like the one on this page, visit
-        <a href="https://github.com/alifeee/steam_collage"
-          >https://github.com/alifeee/steam_collage</a
-        >.
+        To see how this works check:
+        <a href="https://github.com/alifeee/steam_collage">
+          https://github.com/alifeee/steam_collage
+        </a>
       </p>
-      <label for="sid">Steam ID:</label>
-      <input type="text" id="steamID" name="sid" /><br />
-      <button type="button" onclick="createMosaic()">Create Mosaic</button>
+      <form id="form" action="mosaic.php" method="post">
+        <h2>Generate your own collage</h2>
+
+        <p>
+          <label for="steamid">Steam ID or vanity URL:</label>
+          <input type="text" id="steamID" name="steamid" />
+        </p>
+
+        <p>
+          <label for="rows">Rows:</label>
+          <input
+            type="number"
+            id="rows"
+            name="rows"
+            min="1"
+            max="100"
+            value="5"
+          />
+        </p>
+
+        <p>
+          <label for="cols">Columns:</label>
+          <input
+            type="number"
+            id="cols"
+            name="cols"
+            min="1"
+            max="100"
+            value="5"
+          />
+        </p>
+
+        <p>
+          <label for="sorting">Sort by:</label>
+          <select id="sorting" name="sorting">
+            <option value="playtime">Playtime</option>
+            <option value="recent">Recent</option>
+            <option value="name">Name</option>
+          </select>
+        </p>
+
+        <button id="submit" type="button" onclick="createMosaic()">
+          Create Mosaic
+        </button>
+      </form>
+      <span id="urldescription"></span>
+      <a id="url" target="_blank"></a>
     </main>
 
     <footer><a class="backlink" href="../">Back to main page</a></footer>
@@ -40,13 +84,67 @@
     <script src="http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=false&callback=getGamesList"></script>
   </body>
   <style>
+    html {
+      height: 100%;
+    }
     body {
       background-image: url("mosaic.jpeg");
       background-size: cover;
+      height: 100%;
     }
-    #bg {
-      padding: 10px;
-      background: #424242;
+    main {
+      background-color: rgba(18, 18, 18, 0.9);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    form button {
+      margin-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form > p {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    form > p > * {
+      display: block;
+    }
+    #urldescription {
+      margin-top: 1rem;
+      display: block;
     }
   </style>
+  <script>
+    // on submit, send data to
+    // http://45.91.169.110:5000/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
+    function createMosaic() {
+      var steamID = document.getElementById("steamID").value;
+      var rows = document.getElementById("rows").value;
+      var cols = document.getElementById("cols").value;
+      var sorting = document.getElementById("sorting").value;
+      var url =
+        "http://45.91.169.110:5000/steamcollage/games?id=" +
+        steamID +
+        "&rows=" +
+        rows +
+        "&cols=" +
+        cols +
+        "&sorting=" +
+        sorting;
+
+      // show url
+      document.getElementById("urldescription").innerHTML =
+        "Your mosaic is available at the link below. It may take a while to load, especially if you have a lot of rows/columns.";
+      // replace #url href with url
+      document.getElementById("url").href = url;
+      document.getElementById("url").innerHTML = url;
+    }
+  </script>
 </html>

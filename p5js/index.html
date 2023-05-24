@@ -21,28 +21,46 @@
     </header>
 
     <main>
-      <h2>p5.js Projects</h2>
+      <h1>p5.js Projects</h1>
 
-      <h3>What is p5.js?</h3>
       <p>
-        <a href="https://p5js.org">p5.js</a> is a versatile JavaScript library
+        <a href="https://p5js.org">p5.js</a> is a neat little JavaScript library
         for animations and artwork using the HTML canvas element. It adds a lot
         of useful methods to make creating animations faster and easier. A lot
         of the language is based on
         <a href="https://processing.org/">Processing</a>, a programming language
-        for the visual arts.
+        to make things that look cool and move around.
       </p>
-      <p>Below are some of the projects I have made using p5.js.</p>
+      <p>Here's some stuff I've made with p5.js while screwing around:</p>
 
-      <hr />
-
-      <h3>Projects:</h3>
-
-      <ul>
-        <li><a href="./bouncing_balls">Bouncing Balls</a></li>
-        <li><a href="./orbits">Orbits</a></li>
-        <li><a href="./random_picker">Random Picker</a></li>
-        <li><a href="./conways_game_of_life">Conway's Game of Life</a></li>
+      <ul class="links">
+        <li>
+          <a href="./bouncing_balls">
+            <img src="./bouncing_balls/thumbnail.png" alt="Bouncing Balls" />
+            <span>Bouncing Balls</span>
+          </a>
+        </li>
+        <li>
+          <a href="./orbits">
+            <img src="./orbits/thumbnail.png" alt="Orbits" />
+            <span>Orbits</span>
+          </a>
+        </li>
+        <li>
+          <a href="./random_picker">
+            <img src="./random_picker/thumbnail.png" alt="Random Picker" />
+            <span>Random Picker</span>
+          </a>
+        </li>
+        <li>
+          <a href="./conways_game_of_life">
+            <img
+              src="./conways_game_of_life/thumbnail.png"
+              alt="Conway's Game of Life"
+            />
+            <span>Conway's Game of Life</span>
+          </a>
+        </li>
       </ul>
     </main>
 
@@ -50,4 +68,45 @@
       <a class="backlink" href="../">Back to main page</a>
     </footer>
   </body>
+  <style>
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .links li {
+      max-width: 15rem;
+      margin: 0.5rem;
+    }
+
+    .links li a {
+      display: block;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #000;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+
+    .links li a:hover {
+      opacity: 0.9;
+    }
+
+    .links li a img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+
+    .links li a span {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
 </html>
