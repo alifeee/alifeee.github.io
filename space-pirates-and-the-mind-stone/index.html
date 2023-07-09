@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>alifeee</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+
+    <!-- this is needed to run Godot games. it reloads the page and adds correct headers -->
+    <!-- from https://github.com/gzuidhof/coi-serviceworker -->
+    <!-- see issue on https://github.com/godotengine/godot-proposals/issues/6616 -->
+    <script src="coi-serviceworker.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        This is a game made in <a href="https://godotengine.org/">Godot</a> as
+        part of the
+        <a href="https://itch.io/jam/gmtk-2023">GMTK Game Jam 2023</a>, where we
+        had 48 hours to make a game based on the theme
+        <span class="theme">
+          "ROLES R<span class="reverse">E</span>V<span class="reverse">E</span
+          >RS<span class="reverse">E</span>D" </span
+        >.
+      </p>
+      <p>
+        Made as a team of 3:
+        <a href="https://github.com/alifeee">@alifeee</a> (myself),
+        <a href="https://github.com/FreyaCon">@FreyaCon</a> and
+        <a href="https://github.com/dicemaster5">@dicemaster5</a>
+      </p>
+      <p>
+        You can play the game on:
+        <a href="https://alifeee.itch.io/space-pirates-and-the-mind-stone"
+          >https://alifeee.itch.io/space-pirates-and-the-mind-stone</a
+        >
+        or (hopefully) below!
+      </p>
+    </main>
+
+    <div class="container">
+      <iframe id="game" src="" width="1152px" height="648" allow="iframe">
+      </iframe>
+      <button class="play button" onclick="playgame()">PLAY</button>
+    </div>
+
+    <button class="fullscreen button" onclick="fullscreeniframe()">
+      FULLSCREEN
+    </button>
+
+    <footer>
+      <a class="backlink" href="/">Back to main page</a>
+    </footer>
+  </body>
+  <style scoped>
+    iframe {
+      border: none;
+      margin: 0 auto;
+      display: block;
+      background-color: #1c141d;
+      background-image: url("images/title\ page.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    .theme {
+      font-weight: bold;
+    }
+    .reverse {
+      transform: scaleX(-1);
+      display: inline-block;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .button {
+      display: block;
+      margin: 1rem auto;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #7f708a;
+      color: #dfdfdf;
+      font-size: 1.2em;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    .fullscreen.button {
+      display: none;
+    }
+    .play.button {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 80px;
+    }
+  </style>
+  <script>
+    var iframe = document.querySelector("#game");
+    var playbutton = document.querySelector(".play.button");
+    var fullscreenbutton = document.querySelector(".fullscreen.button");
+
+    function fullscreeniframe() {
+      iframe.requestFullscreen();
+    }
+    function playgame() {
+      iframe.src = "./game";
+      playbutton.style.display = "none";
+      fullscreenbutton.style.display = "block";
+    }
+  </script>
+</html>
