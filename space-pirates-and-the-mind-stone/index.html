@@ -112,4 +112,18 @@
       height: 80px;
     }
   </style>
+  <script>
+    var iframe = document.querySelector("#game");
+    var playbutton = document.querySelector(".play.button");
+    var fullscreenbutton = document.querySelector(".fullscreen.button");
+
+    function fullscreeniframe() {
+      iframe.requestFullscreen();
+    }
+    function playgame() {
+      iframe.src = "./game";
+      playbutton.style.display = "none";
+      fullscreenbutton.style.display = "block";
+    }
+  </script>
 </html>
