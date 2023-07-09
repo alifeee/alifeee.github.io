@@ -69,6 +69,47 @@
       border: none;
       margin: 0 auto;
       display: block;
+      background-color: #1c141d;
+      background-image: url("images/title\ page.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    .theme {
+      font-weight: bold;
+    }
+    .reverse {
+      transform: scaleX(-1);
+      display: inline-block;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .button {
+      display: block;
+      margin: 1rem auto;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #7f708a;
+      color: #dfdfdf;
+      font-size: 1.2em;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    .fullscreen.button {
+      display: none;
+    }
+    .play.button {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 80px;
     }
   </style>
 </html>
