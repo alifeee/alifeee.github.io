@@ -1,16 +1,26 @@
 # `alifeee.github.io`
 
-You can visit the website by visiting <https://alifeee.co.uk/> or <https://alifeee.github.io/>
+My personal website!
 
-## Jest testing
+<https://alifeee.co.uk/>
 
-### Running tests - simple
+![Screenshot of buttons from main page](images/website-buttons.png)
+
+## Utilities
+
+### Generate sitemap
+
+```bash
+npm run sitemap
+```
+
+### Run jest tests - simple
 
 ```bash
 npm test
 ```
 
-### Running tests - with debug/watch
+### Run jest tests - with debug/watch
 
 (in VSCode): `F1` ⇾ `Debug: JavaScript Debug Terminal`
 
