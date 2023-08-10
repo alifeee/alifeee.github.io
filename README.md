@@ -27,3 +27,10 @@ npm test
 ```bash
 npm test -- --watch
 ```
+
+## DNS
+
+DNS Configuration
+
+![Screenshot of DNS configuration](https://github.com/alifeee/alifeee.github.io/assets/13833017/fedf21fa-be25-4a77-aefd-bd69346f640c)
+
