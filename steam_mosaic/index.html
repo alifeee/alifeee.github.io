@@ -11,6 +11,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
     />
+
+    <!-- alive checker web component -->
+    <script src="alive_checker.js" defer></script>
   </head>
 
   <body>
@@ -21,7 +24,12 @@
     </header>
 
     <main>
-      <h1>Steam Collage</h1>
+      <h1>
+        Steam Collage
+        <alive-checker
+          src="http://45.91.169.110:5000/steamcollage/alive"
+        ></alive-checker>
+      </h1>
       <p>
         To see how this works check:
         <a href="https://github.com/alifeee/steam_collage">
@@ -30,6 +38,13 @@
       </p>
       <form id="form" action="mosaic.php" method="post">
         <h2>Generate your own collage</h2>
+
+        <p>
+          API Status:
+          <alive-checker
+            src="http://45.91.169.110:5000/steamcollage/alive"
+          ></alive-checker>
+        </p>
 
         <p>
           <label for="steamid">Steam ID or vanity URL:</label>
