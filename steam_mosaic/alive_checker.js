@@ -21,18 +21,27 @@ class AliveChecker extends HTMLElement {
 
   //  send http request to check if the server is alive
   async checkAlive() {
-    const response = await fetch(this.src, { mode: "no-cors" });
-
-    if (response.status === 200) {
-      this.shadowRoot.getElementById("indicator").style.backgroundColor =
-        "#00ff00";
-    } else {
+    let response;
+    try {
+      response = await fetch(this.src, { mode: "no-cors" });
+      if (response.status === 200) {
+        this.shadowRoot.getElementById("indicator").style.backgroundColor =
+          "#00ff00";
+      } else {
+        throw new Error("Server alive check did not return 200");
+      }
+    } catch (error) {
       console.group("Server is not alive");
-      console.log("Response status: ", response.status);
-      console.log(response);
+      if (response) {
+        console.log(response);
+        console.log("Response status: ", response.status);
+      } else {
+        console.log("No response");
+      }
       console.groupEnd();
       this.shadowRoot.getElementById("indicator").style.backgroundColor =
         "#ff0000";
+      throw error;
     }
   }
 
