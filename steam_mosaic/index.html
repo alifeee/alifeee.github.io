@@ -27,7 +27,7 @@
       <h1>
         Steam Collage
         <img
-          src="http://45.91.169.110:5000/steamcollage/alive_img"
+          src="http://server.alifeee.co.uk:5000/steamcollage/alive_img"
           onerror="this.src='./didnotload.png'"
           style="
             background-color: orange;
@@ -50,7 +50,7 @@
         <p>
           API Status:
           <img
-            src="http://45.91.169.110:5000/steamcollage/alive_img"
+            src="http://server.alifeee.co.uk:5000/steamcollage/alive_img"
             onerror="this.src='./didnotload.png'"
             style="
               background-color: orange;
@@ -168,7 +168,7 @@
   </style>
   <script>
     // on submit, send data to
-    // http://45.91.169.110:5000/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
+    // http://server.alifeee.co.uk:5000/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
     function createMosaic() {
       // reset img
       let image = document.getElementById("mosaic");
@@ -186,7 +186,7 @@
       var cols = document.getElementById("cols").value;
       var sorting = document.getElementById("sorting").value;
       var url =
-        "http://45.91.169.110:5000/steamcollage/games?id=" +
+        "http://server.alifeee.co.uk:5000/steamcollage/games?id=" +
         steamID +
         "&rows=" +
         rows +
