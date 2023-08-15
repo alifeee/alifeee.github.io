@@ -104,8 +104,11 @@
           Create Mosaic
         </button>
       </form>
-      <span id="urldescription"></span>
-      <a id="url" target="_blank"></a>
+      <img
+        src=""
+        id="mosaic"
+        alt="loading image... It may take a while to load, especially if you have a lot of rows/columns."
+      />
     </main>
 
     <footer><a class="backlink" href="../">Back to main page</a></footer>
@@ -136,9 +139,11 @@
       align-items: flex-start;
     }
     form button {
+      font-size: large;
       margin-top: 1rem;
       margin-left: auto;
       margin-right: auto;
+      padding: 0.5rem;
     }
     form > p {
       width: 100%;
@@ -149,15 +154,33 @@
     form > p > * {
       display: block;
     }
-    #urldescription {
+    #mosaic {
+      display: none;
       margin-top: 1rem;
-      display: block;
+      min-width: min(100%, 500px);
+      max-width: 100%;
+      min-height: 200px;
+      max-height: 100%;
+      background-color: aliceblue;
+      margin: 1rem auto;
+      color: red;
     }
   </style>
   <script>
     // on submit, send data to
     // http://45.91.169.110:5000/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
     function createMosaic() {
+      // reset img
+      let image = document.getElementById("mosaic");
+      image.src = "";
+      image.style.minHeight = "200px";
+      image.style.minWidth = "min(100%, 500px)";
+      image.style.backgroundColor = "aliceblue";
+      image.setAttribute(
+        "alt",
+        "loading image... It may take a while to load, especially if you have a lot of rows/columns."
+      );
+
       var steamID = document.getElementById("steamID").value;
       var rows = document.getElementById("rows").value;
       var cols = document.getElementById("cols").value;
@@ -172,12 +195,23 @@
         "&sort=" +
         sorting;
 
-      // show url
-      document.getElementById("urldescription").innerHTML =
-        "Your mosaic is available at the link below. It may take a while to load, especially if you have a lot of rows/columns.";
-      // replace #url href with url
-      document.getElementById("url").href = url;
-      document.getElementById("url").innerHTML = url;
+      // show mosaic
+      image.src = url;
+      image.style.display = "block";
+      image.addEventListener("load", function () {
+        image.style.minHeight = "0px";
+        image.style.minWidth = "0px";
+        image.style.backgroundColor = "none";
+      });
+      image.addEventListener("error", function () {
+        image.style.minHeight = "0px";
+        image.style.minWidth = "0px";
+        image.style.backgroundColor = "none";
+        image.setAttribute(
+          "alt",
+          "failed to load image. try refreshing the page. is the status indicator above green? if you are asking to sort by recent, is this public on your steam profile?"
+        );
+      });
     }
   </script>
 </html>
