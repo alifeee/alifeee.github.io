@@ -26,9 +26,17 @@
     <main>
       <h1>
         Steam Collage
-        <alive-checker
-          src="http://45.91.169.110:5000/steamcollage/alive"
-        ></alive-checker>
+        <img
+          src="http://45.91.169.110:5000/steamcollage/alive_img"
+          onerror="this.src='./didnotload.png'"
+          style="
+            background-color: orange;
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+          "
+        />
       </h1>
       <p>
         To see how this works check:
@@ -41,9 +49,17 @@
 
         <p>
           API Status:
-          <alive-checker
-            src="http://45.91.169.110:5000/steamcollage/alive"
-          ></alive-checker>
+          <img
+            src="http://45.91.169.110:5000/steamcollage/alive_img"
+            onerror="this.src='./didnotload.png'"
+            style="
+              background-color: orange;
+              display: inline-block;
+              height: 1rem;
+              width: 1rem;
+              border-radius: 50%;
+            "
+          />
         </p>
 
         <p>
