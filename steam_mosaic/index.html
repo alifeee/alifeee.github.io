@@ -44,6 +44,46 @@
           https://github.com/alifeee/steam_collage
         </a>
       </p>
+      <p>
+        Images are
+        <a href="https://github.com/alifeee/steam_collage_api/issues/21"
+          >not yet served over HTTPS</a
+        >. If you use Firefox, this should work. If you use Chrome (or anything
+        else), the
+        <a
+          href="https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html?m=1"
+        >
+          images will be blocked </a
+        >, as they are
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content"
+        >
+          mixed media</a
+        >. To fix this, you can allow mixed media on `alifeee.co.uk`.
+      </p>
+
+      <details>
+        <summary>How to enable images on Chrome</summary>
+        <ol>
+          <li>
+            Navigate to site settings for `alifeee.co.uk`
+            <img
+              src="images/chrome_site_settings.png"
+              alt="Screenshot of
+            Chrome site settings"
+            />
+          </li>
+          <li>
+            Enable "Insecure content"
+            <img
+              src="images/chrome_insecure_content.png"
+              alt="Screenshot of insecure content
+            setting"
+            />
+          </li>
+          <li>Done. Now HTTP images will be allowed only for this webpage.</li>
+        </ol>
+      </details>
       <form id="form" action="mosaic.php" method="post">
         <h2>Generate your own collage</h2>
 
@@ -164,6 +204,9 @@
       background-color: aliceblue;
       margin: 1rem auto;
       color: red;
+    }
+    ol img {
+      max-width: 100%;
     }
   </style>
   <script>
