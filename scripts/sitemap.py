@@ -1,4 +1,4 @@
-# finds every html file and makes a sitemap
+"""finds every html file and makes a sitemap"""
 
 import os
 import re
@@ -22,7 +22,7 @@ def find_html_files():
     return html_files
 
 
-def main(out_file):
+def main(out_file: str) -> None:
     """Replace the <div id="sitemap"></div> in the given file with a sitemap
     Sitemap is a list of links in the format
     - ./
@@ -38,34 +38,35 @@ def main(out_file):
     tree = "<ul>\n"
     depth = 1
     for file in html_files:
-        if file[:2] != ".\\":
-            file = ".\\" + file
-        file = file.replace("\\", "/")
-        if file.count("/") > depth:
+        if file[:2] != f".{os.sep}":
+            file = f".{os.sep}" + file
+        while file.count(os.sep) > depth:
             tree += "<ul>\n"
             depth += 1
-        elif file.count("/") < depth:
+        while file.count(os.sep) < depth:
             tree += "</ul>\n"
             depth -= 1
         # if file ends in "/index.html", strip it, unless it's the root
-        if re.search(r"/index\.html$", file) and file != "./index.html":
+        if re.search(r"index\.html$", file) and file != f".{os.sep}index.html":
             file = file[:-11]
         tree += f"<li><a href='{file}'>{file}</a></li>\n"
     while depth >= 1:
         tree += "</ul>\n"
         depth -= 1
 
-    with open(out_file, "r") as f:
-        content = f.read()
+    with open(out_file, "r", encoding="utf-8") as file:
+        content = file.read()
+
     # put tree inside <div id="sitemap">...</div>
+    tree = tree.replace("\\", "/")
     content = re.sub(
         r"<div id=\"sitemap\">.*</div>",
         f'<div id="sitemap">\n{tree}</div>',
         content,
         flags=re.DOTALL,
     )
-    with open(out_file, "w") as f:
-        f.write(content)
+    with open(out_file, "w", encoding="utf-8") as file:
+        file.write(content)
 
 
 if __name__ == "__main__":
