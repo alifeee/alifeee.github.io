@@ -38,14 +38,14 @@ def main(out_file: str) -> None:
     tree = "<ul>\n"
     depth = 1
     for file in html_files:
-        if file[:2] != f".{os.sep}":
-            file = f".{os.sep}" + file
         while file.count(os.sep) > depth:
             tree += "<ul>\n"
             depth += 1
         while file.count(os.sep) < depth:
             tree += "</ul>\n"
             depth -= 1
+        if file[:2] != f".{os.sep}":
+            file = f".{os.sep}" + file
         # if file ends in "/index.html", strip it, unless it's the root
         if re.search(r"index\.html$", file) and file != f".{os.sep}index.html":
             file = file[:-11]
