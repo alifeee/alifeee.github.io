@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Budget calc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body x-data="{ weekly_stipend: 70, weekly_rent: 100, custom_months: 2 }">
+    <h1>Rent worker-outerer</h1>
+    <p>
+      If you have £<input
+        type="number"
+        min="0"
+        step="1"
+        x-model="weekly_stipend"
+        id="weekly_stipend"
+      />
+      of
+      <a href="https://lha-direct.voa.gov.uk/Search.aspx" target="_blank"
+        >stipend</a
+      >
+    </p>
+    <p>
+      and rent is £<input
+        type="number"
+        min="0"
+        step="1"
+        x-model="weekly_rent"
+        id="weekly_rent"
+      />
+      per week
+    </p>
+    <p>you pay:</p>
+    <table>
+      <tr>
+        <th>Timescale</th>
+        <th>Total rent</th>
+        <th>Minus stipend</th>
+      </tr>
+      <template x-for="months in [1,3,6,12]">
+        <tr>
+          <td x-html="months + ' months'"></td>
+          <td>£<span x-html="~~(weekly_rent * (months * 52 / 12))"></span></td>
+          <td>
+            £<span
+              x-html="~~(weekly_rent * (months * 52 / 12) - weekly_stipend * (months * 52 / 12))"
+            ></span>
+          </td>
+        </tr>
+      </template>
+      <tr>
+        <td>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            x-model="custom_months"
+            id="custom_months"
+          />
+          months
+        </td>
+        <td>
+          £<span x-html="~~(weekly_rent * (custom_months * 52 / 12))"></span>
+        </td>
+        <td>
+          £<span
+            x-html="~~(weekly_rent * (custom_months * 52 / 12) - weekly_stipend * (custom_months * 52 / 12))"
+          ></span>
+        </td>
+      </tr>
+    </table>
+    <pre id="background">
+  ____||____
+ ///////////\
+///////////  \
+|    _    |  |
+|[] | | []|[]|
+|   | |   |  |
+    </pre>
+  </body>
+  <style>
+    body {
+      font-family: sans-serif;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc8;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+
+    input {
+      width: 4rem;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid #ccc8;
+      padding: 0.5rem;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    /* centred */
+    #background {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      line-height: 1;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  </style>
+</html>
