@@ -7,14 +7,16 @@
     <!-- alpinejs -->
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ weekly_stipend: 70, weekly_rent: 100, custom_months: 2 }">
+  <body
+    x-data="{ weekly_stipend: 70, weekly_rent: 100, custom_months: 10, monthly_rent: 433 }"
+  >
     <h1>Rent worker-outerer</h1>
     <p>
       If you have £<input
         type="number"
         min="0"
         step="1"
-        x-model="weekly_stipend"
+        x-model.number="weekly_stipend"
         id="weekly_stipend"
       />
       of
@@ -27,10 +29,22 @@
         type="number"
         min="0"
         step="1"
-        x-model="weekly_rent"
         id="weekly_rent"
+        x-model.number="weekly_rent"
+        x-on:input="monthly_rent = ~~(weekly_rent * 52 / 12)"
       />
       per week
+    </p>
+    <p>
+      equating to £<input
+        type="number"
+        min="0"
+        step="1"
+        id="monthly_rent"
+        x-model.number="monthly_rent"
+        x-on:input="weekly_rent = ~~(monthly_rent * 12 / 52)"
+      />
+      per month
     </p>
     <p>you pay:</p>
     <table>
@@ -91,6 +105,10 @@
       align-items: center;
       padding: 1rem;
       margin: 1rem auto;
+    }
+
+    p {
+      margin: 0.5rem;
     }
 
     input {
