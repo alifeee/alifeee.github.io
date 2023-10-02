@@ -22,6 +22,23 @@ def find_html_files():
     return html_files
 
 
+def sort_html_files(html_files):
+    """sorts the html files alphabetically (ignoring non-alphanumeric characters)
+
+    Args:
+        html_files (list[str]): list of html files
+
+    Returns:
+        list[str]: sorted list of html files
+    """
+
+    def sort_key(file):
+        """key for sorting html files"""
+        return re.sub(r"[^a-zA-Z0-9]", "", file.lower())
+
+    return sorted(html_files, key=sort_key)
+
+
 def main(out_file: str) -> None:
     """Replace the <div id="sitemap"></div> in the given file with a sitemap
     Sitemap is a list of links in the format
@@ -35,6 +52,7 @@ def main(out_file: str) -> None:
         out_file (str): file to write the sitemap to
     """
     html_files = find_html_files()
+    html_files = sort_html_files(html_files)
     tree = "<ul>\n"
     depth = 1
     for file in html_files:
