@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scotland Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body x-data="{ combined: true }" x-on:click.stop="combined = !combined">
+    <!-- checkbox toggles combined -->
+    <div class="combined">
+      <label for="combined">Combined</label>
+      <input
+        type="checkbox"
+        id="combined"
+        name="combined"
+        value="combined"
+        x-model="combined"
+      />
+    </div>
+    <img
+      src="./images/route_all.svg"
+      :src="combined ? './images/route_all.svg' : './images/route_by_person.svg'"
+      alt="driving route around scotland"
+    />
+    <footer>
+      <a href="https://github.com/alifeee/scotland-trip">Source</a>
+    </footer>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+      justify-content: center;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+    input {
+      margin: 0;
+      padding: 0;
+      display: block;
+      margin: auto;
+    }
+    label {
+      margin: 0;
+      padding: 0;
+      display: block;
+      margin: auto;
+    }
+    div.combined {
+      margin: 0;
+      padding: 0;
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+    footer {
+      margin: 0;
+      padding: 0;
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+    footer a {
+      font-size: small;
+    }
+  </style>
+</html>
