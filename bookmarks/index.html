@@ -69,6 +69,18 @@
   "
     >
       <h1>Bookmarks!</h1>
+      <p>Some bookmark collections that I often want to share!</p>
+      <h2>Collections</h2>
+      <ul>
+        <template
+          x-for="folder_name in Object.keys(data.bookmarks)"
+          :key="folder_name"
+        >
+          <li>
+            <a :href="'#' + folder_name" x-text="folder_name"></a>
+          </li>
+        </template>
+      </ul>
       <template
         x-for="(folder_contents, folder_name) in data.bookmarks"
         :key="folder_name"
@@ -86,6 +98,7 @@
           </ul>
         </div>
       </template>
+      <hr />
       <span style="display: flex; justify-content: center">
         Updated (when I remember it) by&nbsp;
         <a href="https://github.com/alifeee/firefox-bookmarks" target="_blank">
