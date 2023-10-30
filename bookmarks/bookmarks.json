@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-10-30T23:12:32.473369Z",
+    "last_modified": "2023-10-30T23:31:09.170172Z",
     "bookmarks": {
         "personal websites": [
             {
@@ -549,6 +549,400 @@
                 "url": "https://tomforth.co.uk/wenevertried/",
                 "date_added": "2023-10-18T01:43:08.956000Z",
                 "last_modified": "2023-10-18T13:22:20.000000Z"
+            }
+        ],
+        "Articles (programming)": [
+            {
+                "title": "Myth of the Day: Functional Programmers Don’t Use Loops",
+                "url": "https://two-wrongs.com/myth-of-the-day-functional-programmers-dont-use-loops",
+                "date_added": "2020-08-05T16:30:52.531000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "So You Want to be a Functional Programmer (Part 1) | by Charles Scalfani | Medium",
+                "url": "https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536",
+                "date_added": "2020-08-05T16:49:50.760000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Why Programmers Need Limits. Limits make for better Art, Design and… | by Charles Scalfani | Medium",
+                "url": "https://medium.com/@cscalfani/why-programmers-need-limits-3d96e1a0a6db",
+                "date_added": "2020-08-05T17:02:08.422000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "F*ck it: use React for your personal site if you want to - Ironeko",
+                "url": "https://ironeko.com/posts/f-ck-it-use-react-for-your-personal-site-if-you-want-to",
+                "date_added": "2023-02-06T13:48:33.683000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Paul Ford: What Is Code? | Bloomberg",
+                "url": "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/",
+                "date_added": "2023-03-30T00:49:45.964000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Paul Ford: What Is Code? | Bloomberg",
+                "url": "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/#grabbag",
+                "date_added": "2023-04-12T20:13:20.304000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Hosting my static sites with nginx",
+                "url": "https://jvns.ca/blog/2022/01/24/hosting-my-static-sites-with-nginx/",
+                "date_added": "2023-04-27T17:53:08.554000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Tailwind CSS origins",
+                "url": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
+                "date_added": "2023-04-27T18:37:47.470000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Static site generators: Hugo vs Jekyll vs Gatsby vs 11ty",
+                "url": "https://tomhazledine.com/eleventy-static-site-generator/",
+                "date_added": "2023-05-17T16:09:02.244000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Implementing SEO and Open Graph tags in Eleventy (11ty)",
+                "url": "https://iamjoona.com/blog/seo-tags-in-eleventy/",
+                "date_added": "2023-05-17T16:16:15.950000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "A talk: How To Find Things Online | v21",
+                "url": "https://v21.io/blog/how-to-find-things-online",
+                "date_added": "2023-06-06T18:54:31.642000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "https://www.ietf.org/rfc/rfc3514.txt",
+                "url": "https://www.ietf.org/rfc/rfc3514.txt",
+                "date_added": "2023-06-21T23:02:56.320000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Interactive blog posts with no build step using Markdown and Lit | Andrew Jakubowicz",
+                "url": "https://andrewjakubowicz.me/posts/making-of-a-blog-post/",
+                "date_added": "2023-06-22T00:35:03.814000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Making \"LCD, Please\" | Development Logs by Lucas Pope",
+                "url": "https://dukope.com/devlogs/papers-please/lcdplease/",
+                "date_added": "2023-08-18T10:37:38.363000Z",
+                "last_modified": "2023-10-16T12:58:12.000000Z"
+            },
+            {
+                "title": "Command-line Tools can be 235x Faster than your Hadoop Cluster - Adam Drake",
+                "url": "https://adamdrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html",
+                "date_added": "2023-08-22T16:25:54.196000Z",
+                "last_modified": "2023-10-16T12:58:12.000000Z"
+            },
+            {
+                "title": "The reckless, infinite scope of web browsers",
+                "url": "https://drewdevault.com/2020/03/18/Reckless-limitless-scope",
+                "date_added": "2023-10-20T10:39:11.412000Z",
+                "last_modified": "2023-10-23T22:10:08.000000Z"
+            },
+            {
+                "title": "Why I don't have analytics on my website",
+                "url": "https://ajenkins.me/post/analytics/",
+                "date_added": "2023-10-25T22:21:08.509000Z",
+                "last_modified": "2023-10-25T22:21:08.509000Z"
+            }
+        ],
+        "wordles": [
+            {
+                "title": "Wordle - A daily word game",
+                "url": "https://www.powerlanguage.co.uk/wordle/",
+                "date_added": "2022-02-08T13:43:52.251000Z",
+                "last_modified": "2022-02-08T13:43:56.875000Z"
+            },
+            {
+                "title": "Absurdle @ Things Of Interest",
+                "url": "https://qntm.org/files/absurdle/absurdle.html",
+                "date_added": "2022-02-08T13:44:15.388000Z",
+                "last_modified": "2022-02-08T13:44:15.388000Z"
+            },
+            {
+                "title": "dordle by zaratustra",
+                "url": "https://zaratustra.itch.io/dordle",
+                "date_added": "2022-02-08T13:44:32.305000Z",
+                "last_modified": "2022-02-08T13:44:32.305000Z"
+            },
+            {
+                "title": "Lewdle - A lewd daily word game",
+                "url": "https://www.lewdlegame.com/",
+                "date_added": "2022-02-08T13:44:41.015000Z",
+                "last_modified": "2022-02-08T13:44:41.015000Z"
+            },
+            {
+                "title": "Primel",
+                "url": "https://converged.yt/primel/",
+                "date_added": "2022-02-08T13:44:49.113000Z",
+                "last_modified": "2022-02-08T13:44:49.113000Z"
+            },
+            {
+                "title": "Sweardle - the 4 letter word guessing game",
+                "url": "https://sweardle.com/",
+                "date_added": "2022-02-08T13:44:59.815000Z",
+                "last_modified": "2022-02-08T13:44:59.815000Z"
+            },
+            {
+                "title": "QUEERDLE",
+                "url": "https://queerdle.com/",
+                "date_added": "2022-02-08T13:45:17.982000Z",
+                "last_modified": "2022-02-08T13:45:17.982000Z"
+            },
+            {
+                "title": "Taylordle",
+                "url": "https://www.taylordle.com/",
+                "date_added": "2022-02-08T13:45:31.253000Z",
+                "last_modified": "2022-02-08T13:45:31.253000Z"
+            },
+            {
+                "title": "BTS Wordle",
+                "url": "https://bts-wordle.vercel.app/",
+                "date_added": "2022-02-08T13:45:40.817000Z",
+                "last_modified": "2022-02-08T13:45:40.817000Z"
+            },
+            {
+                "title": "Wordle Unlimited - Play Wordle with Unlimited Words",
+                "url": "https://www.wordleunlimited.com/",
+                "date_added": "2022-02-08T13:45:49.797000Z",
+                "last_modified": "2022-02-08T13:45:49.797000Z"
+            },
+            {
+                "title": "Searchdle: An SEO version of Wordle",
+                "url": "https://wtfseo.com/searchdle/",
+                "date_added": "2022-02-08T13:46:41.496000Z",
+                "last_modified": "2022-02-08T13:46:41.496000Z"
+            },
+            {
+                "title": "Jewdle – a daily Jewish word game",
+                "url": "https://www.jewdle.app/",
+                "date_added": "2022-02-08T13:46:54.391000Z",
+                "last_modified": "2022-02-08T13:46:54.391000Z"
+            },
+            {
+                "title": "Star Wordle",
+                "url": "https://www.starwordle.com/",
+                "date_added": "2022-02-08T13:47:02.921000Z",
+                "last_modified": "2022-02-08T13:47:02.921000Z"
+            },
+            {
+                "title": "Worldle",
+                "url": "https://worldle.teuteuf.fr/",
+                "date_added": "2022-02-08T13:47:27.270000Z",
+                "last_modified": "2022-02-08T13:47:27.270000Z"
+            },
+            {
+                "title": "Letterle",
+                "url": "https://edjefferson.com/letterle/",
+                "date_added": "2022-02-08T13:51:43.907000Z",
+                "last_modified": "2022-02-08T13:51:43.907000Z"
+            },
+            {
+                "title": "Nerdle - the daily numbers game",
+                "url": "https://nerdlegame.com/",
+                "date_added": "2022-02-08T13:52:01.356000Z",
+                "last_modified": "2022-02-08T13:52:01.356000Z"
+            },
+            {
+                "title": "Globle",
+                "url": "https://globle-game.com/",
+                "date_added": "2022-02-14T09:09:25.763000Z",
+                "last_modified": "2022-02-14T10:08:18.000000Z"
+            },
+            {
+                "title": "Chessle",
+                "url": "https://jackli.gg/chessle/",
+                "date_added": "2022-02-16T11:41:41.925000Z",
+                "last_modified": "2022-02-17T20:06:12.000000Z"
+            },
+            {
+                "title": "UC Dwordle",
+                "url": "https://ucdavis-life.github.io/",
+                "date_added": "2022-02-22T11:23:33.551000Z",
+                "last_modified": "2022-02-22T11:23:33.551000Z"
+            },
+            {
+                "title": "Quordle",
+                "url": "https://www.quordle.com/#/",
+                "date_added": "2022-02-22T11:24:13.542000Z",
+                "last_modified": "2022-02-22T11:24:13.542000Z"
+            },
+            {
+                "title": "Octordle",
+                "url": "https://octordle.com/?mode=daily",
+                "date_added": "2022-02-22T11:24:26.100000Z",
+                "last_modified": "2022-02-22T11:24:26.100000Z"
+            },
+            {
+                "title": "sedecordle",
+                "url": "http://www.sedecordle.com/?mode=daily",
+                "date_added": "2022-02-22T11:24:43.747000Z",
+                "last_modified": "2022-02-22T11:24:43.747000Z"
+            },
+            {
+                "title": "Semantle",
+                "url": "https://semantle.novalis.org/",
+                "date_added": "2022-02-22T11:43:37.241000Z",
+                "last_modified": "2022-02-22T11:43:37.241000Z"
+            },
+            {
+                "title": "Durdle",
+                "url": "http://durdle.me/",
+                "date_added": "2022-02-27T02:52:46.493000Z",
+                "last_modified": "2022-02-27T12:27:20.000000Z"
+            },
+            {
+                "title": "squirdle",
+                "url": "https://squirdle.fireblend.com/",
+                "date_added": "2022-02-28T17:29:05.340000Z",
+                "last_modified": "2022-02-28T21:11:15.000000Z"
+            },
+            {
+                "title": "Heardle - Like Wordle, but for Music",
+                "url": "https://www.heardle.app/",
+                "date_added": "2022-03-06T13:05:07.132000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Scholardle",
+                "url": "https://www.scholardle.com/",
+                "date_added": "2022-03-11T09:32:24.917000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Survivle",
+                "url": "https://lazyguyy.github.io/survivle/",
+                "date_added": "2022-03-14T14:28:44.074000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Brandle",
+                "url": "https://code-a-software.net/brandle/",
+                "date_added": "2022-03-15T16:16:13.279000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Squabble",
+                "url": "https://squabble.me/",
+                "date_added": "2022-03-16T14:30:18.038000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Qwordle",
+                "url": "https://qwordle.bhat.ca/",
+                "date_added": "2022-03-17T20:59:42.754000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Squardle - Wordle squared?",
+                "url": "https://fubargames.se/squardle/",
+                "date_added": "2022-03-18T16:39:33.988000Z",
+                "last_modified": "2022-03-18T17:17:26.000000Z"
+            },
+            {
+                "title": "Adverswordle",
+                "url": "https://adverswordle.doteye.online/",
+                "date_added": "2022-03-22T10:58:43.427000Z",
+                "last_modified": "2022-03-22T11:17:38.000000Z"
+            },
+            {
+                "title": "Emotle | Emotle",
+                "url": "https://emotle.com/",
+                "date_added": "2022-04-04T11:17:12.368000Z",
+                "last_modified": "2022-04-04T11:17:14.670000Z"
+            },
+            {
+                "title": "Framed - The daily movie guessing game",
+                "url": "https://framed.wtf/",
+                "date_added": "2022-04-04T11:17:23.149000Z",
+                "last_modified": "2022-04-04T11:17:23.149000Z"
+            },
+            {
+                "title": "Daily Home | Appraisir",
+                "url": "https://appraisir.com/Daily/",
+                "date_added": "2022-04-04T11:17:46.492000Z",
+                "last_modified": "2022-04-04T11:17:46.492000Z"
+            },
+            {
+                "title": "Wheredle 🌎",
+                "url": "https://wheredle.xyz/",
+                "date_added": "2022-04-08T11:32:20.840000Z",
+                "last_modified": "2022-04-08T16:00:07.000000Z"
+            },
+            {
+                "title": "Duotrigordle",
+                "url": "https://duotrigordle.com/",
+                "date_added": "2022-04-10T12:45:47.799000Z",
+                "last_modified": "2022-04-10T12:45:49.493000Z"
+            },
+            {
+                "title": "Redactle - A daily puzzle game",
+                "url": "https://www.redactle.com/",
+                "date_added": "2022-04-15T21:39:11.394000Z",
+                "last_modified": "2022-04-15T23:55:02.000000Z"
+            },
+            {
+                "title": "ESChallenge (Eurovision Heardle)",
+                "url": "https://eurosong.app/",
+                "date_added": "2022-04-21T19:30:00.931000Z",
+                "last_modified": "2022-04-21T19:30:02.651000Z"
+            },
+            {
+                "title": "MURDLE! Solve a mystery every day!",
+                "url": "https://murdle.com/",
+                "date_added": "2022-11-18T22:51:11.874000Z",
+                "last_modified": "2022-11-18T22:51:16.912000Z"
+            },
+            {
+                "title": "Pteredactle - Puzzle Game",
+                "url": "https://pteredactle.com/#Q159190",
+                "date_added": "2022-12-14T19:19:14.868000Z",
+                "last_modified": "2022-12-14T19:19:18.647000Z"
+            },
+            {
+                "title": "Flaggle 🏁",
+                "url": "https://ducc.pythonanywhere.com/flaggle/",
+                "date_added": "2023-02-07T11:45:06.040000Z",
+                "last_modified": "2023-02-07T22:17:41.000000Z"
+            },
+            {
+                "title": "Lirdle: One Lie Per Line",
+                "url": "http://lirdle.com/",
+                "date_added": "2023-03-06T17:50:36.091000Z",
+                "last_modified": "2023-03-14T20:46:35.000000Z"
+            },
+            {
+                "title": "Waffle - daily word game",
+                "url": "https://wafflegame.net/",
+                "date_added": "2023-03-06T19:07:08.888000Z",
+                "last_modified": "2023-04-17T01:19:44.784000Z"
+            },
+            {
+                "title": "Hexordle",
+                "url": "https://hexordle.com/",
+                "date_added": "2023-03-06T19:09:26.474000Z",
+                "last_modified": "2023-03-14T20:46:35.000000Z"
+            },
+            {
+                "title": "OEC Tradle",
+                "url": "https://oec.world/en/tradle/",
+                "date_added": "2023-04-10T10:19:28.376000Z",
+                "last_modified": "2023-04-17T01:20:13.856000Z"
+            },
+            {
+                "title": "GeoScienceWord",
+                "url": "https://word.geoscienceworld.org/",
+                "date_added": "2023-05-15T11:52:01.928000Z",
+                "last_modified": "2023-05-16T14:47:14.000000Z"
             }
         ]
     }
