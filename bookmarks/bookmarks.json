@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-10-30T23:36:10.043384Z",
+    "last_modified": "2023-10-31T12:01:17.644436Z",
     "bookmarks": {
         "personal websites": [
             {
@@ -349,6 +349,12 @@
                 "url": "https://www.timhunkin.com/",
                 "date_added": "2023-10-29T11:25:58.033000Z",
                 "last_modified": "2023-10-29T11:25:58.033000Z"
+            },
+            {
+                "title": "Todd Wolfson - Blog",
+                "url": "https://twolfson.com/",
+                "date_added": "2023-10-30T21:02:44.218000Z",
+                "last_modified": "2023-10-30T21:02:44.218000Z"
             }
         ],
         "Articles (random)": [
@@ -521,6 +527,12 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
+                "title": "What happened when we offered Free Hugs to people",
+                "url": "https://blinry.org/free-hugs/",
+                "date_added": "2023-06-28T18:20:08.734000Z",
+                "last_modified": "2023-10-30T23:30:18.732000Z"
+            },
+            {
                 "title": "Greater London Industrial Archaeology Society",
                 "url": "http://www.glias.org.uk/index.htm",
                 "date_added": "2023-08-05T12:28:51.360000Z",
@@ -623,6 +635,12 @@
                 "url": "https://andrewjakubowicz.me/posts/making-of-a-blog-post/",
                 "date_added": "2023-06-22T00:35:03.814000Z",
                 "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "The midwit home - DYNOMIGHT INTERNET NEWSLETTER",
+                "url": "https://dynomight.substack.com/p/midwit-home",
+                "date_added": "2023-10-12T17:31:55.193000Z",
+                "last_modified": "2023-10-30T23:30:24.100000Z"
             },
             {
                 "title": "Making \"LCD, Please\" | Development Logs by Lucas Pope",
@@ -937,6 +955,12 @@
                 "url": "https://word.geoscienceworld.org/",
                 "date_added": "2023-05-15T11:52:01.928000Z",
                 "last_modified": "2023-05-16T14:47:14.000000Z"
+            },
+            {
+                "title": "Jumblie | A word search game",
+                "url": "https://jumblie.com/",
+                "date_added": "2023-10-31T11:59:08.053000Z",
+                "last_modified": "2023-10-31T11:59:08.053000Z"
             }
         ]
     }
