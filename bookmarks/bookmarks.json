@@ -1,13 +1,7 @@
 {
-    "last_modified": "2023-10-31T12:01:17.644436Z",
+    "last_modified": "2023-11-04T23:02:19.681939Z",
     "bookmarks": {
         "personal websites": [
-            {
-                "title": "Alex Adler",
-                "url": "https://alex-adler.github.io/",
-                "date_added": "2023-03-29T23:26:22.425000Z",
-                "last_modified": "2023-05-25T01:08:43.887000Z"
-            },
             {
                 "title": "Ryan Mulligan",
                 "url": "https://ryanmulligan.dev/",
@@ -25,6 +19,12 @@
                 "url": "https://chuniversiteit.nl/",
                 "date_added": "2023-05-19T22:47:57.259000Z",
                 "last_modified": "2023-05-19T23:49:49.000000Z"
+            },
+            {
+                "title": "Alex Adler",
+                "url": "https://alex-adler.github.io/",
+                "date_added": "2023-03-29T23:26:22.425000Z",
+                "last_modified": "2023-05-25T01:08:43.887000Z"
             },
             {
                 "title": "Tom Forth's Homepage",
@@ -419,15 +419,15 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
-                "title": "Oyacachi – aka the Coldest Place on the Equator, Ever | Big Trip",
-                "url": "https://rtwferrer.wordpress.com/2010/08/19/oyacachi-aka-the-coldest-place-on-the-equator-ever/",
-                "date_added": "2022-03-19T21:09:40.744000Z",
-                "last_modified": "2023-06-28T19:08:13.000000Z"
-            },
-            {
                 "title": "Deciphering The Man Behind Ontario’s Bean Puzzle Tombstone – LADY LATITUDES",
                 "url": "https://ladylatitudes.ca/2021/02/16/deciphering-the-man-behind-ontarios-bean-puzzle-tombstone/",
                 "date_added": "2022-03-19T21:11:32.611000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "Oyacachi – aka the Coldest Place on the Equator, Ever | Big Trip",
+                "url": "https://rtwferrer.wordpress.com/2010/08/19/oyacachi-aka-the-coldest-place-on-the-equator-ever/",
+                "date_added": "2022-03-19T21:09:40.744000Z",
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
@@ -527,12 +527,6 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
-                "title": "What happened when we offered Free Hugs to people",
-                "url": "https://blinry.org/free-hugs/",
-                "date_added": "2023-06-28T18:20:08.734000Z",
-                "last_modified": "2023-10-30T23:30:18.732000Z"
-            },
-            {
                 "title": "Greater London Industrial Archaeology Society",
                 "url": "http://www.glias.org.uk/index.htm",
                 "date_added": "2023-08-05T12:28:51.360000Z",
@@ -555,6 +549,12 @@
                 "url": "https://tomforth.co.uk/wenevertried/",
                 "date_added": "2023-10-18T01:43:08.956000Z",
                 "last_modified": "2023-10-18T13:22:20.000000Z"
+            },
+            {
+                "title": "What happened when we offered Free Hugs to people",
+                "url": "https://blinry.org/free-hugs/",
+                "date_added": "2023-06-28T18:20:08.734000Z",
+                "last_modified": "2023-10-30T23:30:18.732000Z"
             }
         ],
         "Articles (programming)": [
@@ -577,15 +577,15 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
-                "title": "F*ck it: use React for your personal site if you want to - Ironeko",
-                "url": "https://ironeko.com/posts/f-ck-it-use-react-for-your-personal-site-if-you-want-to",
-                "date_added": "2023-02-06T13:48:33.683000Z",
-                "last_modified": "2023-06-28T19:08:13.000000Z"
-            },
-            {
                 "title": "Paul Ford: What Is Code? | Bloomberg",
                 "url": "https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/",
                 "date_added": "2023-03-30T00:49:45.964000Z",
+                "last_modified": "2023-06-28T19:08:13.000000Z"
+            },
+            {
+                "title": "F*ck it: use React for your personal site if you want to - Ironeko",
+                "url": "https://ironeko.com/posts/f-ck-it-use-react-for-your-personal-site-if-you-want-to",
+                "date_added": "2023-02-06T13:48:33.683000Z",
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
@@ -637,12 +637,6 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
-                "title": "The midwit home - DYNOMIGHT INTERNET NEWSLETTER",
-                "url": "https://dynomight.substack.com/p/midwit-home",
-                "date_added": "2023-10-12T17:31:55.193000Z",
-                "last_modified": "2023-10-30T23:30:24.100000Z"
-            },
-            {
                 "title": "Making \"LCD, Please\" | Development Logs by Lucas Pope",
                 "url": "https://dukope.com/devlogs/papers-please/lcdplease/",
                 "date_added": "2023-08-18T10:37:38.363000Z",
@@ -665,6 +659,12 @@
                 "url": "https://ajenkins.me/post/analytics/",
                 "date_added": "2023-10-25T22:21:08.509000Z",
                 "last_modified": "2023-10-25T22:21:08.509000Z"
+            },
+            {
+                "title": "The midwit home - DYNOMIGHT INTERNET NEWSLETTER",
+                "url": "https://dynomight.substack.com/p/midwit-home",
+                "date_added": "2023-10-12T17:31:55.193000Z",
+                "last_modified": "2023-10-30T23:30:24.100000Z"
             }
         ],
         "wordles": [
@@ -961,6 +961,68 @@
                 "url": "https://jumblie.com/",
                 "date_added": "2023-10-31T11:59:08.053000Z",
                 "last_modified": "2023-10-31T11:59:08.053000Z"
+            }
+        ],
+        "mobile games": [
+            {
+                "title": "80 Days – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.inkle.eightydays",
+                "date_added": "2023-11-01T23:42:40.948000Z",
+                "last_modified": "2023-11-04T22:55:56.087000Z"
+            },
+            {
+                "title": "Slice & Dice – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.com.tann.dice",
+                "date_added": "2023-11-01T23:42:16.222000Z",
+                "last_modified": "2023-11-04T22:56:03.258000Z"
+            },
+            {
+                "title": "Spaceteam – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.sleepingbeastgames.spaceteam",
+                "date_added": "2023-11-04T22:55:18.023000Z",
+                "last_modified": "2023-11-04T22:55:59.484000Z"
+            },
+            {
+                "title": "The Battle of Polytopia – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia",
+                "date_added": "2023-11-01T23:43:08.591000Z",
+                "last_modified": "2023-11-04T22:56:10.285000Z"
+            },
+            {
+                "title": "Mindustry – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=io.anuke.mindustry",
+                "date_added": "2023-11-01T23:43:23.889000Z",
+                "last_modified": "2023-11-04T22:55:57.974000Z"
+            },
+            {
+                "title": "into the breach – Android Apps on Google Play",
+                "url": "https://play.google.com/store/search?q=into+the+breach&c=apps",
+                "date_added": "2023-11-04T22:55:44.344000Z",
+                "last_modified": "2023-11-04T22:56:13.910000Z"
+            },
+            {
+                "title": "chwazi – Android Apps on Google Play",
+                "url": "https://play.google.com/store/search?q=chwazi&c=apps",
+                "date_added": "2023-11-04T22:54:34.697000Z",
+                "last_modified": "2023-11-04T22:56:06.277000Z"
+            },
+            {
+                "title": "Reigns – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.devolver.reigns",
+                "date_added": "2023-11-01T23:41:10.360000Z",
+                "last_modified": "2023-11-04T22:56:08.045000Z"
+            },
+            {
+                "title": "Out There: Ω Edition – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.miclos.google.games.outthere",
+                "date_added": "2023-11-04T22:55:00.644000Z",
+                "last_modified": "2023-11-04T22:56:01.536000Z"
+            },
+            {
+                "title": "Space Trader – Apps on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.brucelet.spacetrader",
+                "date_added": "2023-11-01T23:43:38.606000Z",
+                "last_modified": "2023-11-01T23:43:38.606000Z"
             }
         ]
     }
