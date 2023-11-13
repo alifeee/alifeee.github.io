@@ -1,7 +1,51 @@
 {
-    "last_modified": "2023-11-04T23:02:19.681939Z",
+    "last_modified": "2023-11-13T01:44:51.172793Z",
     "bookmarks": {
-        "personal websites": [
+        "TOP 10 personal websites/blogs": [
+            {
+                "title": "Tom Forth's Homepage",
+                "url": "https://www.tomforth.co.uk/",
+                "date_added": "2023-05-29T18:23:46.689000Z",
+                "last_modified": "2023-11-12T22:19:05.160000Z"
+            },
+            {
+                "title": "nonnullish",
+                "url": "https://nonnullish.pages.dev/",
+                "date_added": "2023-09-12T15:53:49.290000Z",
+                "last_modified": "2023-11-12T22:19:28.376000Z"
+            },
+            {
+                "title": "Erich Friedman",
+                "url": "https://erich-friedman.github.io/",
+                "date_added": "2023-07-26T09:29:22.706000Z",
+                "last_modified": "2023-11-12T22:26:34.961000Z"
+            },
+            {
+                "title": "brr",
+                "url": "https://brr.fyi/",
+                "date_added": "2023-10-16T17:08:35.170000Z",
+                "last_modified": "2023-11-12T22:26:40.241000Z"
+            },
+            {
+                "title": "tim hunkin home page",
+                "url": "https://www.timhunkin.com/",
+                "date_added": "2023-10-29T11:25:58.033000Z",
+                "last_modified": "2023-11-12T22:26:42.979000Z"
+            },
+            {
+                "title": "Experimental History | Adam Mastroianni | Substack",
+                "url": "https://www.experimental-history.com/",
+                "date_added": "2023-11-12T22:49:13.615000Z",
+                "last_modified": "2023-11-12T22:49:23.209000Z"
+            },
+            {
+                "title": "DYNOMIGHT INTERNET NEWSLETTER | Substack",
+                "url": "https://dynomight.substack.com/",
+                "date_added": "2023-11-12T22:49:16.319000Z",
+                "last_modified": "2023-11-12T22:49:28.143000Z"
+            }
+        ],
+        "personal websites (with blog)": [
             {
                 "title": "Ryan Mulligan",
                 "url": "https://ryanmulligan.dev/",
@@ -19,18 +63,6 @@
                 "url": "https://chuniversiteit.nl/",
                 "date_added": "2023-05-19T22:47:57.259000Z",
                 "last_modified": "2023-05-19T23:49:49.000000Z"
-            },
-            {
-                "title": "Alex Adler",
-                "url": "https://alex-adler.github.io/",
-                "date_added": "2023-03-29T23:26:22.425000Z",
-                "last_modified": "2023-05-25T01:08:43.887000Z"
-            },
-            {
-                "title": "Tom Forth's Homepage",
-                "url": "https://www.tomforth.co.uk/",
-                "date_added": "2023-05-29T18:23:46.689000Z",
-                "last_modified": "2023-05-30T16:53:13.000000Z"
             },
             {
                 "title": "jedevc",
@@ -66,24 +98,6 @@
                 "title": "Mind of a Hitchhiker",
                 "url": "https://mindofahitchhiker.com/",
                 "date_added": "2023-07-14T12:55:04.460000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
-                "title": "Erich Friedman",
-                "url": "https://erich-friedman.github.io/",
-                "date_added": "2023-07-26T09:29:22.706000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
-                "title": "Des polices de caracteres a Gogo !!!",
-                "url": "http://clofont.free.fr/",
-                "date_added": "2023-08-05T12:28:22.408000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
-                "title": "Daniel Flanagan",
-                "url": "https://daniel-flanagan.com/",
-                "date_added": "2023-08-09T20:39:28.998000Z",
                 "last_modified": "2023-10-16T12:58:12.000000Z"
             },
             {
@@ -135,18 +149,6 @@
                 "last_modified": "2023-10-16T12:58:12.000000Z"
             },
             {
-                "title": "Cat-v.org Random Contrarian Insurgent Organization",
-                "url": "http://cat-v.org/",
-                "date_added": "2023-09-09T14:52:47.833000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
-                "title": "Plan 9 from Bell Labs",
-                "url": "http://9p.io/plan9/",
-                "date_added": "2023-09-09T14:52:51.745000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
                 "title": "Russ Garrett",
                 "url": "https://russ.garrett.co.uk/",
                 "date_added": "2023-09-10T21:45:05.780000Z",
@@ -156,12 +158,6 @@
                 "title": "nutcroft",
                 "url": "https://nutcroft.com/",
                 "date_added": "2023-09-10T22:10:40.237000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
-                "title": "nonnullish",
-                "url": "https://nonnullish.pages.dev/",
-                "date_added": "2023-09-12T15:53:49.290000Z",
                 "last_modified": "2023-10-16T12:58:12.000000Z"
             },
             {
@@ -231,12 +227,6 @@
                 "last_modified": "2023-10-16T12:58:12.000000Z"
             },
             {
-                "title": "Philipp Gortan's Homepage",
-                "url": "https://gortan.org/",
-                "date_added": "2023-10-02T15:27:28.406000Z",
-                "last_modified": "2023-10-16T12:58:12.000000Z"
-            },
-            {
                 "title": "Hillel Wayne",
                 "url": "https://hillelwayne.com/",
                 "date_added": "2023-10-02T21:11:11.266000Z",
@@ -285,34 +275,10 @@
                 "last_modified": "2023-10-16T12:58:12.000000Z"
             },
             {
-                "title": "brr",
-                "url": "https://brr.fyi/",
-                "date_added": "2023-10-16T17:08:35.170000Z",
-                "last_modified": "2023-10-16T21:29:33.000000Z"
-            },
-            {
                 "title": "Max Böck",
                 "url": "https://mxb.dev/",
                 "date_added": "2023-10-16T23:51:49.674000Z",
                 "last_modified": "2023-10-16T23:51:49.674000Z"
-            },
-            {
-                "title": "The Mark Vigeant Web Ring",
-                "url": "http://markvigeant.directory/",
-                "date_added": "2023-10-16T23:59:47.794000Z",
-                "last_modified": "2023-10-16T23:59:47.794000Z"
-            },
-            {
-                "title": "The Web Site of Cobyzaby",
-                "url": "https://cobyzaby.neocities.org/",
-                "date_added": "2023-10-17T00:50:02.242000Z",
-                "last_modified": "2023-10-17T00:50:02.242000Z"
-            },
-            {
-                "title": "Toni Buckby",
-                "url": "https://tonibuckby.com/",
-                "date_added": "2023-10-25T01:25:06.625000Z",
-                "last_modified": "2023-10-25T01:25:06.625000Z"
             },
             {
                 "title": "AJ's Blog",
@@ -345,16 +311,176 @@
                 "last_modified": "2023-10-28T11:57:18.000000Z"
             },
             {
-                "title": "tim hunkin home page",
-                "url": "https://www.timhunkin.com/",
-                "date_added": "2023-10-29T11:25:58.033000Z",
-                "last_modified": "2023-10-29T11:25:58.033000Z"
-            },
-            {
                 "title": "Todd Wolfson - Blog",
                 "url": "https://twolfson.com/",
                 "date_added": "2023-10-30T21:02:44.218000Z",
                 "last_modified": "2023-10-30T21:02:44.218000Z"
+            },
+            {
+                "title": "gregsite - Welcome!",
+                "url": "https://gregdan3.dev/",
+                "date_added": "2023-11-12T18:11:50.327000Z",
+                "last_modified": "2023-11-12T18:11:50.327000Z"
+            }
+        ],
+        "personal websites (without blog)": [
+            {
+                "title": "Alex Adler",
+                "url": "https://alex-adler.github.io/",
+                "date_added": "2023-03-29T23:26:22.425000Z",
+                "last_modified": "2023-11-12T22:31:29.841000Z"
+            },
+            {
+                "title": "Des polices de caracteres a Gogo !!!",
+                "url": "http://clofont.free.fr/",
+                "date_added": "2023-08-05T12:28:22.408000Z",
+                "last_modified": "2023-11-12T22:32:00.757000Z"
+            },
+            {
+                "title": "Daniel Flanagan",
+                "url": "https://daniel-flanagan.com/",
+                "date_added": "2023-08-09T20:39:28.998000Z",
+                "last_modified": "2023-11-12T22:32:42.813000Z"
+            },
+            {
+                "title": "Philipp Gortan's Homepage",
+                "url": "https://gortan.org/",
+                "date_added": "2023-10-02T15:27:28.406000Z",
+                "last_modified": "2023-11-12T22:35:03.833000Z"
+            },
+            {
+                "title": "Vlad's Dating Profile",
+                "url": "https://vlad.roam.garden/Vlad's-Dating-Profile",
+                "date_added": "2023-11-12T22:37:20.046000Z",
+                "last_modified": "2023-11-12T22:37:20.046000Z"
+            },
+            {
+                "title": "The Mark Vigeant Web Ring",
+                "url": "http://markvigeant.directory/",
+                "date_added": "2023-10-16T23:59:47.794000Z",
+                "last_modified": "2023-11-12T22:41:21.635000Z"
+            },
+            {
+                "title": "Toni Buckby",
+                "url": "https://tonibuckby.com/",
+                "date_added": "2023-10-25T01:25:06.625000Z",
+                "last_modified": "2023-11-12T22:43:00.014000Z"
+            },
+            {
+                "title": "Cameron's World",
+                "url": "https://www.cameronsworld.net/",
+                "date_added": "2023-08-24T18:48:52.668000Z",
+                "last_modified": "2023-11-12T22:49:41.839000Z"
+            },
+            {
+                "title": "The Web Site of Cobyzaby",
+                "url": "https://cobyzaby.neocities.org/",
+                "date_added": "2023-10-17T00:50:02.242000Z",
+                "last_modified": "2023-11-12T22:49:43.866000Z"
+            }
+        ],
+        "interesting websites": [
+            {
+                "title": "OpenBenches Welcome!",
+                "url": "https://openbenches.org/",
+                "date_added": "2023-11-12T16:28:46.915000Z",
+                "last_modified": "2023-11-12T16:52:24.000000Z"
+            },
+            {
+                "title": "Cool Space Things",
+                "url": "https://coolspacethings.neocities.org/",
+                "date_added": "2023-11-12T18:15:05.210000Z",
+                "last_modified": "2023-11-12T18:15:05.210000Z"
+            },
+            {
+                "title": "LilyPond – Music notation for everyone",
+                "url": "http://lilypond.org/",
+                "date_added": "2023-11-12T18:17:00.329000Z",
+                "last_modified": "2023-11-12T18:17:00.329000Z"
+            },
+            {
+                "title": "Cat-v.org Random Contrarian Insurgent Organization",
+                "url": "http://cat-v.org/",
+                "date_added": "2023-09-09T14:52:47.833000Z",
+                "last_modified": "2023-11-12T22:33:08.433000Z"
+            },
+            {
+                "title": "Random book",
+                "url": "https://www.goodreads.com/book/random",
+                "date_added": "2023-02-22T12:59:21.984000Z",
+                "last_modified": "2023-11-12T22:50:07.056000Z"
+            },
+            {
+                "title": "Diggers and Dreamers – Intentional Community in Britain",
+                "url": "https://diggersanddreamers.org.uk/",
+                "date_added": "2023-09-03T11:54:08.603000Z",
+                "last_modified": "2023-11-12T22:50:40.339000Z"
+            },
+            {
+                "title": "IMDb Ratings: Movies Higher Lower Game | Stattogories",
+                "url": "https://stattogories.com/imdb/ratings-movies.html",
+                "date_added": "2022-05-19T22:35:28.801000Z",
+                "last_modified": "2023-11-12T22:51:58.662000Z"
+            },
+            {
+                "title": "Nobody.live | Lonely streams and streamers with zero viewers",
+                "url": "https://nobody.live/",
+                "date_added": "2022-05-19T00:38:41.664000Z",
+                "last_modified": "2023-11-12T22:52:26.811000Z"
+            },
+            {
+                "title": "Watch TV live now on the web | free and easy",
+                "url": "https://ukfree.tv/channels/live",
+                "date_added": "2021-11-07T12:30:41.404000Z",
+                "last_modified": "2023-11-12T22:56:05.336000Z"
+            },
+            {
+                "title": "Hanabi · Play Hanabi online with friends!",
+                "url": "https://hanabi.cards/",
+                "date_added": "2021-04-28T20:58:27.275000Z",
+                "last_modified": "2023-11-12T22:56:15.977000Z"
+            },
+            {
+                "title": "Atlas Obscura - Curious and Wondrous Travel Destinations",
+                "url": "https://www.atlasobscura.com/",
+                "date_added": "2021-09-02T10:37:52.310000Z",
+                "last_modified": "2023-11-12T22:56:23.902000Z"
+            },
+            {
+                "title": "Python Graph Gallery",
+                "url": "https://www.python-graph-gallery.com/",
+                "date_added": "2021-07-08T22:31:13.663000Z",
+                "last_modified": "2023-11-12T22:57:49.934000Z"
+            },
+            {
+                "title": "SteamCompanion",
+                "url": "https://steamcompanion.com/compare",
+                "date_added": "2023-02-09T22:09:51.863000Z",
+                "last_modified": "2023-11-12T22:59:43.242000Z"
+            },
+            {
+                "title": "3D Pipes Screensaver",
+                "url": "https://1j01.github.io/pipes/",
+                "date_added": "2021-06-22T20:02:20.390000Z",
+                "last_modified": "2023-11-12T22:59:51.179000Z"
+            },
+            {
+                "title": "Based on a *True* True Story? — Information is Beautiful",
+                "url": "https://informationisbeautiful.net/visualizations/based-on-a-true-true-story/",
+                "date_added": "2018-08-26T19:32:50.757000Z",
+                "last_modified": "2023-11-12T23:01:37.173000Z"
+            },
+            {
+                "title": "The Phrontistery: Obscure Words and Vocabulary Resources",
+                "url": "http://phrontistery.info/index.html",
+                "date_added": "2017-09-21T22:54:36.511000Z",
+                "last_modified": "2023-11-12T23:04:25.338000Z"
+            },
+            {
+                "title": "What To Watch On Streaming - A Good Movie To Watch",
+                "url": "https://agoodmovietowatch.com/",
+                "date_added": "2023-11-12T23:04:58.808000Z",
+                "last_modified": "2023-11-12T23:04:58.808000Z"
             }
         ],
         "Articles (random)": [
@@ -392,12 +518,6 @@
                 "title": "Kursk submarine disaster - Wikipedia",
                 "url": "https://en.m.wikipedia.org/wiki/Kursk_submarine_disaster",
                 "date_added": "2021-10-31T18:29:53.174000Z",
-                "last_modified": "2023-06-28T19:08:13.000000Z"
-            },
-            {
-                "title": "View All — BASE Magazine",
-                "url": "https://www.base-mag.com/explore?offset=1598434454591&category=stories",
-                "date_added": "2021-10-31T18:47:46.598000Z",
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
@@ -509,6 +629,12 @@
                 "last_modified": "2023-06-28T19:08:13.000000Z"
             },
             {
+                "title": "Moondog: Sound of New York - BBC Sounds",
+                "url": "https://www.bbc.co.uk/sounds/play/b0b48wq9",
+                "date_added": "2022-06-12T14:40:36.819000Z",
+                "last_modified": "2023-11-12T22:27:57.599000Z"
+            },
+            {
                 "title": "The plot against Mercia - UnHerd",
                 "url": "https://unherd.com/2020/09/the-plot-against-mercia/#:~:text=The%201956%20West%20Midlands%20Plan,focused%20on%20the%20motor%20industry.",
                 "date_added": "2023-05-29T17:43:04.625000Z",
@@ -555,6 +681,18 @@
                 "url": "https://blinry.org/free-hugs/",
                 "date_added": "2023-06-28T18:20:08.734000Z",
                 "last_modified": "2023-10-30T23:30:18.732000Z"
+            },
+            {
+                "title": "What's so great about tunnel man?",
+                "url": "https://dynomight.substack.com/p/tunnel-man",
+                "date_added": "2023-11-11T21:49:56.017000Z",
+                "last_modified": "2023-11-11T21:49:56.017000Z"
+            },
+            {
+                "title": "Excuse me but why are you eating so many frogs",
+                "url": "https://www.experimental-history.com/p/excuse-me-but-why-are-you-eating",
+                "date_added": "2023-11-12T12:09:22.409000Z",
+                "last_modified": "2023-11-12T16:52:24.000000Z"
             }
         ],
         "Articles (programming)": [
@@ -665,6 +803,68 @@
                 "url": "https://dynomight.substack.com/p/midwit-home",
                 "date_added": "2023-10-12T17:31:55.193000Z",
                 "last_modified": "2023-10-30T23:30:24.100000Z"
+            }
+        ],
+        "video playlists/channels": [
+            {
+                "title": "The Secret Life of Machines Remastered - YouTube",
+                "url": "https://www.youtube.com/playlist?list=PLtaR0lZhSyAPLuoSbMA29s3Ry8ZUvKff3",
+                "date_added": "2023-11-12T21:02:49.740000Z",
+                "last_modified": "2023-11-12T21:02:49.740000Z"
+            },
+            {
+                "title": "Pop Culture Detective - YouTube",
+                "url": "https://www.youtube.com/@PopCultureDetective/videos",
+                "date_added": "2023-11-12T22:16:49.042000Z",
+                "last_modified": "2023-11-12T22:18:02.889000Z"
+            },
+            {
+                "title": "exurb1a - YouTube",
+                "url": "https://www.youtube.com/@Exurb1a/videos",
+                "date_added": "2023-11-12T22:17:27.595000Z",
+                "last_modified": "2023-11-12T22:18:23.429000Z"
+            },
+            {
+                "title": "Captain Disillusion - YouTube",
+                "url": "https://www.youtube.com/@CaptainDisillusion/videos",
+                "date_added": "2023-11-12T22:16:58.921000Z",
+                "last_modified": "2023-11-12T22:18:04.283000Z"
+            },
+            {
+                "title": "Steve Mould - YouTube",
+                "url": "https://www.youtube.com/@SteveMould",
+                "date_added": "2023-11-12T22:17:06.325000Z",
+                "last_modified": "2023-11-12T22:18:05.497000Z"
+            },
+            {
+                "title": "Not Just Bikes - YouTube",
+                "url": "https://www.youtube.com/@NotJustBikes",
+                "date_added": "2023-11-12T22:17:20.587000Z",
+                "last_modified": "2023-11-12T22:18:07.474000Z"
+            },
+            {
+                "title": "Dr Geoff Lindsey - YouTube",
+                "url": "https://www.youtube.com/@DrGeoffLindsey/videos",
+                "date_added": "2023-11-12T22:16:13.117000Z",
+                "last_modified": "2023-11-12T22:16:13.117000Z"
+            },
+            {
+                "title": "Andrewism - YouTube",
+                "url": "https://www.youtube.com/@Andrewism/videos",
+                "date_added": "2023-11-12T22:16:33.104000Z",
+                "last_modified": "2023-11-12T22:16:33.104000Z"
+            },
+            {
+                "title": "jan Usawi - YouTube",
+                "url": "https://www.youtube.com/@janusawi8794/videos",
+                "date_added": "2023-11-12T22:17:42.757000Z",
+                "last_modified": "2023-11-12T22:17:42.757000Z"
+            },
+            {
+                "title": "suckerpinch - YouTube",
+                "url": "https://www.youtube.com/@tom7/videos",
+                "date_added": "2023-11-13T00:34:42.754000Z",
+                "last_modified": "2023-11-13T00:34:42.754000Z"
             }
         ],
         "wordles": [
