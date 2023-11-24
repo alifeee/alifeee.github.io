@@ -48,6 +48,7 @@
         <br />
         <a href="https://blog.alifeee.co.uk">blog.alifeee.co.uk</a>
       </p>
+      <script src="https://webring.alifeee.co.uk/webring.js"></script>
       <ul class="pages">
         <li class="page p5js">
           <img alt="thumbnail for p5.js page" src="./p5js/thumbnail.png" />
@@ -108,7 +109,6 @@
     </main>
 
     <footer>
-      <script src="https://webring.alifeee.co.uk/webring.js"></script>
       <div class="links">
         <a href="https://blog.alifeee.co.uk">
           <img alt="pen nib icon" src="./icons/pen-nib-solid.svg" />
@@ -235,10 +235,28 @@
         z-index: 1;
       }
 
+      /* font for webring */
+      @font-face {
+        font-family: "hockey";
+        src: url("hockey.woff");
+      }
       .webring {
+        font-family: "hockey", sans-serif;
         background-color: var(--primary);
         border: none;
         box-shadow: 0 0 0.5rem black;
+        font-size: 1.3rem;
+        margin: 0 auto 2rem;
+        transition: transform 0.1s ease;
+      }
+      .webring .name {
+        font-size: 2rem;
+      }
+      .webring .description {
+        margin: 0;
+      }
+      .webring:hover {
+        transform: scale(1.05);
       }
     </style>
   </body>
