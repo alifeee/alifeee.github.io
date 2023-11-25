@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-11-25T00:00:41.731932Z",
+    "last_modified": "2023-11-25T13:32:32.442351Z",
     "bookmarks": {
         "TOP 10 personal websites/blogs": [
             {
@@ -61,6 +61,74 @@
                 "url": "http://helivium.com/",
                 "date_added": "2023-11-24T23:56:27.056000Z",
                 "last_modified": "2023-11-24T23:56:47.887000Z"
+            }
+        ],
+        "webrings": [
+            {
+                "title": "alifeee's webring!",
+                "url": "https://webring.alifeee.co.uk/",
+                "date_added": "2023-11-25T13:20:56.292000Z",
+                "last_modified": "2023-11-25T13:20:56.292000Z"
+            },
+            {
+                "title": "sike pona",
+                "url": "https://sike.pona.la/",
+                "date_added": "2023-11-25T12:29:51.310000Z",
+                "last_modified": "2023-11-25T13:30:15.605000Z"
+            },
+            {
+                "title": "🌿 garlic 🧄 garden 🌿",
+                "url": "https://garlic.garden/onionring/",
+                "date_added": "2023-11-25T13:27:40.246000Z",
+                "last_modified": "2023-11-25T13:27:44.347000Z"
+            },
+            {
+                "title": "The Beetle Ring - List of Member Sites",
+                "url": "http://www.naturalworlds.org/beetlering/beetle_sites.htm",
+                "date_added": "2023-11-25T10:57:03.174000Z",
+                "last_modified": "2023-11-25T13:20:58.730000Z"
+            },
+            {
+                "title": "NeoSSG: A webring for Neocities sites made with static site generators",
+                "url": "https://neossg.neocities.org/",
+                "date_added": "2023-11-25T13:00:40.737000Z",
+                "last_modified": "2023-11-25T13:21:01.088000Z"
+            },
+            {
+                "title": "Weird Wide Webring",
+                "url": "https://weirdwidewebring.net/",
+                "date_added": "2023-11-25T13:18:50.266000Z",
+                "last_modified": "2023-11-25T13:21:02.274000Z"
+            },
+            {
+                "title": "null webring",
+                "url": "https://nuthead.neocities.org/ring/",
+                "date_added": "2023-11-25T13:20:37.936000Z",
+                "last_modified": "2023-11-25T13:21:03.285000Z"
+            },
+            {
+                "title": "kulupu ko's Web site",
+                "url": "https://the-blob-system.neocities.org/mante_webring/webring",
+                "date_added": "2023-11-25T13:22:47.514000Z",
+                "last_modified": "2023-11-25T13:22:47.514000Z"
+            },
+            {
+                "title": "furryring: the furry webring",
+                "url": "https://furryring.neocities.org/",
+                "date_added": "2023-11-25T13:23:35.602000Z",
+                "last_modified": "2023-11-25T13:23:35.602000Z"
+            },
+            {
+                "title": "Hotline Webring",
+                "url": "https://hotlinewebring.club/",
+                "date_added": "2023-11-25T13:24:17.182000Z",
+                "last_modified": "2023-11-25T13:24:17.182000Z"
+            },
+            {
+                "title": "bucket webring!",
+                "url": "https://webring.bucketfish.me/",
+                "date_added": "2023-11-25T13:24:46.976000Z",
+                "last_modified": "2023-11-25T13:24:46.976000Z"
             }
         ],
         "personal websites (with blog)": [
@@ -369,6 +437,12 @@
                 "url": "https://chriskirknielsen.com/",
                 "date_added": "2023-11-24T21:10:47.556000Z",
                 "last_modified": "2023-11-24T21:10:47.556000Z"
+            },
+            {
+                "title": "Ross Wintle - Freelance technology, code and consultancy - Ross Wintle",
+                "url": "https://rosswintle.uk/",
+                "date_added": "2023-11-25T13:13:52.746000Z",
+                "last_modified": "2023-11-25T13:13:52.746000Z"
             }
         ],
         "personal websites (without blog)": [
@@ -887,6 +961,18 @@
                 "url": "https://dynomight.substack.com/p/midwit-home",
                 "date_added": "2023-10-12T17:31:55.193000Z",
                 "last_modified": "2023-10-30T23:30:24.100000Z"
+            },
+            {
+                "title": "Hang on, PHP IS a static site generator! - Ross Wintle",
+                "url": "https://rosswintle.uk/2021/12/hang-on-php-is-a-static-site-generator/",
+                "date_added": "2023-11-25T13:07:22.900000Z",
+                "last_modified": "2023-11-25T13:07:22.900000Z"
+            },
+            {
+                "title": "Why I love (and how I make) simple, static, minimal-tech websites - Ross Wintle",
+                "url": "https://rosswintle.uk/2022/08/why-i-love-and-how-i-make-simple-static-minimal-tech-websites/",
+                "date_added": "2023-11-25T13:10:37.119000Z",
+                "last_modified": "2023-11-25T13:10:37.119000Z"
             }
         ],
         "video playlists/channels": [
@@ -1251,6 +1337,12 @@
                 "url": "https://smegle.ganymede.tv/",
                 "date_added": "2023-11-17T01:45:42.927000Z",
                 "last_modified": "2023-11-17T22:23:13.000000Z"
+            },
+            {
+                "title": "WordlePress - a Wordle-style guessing game for WordPress developers",
+                "url": "https://wordlepress.com/",
+                "date_added": "2023-11-25T13:09:40.872000Z",
+                "last_modified": "2023-11-25T13:09:40.872000Z"
             }
         ],
         "mobile games": [
