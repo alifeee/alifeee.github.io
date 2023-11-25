@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-11-15T15:33:59.710980Z",
+    "last_modified": "2023-11-25T00:00:41.731932Z",
     "bookmarks": {
         "TOP 10 personal websites/blogs": [
             {
@@ -13,12 +13,6 @@
                 "url": "https://nonnullish.pages.dev/",
                 "date_added": "2023-09-12T15:53:49.290000Z",
                 "last_modified": "2023-11-12T22:19:28.376000Z"
-            },
-            {
-                "title": "Erich Friedman",
-                "url": "https://erich-friedman.github.io/",
-                "date_added": "2023-07-26T09:29:22.706000Z",
-                "last_modified": "2023-11-12T22:26:34.961000Z"
             },
             {
                 "title": "brr",
@@ -61,6 +55,12 @@
                 "url": "https://vlad.roam.garden/Vlad's-Dating-Profile",
                 "date_added": "2023-11-12T22:37:20.046000Z",
                 "last_modified": "2023-11-13T02:01:42.361000Z"
+            },
+            {
+                "title": "Healing Light Viseum",
+                "url": "http://helivium.com/",
+                "date_added": "2023-11-24T23:56:27.056000Z",
+                "last_modified": "2023-11-24T23:56:47.887000Z"
             }
         ],
         "personal websites (with blog)": [
@@ -345,6 +345,30 @@
                 "url": "https://rachsmith.com/",
                 "date_added": "2023-11-15T15:31:43.745000Z",
                 "last_modified": "2023-11-15T15:31:43.745000Z"
+            },
+            {
+                "title": "ngadev // Neil Gary Allen - Web Developer",
+                "url": "https://neilgaryallen.dev/",
+                "date_added": "2023-11-16T13:37:47.771000Z",
+                "last_modified": "2023-11-17T22:23:13.000000Z"
+            },
+            {
+                "title": "arp242.net",
+                "url": "https://www.arp242.net/",
+                "date_added": "2023-11-23T09:25:17.465000Z",
+                "last_modified": "2023-11-23T20:00:04.000000Z"
+            },
+            {
+                "title": "iliana.fyi",
+                "url": "https://iliana.fyi/",
+                "date_added": "2023-11-24T20:43:00.539000Z",
+                "last_modified": "2023-11-24T20:43:00.539000Z"
+            },
+            {
+                "title": "Home | chriskirknielsen",
+                "url": "https://chriskirknielsen.com/",
+                "date_added": "2023-11-24T21:10:47.556000Z",
+                "last_modified": "2023-11-24T21:10:47.556000Z"
             }
         ],
         "personal websites (without blog)": [
@@ -395,6 +419,24 @@
                 "url": "https://paulchaplin.com/",
                 "date_added": "2023-11-15T12:06:24.961000Z",
                 "last_modified": "2023-11-15T12:06:24.961000Z"
+            },
+            {
+                "title": "✧･maria･✧",
+                "url": "https://maria.town/",
+                "date_added": "2023-11-24T01:14:46.271000Z",
+                "last_modified": "2023-11-24T18:24:51.000000Z"
+            },
+            {
+                "title": "Aya Stead - Personal Porfolio",
+                "url": "https://ayaspace.co.uk/",
+                "date_added": "2023-11-24T21:25:29.919000Z",
+                "last_modified": "2023-11-24T21:25:29.919000Z"
+            },
+            {
+                "title": "Erich Friedman",
+                "url": "https://erich-friedman.github.io/",
+                "date_added": "2023-07-26T09:29:22.706000Z",
+                "last_modified": "2023-11-24T23:57:23.389000Z"
             }
         ],
         "interesting websites": [
@@ -499,6 +541,24 @@
                 "url": "https://agoodmovietowatch.com/",
                 "date_added": "2023-11-12T23:04:58.808000Z",
                 "last_modified": "2023-11-12T23:04:58.808000Z"
+            },
+            {
+                "title": "Lipstick - Stacy Greene",
+                "url": "https://stacygreene.com/projects/lipstick",
+                "date_added": "2023-11-20T10:33:12.547000Z",
+                "last_modified": "2023-11-20T12:08:42.000000Z"
+            },
+            {
+                "title": "Runestone Futhark | chriskirknielsen",
+                "url": "https://chriskirknielsen.com/projects/runestone-futhark/",
+                "date_added": "2023-11-24T21:15:05.695000Z",
+                "last_modified": "2023-11-24T21:15:05.695000Z"
+            },
+            {
+                "title": "Infraphil Viseum",
+                "url": "http://www.infraphil.info/",
+                "date_added": "2023-11-24T23:16:53.917000Z",
+                "last_modified": "2023-11-24T23:16:53.917000Z"
             }
         ],
         "Articles (random)": [
@@ -1185,6 +1245,12 @@
                 "url": "https://jumblie.com/",
                 "date_added": "2023-10-31T11:59:08.053000Z",
                 "last_modified": "2023-10-31T11:59:08.053000Z"
+            },
+            {
+                "title": "Smegle | A Red Dwarf screenshot guessing game",
+                "url": "https://smegle.ganymede.tv/",
+                "date_added": "2023-11-17T01:45:42.927000Z",
+                "last_modified": "2023-11-17T22:23:13.000000Z"
             }
         ],
         "mobile games": [
