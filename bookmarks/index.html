@@ -86,7 +86,11 @@
         :key="folder_name"
       >
         <div id="bookmarks">
-          <h2 :id="folder_name" x-text="folder_name"></h2>
+          <h2
+            :id="folder_name"
+            x-text="folder_name"
+            x-init="window.location.hash = window.location.hash"
+          ></h2>
           <ul>
             <template x-for="bookmark in folder_contents" :key="bookmark.url">
               <li>
