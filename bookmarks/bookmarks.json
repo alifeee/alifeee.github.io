@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-12-04T23:33:52.999335Z",
+    "last_modified": "2023-12-06T00:50:51.615727Z",
     "bookmarks": {
         "TOP 10 personal websites/blogs": [
             {
@@ -61,6 +61,14 @@
                 "url": "http://helivium.com/",
                 "date_added": "2023-11-24T23:56:27.056000Z",
                 "last_modified": "2023-11-24T23:56:47.887000Z"
+            }
+        ],
+        "other bookmarks lists": [
+            {
+                "title": "Bookmarks @ marginalia.nu",
+                "url": "https://www.marginalia.nu/links/bookmarks/",
+                "date_added": "2023-12-06T00:45:48.786000Z",
+                "last_modified": "2023-12-06T00:45:48.786000Z"
             }
         ],
         "webrings": [
@@ -135,6 +143,12 @@
                 "url": "https://webring.xxiivv.com/#arcade",
                 "date_added": "2023-12-03T23:51:41.991000Z",
                 "last_modified": "2023-12-04T10:35:20.000000Z"
+            },
+            {
+                "title": "Webring",
+                "url": "https://webring.xxiivv.com/#random",
+                "date_added": "2023-12-06T00:36:51.800000Z",
+                "last_modified": "2023-12-06T00:36:51.800000Z"
             }
         ],
         "personal websites (with blog)": [
@@ -497,6 +511,18 @@
                 "url": "https://dev-cafe.github.io/",
                 "date_added": "2023-12-04T20:53:33.234000Z",
                 "last_modified": "2023-12-04T20:53:33.234000Z"
+            },
+            {
+                "title": "EO & DA Ramblings",
+                "url": "https://jgomezdans.github.io/",
+                "date_added": "2023-12-04T23:32:47.974000Z",
+                "last_modified": "2023-12-05T12:20:02.000000Z"
+            },
+            {
+                "title": "www.marginalia.nu @ marginalia.nu",
+                "url": "https://www.marginalia.nu/",
+                "date_added": "2023-12-06T00:31:16.639000Z",
+                "last_modified": "2023-12-06T00:31:16.639000Z"
             }
         ],
         "personal websites (without blog)": [
@@ -717,6 +743,12 @@
                 "url": "https://www.htmhell.dev/",
                 "date_added": "2023-12-04T15:19:07.669000Z",
                 "last_modified": "2023-12-04T15:19:07.669000Z"
+            },
+            {
+                "title": "Marginalia Search",
+                "url": "https://search.marginalia.nu/",
+                "date_added": "2023-12-06T00:29:17.553000Z",
+                "last_modified": "2023-12-06T00:29:17.553000Z"
             }
         ],
         "Articles (random)": [
