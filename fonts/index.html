@@ -30,13 +30,14 @@
     <!-- styles -->
     <style>
       @font-face {
-        font-family: "bogface", sans-serif;
-        src: url("BogFace.woff");
+        font-family: "bogface";
+        src: url("./BogFace.woff"), url("./BogFace.woff2"), url("./BogFace.ttf");
       }
 
       h2 {
         text-align: center;
         font-size: 3rem;
+        margin: 0;
       }
 
       .font textarea {
@@ -52,6 +53,9 @@
       .font textarea:focus {
         outline: none;
       }
+      .font nav {
+        font-size: 1.5rem;
+      }
 
       .font p,
       h3,
@@ -66,6 +70,12 @@
       .bogface h3 {
         font-family: "bogface";
         margin: 0;
+      }
+      .bogface nav {
+        margin-top: -1rem;
+      }
+      .bogface p {
+        line-height: 1.2;
       }
     </style>
   </head>
@@ -85,11 +95,27 @@
       </p>
       <div class="bogface font">
         <h3>BOGFACE</h3>
+        <nav>
+          <a
+            href="https://github.com/alifeee/bogface/blob/main/build"
+            target="_blank"
+            >download</a
+          >
+          <span>
+            (<a href="./BogFace.woff">woff</a>,
+            <a href="./BogFace.woff2">woff2</a>,
+            <a href="./BogFace.ttf">ttf</a>)</span
+          >
+          ·
+          <a href="https://github.com/alifeee/bogface" target="_blank"
+            >github</a
+          >
+        </nav>
         <p>
-          A font. Contains all uppercase and lowercase letter, and these
-          characters
+          A font from my mind and my pen. Contains all uppercase and lowercase
+          letter, and these characters:
+          <span class="nofont">, . ; : ! ? '</span>
         </p>
-        <pre>,.;:!?'</pre>
         <textarea style="font-family: 'bogface', sans-serif">
 type here!...</textarea
         >
