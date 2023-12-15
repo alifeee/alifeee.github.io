@@ -152,6 +152,10 @@
         transform: scale(1.05);
       }
     </style>
+
+    <!-- temporary for winter -->
+    <script src="component_island.js"></script>
+    <script src="component_snow.js"></script>
   </head>
 
   <body>
@@ -160,6 +164,10 @@
         <a href="/">alifeee</a>
       </h1>
     </header>
+
+    <is-land on:media="(prefers-reduced-motion: no-preference)">
+      <snow-fall></snow-fall>
+    </is-land>
 
     <main>
       <p class="blurb title">
