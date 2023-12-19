@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-12-06T00:50:51.615727Z",
+    "last_modified": "2023-12-19T17:11:58.147464Z",
     "bookmarks": {
         "TOP 10 personal websites/blogs": [
             {
@@ -523,6 +523,42 @@
                 "url": "https://www.marginalia.nu/",
                 "date_added": "2023-12-06T00:31:16.639000Z",
                 "last_modified": "2023-12-06T00:31:16.639000Z"
+            },
+            {
+                "title": "eta.st",
+                "url": "https://eta.st/",
+                "date_added": "2023-12-06T12:10:19.125000Z",
+                "last_modified": "2023-12-06T12:10:19.125000Z"
+            },
+            {
+                "title": "Harley Watson",
+                "url": "https://lobi.to/",
+                "date_added": "2023-12-06T12:12:16.534000Z",
+                "last_modified": "2023-12-06T12:12:16.534000Z"
+            },
+            {
+                "title": "the mango zone",
+                "url": "https://mango.pdf.zone/",
+                "date_added": "2023-12-06T12:30:14.826000Z",
+                "last_modified": "2023-12-06T12:30:14.826000Z"
+            },
+            {
+                "title": "Luke's Letters",
+                "url": "https://ekulrf.github.io/lukes-letters/",
+                "date_added": "2023-12-09T23:46:26.839000Z",
+                "last_modified": "2023-12-09T23:46:26.839000Z"
+            },
+            {
+                "title": "Raymond Camden",
+                "url": "https://www.raymondcamden.com/",
+                "date_added": "2023-12-10T00:16:44.785000Z",
+                "last_modified": "2023-12-10T00:16:44.785000Z"
+            },
+            {
+                "title": "Hi, I'm Jayesh Bhoot",
+                "url": "https://jysh.net/",
+                "date_added": "2023-12-13T18:32:12.085000Z",
+                "last_modified": "2023-12-13T18:32:12.085000Z"
             }
         ],
         "personal websites (without blog)": [
@@ -597,6 +633,18 @@
                 "url": "https://arcades.agency/index.html",
                 "date_added": "2023-12-03T23:52:52.280000Z",
                 "last_modified": "2023-12-04T10:35:20.000000Z"
+            },
+            {
+                "title": "Julius Tarng — Independent Software Creative",
+                "url": "https://tarng.com/",
+                "date_added": "2023-12-06T01:36:59.265000Z",
+                "last_modified": "2023-12-06T01:37:10.479000Z"
+            },
+            {
+                "title": "Alex Dytrych",
+                "url": "https://alex.dytry.ch/",
+                "date_added": "2023-12-13T22:49:03.404000Z",
+                "last_modified": "2023-12-13T22:49:03.404000Z"
             }
         ],
         "interesting websites": [
@@ -749,6 +797,24 @@
                 "url": "https://search.marginalia.nu/",
                 "date_added": "2023-12-06T00:29:17.553000Z",
                 "last_modified": "2023-12-06T00:29:17.553000Z"
+            },
+            {
+                "title": "RSP6 decoder",
+                "url": "https://eta.st/tickets/",
+                "date_added": "2023-12-06T12:36:58.339000Z",
+                "last_modified": "2023-12-06T12:36:58.339000Z"
+            },
+            {
+                "title": "Unicode progress bars",
+                "url": "http://changaco.oy.lc/unicode-progress-bars/",
+                "date_added": "2023-12-06T17:16:29.371000Z",
+                "last_modified": "2023-12-06T18:05:24.000000Z"
+            },
+            {
+                "title": "The Cheap Web",
+                "url": "https://potato.cheap/",
+                "date_added": "2023-12-18T22:26:25.639000Z",
+                "last_modified": "2023-12-18T23:02:13.000000Z"
             }
         ],
         "Articles (random)": [
@@ -973,6 +1039,12 @@
                 "url": "https://css-tricks.com/words-avoid-educational-writing/",
                 "date_added": "2023-11-27T20:15:15.311000Z",
                 "last_modified": "2023-11-27T20:15:15.311000Z"
+            },
+            {
+                "title": "When you browse Instagram and find former Australian Prime Minister Tony Abbott's passport number",
+                "url": "https://mango.pdf.zone/finding-former-australian-prime-minister-tony-abbotts-passport-number-on-instagram",
+                "date_added": "2023-12-06T12:26:10.302000Z",
+                "last_modified": "2023-12-06T12:26:10.302000Z"
             }
         ],
         "Articles (programming)": [
@@ -1095,6 +1167,12 @@
                 "url": "https://rosswintle.uk/2022/08/why-i-love-and-how-i-make-simple-static-minimal-tech-websites/",
                 "date_added": "2023-11-25T13:10:37.119000Z",
                 "last_modified": "2023-11-25T13:10:37.119000Z"
+            },
+            {
+                "title": "Reversing UK mobile rail tickets",
+                "url": "https://eta.st/2023/01/31/rail-tickets.html",
+                "date_added": "2023-12-06T12:41:51.555000Z",
+                "last_modified": "2023-12-06T12:41:51.555000Z"
             }
         ],
         "video playlists/channels": [
