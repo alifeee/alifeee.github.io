@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        // load text from url
+        // to generate text see https://codepen.io/alifeee/full/QWowbjE
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const name_b64 = urlParams.get("n");
+        const message_b64 = urlParams.get("m");
+
+        const name = atob(name_b64);
+        const message = atob(message_b64);
+
+        const name_el = document.getElementById("name");
+        const message_el = document.getElementById("message");
+
+        if (name_b64) {
+          name_el.innerHTML = name;
+        } else {
+          name_el.innerHTML = "a card";
+        }
+        if (message_b64) {
+          message_el.innerHTML = message;
+        } else {
+          message_el.innerHTML = `<a href="https://codepen.io/alifeee/pen/QWowbjE" target="_blank"
+            >make name/message</a
+          >`;
+        }
+
+        const clickme = document.querySelector(".card-front");
+        clickme.addEventListener("click", function (e) {
+          const card_front = document.querySelector(".card-front");
+          if (card_front.classList.contains("animate")) {
+            card_front.classList.remove("animate");
+          } else {
+            card_front.classList.add("animate");
+          }
+        });
+
+        const clickme2 = document.querySelector(".card-back");
+        clickme2.addEventListener("click", function (e) {
+          const card_front = document.querySelector(".card-front");
+          if (card_front.classList.contains("animate")) {
+            card_front.classList.remove("animate");
+          } else {
+            card_front.classList.add("animate");
+          }
+        });
+      });
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-color: black;
+      }
+      @font-face {
+        font-family: "BogFace";
+        src: url("https://alifeee.co.uk/fonts/BogFace.woff");
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "BogFace", sans-serif;
+        color: white;
+      }
+      .card {
+        --height: min(80vh, 100vw);
+        --width: calc(var(--height) * (0.7));
+        width: var(--width);
+        height: var(--height);
+      }
+      .card-front,
+      .card-back {
+        height: 100%;
+        width: 100%;
+        background-color: purple;
+        border: 1px solid black;
+      }
+
+      .card {
+        position: relative;
+      }
+
+      .card-front {
+        z-index: 1;
+      }
+      .card-back {
+        z-index: 0;
+      }
+
+      .card-front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: calc(0.2 * var(--width));
+        cursor: pointer;
+        padding: 1rem 1rem;
+        position: relative;
+      }
+      .card-front #clickme {
+        color: grey;
+        font-size: calc(0.1 * var(--width));
+      }
+
+      .card-front {
+        transform-origin: 0;
+        transition: 1s ease-in-out transform;
+      }
+      .card-front.animate {
+        transform: rotatey(180deg);
+      }
+      .card-front svg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+      }
+      .card-back a,
+      .card-back a:visited {
+        color: inherit;
+      }
+
+      .card-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0;
+        font-size: calc(0.1 * var(--width));
+        text-align: center;
+      }
+      .card-back #message {
+        margin: 1rem;
+      }
+      .card-back > * {
+        display: block;
+      }
+      .card-back img {
+        width: auto;
+        min-width: 0;
+        max-width: 60%;
+        min-height: 0;
+        margin: 1rem auto;
+        flex-shrink: 5;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+      .card {
+        animation: shake 10s ease-in-out infinite;
+        animation-direction: alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-front">
+        <br />
+        <span id="name"></span>
+        <span id="clickme">click me!</span>
+        <svg
+          width="70"
+          height="100"
+          viewBox="0 0 18.520831 26.45833"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:svg="http://www.w3.org/2000/svg"
+        >
+          <path
+            style="
+              font-variation-settings: normal;
+              opacity: 1;
+              fill: none;
+              fill-opacity: 1;
+              stroke: #fffa;
+              stroke-width: 0.168714px;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 4;
+              stroke-dasharray: none;
+              stroke-dashoffset: 0;
+              stroke-opacity: 1;
+              -inkscape-stroke: none;
+              stop-color: #000000;
+              stop-opacity: 1;
+            "
+            d="M -0.01463668,4.3793692 0.71573726,2.1290278 1.821168,4.3793692 1.1697534,1.8329303 3.4694444,3.9845723 1.8014282,1.6552717 3.7655419,2.4744751 2.0481762,1.1420361 4.7920134,1.2407352 2.2159647,0.73736942 4.0616393,0.3919223 2.1666151,-0.06209392 M -0.01463668,22.078964 0.71573726,24.329306 1.821168,22.078964 l -0.6514146,2.546439 2.299691,-2.151642 -1.6680162,2.329301 1.9641137,-0.819204 -1.7173657,1.332439 2.7438372,-0.0987 -2.5760487,0.503366 1.8456746,0.345447 -1.8950242,0.454016 M 18.53547,4.3793692 17.805096,2.1290278 16.699665,4.3793692 17.35108,1.8329303 15.051389,3.9845723 16.719405,1.6552717 14.755291,2.4744751 16.472657,1.1420361 13.72882,1.2407352 16.304869,0.73736942 14.459194,0.3919223 16.354218,-0.06209392 m 2.181252,22.14105792 -0.730374,2.250342 -1.105431,-2.250342 0.651415,2.546439 -2.299691,-2.151642 1.668016,2.329301 -1.964114,-0.819204 1.717366,1.332439 -2.743837,-0.0987 2.576049,0.503366 -1.845675,0.345447 1.895024,0.454016"
+          />
+        </svg>
+      </div>
+      <div class="card-back">
+        <p id="message"></p>
+        <img src="https://alifeee.co.uk/profile-picture.png" />
+        <span>from alifeee</span>
+      </div>
+    </div>
+  </body>
+</html>
