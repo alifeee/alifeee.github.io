@@ -1,5 +1,5 @@
 {
-    "last_modified": "2023-12-19T17:11:58.147464Z",
+    "last_modified": "2024-01-21T14:25:55.830192Z",
     "bookmarks": {
         "TOP 10 personal websites/blogs": [
             {
@@ -149,6 +149,12 @@
                 "url": "https://webring.xxiivv.com/#random",
                 "date_added": "2023-12-06T00:36:51.800000Z",
                 "last_modified": "2023-12-06T00:36:51.800000Z"
+            },
+            {
+                "title": "Tech makers",
+                "url": "https://webring.stavros.io/",
+                "date_added": "2024-01-06T12:18:56.793000Z",
+                "last_modified": "2024-01-08T12:24:38.000000Z"
             }
         ],
         "personal websites (with blog)": [
@@ -559,6 +565,30 @@
                 "url": "https://jysh.net/",
                 "date_added": "2023-12-13T18:32:12.085000Z",
                 "last_modified": "2023-12-13T18:32:12.085000Z"
+            },
+            {
+                "title": "Frame Notes",
+                "url": "http://frame-notes.blogspot.com/",
+                "date_added": "2024-01-01T20:10:04.040000Z",
+                "last_modified": "2024-01-02T20:34:20.000000Z"
+            },
+            {
+                "title": "Alex Cabal",
+                "url": "https://alexcabal.com/",
+                "date_added": "2024-01-04T21:57:22.245000Z",
+                "last_modified": "2024-01-04T23:14:53.000000Z"
+            },
+            {
+                "title": "Stuffed Wombat",
+                "url": "https://stuffedwomb.at/index",
+                "date_added": "2024-01-08T16:56:50.383000Z",
+                "last_modified": "2024-01-08T16:56:50.383000Z"
+            },
+            {
+                "title": "Kartik Agaram",
+                "url": "http://akkartik.name/about",
+                "date_added": "2024-01-11T00:05:09.764000Z",
+                "last_modified": "2024-01-11T00:05:13.708000Z"
             }
         ],
         "personal websites (without blog)": [
@@ -815,6 +845,24 @@
                 "url": "https://potato.cheap/",
                 "date_added": "2023-12-18T22:26:25.639000Z",
                 "last_modified": "2023-12-18T23:02:13.000000Z"
+            },
+            {
+                "title": "When Can I Reuse This Calendar?",
+                "url": "https://whencanireusethiscalendar.com/",
+                "date_added": "2023-12-27T15:21:06.574000Z",
+                "last_modified": "2023-12-27T15:21:06.574000Z"
+            },
+            {
+                "title": "Animating with Clip-Path | CSS-Tricks - CSS-Tricks",
+                "url": "https://css-tricks.com/animating-with-clip-path/",
+                "date_added": "2023-12-31T00:58:12.981000Z",
+                "last_modified": "2023-12-31T00:58:12.981000Z"
+            },
+            {
+                "title": "LÖVE - Free 2D Game Engine",
+                "url": "https://love2d.org/",
+                "date_added": "2024-01-11T00:30:09.529000Z",
+                "last_modified": "2024-01-11T00:30:09.529000Z"
             }
         ],
         "Articles (random)": [
@@ -1173,6 +1221,30 @@
                 "url": "https://eta.st/2023/01/31/rail-tickets.html",
                 "date_added": "2023-12-06T12:41:51.555000Z",
                 "last_modified": "2023-12-06T12:41:51.555000Z"
+            },
+            {
+                "title": "I made JSX for Lua (because I hate static sites) | Ben Visness",
+                "url": "https://bvisness.me/luax/",
+                "date_added": "2023-12-28T19:06:07.470000Z",
+                "last_modified": "2023-12-29T00:41:24.000000Z"
+            },
+            {
+                "title": "Using computers more freely and safely",
+                "url": "https://akkartik.name/freewheeling/",
+                "date_added": "2024-01-10T23:33:35.771000Z",
+                "last_modified": "2024-01-10T23:33:35.771000Z"
+            },
+            {
+                "title": "Making small games, which is fun in itself · Joys of Small Game Development",
+                "url": "https://abagames.github.io/joys-of-small-game-development-en/fun_to_make_small_games.html",
+                "date_added": "2024-01-11T00:03:05.123000Z",
+                "last_modified": "2024-01-11T00:03:05.123000Z"
+            },
+            {
+                "title": "Stuffed Wombat - The Small Game",
+                "url": "https://stuffedwomb.at/the_small_game",
+                "date_added": "2024-01-11T00:03:11.378000Z",
+                "last_modified": "2024-01-11T00:03:11.378000Z"
             }
         ],
         "video playlists/channels": [
@@ -1543,6 +1615,24 @@
                 "url": "https://wordlepress.com/",
                 "date_added": "2023-11-25T13:09:40.872000Z",
                 "last_modified": "2023-11-25T13:09:40.872000Z"
+            },
+            {
+                "title": "Waffle",
+                "url": "https://wafflegame.net/daily",
+                "date_added": "2024-01-01T14:23:51.743000Z",
+                "last_modified": "2024-01-01T14:53:49.000000Z"
+            },
+            {
+                "title": "Quordle",
+                "url": "https://www.merriam-webster.com/games/quordle/#/",
+                "date_added": "2024-01-01T14:24:28.327000Z",
+                "last_modified": "2024-01-01T14:53:49.000000Z"
+            },
+            {
+                "title": "Octordle",
+                "url": "https://www.britannica.com/games/octordle/daily",
+                "date_added": "2024-01-01T14:24:36.753000Z",
+                "last_modified": "2024-01-01T14:53:49.000000Z"
             }
         ],
         "mobile games": [
