@@ -66,11 +66,21 @@
       }
 
       .bloglink {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         text-align: center;
         font-size: 2rem;
       }
       .bloglink a {
         font-family: "Josefin Sans", sans-serif;
+      }
+      .bloglink > * {
+        display: block;
+      }
+      .bloglink .or {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        opacity: 0.5;
       }
 
       .pages {
@@ -177,11 +187,12 @@
         Some of those things are here. Some are on GitHub. Some are made of
         cardboard.
       </p>
-      <p class="bloglink">
-        Why not check out:
-        <br />
+      <section class="bloglink">
+        <span class="why-not"> Why not check out: </span>
         <a href="https://blog.alifeee.co.uk">blog.alifeee.co.uk</a>
-      </p>
+        <span class="or">or</span>
+        <a href="https://weeknotes.alifeee.co.uk">weeknotes.alifeee.co.uk</a>
+      </section>
       <script src="https://webring.alifeee.co.uk/webring.js"></script>
       <ul class="pages">
         <li class="page p5js">
