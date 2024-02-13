@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICS generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "BogFace";
+        src: url("../fonts/BogFace.woff");
+      }
+      body {
+        font-family: "BogFace", sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      header {
+        margin-bottom: 2rem;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      label {
+        margin-bottom: 0.5rem;
+      }
+      input {
+        margin-bottom: 1rem;
+      }
+      .submit button {
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+    <script>
+      function setDate() {
+        const dateInput = document.getElementById("date");
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        const date = `${year}-${month}-${day}T`;
+        dateInput.value = date;
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("ics-form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const event = formData.get("event");
+          const date = formData.get("date");
+          const location = formData.get("location");
+          const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:${event}
+DTSTART:${date}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+          const blob = new Blob([ics], { type: "text/calendar" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "event.ics";
+          a.click();
+          URL.revokeObjectURL(url);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>ICS File Generator</h1>
+    </header>
+    <main>
+      <!-- girli gig
+2024-06-03T19:30
+The Wardrobe, Leeds
+
+reminders: 1day, 2day, 4day, 1week
+colour: blue -->
+      <form id="ics-form">
+        <label for="event">Event (required) </label>
+        <input type="text" id="event" name="event" />
+        <label for="date">Date (required - YYYY-MM-DDTHH:MM)</label>
+        <div>
+          <input type="text" id="date" name="date" />
+          <button type="button" onclick="setDate()">Now</button>
+        </div>
+        <label for="duration">Duration (hr)</label>
+        <input type="number" id="duration" name="duration" />
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" />
+        <div class="submit">
+          <button type="submit">Download ICS</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
