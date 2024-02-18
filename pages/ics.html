@@ -43,12 +43,17 @@
       label {
         margin-bottom: 0.5rem;
       }
-      input {
+      input,
+      textarea {
         margin-bottom: 1rem;
       }
       .submit button {
         margin: 0.5rem;
         padding: 0.5rem 1rem;
+      }
+      #output {
+        background-color: #fff;
+        padding: 1rem;
       }
     </style>
     <script>
@@ -58,7 +63,7 @@
         const year = now.getFullYear();
         const month = String(now.getMonth() + 1).padStart(2, "0");
         const day = String(now.getDate()).padStart(2, "0");
-        const date = `${year}-${month}-${day}T`;
+        const date = `${year}-${month}-${day}`;
         dateInput.value = date;
       }
       document.addEventListener("DOMContentLoaded", () => {
@@ -67,16 +72,59 @@
           e.preventDefault();
           const formData = new FormData(form);
           const event = formData.get("event");
+          const description = formData.get("description");
           const date = formData.get("date");
+          const duration = formData.get("duration");
           const location = formData.get("location");
+
+          const startDate = new Date(date);
+
+          // console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
+          const isOnlyDate = date.match(/^\d{4}-\d{2}-\d{2}$/);
+
+          let endDate = new Date(date);
+          if (isOnlyDate) {
+            endDate.setHours(startDate.getHours() + ((duration % 24) + 24));
+          } else {
+            endDate.setHours(startDate.getHours() + duration);
+          }
+          console.log(startDate, endDate);
+
+          function icsDate(date, dateonly = false) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, "0");
+            const day = String(date.getDate()).padStart(2, "0");
+            const hours = String(date.getHours()).padStart(2, "0");
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            return `${year}${month}${day}${
+              dateonly ? "" : "T" + hours + minutes + "00Z"
+            }`;
+          }
+
           const ics = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-SUMMARY:${event}
-DTSTART:${date}
-LOCATION:${location}
-END:VEVENT
-END:VCALENDAR`;
+       PRODID:-//Google Inc//Google Calendar 70.9054//EN
+       VERSION:2.0
+       BEGIN:VEVENT
+        SUMMARY:${event}
+        DTSTART${isOnlyDate ? ";VALUE=DATE" : ""}:${icsDate(
+            startDate,
+            isOnlyDate
+          )}
+        DTEND${isOnlyDate ? ";VALUE=DATE" : ""}:${icsDate(endDate, isOnlyDate)}
+        DTSTAMP:${icsDate(new Date())}
+        ${location ? `LOCATION:${location}` : ""}
+        ${description ? `DESCRIPTION:${description}` : ""}
+       END:VEVENT
+      END:VCALENDAR
+      `;
+
+          // remove leading spaces
+          const icsClean = ics.replace(/^[ \t]+/gm, "");
+
+          const output = document.getElementById("output");
+          output.textContent = icsClean;
+
           const blob = new Blob([ics], { type: "text/calendar" });
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
@@ -102,7 +150,9 @@ colour: blue -->
       <form id="ics-form">
         <label for="event">Event (required) </label>
         <input type="text" id="event" name="event" />
-        <label for="date">Date (required - YYYY-MM-DDTHH:MM)</label>
+        <label for="event">Description</label>
+        <textarea type="text" id="description" name="description"></textarea>
+        <label for="date">Date (required - YYYY-MM-DD[THH:MM])</label>
         <div>
           <input type="text" id="date" name="date" />
           <button type="button" onclick="setDate()">Now</button>
@@ -116,6 +166,9 @@ colour: blue -->
           <button type="reset">Reset</button>
         </div>
       </form>
+      <section class="output">
+        <pre id="output"></pre>
+      </section>
     </main>
   </body>
 </html>
