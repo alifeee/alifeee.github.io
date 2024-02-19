@@ -27,7 +27,7 @@
       <h1>
         Steam Collage
         <img
-          src="http://server.alifeee.co.uk:5000/steamcollage/alive_img"
+          src="https://steamcollage.alifeee.co.uk/steamcollage/alive_img"
           onerror="this.src='./didnotload.png'"
           style="
             background-color: orange;
@@ -40,57 +40,24 @@
       </h1>
       <p>
         To see how this works check:
-        <a href="https://github.com/alifeee/steam_collage">
+        <a target="_blank" href="https://github.com/alifeee/steam_collage">
           https://github.com/alifeee/steam_collage
         </a>
       </p>
       <p>
-        Images are
-        <a href="https://github.com/alifeee/steam_collage_api/issues/21"
-          >not yet served over HTTPS</a
-        >. If you use Firefox, this should work. If you use Chrome (or anything
-        else), the
-        <a
-          href="https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html?m=1"
+        Read the blog post about this on
+        <a target="_blank" href="https://blog.alifeee.co.uk/steam-collage-api/"
+          >https://blog.alifeee.co.uk/steam-collage-api/</a
         >
-          images will be blocked </a
-        >, as they are
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content"
-        >
-          mixed media</a
-        >. To fix this, you can allow mixed media on `alifeee.co.uk`.
       </p>
 
-      <details>
-        <summary>How to enable images on Chrome</summary>
-        <ol>
-          <li>
-            Navigate to site settings for `alifeee.co.uk`
-            <img
-              src="images/chrome_site_settings.png"
-              alt="Screenshot of
-            Chrome site settings"
-            />
-          </li>
-          <li>
-            Enable "Insecure content"
-            <img
-              src="images/chrome_insecure_content.png"
-              alt="Screenshot of insecure content
-            setting"
-            />
-          </li>
-          <li>Done. Now HTTP images will be allowed only for this webpage.</li>
-        </ol>
-      </details>
       <form id="form" action="mosaic.php" method="post">
         <h2>Generate your own collage</h2>
 
         <p>
           API Status:
           <img
-            src="http://server.alifeee.co.uk:5000/steamcollage/alive_img"
+            src="https://steamcollage.alifeee.co.uk/steamcollage/alive_img"
             onerror="this.src='./didnotload.png'"
             style="
               background-color: orange;
@@ -207,7 +174,7 @@
   </style>
   <script>
     // on submit, send data to
-    // http://server.alifeee.co.uk:5000/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
+    // https://steamcollage.alifeee.co.uk/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
     function createMosaic() {
       // reset img
       let image = document.getElementById("mosaic");
@@ -225,7 +192,7 @@
       var cols = document.getElementById("cols").value;
       var sorting = document.getElementById("sorting").value;
       var url =
-        "http://server.alifeee.co.uk:5000/steamcollage/games?id=" +
+        "https://steamcollage.alifeee.co.uk/steamcollage/games?id=" +
         steamID +
         "&rows=" +
         rows +
