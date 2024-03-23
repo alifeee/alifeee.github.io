@@ -1110,8 +1110,7 @@
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" />
-        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487"
-            target="_blank">
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487">
             <text text-anchor="middle" font-size="10px" x="50%" y="100%">
                 Viewer does not support full SVG 1.1
             </text>
