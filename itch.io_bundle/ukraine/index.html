@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="/favicon.ico" />
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
   </head>
   <body>
     <header>
@@ -56,7 +59,7 @@
             for (var game in genres[genre]) {
               genre_expandable += "<details>";
               genre_expandable +=
-                "<summary><span class='clickme'>" +
+                "<summary><span class='clickme' style='color:#ccc'>" +
                 game +
                 "</span></summary>";
               genre_expandable += "<a href=" + genres[genre][game]["url"] + ">";
@@ -87,7 +90,7 @@
             for (var game in cats[cat]) {
               cats_expandable += "<details>";
               cats_expandable +=
-                "<summary><span class='clickme'>" +
+                "<summary><span class='clickme' style='color:#ccc'>" +
                 game +
                 "</span></summary>";
               cats_expandable += "<a href=" + cats[cat][game]["url"] + ">";
@@ -120,5 +123,16 @@
       xmlhttp.send();
     </script>
   </body>
-  
+  <style>
+    .clickme {
+      cursor: pointer;
+    }
+    details > details {
+      margin-left: 15px;
+    }
+    details > a,
+    details > span {
+      margin-left: 15px;
+    }
+  </style>
 </html>

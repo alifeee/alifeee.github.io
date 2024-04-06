@@ -7,8 +7,11 @@
 
     <link rel="icon" href="/favicon.ico" />
 
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
   </head>
   <body>
     <header>
@@ -65,5 +68,45 @@
       <a class="backlink" href="../">Back to main page</a>
     </footer>
   </body>
-  
+  <style>
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .links li {
+      max-width: 15rem;
+      margin: 0.5rem;
+    }
+
+    .links li a {
+      display: block;
+      height: 100%;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #000;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+
+    .links li a:hover {
+      opacity: 0.9;
+    }
+
+    .links li a img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+
+    .links li a span {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
 </html>
