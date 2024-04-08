@@ -137,7 +137,7 @@ function table_data(games, players) {
     var game_link = "https://"+site+"diplomacy.com/board.php?gameID="
         +game["id"];
     var img_link = "https://alifeee.github.io/diplomacy/vdip.png";
-    text += "<td style='text-align:center'><a href="+
+    text += "<td><a href="+
         game_link +"'><img src='"+img_link+"'></img></a></td>";
     var color = "";
     for (player in players) {
@@ -153,7 +153,7 @@ function table_data(games, players) {
         case "draw":    color="#c6e0b4"; break;
         default: console.log("Problem in table_data");
       }
-      text += "<td style='background-color:"+color+";color:black'>"
+      text += "<td>"
           +game['results'][player]+"</td>";
     }
     text += "</tr>";
