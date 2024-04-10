@@ -7,8 +7,11 @@
 
     <link rel="icon" href="/favicon.ico" />
 
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
   </head>
 
   <body>
@@ -144,5 +147,131 @@
     </footer>
   </body>
 
-  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .caesar.app {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+    }
+
+    .caesar.app > * {
+      min-width: 15rem;
+      flex: 1;
+      padding: 0.5rem;
+    }
+
+    /* input area */
+
+    .caesar.input > textarea {
+      width: 100%;
+      resize: vertical;
+    }
+
+    .shift.control {
+      display: flex;
+    }
+
+    .shift.control > input {
+      flex: 1;
+    }
+
+    .shift.control > span {
+      min-width: 4rem;
+    }
+
+    /* output area */
+
+    .caesar.output {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .caesar.output > p {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .caesar.output > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .caesar.output > p * {
+      margin-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .caesar.output .message {
+      background-color: #fff;
+      color: #000;
+      width: 100%;
+      min-height: 2.188rem;
+      border-radius: 0.25rem;
+      padding: 0.25rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .caesar.output .message:hover {
+      cursor: pointer;
+      background-color: #999;
+    }
+
+    .caesar.output .encode .shift {
+      color: #f77;
+    }
+
+    .caesar.output .decode .shift {
+      color: #4af;
+    }
+
+    .caesar.output .auto .shift {
+      color: #aaf;
+    }
+
+    /* copy dialog */
+
+    .copyable {
+      position: relative;
+      width: 100%;
+    }
+
+    .copyable .copy.icon {
+      position: absolute;
+      inset: 0 0 0 auto;
+      height: 1rem;
+      pointer-events: none;
+    }
+
+    .copy.dialog {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      background-color: #000;
+      color: #fff;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      z-index: 1;
+      transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    }
+
+    .copy.dialog.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+  </style>
 </html>

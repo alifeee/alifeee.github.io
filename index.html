@@ -21,12 +21,147 @@
     <link rel="icon" href="/favicon.ico" />
 
     <!-- stylesheets & fonts -->
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
     <!-- styles -->
 
-    
+    <style>
+      .refurb {
+        color: #ff0000;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000,
+          0 0 80px #ff0000, 0 0 120px #ff0000, 0 0 160px #ff0000;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: monospace;
+      }
+
+      .blurb.title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+      }
+      .blurb.subtitle {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0;
+        opacity: 0.5;
+      }
+      .hi {
+        color: white;
+        display: inline-block;
+        mask: linear-gradient(-60deg, #0f0 30%, #0f05, #0f0 70%) right/500% 100%;
+        background-repeat: no-repeat;
+        animation: shimmer 2s infinite;
+      }
+      @keyframes shimmer {
+        100% {
+          mask-position: left;
+        }
+      }
+
+      .bloglink {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 2rem;
+      }
+      .bloglink a {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      .bloglink > * {
+        display: block;
+      }
+      .bloglink .or {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        opacity: 0.5;
+      }
+
+      .pages {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .page {
+        position: relative;
+        flex: 1 0 10rem;
+        background-color: var(--primary-subtle);
+        outline: 1px solid black;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0.5rem black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 7rem;
+      }
+      .page a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+        font-size: 2rem;
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        transition: transform 0.1s ease;
+      }
+      .page img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        transition: filter 0.1s ease;
+        filter: brightness(0.5);
+        object-fit: cover;
+      }
+      .page:hover img {
+        filter: brightness(0.25);
+      }
+      .page:hover {
+        transform: scale(1.05);
+      }
+      .page a {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* font for webring */
+      @font-face {
+        font-family: "hockey";
+        src: url("hockey.woff");
+      }
+      .webring.webring {
+        font-family: "hockey", sans-serif;
+        background-color: var(--primary);
+        border: none;
+        box-shadow: 0 0 0.5rem black;
+        font-size: 1.3rem;
+        margin: 0 auto 2rem;
+        transition: transform 0.1s ease;
+      }
+      .webring.webring .name {
+        font-size: 2rem;
+      }
+      .webring.webring .description {
+        margin: 0;
+      }
+      .webring:hover {
+        transform: scale(1.05);
+      }
+    </style>
 
     <!-- temporary for winter -->
     <!-- <script src="component_island.js"></script> -->
@@ -45,7 +180,6 @@
     </is-land>
 
     <main>
-      <h2>Why does this website have no CSS? It's <a href="https://css-naked-day.github.io/">CSS Naked Day 2024</a>!</h2>
       <p class="blurb title">
         <span class="hi">Hi!</span> I'm alifeee and I make things!
       </p>
@@ -59,7 +193,7 @@
         <span class="or">or</span>
         <a href="https://weeknotes.alifeee.co.uk">weeknotes.alifeee.co.uk</a>
       </section>
-      
+      <script src="https://webring.alifeee.co.uk/webring.js"></script>
       <ul class="pages">
         <li class="page p5js">
           <img alt="thumbnail for p5.js page" src="./p5js/thumbnail.png" />
@@ -140,10 +274,6 @@
         <a href="https://linktr.ee/alifeee">
           <img alt="link icon" src="./icons/linktree-logo-icon.svg" />
           <span class="text">Linktree</span>
-        </a>
-        <a href="https://twitter.com/alifeeeirenn">
-          <img alt="Twitter icon" src="./icons/twitter.svg" />
-          <span class="text">Twitter</span>
         </a>
         <a href="https://github.com/alifeee">
           <img alt="GitHub icon" src="./icons/github.svg" />

@@ -7,8 +7,11 @@
 
     <link rel="icon" href="/favicon.ico" />
 
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
   </head>
 
   <body>
@@ -56,23 +59,23 @@
       <h3>The Results</h3>
     </main>
     <div class="results-table">
-      <table id="results" ></table>
+      <table id="results" style="margin-left: auto; margin-right: auto"></table>
     </div>
 
     <main>
       <h2>Charts</h2>
 
       <div class="results-graphs">
-        <div >
+        <div style="width: 100%">
           <canvas id="performance_chart" height="190"></canvas>
         </div>
-        <div >
+        <div style="width: 100%">
           <canvas id="alex_performance_chart" height="190"></canvas>
         </div>
-        <div >
+        <div style="width: 100%">
           <canvas id="total_games_chart" height="190"></canvas>
         </div>
-        <div >
+        <div style="width: 100%">
           <canvas id="wins_draws_chart" height="150"></canvas>
         </div>
       </div>
@@ -168,5 +171,32 @@
       });
     </script>
   </body>
-  
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .results-table {
+      width: 100vw;
+      display: block;
+      overflow-x: auto;
+      padding: 0 1rem 0.5rem;
+    }
+    .results-graphs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 1rem;
+    }
+    #results a {
+      text-decoration: none;
+    }
+  </style>
 </html>

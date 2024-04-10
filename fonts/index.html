@@ -18,11 +18,63 @@
     <link rel="icon" href="/favicon.ico" />
 
     <!-- stylesheets & fonts -->
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
     <!-- styles -->
-    
+    <style>
+      @font-face {
+        font-family: "bogface";
+        src: url("./BogFace.woff"), url("./BogFace.woff2"), url("./BogFace.ttf");
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .font textarea {
+        width: 100%;
+        height: 10rem;
+        font-family: "bogface", sans-serif;
+        font-size: 2rem;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 1rem;
+      }
+      .font textarea:focus {
+        outline: none;
+      }
+      .font nav {
+        font-size: 1.5rem;
+      }
+
+      .font p,
+      h3,
+      pre {
+        margin: 0;
+      }
+
+      .bogface {
+        font-family: "bogface", sans-serif;
+        font-size: 2em;
+      }
+      .bogface h3 {
+        font-family: "bogface", sans-serif;
+        margin: 0;
+      }
+      .bogface nav {
+        margin-top: -1rem;
+      }
+      .bogface p {
+        line-height: 1.2;
+      }
+    </style>
   </head>
 
   <body>
@@ -61,7 +113,7 @@
           letters, numbers, and these characters:
           <span class="nofont">, . ; : ! ? '</span>
         </p>
-        <textarea >
+        <textarea style="font-family: 'bogface', sans-serif">
 type here!...</textarea
         >
       </div>

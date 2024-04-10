@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="/favicon.ico" />
-    
-    
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
     <!-- alive checker web component -->
     <script src="alive_checker.js" defer></script>
@@ -26,7 +29,13 @@
         <img
           src="https://steamcollage.alifeee.co.uk/steamcollage/alive_img"
           onerror="this.src='./didnotload.png'"
-          
+          style="
+            background-color: orange;
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+          "
         />
       </h1>
       <p>
@@ -50,7 +59,13 @@
           <img
             src="https://steamcollage.alifeee.co.uk/steamcollage/alive_img"
             onerror="this.src='./didnotload.png'"
-            
+            style="
+              background-color: orange;
+              display: inline-block;
+              height: 1rem;
+              width: 1rem;
+              border-radius: 50%;
+            "
           />
         </p>
 
@@ -105,7 +120,58 @@
 
     <footer><a class="backlink" href="../">Back to main page</a></footer>
   </body>
-  
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background-image: url("mosaic.jpeg");
+      background-size: cover;
+      height: 100%;
+    }
+    main,
+    footer > a {
+      background-color: rgba(18, 18, 18, 0.9);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    form button {
+      font-size: large;
+      margin-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.5rem;
+    }
+    form > p {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    form > p > * {
+      display: block;
+    }
+    #mosaic {
+      display: none;
+      margin-top: 1rem;
+      min-width: min(100%, 500px);
+      max-width: 100%;
+      min-height: 200px;
+      max-height: 100%;
+      background-color: aliceblue;
+      margin: 1rem auto;
+      color: red;
+    }
+    ol img {
+      max-width: 100%;
+    }
+  </style>
   <script>
     // on submit, send data to
     // https://steamcollage.alifeee.co.uk/steamcollage/games?steamid=76561198025086159&rows=5&cols=5&sorting=playtime
