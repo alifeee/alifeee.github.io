@@ -16,10 +16,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
       main p {
         text-align: center;
-        margin-bottom: 0;
+        margin-top: 0;
       }
       img[alt="anvil"] {
         display: inline;
@@ -28,9 +29,96 @@
       }
       embed {
         width: min(100%, 100vw);
-        margin: 2rem 0 0;
+        margin: 2rem 0 2rem;
+      }
+      blockquote {
+        font-style: italic;
+        margin: 0;
+      }
+      time {
+        color: #ddffdd;
+      }
+
+      .countdown {
+        margin: 0 auto;
+        padding-top: 1rem;
+        text-align: center;
+        font-weight: bold;
+        color: #ffa;
+        display: none;
+      }
+
+      .countdown .cd-item {
+        font-size: 14px;
+        display: table-cell;
+        letter-spacing: 2;
+      }
+
+      .countdown .cd-item .cd-num {
+        font-size: 30px;
+      }
+
+      .countdown .cd-item .cd-divider {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .event-date {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
       }
     </style>
+    <script>
+      // from https://github.com/siamcomm/simple-countdown-timer/
+      function addCountdownTo(time, element) {
+        // Set the date we're counting down to
+        var countDownDate = new Date(time).getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id=""
+          //
+          // Option 1 - All in one line
+          // document.getElementById("countdown").innerHTML = days + "days " + hours + "h "  + minutes + "m " + seconds + "s ";
+          //
+          // Option 2 - Breakout into seperate divs and display individual values
+          document.getElementById(element + "days").innerHTML =
+            '<div class="cd-num">' + days + "</div> DAYS";
+          document.getElementById(element + "hours").innerHTML =
+            '<div class="cd-num">' + hours + "</div> HRS";
+          document.getElementById(element + "mins").innerHTML =
+            '<div class="cd-num">' + minutes + "</div> MINS";
+          document.getElementById(element + "secs").innerHTML =
+            '<div class="cd-num">' + seconds + "</div> SECS";
+
+          // If the count down is finished, hide the containing div
+          if (distance > 0) {
+            document.getElementById(element).style.display = "block";
+          } else {
+            clearInterval(x);
+          }
+        }, 1000);
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        addCountdownTo("Jul 31, 2024 12:00:00", "countdown");
+        addCountdownTo("Nov 30, 2024 12:00:00", "countdown2");
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -40,11 +128,11 @@
     </header>
 
     <main>
-      <p>
+      <h2>
         Wouldn't it be nice to have an
         <img alt="anvil" src="./anvilnobg.png" /> anvil
         <img alt="anvil" src="./anvilnobg.png" /> emoji?
-      </p>
+      </h2>
       <p>
         If you could represent <em>heavy</em> things well?
         <img alt="anvil" src="./anvilnobg.png" />
@@ -56,7 +144,8 @@
       <p>
         Well, maybe soon you will be able to. In this document is a proposal for
         an anvil emoji <img alt="anvil" src="./anvilnobg.png" /> submitted to
-        the Unicode Consortium on <time datetime="2024-04-23">2024-04-23</time>:
+        the Unicode Consortium on
+        <time datetime="2024-04-23">23rd April 2024</time>:
       </p>
       <p>
         For Unicode submission guidelines, rules, and generally more context,
@@ -65,12 +154,13 @@
           >https://unicode.org/emoji/proposals.html</a
         >
       </p>
-      <p>
-        <img alt="anvil" src="./anvilnobg.png" />
-        <img alt="anvil" src="./anvilnobg.png" /> PROPOSAL FOLLOWS
+      <h2>
         <img alt="anvil" src="./anvilnobg.png" />
         <img alt="anvil" src="./anvilnobg.png" />
-      </p>
+        PROPOSAL FOLLOWS
+        <img alt="anvil" src="./anvilnobg.png" />
+        <img alt="anvil" src="./anvilnobg.png" />
+      </h2>
       <p>
         <img alt="anvil" src="./anvilnobg.png" />
         <a href="./anvil.pdf">DOWNLOAD PDF HERE</a>
@@ -89,6 +179,77 @@
         height="670"
         type="application/pdf"
       />
+      <h2>
+        <img alt="anvil" src="./anvilnobg.png" />
+        Deadlines
+        <img alt="anvil" src="./anvilnobg.png" />
+      </h2>
+      <p>
+        According to the Unicode Consortium's
+        <a
+          href="http://blog.unicode.org/2024/03/emoji-submissions-intake-process-re.html"
+          >latest blog</a
+        >
+        about the topic,
+      </p>
+      <blockquote
+        cite="http://blog.unicode.org/2024/03/emoji-submissions-intake-process-re.html"
+      >
+        <p>
+          The submission window will be open April 2 through July 31, 2024 and
+          all submissions will be notified of their status by November 30, 2024.
+        </p>
+      </blockquote>
+      <p>
+        At or before this point, the proposal PDF should end up on the
+        <a href="https://www.unicode.org/emoji/emoji-proposals-status.html"
+          >list of emoji requests</a
+        >
+        and/or the
+        <a href="https://www.unicode.org/L2/"
+          >Unicode® Technical Committee Document Registry</a
+        >.
+      </p>
+
+      <h2 class="wrap">
+        <img alt="anvil" src="./anvilnobg.png" />
+        Time until submission deadline
+        <img alt="anvil" src="./anvilnobg.png" />
+      </h2>
+      <p>
+        <img alt="anvil" src="./anvilnobg.png" />
+        <time datetime="2024-07-31">31st July 2024</time>
+        <img alt="anvil" src="./anvilnobg.png" />
+      </p>
+      <div class="countdown" id="countdown">
+        <div class="cd-item" id="countdowndays"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdownhours"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdownmins"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdownsecs"></div>
+      </div>
+
+      <h2>
+        <img alt="anvil" src="./anvilnobg.png" />
+        Time until notification of outcome
+        <img alt="anvil" src="./anvilnobg.png" />
+      </h2>
+      <time datetime="2024-11-30">
+        <img alt="anvil" src="./anvilnobg.png" />
+        30th November 2024
+        <img alt="anvil" src="./anvilnobg.png" />
+      </time>
+      <div class="countdown" id="countdown2">
+        <div class="cd-item" id="countdown2days"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdown2hours"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdown2mins"></div>
+        <div class="cd-item"><div class="cd-divider">:</div></div>
+        <div class="cd-item" id="countdown2secs"></div>
+      </div>
     </main>
 
     <footer>
