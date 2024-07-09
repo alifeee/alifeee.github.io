@@ -18,7 +18,32 @@
       h3 {
         font-size: 2rem;
         text-align: center;
-        text-decoration: underline;
+        margin: 3rem 0 0;
+      }
+      h3 > a {
+        text-decoration: none;
+      }
+      h4 {
+        margin: 0;
+      }
+      img.cover {
+        max-width: 100%;
+      }
+      p {
+        text-align: justify;
+      }
+      span.highlight {
+        color: aqua;
+      }
+      .gallery {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 0.5rem;
+        row-gap: 0;
+      }
+      .gallery img {
+        max-width: 100%;
       }
     </style>
   </head>
@@ -33,55 +58,138 @@
       <h2>Talks and Workshops!</h2>
       <p>A collection of talks and workshops I have given or done.</p>
 
-      <h3>Font Workshop</h3>
-      <nav>
-        <ul>
-          <li>
-            Talk link:
-            <a href="https://alifeee.co.uk/font-workshop/"
-              >alifeee.co.uk/font-workshop/</a
-            >
-            (<a href="https://github.com/alifeee/font-workshop/">GitHub</a>)
-          </li>
-          <li>
-            Blog post:
-            <a href="https://blog.alifeee.co.uk/font-workshop/">
-              blog.alifeee.co.uk/font-workshop/
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <p>Run at:</p>
-      <ul>
-        <li>
-          Sheffield Hackspace on
-          <time datetime="2024-03-02">2nd March 2024</time>
-        </li>
-        <li>
-          <a href="https://www.emfcamp.org/">EMFCamp</a> on
-          <time datetime="2024-06-01">1st June 2024</time> (<a
-            href="https://www.emfcamp.org/schedule/2024/267-computer-font-making-workshop"
-            >link</a
-          >)
-        </li>
-      </ul>
+      <hr />
 
-      <h3>Font Talk</h3>
-      <p>
-        A talk for Front-End Sheffield's (FES') March 2024 meetup on
-        <time datetime="2024-03-28">2024-03-28</time>
-      </p>
-      <nav>
+      <article>
+        <h3 id="font-workshop">Font Workshop <a href="#font-workshop">#</a></h3>
+        <p>Make your own fonts!</p>
+        <section>
+          <p>
+            Fonts are fun!
+            <span class="highlight"
+              >Font creation should be accessible to anyone.</span
+            >
+            This is a workshop to guide anyone through the process of making
+            their own computer fonts, from handwriting fonts to custom-drawn,
+            designed, copied, or modified ones.
+          </p>
+          <p>
+            After a short talk, I encourage experimentation with letter forms on
+            paper, and then use of a laptop to digitally create your own font.
+          </p>
+          <p>
+            With one person (me) to offer wandering help, the workshop works
+            well with <span class="highlight">up to 20 people</span>, and takes
+            <span class="highlight">around 1½ - 2 hours</span>. Each person
+            <span class="highlight"> needs a laptop</span> (or computer) which
+            can have FontForge installed onto it, which are usually personal
+            laptops.
+          </p>
+        </section>
+        <a href="images/font-workshop-1.jpg">
+          <img
+            class="cover"
+            src="images/font-workshop-1.jpg"
+            alt='picture of alifeee pointing towards presentation slide which says "OUTLINE A LEETTER FORM... Background layer for tracing images (File > Import)"'
+          />
+        </a>
+        <section class="gallery">
+          <a href="images/font-workshop-2.jpg">
+            <img
+              src="images/font-workshop-2.jpg"
+              alt='picture of alifeee presenting. a slide adjacent says "Why I like fonts... How to make a font... Design... FontForge"'
+            />
+          </a>
+          <a href="images/font-workshop-6.jpg">
+            <img
+              src="images/font-workshop-6.jpg"
+              alt="a picture of a sheet of paper, with lines and hand-drawn letter forms"
+            />
+          </a>
+          <a href="images/font-workshop-3.jpg">
+            <img
+              src="images/font-workshop-3.jpg"
+              alt="a picture of alifeee sat down at a desk with others, gesticulating. it looks like explaining is happening."
+            />
+          </a>
+          <a href="images/font-workshop-4.jpg">
+            <img
+              src="images/font-workshop-4.jpg"
+              alt="a picture of a laptop screen, showing a cartoony font in the FontForge preview window. In the background: the FontForge documentation, the FontForge overview window, and the FontForge design window"
+            />
+          </a>
+          <a href="images/font-workshop-7.jpg">
+            <img
+              src="images/font-workshop-7.jpg"
+              alt="picture of alifeee chatting to people sat at a desk on laptops. it looks like explaining is happening"
+            />
+          </a>
+          <a href="images/font-workshop-5.jpg">
+            <img
+              src="images/font-workshop-5.jpg"
+              alt="picture of a laptop screen, showing a thick, poster-style letter N, in a FontForge preview window. In the background, a poster is visible which uses a similar font"
+            />
+          </a>
+        </section>
+        <h4>Links</h4>
+        <nav>
+          <ul>
+            <li>
+              Talk link:
+              <a href="https://alifeee.co.uk/font-workshop/"
+                >alifeee.co.uk/font-workshop</a
+              >
+              (<a href="https://github.com/alifeee/font-workshop/">GitHub</a>)
+            </li>
+            <li>
+              Blog post:
+              <a href="https://blog.alifeee.co.uk/font-workshop/">
+                blog.alifeee.co.uk/font-workshop/
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <h4>Run at</h4>
         <ul>
           <li>
-            Talk link:
-            <a href="https://alifeee.co.uk/font-talk/"
-              >alifeee.co.uk/font-talk/</a
+            <a href="https://www.sheffieldhackspace.org.uk/"
+              >Sheffield Hackspace</a
             >
-            (<a href="https://github.com/alifeee/font-talk/">GitHub</a>)
+            on <time datetime="2024-03-02">2nd March 2024</time> (<a
+              href="https://www.sheffieldhackspace.org.uk/font-workshop/"
+              >blog</a
+            >)
+          </li>
+          <li>
+            <a href="https://www.emfcamp.org/">EMFCamp</a> on
+            <time datetime="2024-06-01">1st June 2024</time> (<a
+              href="https://www.emfcamp.org/schedule/2024/267-computer-font-making-workshop"
+              >on the schedule</a
+            >)
           </li>
         </ul>
-      </nav>
+      </article>
+
+      <hr />
+
+      <article>
+        <h3 id="font-talk">Font Talk <a href="#font-talk">#</a></h3>
+        <p>
+          A talk for Front-End Sheffield's (FES') March 2024 meetup on
+          <time datetime="2024-03-28">2024-03-28</time>
+        </p>
+        <nav>
+          <ul>
+            <li>
+              Talk link:
+              <a href="https://alifeee.co.uk/font-talk/"
+                >alifeee.co.uk/font-talk/</a
+              >
+              (<a href="https://github.com/alifeee/font-talk/">GitHub</a>)
+            </li>
+          </ul>
+        </nav>
+      </article>
     </main>
 
     <footer>
