@@ -34,6 +34,17 @@
         text-align: center;
       }
 
+      main {
+        max-width: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      main > * {
+        max-width: 40rem;
+      }
+
       .refurb {
         color: #ff0000;
         text-transform: uppercase;
@@ -83,7 +94,22 @@
         opacity: 0.5;
       }
 
+      .stuff-haver {
+        max-width: unset;
+        width: 100%;
+      }
+      .stuff {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
+        max-width: none;
+        justify-content: center;
+      }
+      .stuff > article {
+        margin: 0 auto 0 auto;
+      }
+
       .pages {
+        max-width: 40rem;
         list-style-type: none;
         padding: 0;
         margin: 1rem 1rem 4rem 1rem;
@@ -197,111 +223,149 @@
         <span class="or">or</span>
         <a href="https://weeknotes.alifeee.co.uk">weeknotes.alifeee.co.uk</a>
       </section>
-      <h2>interactive things I've made</h2>
-      <ul class="pages">
-        <li class="page">
-          <img alt="me doing a handstand" src="./images/handstands.png" />
-          <a href="https://downpour.games/~alifeee">Downpour games!!!</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for video games page"
-            src="./space-pirates-and-the-mind-stone/images/square.png"
-          />
-          <a href="./video_games/">Video Games on itch.io</a>
-        </li>
-        <li class="page p5js">
-          <img alt="thumbnail for p5.js page" src="./p5js/thumbnail.png" />
-          <a href="./p5js">p5.js Simulations</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for cryptography page"
-            src="./cryptography/thumbnail.png"
-          />
-          <a href="./cryptography">Cryptography</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for steam mosaic page"
-            src="./steam_mosaic/thumbnail.jpg"
-          />
-          <a href="./steam_mosaic">Steam Collage</a>
-        </li>
-      </ul>
-      <h2>non-interactive things I've made</h2>
-      <ul class="pages">
-        <li class="page">
-          <img
-            alt="thumbnail for talks and workshops page"
-            src="./talks-and-workshops/images/font-workshop-3.jpg"
-          />
-          <a href="./talks-and-workshops/">Talks & Workshops</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for anvil emoji proposal page"
-            src="./anvil/anvilbg.png"
-          />
-          <a href="./anvil/">Anvil Emoji Proposal</a>
-        </li>
-        <li class="page">
-          <img alt="thumbnail for fonts page" src="./fonts/bogface_lower.png" />
-          <a href="./fonts">Fonts</a>
-        </li>
-      </ul>
-      <h2>information presented nicely</h2>
-      <ul class="pages">
-        <li class="page">
-          <img
-            alt="thumbnail for itch.io bundle page"
-            src="./itch.io_bundle/thumbnail.png"
-          />
-          <a href="./itch.io_bundle">Itch.io games</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for diplomacy page"
-            src="./diplomacy/thumbnail.png"
-          />
-          <a href="./diplomacy">Diplomacy</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for bookmarks page"
-            src="./bookmarks/thumbnail.png"
-          />
-          <a href="./bookmarks">Bookmarks</a>
-        </li>
-        <li class="page">
-          <img
-            alt="thumbnail for durham physics page"
-            src="./durham_physics/thumbnail.png"
-          />
-          <a href="./durham_physics">Durham Physics</a>
-        </li>
-      </ul>
-      <h2>stuff on my server</h2>
-      <p>
-        Most on there is either temporary, experimental, or very interactive
-      </p>
-      <ul class="pages">
-        <li class="page">
-          <img
-            alt="thumbnail for server homepage"
-            src="./images/server_homepage.png"
-          />
-          <a href="http://server.alifeee.co.uk">server.alifeee.co.uk</a>
-        </li>
-      </ul>
-      <h2>other stuff I'm involved in</h2>
-      <ul class="pages">
-        <li class="page">
-          <img alt="thumbnail for lipu tenpo" src="./images/liputenpo.png" />
-          <a href="https://liputenpo.org">lipu tenpo</a>
-        </li>
-      </ul>
+      <div class="stuff-haver">
+        <section class="stuff">
+          <article>
+            <h2>interactive things I've made</h2>
+            <ul class="pages">
+              <li class="page">
+                <img alt="me doing a handstand" src="./images/handstands.png" />
+                <a href="https://downpour.games/~alifeee">Downpour games!!!</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for video games page"
+                  src="./space-pirates-and-the-mind-stone/images/square.png"
+                />
+                <a href="./video_games/">Video Games on itch.io</a>
+              </li>
+              <li class="page p5js">
+                <img
+                  alt="thumbnail for p5.js page"
+                  src="./p5js/thumbnail.png"
+                />
+                <a href="./p5js">p5.js Simulations</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for cryptography page"
+                  src="./cryptography/thumbnail.png"
+                />
+                <a href="./cryptography">Cryptography</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for steam mosaic page"
+                  src="./steam_mosaic/thumbnail.jpg"
+                />
+                <a href="./steam_mosaic">Steam Collage</a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h2>non-interactive things I've made</h2>
+            <ul class="pages">
+              <li class="page">
+                <img
+                  alt="thumbnail for talks and workshops page"
+                  src="./talks-and-workshops/images/font-workshop-3.jpg"
+                />
+                <a href="./talks-and-workshops/">Talks & Workshops</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for anvil emoji proposal page"
+                  src="./anvil/anvilbg.png"
+                />
+                <a href="./anvil/">Anvil Emoji Proposal</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for fonts page"
+                  src="./fonts/bogface_lower.png"
+                />
+                <a href="./fonts">Fonts</a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h2>information presented nicely</h2>
+            <ul class="pages">
+              <li class="page">
+                <img
+                  alt="thumbnail for itch.io bundle page"
+                  src="./itch.io_bundle/thumbnail.png"
+                />
+                <a href="./itch.io_bundle">Itch.io games</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for diplomacy page"
+                  src="./diplomacy/thumbnail.png"
+                />
+                <a href="./diplomacy">Diplomacy</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for bookmarks page"
+                  src="./bookmarks/thumbnail.png"
+                />
+                <a href="./bookmarks">Bookmarks</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="thumbnail for durham physics page"
+                  src="./durham_physics/thumbnail.png"
+                />
+                <a href="./durham_physics">Durham Physics</a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h2>stuff on my server</h2>
+            <p>
+              Most on there is either temporary, experimental, or very
+              interactive
+            </p>
+            <ul class="pages">
+              <li class="page">
+                <img
+                  alt="thumbnail for server homepage"
+                  src="./images/server_homepage.png"
+                />
+                <a href="http://server.alifeee.co.uk">server.alifeee.co.uk</a>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h2>other stuff I'm involved in</h2>
+            <ul class="pages">
+              <li class="page">
+                <img
+                  alt="thumbnail for lipu tenpo"
+                  src="./images/liputenpo.png"
+                />
+                <a href="https://liputenpo.org">lipu tenpo</a>
+              </li>
+              <li class="page">
+                <img
+                  alt="sheffield hackspace logo"
+                  src="./images/shhm-logo.png"
+                />
+                <a href="https://www.sheffieldhackspace.org.uk/"
+                  >Sheffield Hackspace</a
+                >
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
       <script src="https://webring.alifeee.co.uk/webring.js"></script>
+      <p>
+        Reached the end? You're mistaken. Click
+        <a href="https://server.alifeee.co.uk/github/html.cgi">here</a> for a
+        random one of my GitHub repositories.
+      </p>
     </main>
 
     <footer>
