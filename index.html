@@ -30,9 +30,12 @@
     <!-- styles -->
 
     <style>
+      * {
+        text-align: center;
+      }
+
       .refurb {
         color: #ff0000;
-        text-align: center;
         text-transform: uppercase;
         text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000,
           0 0 80px #ff0000, 0 0 120px #ff0000, 0 0 160px #ff0000;
@@ -42,12 +45,10 @@
       }
 
       .blurb.title {
-        text-align: center;
         font-size: 2rem;
         margin: 0;
       }
       .blurb.subtitle {
-        text-align: center;
         font-size: 1.5rem;
         margin: 0;
         opacity: 0.5;
@@ -68,7 +69,6 @@
       .bloglink {
         margin-top: 2rem;
         margin-bottom: 2rem;
-        text-align: center;
         font-size: 2rem;
       }
       .bloglink a {
@@ -86,7 +86,7 @@
       .pages {
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 1rem 1rem 4rem 1rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -102,7 +102,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 7rem;
+        min-height: 11rem;
       }
       .page a {
         display: block;
@@ -112,7 +112,6 @@
         font-size: 2rem;
         font-family: "Josefin Sans", sans-serif;
         text-decoration: none;
-        text-align: center;
         color: white;
         transition: transform 0.1s ease;
       }
@@ -193,31 +192,18 @@
         <span class="or">or</span>
         <a href="https://weeknotes.alifeee.co.uk">weeknotes.alifeee.co.uk</a>
       </section>
-      <script src="https://webring.alifeee.co.uk/webring.js"></script>
+      <h2>interactive things I've made</h2>
       <ul class="pages">
         <li class="page">
-          <img
-            alt="thumbnail for talks and workshops page"
-            src="./talks-and-workshops/images/font-workshop-3.jpg"
-          />
-          <a href="./talks-and-workshops/">Talks & Workshops</a>
-        </li>
-        <li class="page p5js">
           <img alt="me doing a handstand" src="./images/handstands.png" />
           <a href="https://downpour.games/~alifeee">Downpour games!!!</a>
         </li>
         <li class="page">
           <img
-            alt="thumbnail for Space Pirates and the Mind Stone page"
+            alt="thumbnail for video games page"
             src="./space-pirates-and-the-mind-stone/images/square.png"
           />
-          <a href="./space-pirates-and-the-mind-stone/"
-            >Space Pirates and the Mind Stone</a
-          >
-        </li>
-        <li class="page">
-          <img alt="" src="./anvil/anvilbg.png" />
-          <a href="./anvil/">Anvil Emoji Proposal</a>
+          <a href="./video_games/">Video Games on itch.io</a>
         </li>
         <li class="page p5js">
           <img alt="thumbnail for p5.js page" src="./p5js/thumbnail.png" />
@@ -232,18 +218,35 @@
         </li>
         <li class="page">
           <img
-            alt="thumbnail for durham physics page"
-            src="./durham_physics/thumbnail.png"
-          />
-          <a href="./durham_physics">Durham Physics</a>
-        </li>
-        <li class="page">
-          <img
             alt="thumbnail for steam mosaic page"
             src="./steam_mosaic/thumbnail.jpg"
           />
           <a href="./steam_mosaic">Steam Collage</a>
         </li>
+      </ul>
+      <h2>non-interactive things I've made</h2>
+      <ul class="pages">
+        <li class="page">
+          <img
+            alt="thumbnail for talks and workshops page"
+            src="./talks-and-workshops/images/font-workshop-3.jpg"
+          />
+          <a href="./talks-and-workshops/">Talks & Workshops</a>
+        </li>
+        <li class="page">
+          <img
+            alt="thumbnail for anvil emoji proposal page"
+            src="./anvil/anvilbg.png"
+          />
+          <a href="./anvil/">Anvil Emoji Proposal</a>
+        </li>
+        <li class="page">
+          <img alt="thumbnail for fonts page" src="./fonts/bogface_lower.png" />
+          <a href="./fonts">Fonts</a>
+        </li>
+      </ul>
+      <h2>information presented nicely</h2>
+      <ul class="pages">
         <li class="page">
           <img
             alt="thumbnail for itch.io bundle page"
@@ -259,17 +262,34 @@
           <a href="./diplomacy">Diplomacy</a>
         </li>
         <li class="page">
-          <img alt="thumbnail for fonts page" src="./fonts/bogface_lower.png" />
-          <a href="./fonts">Fonts</a>
-        </li>
-        <li class="page">
           <img
             alt="thumbnail for bookmarks page"
             src="./bookmarks/thumbnail.png"
           />
           <a href="./bookmarks">Bookmarks</a>
         </li>
+        <li class="page">
+          <img
+            alt="thumbnail for durham physics page"
+            src="./durham_physics/thumbnail.png"
+          />
+          <a href="./durham_physics">Durham Physics</a>
+        </li>
       </ul>
+      <h2>stuff on my server</h2>
+      <p>
+        Most on there is either temporary, experimental, or very interactive
+      </p>
+      <ul class="pages">
+        <li class="page">
+          <img
+            alt="thumbnail for server homepage"
+            src="./images/server_homepage.png"
+          />
+          <a href="http://server.alifeee.co.uk">server.alifeee.co.uk</a>
+        </li>
+      </ul>
+      <script src="https://webring.alifeee.co.uk/webring.js"></script>
     </main>
 
     <footer>
