@@ -77,23 +77,6 @@
         }
       }
 
-      .bloglink {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-      }
-      .bloglink a {
-        font-family: "Josefin Sans", sans-serif;
-      }
-      .bloglink > * {
-        display: block;
-      }
-      .bloglink .or {
-        font-family: "Roboto", sans-serif;
-        font-size: 1.5rem;
-        opacity: 0.5;
-      }
-
       .weather figure {
         max-width: 90vw;
         width: 30rem;
@@ -223,6 +206,140 @@
       }
     </style>
 
+    <style>
+      .other-sites {
+        margin: 0.5rem 0 0 0;
+        max-width: 100vw;
+        width: auto;
+      }
+      .other-sites h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      .other-sites-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      /* blog style */
+      @font-face {
+        font-family: "Josefin Sans";
+        src: url("https://blog.alifeee.co.uk/fonts/JosefinSans-Regular.ttf");
+      }
+      .blog-post {
+        background-color: #dcd;
+        font-family: "Josefin Sans", sans-serif;
+        box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.2);
+        pointer-events: none;
+        margin: 0.5rem 0;
+        max-width: 20rem;
+      }
+      .blog-post a {
+        color: #000;
+        padding: 1rem;
+      }
+      .blog-post a:visited {
+        color: #000;
+      }
+      .blog-post:hover {
+        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
+      }
+      .blog-post .link {
+        text-decoration: none;
+        color: black;
+        pointer-events: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "preview-image info";
+        align-items: center;
+      }
+      .blog-post .link > * {
+        margin: 0 0.5rem;
+      }
+      .blog-post .link > .info {
+        grid-area: info;
+      }
+      .blog-post .link > .preview-image {
+        grid-area: preview-image;
+        max-width: 100%;
+        display: flex;
+      }
+      .blog-post .preview-image > img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: contain;
+        border-radius: 1em;
+        margin: 0 auto;
+      }
+      .blog-post .info .title {
+        margin: 0;
+        font-size: 2rem;
+      }
+      .blog-post .info .date {
+        margin: 0;
+        margin-top: 0.5rem;
+        opacity: 0.6;
+        font-size: 0.8rem;
+      }
+
+      /* weeknote style */
+      @font-face {
+        font-family: "BogFace";
+        src: url("./fonts/BogFace.woff2");
+      }
+      .weeknote {
+        font-family: "BogFace", sans-serif !important;
+        padding: 1rem;
+        margin: 0.5rem;
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "title date"
+          "words links";
+        grid-gap: 1rem;
+        border: 1px solid grey;
+        border-radius: 0.5rem;
+        max-width: 40rem;
+        position: relative;
+        background-color: #f5abb7;
+        background-size: 25px 25px;
+        background-image: repeating-linear-gradient(
+          -45deg,
+          #9591 0,
+          #9591 2px,
+          #f5abb7 0,
+          #f5abb7 50%
+        );
+        text-decoration: none;
+        text-align: center;
+        color: #444 !important;
+        position: relative;
+      }
+      .weeknote:visited {
+        color: #444 !important;
+      }
+      .weeknote .title {
+        margin: 0;
+        grid-area: title;
+        color: #000;
+        font-size: 1.5rem;
+      }
+      .weeknote .words {
+        grid-area: words;
+      }
+      .weeknote .links {
+        grid-area: links;
+      }
+      .weeknote .date {
+        grid-area: date;
+      }
+    </style>
+
     <!-- temporary for winter -->
     <!-- <script src="component_island.js"></script> -->
     <!-- <script src="component_snow.js"></script> -->
@@ -247,22 +364,38 @@
         Some of those things are here. Some are on GitHub. Some are made of
         cardboard.
       </p>
-      <section class="bloglink">
-        <span class="why-not"> Why not check out: </span>
-        <a href="https://blog.alifeee.co.uk">blog.alifeee.co.uk</a>
-        <span class="or">or</span>
-        <a href="https://weeknotes.alifeee.co.uk">weeknotes.alifeee.co.uk</a>
-        <span class="or">or</span>
-        <span style="font-size: 1rem">
-          <a href="https://mynutiae.neocities.org/">mynutiae</a>,
-          <a href="https://thoughtsofahummingbirdhawkmoth.neocities.org/"
-            >TOAHHM</a
-          >, or
-          <a href="https://day2day-moral-ambiguities.neocities.org/"
-            >moral ambiguities</a
-          >
-        </span>
+      <section class="other-sites">
+        <h2>Why not check out:</h2>
+        <div class="other-sites-list">
+          <div class="blog-post">
+            <a class="link" href="https://blog.alifeee.co.uk">
+              <div class="preview-image">
+                <img src="./profile-picture.png" alt="drawing of author" />
+              </div>
+              <div class="info">
+                <span class="title">my blog !!!</span>
+                <p class="date">blog.alifeee.co.uk</p>
+              </div>
+            </a>
+          </div>
+          <a href="https://weeknotes.alifeee.co.uk/" class="weeknote">
+            <span class="title">my weeknotes !! :]</span>
+            <span class="words">between 137 and 3,215 words</span>
+            <span class="links">many links</span>
+            <time class="date">posted every Sunday</time>
+          </a>
+        </div>
       </section>
+      <span>or</span> <br />
+      <span style="font-size: 1rem">
+        <a href="https://mynutiae.neocities.org/">mynutiae</a>,
+        <a href="https://thoughtsofahummingbirdhawkmoth.neocities.org/"
+          >TOAHHM</a
+        >, or
+        <a href="https://day2day-moral-ambiguities.neocities.org/"
+          >moral ambiguities</a
+        >
+      </span>
       <div class="stuff-haver">
         <section class="stuff">
           <article class="weather">
