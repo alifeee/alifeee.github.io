@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>alifeee</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+
+    <style>
+      h3 {
+        position: relative;
+      }
+      h3 a {
+        text-decoration: none;
+      }
+      h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: -1rem;
+        border-top: 1px solid white;
+        z-index: -1;
+      }
+
+      .maplink {
+        display: flex;
+        justify-content: center;
+      }
+      .maplink a {
+        padding: 0.5rem 1rem;
+        background-color: green;
+        border-radius: 1rem;
+        background: rgb(5, 36, 0);
+        background: linear-gradient(
+          90deg,
+          rgb(17, 73, 8) 0%,
+          rgb(8, 65, 73) 50%,
+          rgba(9, 9, 121, 1) 100%
+        );
+        color: white;
+        text-decoration: none;
+      }
+      .maplink a:visited {
+        color: white;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+      td {
+        padding: 0.1rem;
+      }
+
+      h4 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/">alifeee</a>
+      </h1>
+    </header>
+
+    <main>
+      <h2>maps</h2>
+      <p>
+        I like maps, <a href="https://geojson.org/">geojson</a>, and data. As
+        such, I end up making a lot of custom maps.
+      </p>
+      <p>Here are some of those :)</p>
+
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#sheffield-stink-pipes">Sheffield Stink Pipes</a></li>
+        <li><a href="#mountain-bothies">Mountain Bothies</a></li>
+        <li><a href="#river-walks">River Walks</a></li>
+        <li><a href="#scotland-trip">Scotland Trip</a></li>
+        <li><a href="#bike-to-cambridge">Bike to Cambridge</a></li>
+      </ul>
+
+      <h3 id="sheffield-stink-pipes">
+        Sheffield Stink Pipes <a href="#sheffield-stink-pipes">#</a>
+      </h3>
+      <p>
+        <a
+          href="https://gist.github.com/alifeee/60e121a4b55ce1069b003e1d94f0e046"
+          >source</a
+        >
+        /
+        <a
+          href="https://geojson.io/#id=gist:alifeee/60e121a4b55ce1069b003e1d94f0e046"
+          >map</a
+        >
+      </p>
+      <p>
+        I like stink pipes. This is a map of the 21 Grade II listed stink pipes
+        in Sheffield.
+      </p>
+      <p>
+        The source also has generic instructions for making a geojson file from
+        any list of data from
+        <a href="https://historicengland.org.uk/">Historic England</a> (i.e.,
+        any collection of listed structures).
+      </p>
+      <div class="maplink">
+        <a
+          href="https://geojson.io/#id=gist:alifeee/60e121a4b55ce1069b003e1d94f0e046"
+          >view map!</a
+        >
+      </div>
+
+      <h3 id="mountain-bothies">
+        Mountain Bothies <a href="#mountain-bothies">#</a>
+      </h3>
+      <p>
+        <a href="https://github.com/alifeee/mountain-bothies">source</a> /
+        <a
+          href="https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.githubusercontent.com%2Falifeee%2Fmountain-bothies%2Frefs%2Fheads%2Fmain%2Fbothies.geojson"
+          >map 1 (geojson.io)</a
+        >
+        /
+        <a href="https://server.alifeee.co.uk/bothies/">map 2 (my server)</a> /
+        <a href="https://www.mountainbothies.org.uk/bothies/location-map/"
+          >map 3 (the MBA)</a
+        >
+      </p>
+      <p>
+        I made this because I wanted to choose a bothie to visit that had good
+        pedestrian access, and that I could plan a route to, and the bothie map
+        on <abbr>MBA</abbr>'s (Mountain Bothies Association) website uses a map
+        overlay of OS maps, which uses the "Standard" map type, which doesn't
+        show common footpaths, bridleways, etc.
+      </p>
+      <p>
+        So, my solution (as you see in source above) was to scrape the bothie
+        locations, and create my own map, which I could then overlay onto Bing
+        Maps, which (for some reason) includes a premium OS Maps layer for free.
+      </p>
+      <p>
+        In the end (and mainly because of train timetables) we went to
+        <a
+          href="https://www.mountainbothies.org.uk/bothies/southwest-highlands-islands/abyssinia/"
+          >Abyssinia</a
+        >.
+      </p>
+      <div class="maplink">
+        <a href="https://server.alifeee.co.uk/bothies/">view map!</a>
+      </div>
+
+      <h3 id="river-walks">River Walks <a href="#river-walks">#</a></h3>
+      <p>
+        Sheffield has 5 rivers, which makes it ideal for river walking. I found
+        the IDs of the rivers on <abbr>OSM</abbr> (<a
+          href="https://www.openstreetmap.org"
+          >Open Street Map</a
+        >) and created a query for
+        <a href="https://overpass-turbo.eu/">Overpass Turbo</a>, which is a tool
+        to visualise OSM queries.
+      </p>
+      <table>
+        <tr>
+          <th>River</th>
+          <th>OSM relation</th>
+        </tr>
+        <tr>
+          <td>River Sheaf</td>
+          <td>
+            <a href="https://www.openstreetmap.org/relation/11890887"
+              >11890887</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Porter Brook</td>
+          <td>
+            <a href="https://www.openstreetmap.org/relation/3199311"
+              >OSM relation</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>River Rivelin</td>
+          <td>
+            <a href="https://www.openstreetmap.org/relation/13987431"
+              >OSM relation</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>River Loxley</td>
+          <td>
+            <a href="https://www.openstreetmap.org/relation/13987423"
+              >OSM relation</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>River Don</td>
+          <td>
+            <a href="https://www.openstreetmap.org/relation/2878078"
+              >OSM relation</a
+            >
+          </td>
+        </tr>
+      </table>
+      <h4>Combined</h4>
+      <p>
+        To find good-looking spots for a river walk, I combined Sheffield's four
+        smaller rivers into one map using Overpass Turbo.
+      </p>
+      <p>
+        <a
+          href="https://overpass-turbo.eu/?R=&C=&Q=%3Cosm-script%20output=%22json%22%3E%20%20%3Cunion%3E%20%20%20%3Cid-query%20ref=%2211890887%22%20type=%22relation%22/%3E%20%20%20%3Cid-query%20ref=%223199311%22%20type=%22relation%22/%3E%20%20%20%3Cid-query%20ref=%2213987423%22%20type=%22relation%22/%3E%20%20%20%3Cid-query%20ref=%2213987431%22%20type=%22relation%22/%3E%20%20%20%3C/union%3E%20%20%3Cprint%20mode=%22body%22/%3E%20%20%3Crecurse%20type=%22down%22/%3E%20%20%3Cprint%20mode=%22skeleton%22/%3E%3C/osm-script%3E"
+          >Sheaf/Porter/Rivelin/Loxley</a
+        >
+        combined using Overpass Turbo
+      </p>
+      <h4>Sewage</h4>
+      <p>
+        In a river in a city, you should probably be aware that there are many
+        storm overflow drains which dump untreated or treated sewage into the
+        rivers. They <i>should</i> only operate in times of high rainfall, and I
+        believe their use is declining.
+      </p>
+      <p>
+        Yorkshire Water's
+        <a
+          href="https://experience.arcgis.com/experience/45b567b9b39d4ceea64c22c19366d118/"
+          >Storm Overflow Map</a
+        >
+        / The Rivers Trust's
+        <a href="https://theriverstrust.org/sewage-map">sewage map</a>
+        / The Rivers Trust's
+        <a href="https://theriverstrust.org/key-issues/sewage-in-rivers"
+          >article on sewage in our rivers</a
+        >
+      </p>
+      <h4>my river walks</h4>
+      <p>I enjoy a river walk. Here are some maps of some that I've done</p>
+      <p>
+        River Sheaf /
+        <a
+          href="https://gist.github.com/alifeee/bcb35365a10005cebd8f7d53de089104"
+          >geojson</a
+        >
+        /
+        <a
+          href="https://geojson.io/#id=gist:alifeee/bcb35365a10005cebd8f7d53de089104"
+          >map</a
+        >
+      </p>
+      <p>
+        River Rivelin /
+        <a
+          href="https://geojson.io/#id=gist:alifeee/0851a58ae27b162e19535a09aa8ab3a1"
+          >geojson</a
+        >
+        /
+        <a
+          href="https://geojson.io/#id=gist:alifeee/0851a58ae27b162e19535a09aa8ab3a1"
+          >map</a
+        >
+      </p>
+      <p>
+        combined /
+        <a
+          href="https://gist.github.com/alifeee/c7bbea36f90dafbb10c1d1937b78e317"
+          >geojson</a
+        >
+        /
+        <a
+          href="https://geojson.io/#id=gist:alifeee/c7bbea36f90dafbb10c1d1937b78e317"
+          >map</a
+        >
+      </p>
+      <div class="maplink">
+        <a
+          href="https://geojson.io/#id=gist:alifeee/c7bbea36f90dafbb10c1d1937b78e317"
+          >view map!</a
+        >
+      </div>
+
+      <h3 id="scotland-trip">Scotland Trip <a href="#scotland-trip">#</a></h3>
+      <p>
+        <a
+          href="https://github.com/alifeee/alifeee.github.io/tree/main/scotland-trip"
+          >source</a
+        >
+        / <a href="https://alifeee.co.uk/scotland-trip/">map</a>
+      </p>
+      <p>
+        I went on a road trip through Scotland, and kept track of our stopping
+        points. I exported several GPX files of the routes between the points,
+        and used Python to make them into an SVG.
+      </p>
+      <div class="maplink">
+        <a href="https://alifeee.co.uk/scotland-trip/">view map!</a>
+      </div>
+
+      <h3 id="bike-to-cambridge">
+        Bike to Cambridge <a href="#bike-to-cambridge">#</a>
+      </h3>
+      <p>
+        <a href="https://github.com/alifeee/blog/tree/main/bike-to-cambridge"
+          >source</a
+        >
+        / <a href="https://blog.alifeee.co.uk/bike-to-cambridge/">blog post</a>
+      </p>
+      <p>
+        I biked from Birmingham to Cambridge and made a lot of maps of the
+        journey. You'll find a lot more information in the blog post.
+      </p>
+      <div class="maplink">
+        <a href="https://blog.alifeee.co.uk/bike-to-cambridge/">view map!</a>
+      </div>
+    </main>
+
+    <footer>
+      <a class="backlink" href="/">Back to main page</a>
+    </footer>
+  </body>
+</html>
