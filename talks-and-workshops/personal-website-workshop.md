@@ -113,6 +113,7 @@ ask someone you know - or a search engine - how to do these
 - custom mouse cursor
   - use animations like click spark
 - have a custom URL
+- add a guestbook -> <https://webmention.io/>
 
 ### non-exhaustive list of things you could put on your site
 
