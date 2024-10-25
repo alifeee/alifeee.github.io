@@ -31,6 +31,19 @@
         z-index: -1;
       }
 
+      .toc .maplink {
+        display: inline-block;
+        margin: 0.5rem 0 0.5rem 0;
+      }
+      .toc ul {
+        list-style: none;
+        padding: 0px;
+      }
+      .toc li:before {
+        content: "↓";
+        margin: 0 0.5rem 0 0;
+      }
+
       .maplink {
         display: flex;
         justify-content: center;
@@ -46,11 +59,11 @@
           rgb(8, 65, 73) 50%,
           rgba(9, 9, 121, 1) 100%
         );
-        color: white;
+        color: #ccc;
         text-decoration: none;
       }
       .maplink a:visited {
-        color: white;
+        color: #ccc;
       }
 
       table {
@@ -68,6 +81,7 @@
 
       h4 {
         text-decoration: underline;
+        text-underline-offset: 0.25rem;
       }
     </style>
   </head>
@@ -87,26 +101,62 @@
       <p>Here are some of those :)</p>
 
       <h3>Table of Contents</h3>
-      <ul>
-        <li>
-          Making Data Open
-          <ul>
-            <li><a href="#sheffield-stink-pipes">Sheffield Stink Pipes</a></li>
-            <li><a href="#mountain-bothies">Mountain Bothies</a></li>
-            <li>
-              <a href="#service-stations">UK & Ireland Service Stations</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Personal maps
-          <ul>
-            <li><a href="#river-walks">River Walks</a></li>
-            <li><a href="#scotland-trip">Scotland Trip</a></li>
-            <li><a href="#bike-to-cambridge">Bike to Cambridge</a></li>
-          </ul>
-        </li>
-      </ul>
+      <section class="toc">
+        <h4>Making Data Open</h4>
+        <ul>
+          <li>
+            <a href="#sheffield-stink-pipes">Sheffield Stink Pipes</a>
+            <div class="maplink">
+              <a
+                href="https://geojson.io/#id=gist:alifeee/60e121a4b55ce1069b003e1d94f0e046"
+                >view map!</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="#mountain-bothies">Mountain Bothies</a>
+            <div class="maplink">
+              <a href="https://server.alifeee.co.uk/bothies/">view map!</a>
+            </div>
+          </li>
+          <li>
+            <a href="#service-stations">UK & Ireland Service Stations</a>
+            <div class="maplink">
+              <a
+                href="https://www.google.com/maps/d/viewer?mid=1llayKM-EKG17ENDg8x-3_Xv6-yNkTxU"
+                >view map!</a
+              >
+            </div>
+          </li>
+        </ul>
+        <h4>Personal maps</h4>
+        <ul>
+          <li>
+            <a href="#river-walks">River Walks</a>
+            <div class="maplink">
+              <a
+                href="https://geojson.io/#id=gist:alifeee/c7bbea36f90dafbb10c1d1937b78e317"
+                >view map!</a
+              >
+            </div>
+          </li>
+          <li>
+            <a href="#scotland-trip">Scotland Trip</a>
+            <div class="maplink">
+              <a href="https://alifeee.co.uk/scotland-trip/">view map!</a>
+            </div>
+          </li>
+          <li>
+            <a href="#bike-to-cambridge">Bike to Cambridge</a>
+            <div class="maplink">
+              <a
+                href="https://blog.alifeee.co.uk/bike-to-cambridge/#:~:text=Here%20was%20the%20final%20route"
+                >view map!</a
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
 
       <h3 id="sheffield-stink-pipes">
         Sheffield Stink Pipes (geojson) <a href="#sheffield-stink-pipes">#</a>
@@ -381,7 +431,10 @@
         journey. You'll find a lot more information in the blog post.
       </p>
       <div class="maplink">
-        <a href="https://blog.alifeee.co.uk/bike-to-cambridge/">view map!</a>
+        <a
+          href="https://blog.alifeee.co.uk/bike-to-cambridge/#:~:text=Here%20was%20the%20final%20route"
+          >view map!</a
+        >
       </div>
     </main>
 
