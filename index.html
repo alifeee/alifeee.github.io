@@ -77,6 +77,22 @@
         }
       }
 
+      .contents {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        max-width: unset;
+      }
+      .contents li {
+        /* min-width: 17rem; */
+        margin: 0.5rem 0.5rem 0 0.5rem;
+      }
+
       .weather figure {
         max-width: 90vw;
         width: 30rem;
@@ -364,6 +380,28 @@
         Some of those things are here. Some are on GitHub. Some are made of
         cardboard.
       </p>
+      <p style="margin: 0">(some) contents:</p>
+      <ul class="contents">
+        <li>
+          ↓
+          <a href="#interactive-things-ive-made"
+            >interactive things I've made</a
+          >
+        </li>
+        <li>
+          ↓
+          <a href="#non-interactive-things-ive-made"
+            >non-interactive things I've made</a
+          >
+        </li>
+        <li>
+          ↓
+          <a href="#information-presented-nicely"
+            >information presented nicely</a
+          >
+        </li>
+        <li>↓ <a href="#stuff-on-my-server">stuff on my server</a></li>
+      </ul>
       <section class="other-sites">
         <h2>Why not check out:</h2>
         <div class="other-sites-list">
@@ -399,7 +437,7 @@
       <div class="stuff-haver">
         <section class="stuff">
           <article class="weather">
-            <h2>The weather where I am</h2>
+            <h2 id="the-weather-where-i-am">The weather where I am</h2>
             <figure>
               <img
                 src="https://server.alifeee.co.uk/static/weather/sheffield.bmp"
@@ -424,7 +462,9 @@
             </figure>
           </article>
           <article>
-            <h2>interactive things I've made</h2>
+            <h2 id="interactive-things-ive-made">
+              interactive things I've made
+            </h2>
             <ul class="pages">
               <li class="page">
                 <img alt="me doing a handstand" src="./images/handstands.png" />
@@ -463,7 +503,9 @@
             </ul>
           </article>
           <article>
-            <h2>non-interactive things I've made</h2>
+            <h2 id="non-interactive-things-ive-made">
+              non-interactive things I've made
+            </h2>
             <ul class="pages">
               <li class="page">
                 <img
@@ -489,7 +531,9 @@
             </ul>
           </article>
           <article>
-            <h2>information presented nicely</h2>
+            <h2 id="information-presented-nicely">
+              information presented nicely
+            </h2>
             <ul class="pages">
               <li class="page">
                 <img alt="thumbnail for maps page" src="./maps/pins.png" />
@@ -529,7 +573,7 @@
             </ul>
           </article>
           <article>
-            <h2>stuff on my server</h2>
+            <h2 id="stuff-on-my-server">stuff on my server</h2>
             <p>
               Most on there is either temporary, experimental, or very
               interactive
@@ -545,7 +589,7 @@
             </ul>
           </article>
           <article>
-            <h2>other stuff I'm involved in</h2>
+            <h2 id="other-stuff-im-involved-in">other stuff I'm involved in</h2>
             <ul class="pages">
               <li class="page">
                 <img
