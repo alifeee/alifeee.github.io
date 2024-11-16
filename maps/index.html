@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
 
+    <!-- open graph meta -->
+    <meta property="og:title" content="alifeee's maps" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alifeee.co.uk/maps/" />
+    <meta
+      property="og:image"
+      content="https://alifeee.co.uk/maps/images/map_service_stations.png"
+    />
+    <meta
+      property="og:description"
+      content="maps and related things made by alifeee"
+    />
+    <meta property="og:locale" content="en_GB" />
+
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/stylesheet.css" />
     <link
@@ -42,6 +56,18 @@
       .toc li:before {
         content: "↓";
         margin: 0 0.5rem 0 0;
+      }
+
+      main .img {
+        display: block;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+        width: max-content;
+        max-height: 20rem;
+      }
+      main .img img {
+        max-width: 100%;
+        max-height: 20rem;
       }
 
       .maplink {
@@ -128,6 +154,15 @@
               >
             </div>
           </li>
+          <li>
+            <a href="#sheffield-hmo-licences">Sheffield HMO Licences</a>
+            <div class="maplink">
+              <a
+                href="https://www.google.com/maps/d/u/0/edit?mid=1NjXfv4QNknNBu5NxOTnUoRictWhNfQM&usp=sharing"
+                >view map!</a
+              >
+            </div>
+          </li>
         </ul>
         <h4>Personal maps</h4>
         <ul>
@@ -182,6 +217,13 @@
         <a href="https://historicengland.org.uk/">Historic England</a> (i.e.,
         any collection of listed structures).
       </p>
+      <a
+        class="img"
+        href="https://geojson.io/#id=gist:alifeee/60e121a4b55ce1069b003e1d94f0e046"
+        ><img
+          src="images/map_stink_pipes.png"
+          alt="screenshot of a map of Sheffield, with a few pins visible"
+      /></a>
       <div class="maplink">
         <a
           href="https://geojson.io/#id=gist:alifeee/60e121a4b55ce1069b003e1d94f0e046"
@@ -224,6 +266,11 @@
           >Abyssinia</a
         >.
       </p>
+      <a class="img" href="https://server.alifeee.co.uk/bothies/"
+        ><img
+          src="images/map_mountain_bothies.png"
+          alt="screenshot of a map of the UK, with lots of labelled pins visible"
+      /></a>
       <div class="maplink">
         <a href="https://server.alifeee.co.uk/bothies/">view map!</a>
       </div>
@@ -256,9 +303,71 @@
         file.
       </p>
       <p>It comes in very handy for hitchhiking.</p>
+      <a
+        class="img"
+        href="https://www.google.com/maps/d/viewer?mid=1llayKM-EKG17ENDg8x-3_Xv6-yNkTxU"
+        ><img
+          src="images/map_service_stations.png"
+          alt="screenshot of a map of the UK, with lots of labelled pins visible"
+      /></a>
       <div class="maplink">
         <a
           href="https://www.google.com/maps/d/viewer?mid=1llayKM-EKG17ENDg8x-3_Xv6-yNkTxU"
+          >view map!</a
+        >
+      </div>
+
+      <h3 id="sheffield-hmo-licences">
+        Sheffield HMO (Houses in Multiple Occupation) Licences (geojson, gpx,
+        kml)
+        <a href="#sheffield-hmo-licences">#</a>
+      </h3>
+      <p>
+        <a href="https://github.com/alifeee/hmo-licences-in-sheffield"
+          >source</a
+        >
+        /
+        <a
+          href="https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.githubusercontent.com%2Falifeee%2Fhmo-licences-in-sheffield%2Frefs%2Fheads%2Fmain%2Fhmos.geojson"
+          >map 1</a
+        >
+        (geojson.io) /
+        <a
+          href="https://www.google.com/maps/d/u/0/edit?mid=1NjXfv4QNknNBu5NxOTnUoRictWhNfQM&usp=sharing"
+          >map 2</a
+        >
+        (Google Maps)
+      </p>
+      <p>
+        Sheffield City Council publishes data on Houses in Multiple Occupation
+        (HMOs) in its district on
+        <a
+          href="https://www.sheffield.gov.uk/housing/houses-in-multiple-occupation"
+          >https://www.sheffield.gov.uk/housing/houses-in-multiple-occupation</a
+        >.
+      </p>
+      <p>
+        They only post an excel file, and refused to consider posting a CSV.
+        They also said that historical data is not available, and they delete
+        the file every time they upload a new one. Hey-ho.
+      </p>
+      <p>
+        Anyway, I downloaded it, geocoded the addresses from street names and
+        postcodes into latitude/longitude coordinates, and created some data
+        files, so one could view the data nicely on a map. It also has the bonus
+        of being colour coded by "Permitted Occupants". Apparently some houses
+        are allowed to house 93 occupants. Crazy.
+      </p>
+      <a
+        class="img"
+        href="https://www.google.com/maps/d/u/0/edit?mid=1NjXfv4QNknNBu5NxOTnUoRictWhNfQM&usp=sharing"
+        ><img
+          src="images/map_hmos_in_sheffield.png"
+          alt="screenshot of a map of Sheffield, with lots of labelled pins visible of differend colours"
+      /></a>
+      <div class="maplink">
+        <a
+          href="https://www.google.com/maps/d/u/0/edit?mid=1NjXfv4QNknNBu5NxOTnUoRictWhNfQM&usp=sharing"
           >view map!</a
         >
       </div>
@@ -391,6 +500,13 @@
           >map</a
         >
       </p>
+      <a
+        class="img"
+        href="https://geojson.io/#id=gist:alifeee/c7bbea36f90dafbb10c1d1937b78e317"
+        ><img
+          src="images/map_river_walk.png"
+          alt="screenshot of a map of part of Sheffield, with a black line visible following a river"
+      /></a>
       <div class="maplink">
         <a
           href="https://geojson.io/#id=gist:alifeee/c7bbea36f90dafbb10c1d1937b78e317"
@@ -413,6 +529,11 @@
         points. I exported several GPX files of the routes between the points,
         and used Python to make them into an SVG.
       </p>
+      <a class="img" href="https://alifeee.co.uk/scotland-trip/"
+        ><img
+          src="images/map_scotland_trip.png"
+          alt="screenshot of a trace around several labelled cities"
+      /></a>
       <div class="maplink">
         <a href="https://alifeee.co.uk/scotland-trip/">view map!</a>
       </div>
@@ -430,6 +551,13 @@
         I biked from Birmingham to Cambridge and made a lot of maps of the
         journey. You'll find a lot more information in the blog post.
       </p>
+      <a
+        class="img"
+        href="https://blog.alifeee.co.uk/bike-to-cambridge/#:~:text=Here%20was%20the%20final%20route"
+        ><img
+          src="images/map_bike_to_cambridge.png"
+          alt="screenshot of a map trace from Birmingham to Cambridge"
+      /></a>
       <div class="maplink">
         <a
           href="https://blog.alifeee.co.uk/bike-to-cambridge/#:~:text=Here%20was%20the%20final%20route"
