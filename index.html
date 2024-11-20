@@ -354,6 +354,24 @@
       .weeknote .date {
         grid-area: date;
       }
+
+      /* notes style */
+      .notes {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        background-color: white;
+        color: #111;
+        padding: 1rem 0.5rem;
+        border: 2px dashed #f0f8;
+        --link-visited: #111;
+      }
+      .notes p {
+        margin: 0;
+      }
+      .notes .n1 {
+        font-size: 2rem;
+        font-weight: bold;
+      }
     </style>
 
     <!-- temporary for winter -->
@@ -421,6 +439,10 @@
             <span class="words">between 137 and 3,215 words</span>
             <span class="links">many links</span>
             <time class="date">posted every Sunday</time>
+          </a>
+          <a class="notes" href="https://blog.alifeee.co.uk/notes/">
+            <p class="n1">notes by alifeee</p>
+            <p class="n2">short, text-only notes, mostly about programming.</p>
           </a>
         </div>
       </section>
