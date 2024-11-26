@@ -31,6 +31,16 @@
         src: url("./BogFace.woff"), url("./BogFace.woff2"), url("./BogFace.ttf");
       }
 
+      @font-face {
+        font-family: "barcamp";
+        src: url("./Barcamp-Thirteen.woff2"), url("./Barcamp-Thirteen.ttf");
+      }
+
+      h2,
+      h3 {
+        font-family: unset;
+      }
+
       h2 {
         text-align: center;
         font-size: 3rem;
@@ -60,19 +70,21 @@
         margin: 0;
       }
 
-      .bogface {
-        font-family: "bogface", sans-serif;
+      .font {
         font-size: 2em;
       }
-      .bogface h3 {
+
+      .bogface {
         font-family: "bogface", sans-serif;
-        margin: 0;
-      }
-      .bogface nav {
-        margin-top: -1rem;
-      }
-      .bogface p {
         line-height: 1.2;
+      }
+
+      .barcamp {
+        font-family: "barcamp", sans-serif;
+      }
+
+      .nofont {
+        font-family: sans-serif;
       }
     </style>
   </head>
@@ -94,9 +106,10 @@
         >.
       </p>
       <hr />
+
       <div class="bogface font">
         <h3>BOGFACE</h3>
-        <nav>
+        <nav class="nofont">
           <a href="https://github.com/alifeee/bogface/blob/main/build"
             >download</a
           >
@@ -118,6 +131,37 @@ type here!...</textarea
         >
       </div>
       <hr />
+
+      <div class="barcamp font">
+        <h3>barcamp THIRTEEN</h3>
+        <nav class="nofont">
+          <a href="https://github.com/alifeee/barcamp-xiii-typeface"
+            >download</a
+          >
+          <span>
+            (<a
+              href="https://github.com/alifeee/barcamp-xiii-typeface/raw/refs/heads/main/Barcamp-Thirteen.woff2"
+              >woff2</a
+            >,
+            <a
+              href="https://github.com/alifeee/barcamp-xiii-typeface/raw/refs/heads/main/Barcamp-Thirteen.ttf"
+              >ttf</a
+            >)
+          </span>
+          ·
+          <a href="https://github.com/alifeee/barcamp-xiii-typeface">github</a>
+        </nav>
+        <p>
+          a communal typeface, created at
+          <a href="https://thirteen.barcamplondon.org/">barcamp Xiii</a>
+          using paper & pens, and compiled using FontForge.
+        </p>
+        <textarea style="font-family: 'barcamp', sans-serif">
+type here!...</textarea
+        >
+      </div>
+      <hr />
+
       <h3>Kiran Builder</h3>
       <nav>
         <a href="https://github.com/alifeee/kiran-builder-typeface">github</a>
