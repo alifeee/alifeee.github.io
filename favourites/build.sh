@@ -18,9 +18,13 @@ python3 -c "import markdown" && echo "python markdown is instaled!" > /dev/stder
 
 echo "found" $(find . -name "*.md" | wc -l) "files" >> /dev/stderr
 
+# main content
 LISTFILE="/tmp/list2i8yt7gw.html"
+printf "" > $LISTFILE
+
+# table of contents
 contents="<ul>"
-echo "" > $LISTFILE
+
 for file in *.md; do
   # notify script runner
   echo "  transforming ${file}" >> /dev/stderr
@@ -38,7 +42,7 @@ for file in *.md; do
   echo "</section>" >> $LISTFILE
   echo "<hr />" >> $LISTFILE
 done
-
+# table of contents
 contents="${contents}</ul><hr />"
 
 INDEX_FILE="index.html"
