@@ -91,14 +91,14 @@ footer > .links > a {
   align-items: center;
   margin: 0 1rem 1rem;
 }
-footer a:link {
+footer .links a:link {
   text-decoration: none;
   color: white;
 }
-footer a:visited {
+footer .links a:visited {
   color: white;
 }
-footer a:hover {
+footer .links a:hover {
   text-decoration: underline;
 }
 
