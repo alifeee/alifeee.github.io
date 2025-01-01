@@ -1,4 +1,4 @@
-#!/bin/bash
+a#!/bin/bash
 # generate HTML from markdown,
 #  then replace all lines between START_CONTENT and END_CONTENT with this HTML
 #  in the file INDEX_FILE
@@ -36,11 +36,21 @@ for file in *.md; do
   contents="${contents}<li><a href=\"#${sectionname}\">${sectionname}</a></li>"
 
   # create section
-  echo "<section>" >> $LISTFILE
-  echo '<h2 id="'"${sectionname}"'">'"${sectionname}"'</h2>' >> $LISTFILE
+  cat >> $LISTFILE << EOF
+  <section>
+  <h2 id="${sectionname}">
+    ${sectionname}
+    <a href="#${sectionname}">#</a>
+    <span class=fade>
+    from <a href="${file}">${file}</a>
+    </span>
+  </h2>
+EOF
   python3 -m markdown -x def_list "${file}" >> $LISTFILE
-  echo "</section>" >> $LISTFILE
-  echo "<hr />" >> $LISTFILE
+  cat >> $LISTFILE << EOF
+  </section>
+  <hr />
+EOF
 done
 # table of contents
 contents="${contents}</ul><hr />"

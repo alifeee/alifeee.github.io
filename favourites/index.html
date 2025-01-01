@@ -22,6 +22,18 @@
 
     <!-- stylesheets & fonts -->
     <link rel="stylesheet" href="/stylesheet.css" />
+    <style>
+      .fade {
+        font-size: 1rem;
+        opacity: 0.5;
+      }
+      h2 a {
+        text-decoration: none;
+      }
+      h2 a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -38,20 +50,32 @@
       <p>skip to...</p>
       <!-- !!start content!! -->
 <ul><li><a href="#documentaries">documentaries</a></li><li><a href="#images">images</a></li></ul><hr />
-<section>
-<h2 id="documentaries">documentaries</h2>
+  <section>
+  <h2 id="documentaries">
+    documentaries
+    <a href="#documentaries">#</a>
+    <span class=fade>
+    from <a href="documentaries.md">documentaries.md</a>
+    </span>
+  </h2>
 <dl>
 <dt>The Contestant</dt>
 <dd>I watched this at the first Sheffield DocFest I volunteered at, it's about a Japanese man who spends more than a year alone in a room as part of a Truman-esque gameshow. Supposedly, it's the source of the eggplant emoji... metaphor. <a href="https://en.wikipedia.org/wiki/The_Contestant_(2023_film)">on wikipedia</a></dd>
-</dl></section>
-<hr />
-<section>
-<h2 id="images">images</h2>
+</dl>  </section>
+  <hr />
+  <section>
+  <h2 id="images">
+    images
+    <a href="#images">#</a>
+    <span class=fade>
+    from <a href="images.md">images.md</a>
+    </span>
+  </h2>
 <dl>
 <dt><img alt="drawing of several birds and a banner that says 'fuck their borders'" src="./images/borders.png" /></dt>
 <dd>I just think it's neat. The source is <a href="https://wiki.xxiivv.com/media/refs/borders.png">https://wiki.xxiivv.com/media/refs/borders.png</a></dd>
-</dl></section>
-<hr />
+</dl>  </section>
+  <hr />
       <!-- !!end content!! -->
     </main>
   </body>
