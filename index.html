@@ -96,6 +96,19 @@
         margin: 0.5rem 0.5rem 0 0.5rem;
       }
 
+      .rss {
+        gap: 0.3rem;
+      }
+      .rss li {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .rss img {
+        display: inline-block;
+        filter: invert(54%) sepia(46%) saturate(4069%) hue-rotate(344deg)
+          brightness(95%) contrast(100%);
+      }
+
       .weather figure {
         max-width: 90vw;
         width: 30rem;
@@ -401,7 +414,7 @@
         Some of those things are here. Some are on GitHub. Some are made of
         cardboard.
       </p>
-      <p style="margin: 0">(some) contents:</p>
+      <p style="margin: 0">skip down to:</p>
       <ul class="contents">
         <li>
           ↓
@@ -421,7 +434,32 @@
             >information presented nicely</a
           >
         </li>
+        <li>
+          ↓
+          <a href="#some-of-my-favourite-things">some of my favourite things</a>
+        </li>
         <li>↓ <a href="#stuff-on-my-server">stuff on my server</a></li>
+      </ul>
+      <p style="margin: 0.5rem 0 0">
+        my RSS feeds (<a href="https://aboutfeeds.com/"><i>what</i> feeds?</a>):
+      </p>
+      <ul class="contents rss">
+        <li>
+          <img alt="_RSS_" src="./icons/rss.svg" />
+          <a href="https://blog.alifeee.co.uk/feed.xml">blog</a>
+        </li>
+        <li>
+          <img alt="_RSS_" src="./icons/rss.svg" />
+          <a href="https://blog.alifeee.co.uk/notes/feed.xml">notes</a>
+        </li>
+        <li>
+          <img alt="_RSS_" src="./icons/rss.svg" />
+          <a href="https://weeknotes.alifeee.co.uk/feed.xml">weeknotes</a>
+        </li>
+        <li>
+          <img alt="_RSS_" src="./icons/rss.svg" />
+          <a href="https://alifeee.co.uk/favourites/feed.xml">faves</a>
+        </li>
       </ul>
       <section class="other-sites">
         <h2>Why not check out:</h2>
@@ -592,7 +630,7 @@
             </ul>
           </article>
           <article>
-            <h2 id="some-of-my-favourite-images">
+            <h2 id="some-of-my-favourite-things">
               some of my favourite things
             </h2>
             <ul class="pages">
