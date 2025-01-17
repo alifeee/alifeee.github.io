@@ -35,6 +35,8 @@ for file in *.md; do
   # add to contents
   contents="${contents}<li><a href=\"#${sectionname}\">${sectionname}</a></li>"
 
+  last_edited=$(git log -1 --pretty="format:%ci" "${file}")
+
   # create section
   cat >> $LISTFILE << EOF
   <section>
@@ -45,6 +47,7 @@ for file in *.md; do
     from <a href="${file}">${file}</a>
     </span>
   </h2>
+  <h3 class="last-edited">last edited: ${last_edited}</h3>
 EOF
   python3 -m markdown -x def_list "${file}" >> $LISTFILE
   cat >> $LISTFILE << EOF
