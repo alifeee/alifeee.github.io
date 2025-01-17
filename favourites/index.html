@@ -29,6 +29,7 @@
       }
       h2 {
         line-height: 1.5rem;
+        margin-bottom: 0.5rem;
       }
       h2 a {
         text-decoration: none;
@@ -36,12 +37,34 @@
       h2 a:hover {
         text-decoration: underline;
       }
+      .last-edited {
+        opacity: 50%;
+        margin: 0 0 0 0;
+        font-size: 1rem;
+        text-align: center;
+      }
+
       dt {
         margin-top: 1rem;
       }
       img {
         max-width: 100%;
         max-height: 100%;
+      }
+      main hr {
+        margin: 4rem 0;
+      }
+      main section h2 {
+        position: sticky;
+        top: -1px;
+        background-color: var(--background);
+        z-index: 1;
+        padding: 1rem;
+        box-shadow: 0px 10px 10px -10px black;
+      }
+      .rss {
+        filter: invert(54%) sepia(46%) saturate(4069%) hue-rotate(344deg)
+          brightness(95%) contrast(100%);
       }
     </style>
   </head>
@@ -58,7 +81,13 @@
         categories
       </p>
       <p>
-        This webpage is created from a <a href="https://github.com/alifeee/alifeee.github.io/tree/main/favourites">list of markdown files</a>
+        This webpage is created from a
+        <a
+          href="https://github.com/alifeee/alifeee.github.io/tree/main/favourites"
+          >list of markdown files</a
+        >, and updates are manually noted and written to an
+        <img class="rss" alt="_RSS_" src="/icons/rss.svg" />
+        <a href="./feed.xml">RSS feed</a>.
       </p>
       <p>skip to...</p>
       <!-- !!start content!! -->
