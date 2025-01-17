@@ -3,7 +3,7 @@
 
 <title>alifeee's favourite things</title>
 <link href='https://alifeee.co.uk/favourites/' rel='self' />
-<updated>2024-01-01T00:00:00+01:00</updated>
+<updated>2024-01-01T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
@@ -13,21 +13,21 @@
   <title>update 2024-01-17</title>
   <link href="https://alifeee.co.uk/favourites/" />
   <id>https://alifeee.co.uk/favourites/#2024-01-17</id>
-  <updated>2024-01-17T00:00:00+01:00</updated>
+  <updated>2024-01-17T00:00:00+00:00</updated>
   <summary>added documentaries</summary>
 </entry>
 <entry>
   <title>update 2024-01-05</title>
   <link href="https://alifeee.co.uk/favourites/" />
   <id>https://alifeee.co.uk/favourites/#2024-01-05</id>
-  <updated>2024-01-05T00:00:00+01:00</updated>
+  <updated>2024-01-05T00:00:00+00:00</updated>
   <summary>added forum threads</summary>
 </entry>
 <entry>
   <title>update 2024-01-01</title>
   <link href="https://alifeee.co.uk/favourites/" />
   <id>https://alifeee.co.uk/favourites/#2024-01-01</id>
-  <updated>2024-01-01T00:00:00+01:00</updated>
+  <updated>2024-01-01T00:00:00+00:00</updated>
   <summary>created page with images and documentaries</summary>
 </entry>
 </feed>
