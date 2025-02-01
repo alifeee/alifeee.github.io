@@ -1,18 +1,22 @@
 [
     {
-        "date": "2024-01-01",
+        "date": "2025-01-01",
         "update": "created page with images and documentaries"
     },
     {
-        "date": "2024-01-05",
+        "date": "2025-01-05",
         "update": "added forum threads"
     },
     {
-        "date": "2024-01-17",
+        "date": "2025-01-17",
         "update": "added documentaries"
     },
     {
-        "date": "2024-01-17",
+        "date": "2025-01-17",
         "update": "added articles"
+    },
+    {
+        "date": "2025-01-31",
+        "update": "added books section"
     }
 ]
