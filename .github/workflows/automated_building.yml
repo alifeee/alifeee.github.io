@@ -34,7 +34,7 @@ jobs:
         run: (cd favourites; ./build.sh)
       # changelog on homepage
       - name: make changelog
-        run: ./build.sh
+        run: ./changelog_build.sh
 
       # commit anything that changed
       - name: Commit changes
