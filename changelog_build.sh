@@ -88,7 +88,7 @@ cat >> $RSS_FILE << EOF
 <?xml-stylesheet href="/feed.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-<title>changelog of alifeee.co.uk</title>
+<title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/' rel='self' />
 <updated>${last_date_rfc3339}</updated>
 <author>
