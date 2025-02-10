@@ -1,4 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
+#  also run build scripts and push back to repository
 name: Deploy static content to Pages
 
 on:
@@ -31,13 +32,42 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: "0"
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install markdown
+
+      ## automatic pages
+      # sitemap
+      - name: Make sitemap
+        run: |
+          python ./scripts/sitemap.py ./sitemap.html
+      # favourites page
+      - name: make favourites page
+        run: (cd favourites; ./build.sh)
+      # changelog on homepage
+      - name: make changelog
+        run: ./changelog_build.sh
+
+      # commit anything that changed
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+      # pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: "."
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
