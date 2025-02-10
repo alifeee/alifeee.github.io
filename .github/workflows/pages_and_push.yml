@@ -1,6 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
 #  also run build scripts and push back to repository
-name: Deploy static content to Pages
+name: Build scripts & deploy Pages
 
 on:
   # Runs on pushes targeting the default branch
