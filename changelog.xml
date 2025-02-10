@@ -4,12 +4,22 @@
 
 <title>changelog of alifeee.co.uk</title>
 <link href='https://alifeee.co.uk/' rel='self' />
-<updated>2025-02-10T10:00:00+00:00</updated>
+<updated>2025-02-10T10:30:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-02-10 10:30</title>
+    <link href="https://alifeee.co.uk/" />
+    <id>https://alifeee.co.uk/#2025-02-10%2010:30</id>
+    <updated>2025-02-10T10:30:00+00:00</updated>
+    <summary>
+added two more mobile games to my [favourites](https://alifeee.co.uk/favourites/#mobile%20games), 80 Days and Slice &amp; Dice
+fixed some [GitHub workflows](https://github.com/alifeee/alifeee.github.io/commit/483e667514f2d2a80b709bc53a53bd91de96d42a)
+  </summary>
+</entry>
 <entry>
     <title>update 2025-02-10 10:00</title>
     <link href="https://alifeee.co.uk/" />
@@ -25,7 +35,7 @@ removed (well, retired) my [favourites RSS feed](https://alifeee.co.uk/favourite
     <id>https://alifeee.co.uk/#2025-02-10</id>
     <updated>2025-02-10T00:00:00+00:00</updated>
     <summary>
-added a changelog to my site. it may be quite brittle and I imagine the RSS feed will stop validating almost immediately. but what's a website without some fun.
+added a changelog to my site. it may be quite brittle and I imagine the RSS feed will stop validating almost immediately. but what&#x27;s a website without some fun.
     </summary>
   </entry>
 </feed>
