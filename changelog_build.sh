@@ -40,6 +40,9 @@ python3 -c "import markdown" && echo "python markdown is instaled!" > /dev/stder
 # if there are any triple-new-lines, this script probably breaks
 bad=$((cat changelog.md; echo; echo) | awk 'n>1 {print "oh no"} /^$/ {n+=1; next;} {n=0}')
 [[ -n "${bad}" ]] && (echo "triple newline spotted! get rid!" >> /dev/stderr && exit 1)
+# if there is no final newline, it breaks too also, but we can just add that ourselves
+bad=$((cat changelog.md; echo) | awk '/^$/ {a=1;next} {a=2} END {if (a==2) {print "bad"}}')
+[[ -n "${bad}" ]] && (echo "no terminating newline! adding one..." >> /dev/stderr && echo "" >> "${CHANGELOG}")
 
 original_html=$(cat $INDEX_FILE)
 
@@ -115,7 +118,9 @@ EOF
     echo "</entry>" >> $RSS_FILE
     printf "<entry>" >> $RSS_FILE
   else
-    echo "${line}" | sed 's/^: //' >> $RSS_FILE
+    echo "${line}" | sed 's/^: //' \
+      | python3 -c 'import sys;from html import escape;print(escape(sys.stdin.read()),end="")' \
+      >> $RSS_FILE
   fi
 done <<< "${reverse_cl}"
 echo "    </summary>" >> $RSS_FILE
