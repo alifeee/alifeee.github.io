@@ -20,6 +20,14 @@
     />
     <meta property="og:locale" content="en_GB" />
 
+    <!-- rss -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Changelog for alifeee.co.uk"
+      href="/changelog.xml"
+    />
+
     <!-- favicon -->
     <link rel="icon" href="/favicon.ico" />
 
@@ -144,7 +152,8 @@
       }
       .stuff {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
+        /* make basis smaller on thinner screens */
+        grid-template-columns: repeat(auto-fit, minmax(min(40rem, 60vw), auto));
         max-width: none;
         justify-content: center;
       }
@@ -388,6 +397,27 @@
         font-size: 2rem;
         font-weight: bold;
       }
+
+      #changelog {
+        width: 100%;
+        max-width: 40rem;
+        background-color: #333;
+        height: 40rem;
+        padding: 1rem 1rem 0.5rem;
+        margin: 0 0 1rem 0;
+        font-family: monospace;
+        font-size: 1rem;
+        border: 2px #5555 dashed;
+        max-height: 20rem;
+        overflow-y: scroll;
+      }
+      #changelog * {
+        text-align: left;
+      }
+      #changelog h2,
+      p {
+        margin: 0;
+      }
     </style>
 
     <!-- temporary for winter -->
@@ -458,7 +488,7 @@
         </li>
         <li>
           <img alt="_RSS_" src="./icons/rss.svg" />
-          <a href="https://alifeee.co.uk/favourites/feed.xml">faves</a>
+          <a href="https://alifeee.co.uk/changelog.xml">changelog</a>
         </li>
       </ul>
       <section class="other-sites">
@@ -687,9 +717,34 @@
               </li>
             </ul>
           </article>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <script src="https://webring.alifeee.co.uk/webring.js"></script>
+          </div>
         </section>
       </div>
-      <script src="https://webring.alifeee.co.uk/webring.js"></script>
+      <section id="changelog">
+        <h2>changelog</h2>
+        <p class="rss">
+          generated via <a href="./changelog.md">changelog.md</a> and
+          <a href="./changelog_build.sh">script</a>.
+          <img alt="_RSS_" src="./icons/rss.svg" />
+          <a href="./changelog.xml">RSS</a>.
+        </p>
+        <!-- !!start changelog!! -->
+<dl>
+<dt id="2025-02-10 10:00">2025-02-10 10:00</dt>
+<dd>removed (well, retired) my <a href="https://alifeee.co.uk/favourites/feed.xml">favourites RSS feed</a> in preference to this one. made one final post to it.</dd>
+<dt id="2025-02-10">2025-02-10</dt>
+<dd>added a changelog to my site. it may be quite brittle and I imagine the RSS feed will stop validating almost immediately. but what's a website without some fun.</dd>
+</dl>
+        <!-- !!end changelog!! -->
+      </section>
       <p>
         Reached the end? You're mistaken. Click
         <a href="https://server.alifeee.co.uk/github/html.cgi">here</a> for a

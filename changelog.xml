@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="/feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>changelog of alifeee.co.uk</title>
+<link href='https://alifeee.co.uk/' rel='self' />
+<updated>2025-02-10T10:00:00+00:00</updated>
+<author>
+  <name>alifeee</name>
+</author>
+<id>https://alifeee.co.uk/</id>
+<icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-02-10 10:00</title>
+    <link href="https://alifeee.co.uk/" />
+    <id>https://alifeee.co.uk/#2025-02-10%2010:00</id>
+    <updated>2025-02-10T10:00:00+00:00</updated>
+    <summary>
+removed (well, retired) my [favourites RSS feed](https://alifeee.co.uk/favourites/feed.xml) in preference to this one. made one final post to it.
+  </summary>
+</entry>
+<entry>
+    <title>update 2025-02-10</title>
+    <link href="https://alifeee.co.uk/" />
+    <id>https://alifeee.co.uk/#2025-02-10</id>
+    <updated>2025-02-10T00:00:00+00:00</updated>
+    <summary>
+added a changelog to my site. it may be quite brittle and I imagine the RSS feed will stop validating almost immediately. but what's a website without some fun.
+    </summary>
+  </entry>
+</feed>

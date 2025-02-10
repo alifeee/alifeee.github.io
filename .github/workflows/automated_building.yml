@@ -27,11 +27,14 @@ jobs:
       - name: Make sitemap
         run: |
           python ./scripts/sitemap.py ./sitemap.html
-      
+
       ## automatic pages
       # favourites page
       - name: make favourites page
         run: (cd favourites; ./build.sh)
+      # changelog on homepage
+      - name: make changelog
+        run: ./build.sh
 
       # commit anything that changed
       - name: Commit changes

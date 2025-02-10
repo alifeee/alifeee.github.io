@@ -1,4 +1,4 @@
-a#!/bin/bash
+#!/bin/bash
 # generate HTML from markdown,
 #  then replace all lines between START_CONTENT and END_CONTENT with this HTML
 #  in the file INDEX_FILE
@@ -87,58 +87,3 @@ cat $TEMP_FILE > $INDEX_FILE
 rm -f $TEMP_FILE
 
 echo "done! saved to ${INDEX_FILE} 🚀" >> /dev/stderr
-
-
-
-
-
-
-
-# do changelog
-echo "generating RSS from changelog" >> /dev/stderr
-cl=$(cat changelog.json | jq 'reverse')
-
-num_items=$(echo "${cl}" | jq 'length')
-echo "  found ${num_items} items in changelog" >> /dev/stderr
-
-last_date=$(echo "${cl}" | jq -r '.[-1] | .date')
-last_date_rfc3339=$(date --date="${last_date}" --rfc-3339="seconds" | sed 's/ /T/')
-echo "  last change was on ${last_date_rfc3339}" >> /dev/stderr
-
-feed="feed.xml"
-printf "" > $feed
-
-cat >> $feed << EOF
-<?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
-<title>alifeee's favourite things</title>
-<link href='https://alifeee.co.uk/favourites/' rel='self' />
-<updated>${last_date_rfc3339}</updated>
-<author>
-  <name>alifeee</name>
-</author>
-<id>https://alifeee.co.uk/favourites/</id>
-<icon>https://alifeee.co.uk/profile-picture.png</icon>
-EOF
-
-for i in `seq 1 "${num_items}"`; do
-  date_str=$(echo "${cl}" | jq -r '.['$((i-1))'] | .date')
-  date_rfc3339=$(date --date="${date_str}" --rfc-3339="seconds" | sed 's/ /T/')
-  update=$(echo "${cl}" | jq -r '.['$((i-1))'] | .update')
-  cat >> $feed << EOF
-<entry>
-  <title>update ${date_str}</title>
-  <link href="https://alifeee.co.uk/favourites/" />
-  <id>https://alifeee.co.uk/favourites/#${date_str}</id>
-  <updated>${date_rfc3339}</updated>
-  <summary>${update}</summary>
-</entry>
-EOF
-done
-
-cat >> $feed << EOF
-</feed>
-EOF
-
-echo "done!"
