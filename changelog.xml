@@ -4,12 +4,30 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/' rel='self' />
-<updated>2025-02-10T10:30:00+00:00</updated>
+<updated>2025-02-18T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-02-18</title>
+    <link href="https://alifeee.co.uk/" />
+    <id>https://alifeee.co.uk/#2025-02-18</id>
+    <updated>2025-02-18T00:00:00+00:00</updated>
+    <summary>
+updated [bookmarks](./bookmarks/), new since last time is a fair few personal websites, some interesting websites, and a few articles. [changelog](https://github.com/alifeee/firefox-bookmarks)
+  </summary>
+</entry>
+<entry>
+    <title>update 2025-02-15</title>
+    <link href="https://alifeee.co.uk/" />
+    <id>https://alifeee.co.uk/#2025-02-15</id>
+    <updated>2025-02-15T00:00:00+00:00</updated>
+    <summary>
+created &lt;http://mycelium.alifeee.net/&gt; which is the same as this page but it loses 10 characters from the HTML file every day. a slow decay.
+  </summary>
+</entry>
 <entry>
     <title>update 2025-02-10 10:30</title>
     <link href="https://alifeee.co.uk/" />
