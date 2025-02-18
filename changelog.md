@@ -7,3 +7,9 @@
 2025-02-10 10:30
 : added two more mobile games to my [favourites](https://alifeee.co.uk/favourites/#mobile%20games), 80 Days and Slice & Dice
 : fixed some [GitHub workflows](https://github.com/alifeee/alifeee.github.io/commit/483e667514f2d2a80b709bc53a53bd91de96d42a)
+
+2025-02-15
+: created <http://mycelium.alifeee.net/> which is the same as this page but it loses 10 characters from the HTML file every day. a slow decay.
+
+2025-02-18
+: updated [bookmarks](./bookmarks/), new since last time is a fair few personal websites, some interesting websites, and a few articles. [changelog](https://github.com/alifeee/firefox-bookmarks)
