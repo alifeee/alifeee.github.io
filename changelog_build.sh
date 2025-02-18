@@ -108,7 +108,7 @@ while read -r line; do
     cat >> $RSS_FILE << EOF
 
     <title>update ${date_str}</title>
-    <link href="https://alifeee.co.uk/" />
+    <link href="https://alifeee.co.uk/#${date_esc}" />
     <id>https://alifeee.co.uk/#${date_esc}</id>
     <updated>${date_rfc3339}</updated>
     <summary>
