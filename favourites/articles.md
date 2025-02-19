@@ -13,3 +13,7 @@ To me, an "article" is a "blog post" on a website that is not a personal website
 
 "how do I start a blog"
 : see the many links on [How to start blogging](https://gist.github.com/alifeee/c857bfb45bfd260a9b9dd9c45e4f7478) - *alifeee, 2024-01-17, infrequently updated*
+
+some thoughts on LLMs (Large Language Models) and AI (Artificial Intelligence)
+: [TheBullshitMachines.com](https://thebullshitmachines.com/) is a very readable and understandable set of pages about the state of LLMs and generative AI. I'm sure you can guess their overall perspective, and I'm sure you can guess that mine is not far off.
+: [Pluralistic](https://pluralistic.net/) has many [posts tagged LLM](https://pluralistic.net/tag/llms/) that are worth reading, notably about [the chances of general intelligence coming from LLMs](https://pluralistic.net/2023/11/27/10-types-of-people/), [LLMs being used for botspam](https://pluralistic.net/2024/01/15/passive-income-brainworms/), and [copyright considerations](https://pluralistic.net/2024/06/21/off-the-menu/).

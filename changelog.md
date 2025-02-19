@@ -13,3 +13,6 @@
 
 2025-02-18
 : updated [bookmarks](./bookmarks/), new since last time is a fair few personal websites, some interesting websites, and a few articles. [changelog](https://github.com/alifeee/firefox-bookmarks)
+
+2025-02-19
+: added some articles about LLMs/AI to [favourites](./favourites/#articles)
