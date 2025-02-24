@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>alifeee's website changelog</title>
-<link href='https://alifeee.co.uk/' rel='self' />
+<link href='https://alifeee.co.uk/changelog.xml' rel='self' />
 <updated>2025-02-19T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
