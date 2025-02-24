@@ -3,13 +3,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>alifeee's website changelog</title>
-<link href='https://alifeee.co.uk/' rel='self' />
-<updated>2025-02-18T00:00:00+00:00</updated>
+<link href='https://alifeee.co.uk/changelog.xml' rel='self' />
+<updated>2025-02-19T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-02-19</title>
+    <link href="https://alifeee.co.uk/#2025-02-19" />
+    <id>https://alifeee.co.uk/#2025-02-19</id>
+    <updated>2025-02-19T00:00:00+00:00</updated>
+    <summary>
+added some articles about LLMs/AI to [favourites](./favourites/#articles)
+  </summary>
+</entry>
 <entry>
     <title>update 2025-02-18</title>
     <link href="https://alifeee.co.uk/#2025-02-18" />
