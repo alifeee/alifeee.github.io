@@ -16,3 +16,6 @@
 
 2025-02-19
 : added some articles about LLMs/AI to [favourites](./favourites/#articles)
+
+2025-02-24
+: added [favourites section on cooperatives](/favourites/#coop resources)
