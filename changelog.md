@@ -18,4 +18,7 @@
 : added some articles about LLMs/AI to [favourites](./favourites/#articles)
 
 2025-02-24
-: added [favourites section on cooperatives](/favourites/#coop resources)
+: added [favourites section on cooperatives](/favourites/#coop%20resources)
+
+2025-02-24 12:30
+: added [favourites section on alternatives to big tech](/favourites/#big%20tech%20alternatives)
