@@ -23,6 +23,15 @@
     <!-- stylesheets & fonts -->
     <link rel="stylesheet" href="/stylesheet.css" />
     <style>
+      main {
+        max-width: unset;
+      }
+
+      .introduction {
+        max-width: 40rem;
+        margin: auto;
+      }
+
       .fade {
         font-size: 1rem;
         opacity: 0.5;
@@ -66,6 +75,40 @@
         filter: invert(54%) sepia(46%) saturate(4069%) hue-rotate(344deg)
           brightness(95%) contrast(100%);
       }
+
+      .favourites {
+        break-inside: avoid;
+        column-fill: balance;
+      }
+      .favourites * {
+        break-inside: avoid;
+      }
+
+      .favourites article {
+        max-width: 40rem;
+        margin: auto;
+      }
+
+      @media (width > 40rem) {
+        .contents {
+          columns: 2;
+        }
+      }
+      @media (width > 80rem) {
+        .favourites {
+          columns: 2;
+        }
+      }
+      @media (width > 120rem) {
+        .favourites {
+          columns: 3;
+        }
+      }
+      @media (width > 160rem) {
+        .favourites {
+          columns: 4;
+        }
+      }
     </style>
   </head>
   <body>
@@ -75,32 +118,31 @@
       </h1>
     </header>
     <main>
-      <h2>some of my favourite things</h2>
-      <p>
-        a non-exhaustive list of some things I enjoy, from a breadth of
-        categories.
-      </p>
-      <p>
-        This webpage is created from a
-        <a
-          href="https://github.com/alifeee/alifeee.github.io/tree/main/favourites"
-          >list of markdown files</a
-        >, and updates are manually noted in the
-        <a href="/#changelog">website changelog</a> (
-        <img class="rss" alt="_RSS_" src="/icons/rss.svg" />
-        <a href="./feed.xml">RSS feed</a>).
-      </p>
-      <p>
-        partly inspired by fLaMEd's
-        <a href="https://flamedfury.com/posts/the-art-of-hyperlinking/"
-          >The Art of Hyperlinking</a
-        >. see also <a href="../bookmarks/">bookmarks/</a>, a much more
-        disorganised list.
-      </p>
-      <p>skip to...</p>
-      <!-- !!start content!! -->
-<ul><li><a href="#articles">articles</a></li><li><a href="#big tech alternatives">big tech alternatives</a></li><li><a href="#books">books</a></li><li><a href="#coop resources">coop resources</a></li><li><a href="#documentaries">documentaries</a></li><li><a href="#forum threads">forum threads</a></li><li><a href="#images">images</a></li><li><a href="#miniseries">miniseries</a></li><li><a href="#mobile games">mobile games</a></li></ul><hr />
-  <section>
+      <section class="introduction">
+        <h2>some of my favourite things</h2>
+        <p>
+          a non-exhaustive list of some things I enjoy, from a breadth of
+          categories.
+        </p>
+        <p>
+          This webpage is created from a
+          <a
+            href="https://github.com/alifeee/alifeee.github.io/tree/main/favourites"
+            >list of markdown files</a
+          >, and updates are manually noted in the
+          <a href="/#changelog">website changelog</a> (
+          <img class="rss" alt="_RSS_" src="/icons/rss.svg" />
+          <a href="./feed.xml">RSS feed</a>).
+        </p>
+        <p>
+          partly inspired by fLaMEd's
+          <a href="https://flamedfury.com/posts/the-art-of-hyperlinking/"
+            >The Art of Hyperlinking</a
+          >. see also <a href="../bookmarks/">bookmarks/</a>, a much more
+          disorganised list.
+        </p>
+        <p>skip to...</p>
+        <!-- !!start content!! -->
   <h2 id="articles">
     articles
     <a href="#articles">#</a>

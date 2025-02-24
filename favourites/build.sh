@@ -20,10 +20,10 @@ echo "found" $(find . -name "*.md" | wc -l) "files" >> /dev/stderr
 
 # main content
 LISTFILE="/tmp/list2i8yt7gw.html"
-printf "" > $LISTFILE
+printf '<section class="favourites">' > $LISTFILE
 
 # table of contents
-contents="<ul>"
+contents='<ul class="contents">'
 
 for file in *.md; do
   # notify script runner
@@ -39,7 +39,7 @@ for file in *.md; do
 
   # create section
   cat >> $LISTFILE << EOF
-  <section>
+  <article>
   <h2 id="${sectionname}">
     ${sectionname}
     <a href="#${sectionname}">#</a>
@@ -51,12 +51,14 @@ for file in *.md; do
 EOF
   python3 -m markdown -x def_list "${file}" >> $LISTFILE
   cat >> $LISTFILE << EOF
-  </section>
   <hr />
+  </article>
 EOF
 done
+printf '</section>' >> $LISTFILE
+
 # table of contents
-contents="${contents}</ul><hr />"
+contents="${contents}</ul><hr /></section>"
 
 INDEX_FILE="index.html"
 TEMP_FILE="/tmp/index827fhu.html"
