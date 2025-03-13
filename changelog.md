@@ -22,3 +22,6 @@
 
 2025-02-24 12:30
 : added [favourites section on alternatives to big tech](/favourites/#big%20tech%20alternatives)
+
+2025-03-13
+: added [hardware hacking](/favourites/#hardware%20hacking) to favourites page, because I wanted to link to it from [a note about microcontrollers](https://blog.alifeee.co.uk/notes/testing-micropython-on-an-esp-8266-d1-mini/) and... it didn't exist yet
