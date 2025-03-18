@@ -25,3 +25,6 @@
 
 2025-03-13
 : added [hardware hacking](/favourites/#hardware%20hacking) to favourites page, because I wanted to link to it from [a note about microcontrollers](https://blog.alifeee.co.uk/notes/testing-micropython-on-an-esp-8266-d1-mini/) and... it didn't exist yet
+
+2025-03-18
+: added a section about RSS feeds to my favourites page -> [`/favourites/#RSS feeds`](/favourites/#RSS feeds). I love RSS feeds.
