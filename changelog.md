@@ -28,3 +28,6 @@
 
 2025-03-18
 : added a section about RSS feeds to my favourites page -> [`/favourites/#RSS feeds`](/favourites/#RSS feeds). I love RSS feeds.
+
+2025-03-28
+: added link to [fundraiser](https://gofund.me/d8fcca90) on homepage
