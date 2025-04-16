@@ -31,3 +31,6 @@
 
 2025-03-28
 : added link to [fundraiser](https://gofund.me/d8fcca90) on homepage
+
+2025-04-16
+: added [Europe trips](https://alifeee.co.uk/europe-trips/) webpage to [maps page](/maps/#trips-to-europe). I love geojson :]
