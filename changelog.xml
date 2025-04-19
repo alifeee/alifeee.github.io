@@ -4,12 +4,48 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/changelog.xml' rel='self' />
-<updated>2025-02-24T12:30:00+00:00</updated>
+<updated>2025-04-16T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-04-16</title>
+    <link href="https://alifeee.co.uk/#2025-04-16" />
+    <id>https://alifeee.co.uk/#2025-04-16</id>
+    <updated>2025-04-16T00:00:00+00:00</updated>
+    <summary>
+added [Europe trips](https://alifeee.co.uk/europe-trips/) webpage to [maps page](/maps/#trips-to-europe). I love geojson :]
+  </summary>
+</entry>
+<entry>
+    <title>update 2025-03-28</title>
+    <link href="https://alifeee.co.uk/#2025-03-28" />
+    <id>https://alifeee.co.uk/#2025-03-28</id>
+    <updated>2025-03-28T00:00:00+00:00</updated>
+    <summary>
+added link to [fundraiser](https://gofund.me/d8fcca90) on homepage
+  </summary>
+</entry>
+<entry>
+    <title>update 2025-03-18</title>
+    <link href="https://alifeee.co.uk/#2025-03-18" />
+    <id>https://alifeee.co.uk/#2025-03-18</id>
+    <updated>2025-03-18T00:00:00+00:00</updated>
+    <summary>
+added a section about RSS feeds to my favourites page -&gt; [`/favourites/#RSS feeds`](/favourites/#RSS feeds). I love RSS feeds.
+  </summary>
+</entry>
+<entry>
+    <title>update 2025-03-13</title>
+    <link href="https://alifeee.co.uk/#2025-03-13" />
+    <id>https://alifeee.co.uk/#2025-03-13</id>
+    <updated>2025-03-13T00:00:00+00:00</updated>
+    <summary>
+added [hardware hacking](/favourites/#hardware%20hacking) to favourites page, because I wanted to link to it from [a note about microcontrollers](https://blog.alifeee.co.uk/notes/testing-micropython-on-an-esp-8266-d1-mini/) and... it didn&#x27;t exist yet
+  </summary>
+</entry>
 <entry>
     <title>update 2025-02-24 12:30</title>
     <link href="https://alifeee.co.uk/#2025-02-24%2012:30" />

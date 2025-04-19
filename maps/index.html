@@ -199,9 +199,9 @@
           </li>
           <li>
             <a href="#trips-to-europe">Trips to Europe</a>
-            <!-- <div class="maplink">
-              <a href="">view map!</a>
-            </div> -->
+            <div class="maplink">
+              <a href="https://alifeee.co.uk/europe-trips/">view map!</a>
+            </div>
           </li>
         </ul>
 
@@ -632,13 +632,36 @@
           getting a lot of trains whenever I go to Europe.
         </p>
         <p>
-          I'm in the process of collecting GPS traces for some of these trips,
-          to put on some sort of map. It would be neat to visualise. Currently
-          just a
+          For about half of my trips to Europe, I've collected GPS traces
+          (either by
+          <a
+            href="https://blog.alifeee.co.uk/notes/how-to-get-a-gps-trace-of-train-and-boat-journeys/"
+            >manually creating them</a
+          >
+          or using
+          <a
+            href="https://blog.alifeee.co.uk/notes/setting-up-own-tracks-on-my-server/"
+            >OwnTracks</a
+          >
+          to record my GPS location over time). The geojson files are stored in
+          a
           <a href="https://github.com/alifeee/trips-to-europe"
             >GitHub repository</a
-          >.
+          >, and I made a simple interactive map using
+          <a href="https://github.com/maplibre/maplibre-gl-js"
+            >MapLibre GL JS</a
+          >
+          (a JavaScript mapping library that's an Open Source version of
+          <a href="https://www.mapbox.com/">MapBox</a>.)
         </p>
+        <a class="img" href="https://alifeee.co.uk/europe-trips/"
+          ><img
+            src="images/map_europe-trips.png"
+            alt="screenshot of a map with traces around Europe"
+        /></a>
+        <div class="maplink">
+          <a href="https://alifeee.co.uk/europe-trips/">view map!</a>
+        </div>
       </article>
 
       <article>
