@@ -1,6 +1,6 @@
 # personal website workshop
 
-let's make a personal website
+let's make a personal website!
 
 this workshop can run in two (about equal) parts:
 
@@ -9,7 +9,7 @@ this workshop can run in two (about equal) parts:
 
 ## part 1 - safari
 
-here are 22 semi-random personal websites:
+here are 30 semi-random personal websites:
 
 - <https://www.tomforth.co.uk/>
 - <https://sometimes.digital/>
@@ -20,7 +20,6 @@ here are 22 semi-random personal websites:
 - <https://robinprice.net/>
 - <https://nutcroft.com/>
 - <http://tom7.org/>
-- <https://cuddlesomerats.com/>
 - <https://lobi.to/>
 - <https://alifeee.co.uk/>
 - <https://caolan.uk/>
@@ -33,77 +32,85 @@ here are 22 semi-random personal websites:
 - <https://sweetfish.site/>
 - <https://seif.world/>
 - <https://soha.lt/>
+- <https://www.mousereeve.com/>
+- <https://kenru.net/index.html>
+- <https://petrapixel.neocities.org/>
+- <https://carlwk.typepad.com/>
+- <https://brisray.com/>
+- <https://le.alphamethyl.barr0w.net/~elysia/>
+- <https://robert.mathmos.net/>
+- <https://tilde.town/~dozens/>
+- <https://olu.online/>
+
 activities include (whatever people feel like doing)
+
 - browse the sites and write an "observation card"/nature survey (write down things that you find)
 - categorise websites somehow (personal / blog / shrines / etc)
-  - try to categorise these 22 websites into 6 or fewer groups of "similar" sites
+    - try to categorise these 30 websites into 8 or fewer groups of "similar" sites
 - treasure hunt (find X on specific site)
-  - recipe for Potato Provencale (V) (GF)
-  - fonts including "Hockey is Lif", "This Boring Party", "Boring Boron", "Tom's New Roman"
-  - dream diary
-  - Beauty and the Beast grotto
-  - a shrine to trains
-  - Central Florida Mini-Golf Reviews
-- match the website to the description
-  - french fonts
-  - dating profile
-  - antarctica blog
-  - open data blog
-  - cat-looking site
-  - site of a guy who makes amusement machines
-  - massive gif collection (callback to geocities)
-  - professional physicist art portfolio
-  - blog mainly about politics in software
-  - bald nerd does crazy stuff
-  - instructions for embracing rodents
-  - simple collection of personal notes
-  - experimental website hosted on a microcontroller
-  - crazy looking tree structure
-  - an endlessly deep looking website with too many gifs
-  - a very retro looking space-y site with eclectic mix of stuff
-  - maths lover
-  - dithered representation of a household
-  - alifeee's personal website
-  - collection of programming experiments in space
-  - some simple lists of favourite things
+    1. a recipe for Potato Provencale (V) (GF)
+    2. fonts including "Hockey is Lif", "This Boring Party", "Boring Boron", "Tom's New Roman"
+    3. a dream diary
+    4. a Beauty and the Beast grotto
+    5. a shrine to trains
+    6. Central Florida Mini-Golf Reviews
+    7. THE GIANT STEAM CLOCK
+    8. a Sheffield events calendar
+    9. a list of alternate "search engines and directories"
+    10. a clock which displays the time of day in terms of how many times you could have watched Titanic
+    11. a right-handed, introverted student who is bisexual, polyamorous, an artist, a writer, and a cancer
+    12. a list of every place named Bristol
+    13. holiday photos from a cycling trip to Brittany
+    14. a guide to getting started with Yoga
 
 ## part 2 - building a personal website
 
+### option 1 - Neocities
+
 for site hosting we'll use use: <https://neocities.org>... go and create an account!
 
-for inspiration, look at the above sites artistically, and also look at source code for the sites (using inspect element)
+1. think about what you might like to have on your site. for inspiration, look at some of the above sites
+2. follow the neocities tutorial
+3. "inspect element" on existing websites and copy the HTML of bits you like! (it's all public!)
+    1. Firefox/Chrome/Edge: right click > inspect element
+    2. Safari: Open Safari > Preferences > Advanced > Show Developer menu
+4. also check out some templates!
+    - <https://webmastering.neocities.org/layouts>
+    - <https://goblin-heart.net/sadgrl/projects/layout-builder/>
+    - <https://jakechirak.com/howto/makeyourownwebsite/howtohome>
 
-either:
+### option 2 - drag and drop maker
 
-- start from scratch (follow the neocities tutorial first)
-- use a template, e.g., <https://webmastering.neocities.org/layouts> or <https://goblin-heart.net/sadgrl/projects/layout-builder/>
-- find a drag and drop maker, e.g., <https://hotglue.me/>
+I'd encourage you to check out option 1 instead, but if you really want to, there are a few drag and drop makers: https://hotglue.me/ or https://mmm.page/
 
-### guides
+## guides
 
 - neocities built in tutorial (you should be shown this when you create an account)
-- <https://htmlforpeople.com/>
-- <https://goblin-heart.net/sadgrl/learn/articles/beginners-guide-neocities>
-- <https://webmastering.neocities.org/>
-- <https://jakechirak.com/howto/makeyourownwebsite/howtohome>
+- (mega list of guides with everything you could ever think of) https://discourse.32bit.cafe/t/resources-list-for-the-personal-web/49
+- (more in-depth tutorial) <https://htmlforpeople.com/>
+- (beginner's guide to neocities) <https://goblin-heart.net/sadgrl/learn/articles/beginners-guide-neocities>
+- (list of guides for neocities) <https://webmastering.neocities.org/>
+- (simple guide for making artist portfolio website) <https://jakechirak.com/howto/makeyourownwebsite/howtohome>
+- (guide on writing HTML) <https://lmnt.me/blog/how-to-make-a-damn-website.html>
 
 ### why should you care?
 
-personal websites are awesome :). consider the thoughts found in these links:
+a personal website allows you to create and share your creations without conforming to the format of an app or service (think Instagram's square images), lets you display whatever you want (videos? recipes? text? audio?) in whatever format you want, and is shareable without advertising, tracking, or anything you didn't ask for.
 
-- <https://indieweb.org/>
-- <https://birming.com/blog-painter/>
+The homepage of <https://indieweb.org/> has more opinions about this, and so do many blog posts, including: <https://birming.com/blog-painter/>, <https://localghost.dev/blog/this-page-is-under-construction/>, <https://www.htmlforpeople.com/intro/>, or <https://jamesg.blog/2024/01/06/the-web-is-yours>.
+
+If the sites above didn't give you any ideas of what to put on a website, maybe [100 things you can do on your personal website](https://jamesg.blog/2024/02/19/personal-website-ideas) by [James](https://jamesg.blog/) will.
 
 ### cheatsheets
 
 - how to steal from other websites (using inspect element)
-- HTML \<head\> template with all metadata
+- HTML \<head\> template with all metadata (look at intro of https://alifeee.co.uk/)
 - HTML, e.g., <https://htmlcheatsheet.com/>, <https://developer.mozilla.org/en-US/docs/Learn/HTML/Cheatsheet>
 - CSS, e.g., <https://htmlcheatsheet.com/css/>, <https://devhints.io/css>
 
 ### specific things you could want to do
 
-ask someone you know - or a search engine - how to do these
+to figure out how to do these, ask someone you know, look on 32bit.cafe resources list (above), or ask a search engine
 
 - create an RSS feed -> <https://everest-pipkin.com/teaching/handmadeRSS>
 - use a custom font
@@ -111,18 +118,32 @@ ask someone you know - or a search engine - how to do these
 - place items anywhere on screen
 - make something bigger or smaller
 - custom mouse cursor
-  - use animations like click spark
+    - use animations like [click spark](https://github.com/hexagoncircle/click-spark)
 - have a custom URL
-- add a guestbook -> <https://webmention.io/>
+- add a guestbook/comments
+    - <https://webmention.io/>
+    - <https://virtualobserver.moe/ayano/comment-widget>
+    - https://www.htmlcommentbox.com/
+- add other widgets
+    - https://elfsight.com/
 
 ### non-exhaustive list of things you could put on your site
 
-- who are you?
-- what do you like?
-- who are your friends (links)?
-- what do you think?
-- information about where you live?
-- see more on <https://slashpages.net/>
+- answers to questions
+    - who are you?
+    - what do you like?
+    - who are your friends (links)?
+    - what do you think?
+    - information about where you live?
+    - see more on <https://slashpages.net/>
+- things
+    - dream diary
+    - blog
+    - favourite things
+        - recipes
+        - music
+        - books
+- more -> <https://jamesg.blog/2024/02/19/personal-website-ideas>
 
 ### key understandings
 
