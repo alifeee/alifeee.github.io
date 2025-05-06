@@ -34,3 +34,6 @@
 
 2025-04-16
 : added [Europe trips](https://alifeee.co.uk/europe-trips/) webpage to [maps page](/maps/#trips-to-europe). I love geojson :]
+
+2025-05-06
+: add some items to Sheffield page: Festival of Debate, DocFest, ScrapDragon, CeilidhSoc, NowThen and NowThen feed. There is much more that still remains only in my head. Such is life.
