@@ -46,3 +46,9 @@
 
 2025-05-09
 : removed links to weeknotes from here and from my blog. The site is still on <https://weeknotes.alifeee.co.uk/>.
+
+2025-05-14 15:00
+: some updates to [`/europe-trips/`](/europe-trips/) which is now fairly complete! (added mpptp route and made all routes toggleable)
+
+2025-05-14 17:00
+: put my collection of river walk coordinates into a [repository](https://github.com/alifeee/river-walks/), so now there's a nicer combined map on [`/maps/#river-walks`](/maps/#river-walks)
