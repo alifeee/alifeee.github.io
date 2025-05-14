@@ -43,3 +43,6 @@
 
 2025-05-06 18:00
 : added interrail trip from 2022 to my [europe trips map](/europe-trips/). the traces aren't true to the actual trains I took, sadly.
+
+2025-05-09
+: removed links to weeknotes from here and from my blog. The site is still on <https://weeknotes.alifeee.co.uk/>.

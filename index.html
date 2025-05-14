@@ -45,12 +45,6 @@
       title="alifeee's notes feed"
       href="https://blog.alifeee.co.uk/notes/feed.xml"
     />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="alifeee's weeknotes feed"
-      href="https://weeknotes.alifeee.co.uk/feed.xml"
-    />
 
     <!-- stylesheets & fonts -->
     <link rel="stylesheet" href="/stylesheet.css" />
@@ -285,6 +279,8 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        gap: 0.5rem;
+        margin: 0 0.5rem;
       }
       /* blog style */
       @font-face {
@@ -346,59 +342,6 @@
         margin-top: 0.5rem;
         opacity: 0.6;
         font-size: 0.8rem;
-      }
-
-      /* weeknote style */
-      @font-face {
-        font-family: "BogFace";
-        src: url("./fonts/BogFace.woff2");
-      }
-      .weeknote {
-        font-family: "BogFace", sans-serif !important;
-        padding: 1rem;
-        margin: 0.5rem;
-        display: grid;
-        grid-template-columns: 4fr 3fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-          "title date"
-          "words links";
-        grid-gap: 1rem;
-        border: 1px solid grey;
-        border-radius: 0.5rem;
-        max-width: 40rem;
-        position: relative;
-        background-color: #f5abb7;
-        background-size: 25px 25px;
-        background-image: repeating-linear-gradient(
-          -45deg,
-          #9591 0,
-          #9591 2px,
-          #f5abb7 0,
-          #f5abb7 50%
-        );
-        text-decoration: none;
-        text-align: center;
-        color: #444 !important;
-        position: relative;
-      }
-      .weeknote:visited {
-        color: #444 !important;
-      }
-      .weeknote .title {
-        margin: 0;
-        grid-area: title;
-        color: #000;
-        font-size: 1.5rem;
-      }
-      .weeknote .words {
-        grid-area: words;
-      }
-      .weeknote .links {
-        grid-area: links;
-      }
-      .weeknote .date {
-        grid-area: date;
       }
 
       /* notes style */
@@ -505,10 +448,6 @@
         </li>
         <li>
           <img alt="_RSS_" src="./icons/rss.svg" />
-          <a href="https://weeknotes.alifeee.co.uk/feed.xml">weeknotes</a>
-        </li>
-        <li>
-          <img alt="_RSS_" src="./icons/rss.svg" />
           <a href="https://alifeee.co.uk/changelog.xml">changelog</a>
         </li>
       </ul>
@@ -526,12 +465,6 @@
               </div>
             </a>
           </div>
-          <a href="https://weeknotes.alifeee.co.uk/" class="weeknote">
-            <span class="title">my weeknotes !! :]</span>
-            <span class="words">between 137 and 3,215 words</span>
-            <span class="links">many links</span>
-            <time class="date">posted every Sunday</time>
-          </a>
           <a class="notes" href="https://blog.alifeee.co.uk/notes/">
             <p class="n1">notes by alifeee</p>
             <p class="n2">short, text-only notes, mostly about programming.</p>
@@ -759,6 +692,10 @@
         </p>
         <!-- !!start changelog!! -->
 <dl>
+<dt id="2025-05-09">2025-05-09</dt>
+<dd>removed links to weeknotes from here and from my blog. The site is still on <a href="https://weeknotes.alifeee.co.uk/">https://weeknotes.alifeee.co.uk/</a>.</dd>
+<dt id="2025-05-06 18:00">2025-05-06 18:00</dt>
+<dd>added interrail trip from 2022 to my <a href="/europe-trips/">europe trips map</a>. the traces aren't true to the actual trains I took, sadly.</dd>
 <dt id="2025-05-06 12:00">2025-05-06 12:00</dt>
 <dd>removed fundraiser... it got funded !</dd>
 <dt id="2025-05-06">2025-05-06</dt>
