@@ -4,12 +4,21 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/changelog.xml' rel='self' />
-<updated>2025-05-14T17:00:00+00:00</updated>
+<updated>2025-05-24T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-05-24</title>
+    <link href="https://alifeee.co.uk/#2025-05-24" />
+    <id>https://alifeee.co.uk/#2025-05-24</id>
+    <updated>2025-05-24T00:00:00+00:00</updated>
+    <summary>
+added a [micropython hackathon](/talks-and-workshops/#micropython-hackathon) to [/talks-and-workshops/](/talks-and-workshops/), and added some pictures to the [personal website workshop](/talks-and-workshops/#personal-website-workshop) (just promo pics)
+  </summary>
+</entry>
 <entry>
     <title>update 2025-05-14 17:00</title>
     <link href="https://alifeee.co.uk/#2025-05-14%2017:00" />
