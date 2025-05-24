@@ -68,3 +68,10 @@ webrepl
     c. uploading a file
 
 use Thonny to save a file called "main.py", which will run every time the microcontroller resets.
+
+potential projects:
+- flash LED
+- turn on webserial
+- ESP which hosts hotspot to receive WiFi credentials https://github.com/simonprickett/phewap
+- make push button do something
+- connect to environment monitor
