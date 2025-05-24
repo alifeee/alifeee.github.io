@@ -1,0 +1,70 @@
+let's try using micropython!
+
+to get started:
+
+    1 flash ESP with Micropython firmware
+    2 attach to the serial monitor with a terminal emulator
+    3 write a program
+        a using the REPL
+        b using the webREPL
+        c uploading a file
+
+links/see also
+    https://blog.alifeee.co.uk/notes/testing-micropython-on-an-esp-8266-d1-mini/
+    https://docs.micropython.org/en/latest/
+    quickref for ESP
+      https://docs.micropython.org/en/latest/esp8266/quickref.html
+    install guide for ESP
+      https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html
+    Thonny
+      https://thonny.org/
+
+1 flash ESP with Micropython firmware
+EITHER
+    https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#intro
+    download from https://micropython.org/download/ESP8266_GENERIC/
+    run something like (see docs above)
+    esptool.py --port /dev/ttyUSB0 erase_flash
+    esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin
+OR
+    use Thonny https://thonny.org/
+    https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/
+
+2 attach to the serial monitor with a terminal emulator 
+for linux you could use https://github.com/yshui/picom
+    picocom /dev/ttyUSB0 -b115200
+for windows/etc, you can search the web for "terminal emulator" or use something like
+    https://www.putty.org/
+OR
+    use Thonny https://thonny.org/
+    https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/
+
+3 write a program
+    a. using the REPL
+
+turn on/off the onboard LED
+>>> from machine import Pin
+>>> p = Pin(2, Pin.OUT)
+>>> p.off()
+>>> p.on()
+
+turn on the WiFi and connect to a network
+>>> import network
+>>> wlan = network.WLAN(network.WLAN.IF_STA)
+>>> wlan.active(True)
+>>> wlan.scan()
+>>> wlan.isconnected()
+>>> # wait a
+>>> wlan.connect("SHHWifi", "TheWoodsAreColdDarkAndDeep") bit
+>>> wlan.isconnected()
+>>> wlan.status() # see list of statuses on https://docs.micropython.org/en/latest/library/network.WLAN.html
+>>> wlan.config("ssid") # check SSID
+>>> # or use function from https://docs.micropython.org/en/latest/esp8266/quickref.html#networking
+
+webrepl
+>>> import webrepl_setup
+>>> print(f"http://{wlan.ifconfig()[0]}:8266")
+
+    c. uploading a file
+
+use Thonny to save a file called "main.py", which will run every time the microcontroller resets.

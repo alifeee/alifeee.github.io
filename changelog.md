@@ -52,3 +52,6 @@
 
 2025-05-14 17:00
 : put my collection of river walk coordinates into a [repository](https://github.com/alifeee/river-walks/), so now there's a nicer combined map on [`/maps/#river-walks`](/maps/#river-walks)
+
+2025-05-24
+: added a [micropython hackathon](/talks-and-workshops/#micropython-hackathon) to [/talks-and-workshops/](/talks-and-workshops/), and added some pictures to the [personal website workshop](/talks-and-workshops/#personal-website-workshop) (just promo pics)
