@@ -46,3 +46,6 @@
 
 2025-05-09
 : removed links to weeknotes from here and from my blog. The site is still on <https://weeknotes.alifeee.co.uk/>.
+
+2025-05-29
+: added [hackspaces](/favourites/hackspaces), [openstreetmap](/favourites/openstreetmap), [dimensional analysis](/favourites/hackspaces) and [modded kindles](/favourites/modded%20kindles) to my [favourites](/favourites/) page!
