@@ -47,5 +47,14 @@
 2025-05-09
 : removed links to weeknotes from here and from my blog. The site is still on <https://weeknotes.alifeee.co.uk/>.
 
+2025-05-14 15:00
+: some updates to [`/europe-trips/`](/europe-trips/) which is now fairly complete! (added mpptp route and made all routes toggleable)
+
+2025-05-14 17:00
+: put my collection of river walk coordinates into a [repository](https://github.com/alifeee/river-walks/), so now there's a nicer combined map on [`/maps/#river-walks`](/maps/#river-walks)
+
+2025-05-24
+: added a [micropython hackathon](/talks-and-workshops/#micropython-hackathon) to [/talks-and-workshops/](/talks-and-workshops/), and added some pictures to the [personal website workshop](/talks-and-workshops/#personal-website-workshop) (just promo pics)
+
 2025-05-29
 : added [hackspaces](/favourites/hackspaces), [openstreetmap](/favourites/openstreetmap), [dimensional analysis](/favourites/hackspaces) and [modded kindles](/favourites/modded%20kindles) to my [favourites](/favourites/) page!
