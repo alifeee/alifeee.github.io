@@ -7,7 +7,7 @@
 #  example:
 #    python3 -m markdown -x def_list images.md
 # usage:
-#  ./build.sh content.md
+#  ./build.sh
 
 set -e
 
@@ -25,7 +25,7 @@ printf '<section class="favourites">' > $LISTFILE
 # table of contents
 contents='<ul class="contents">'
 
-for file in *.md; do
+while read file; do
   # notify script runner
   echo "  transforming ${file}" >> /dev/stderr
 
@@ -55,7 +55,7 @@ EOF
   <hr />
   </article>
 EOF
-done
+done <<< $(ls *.md | sort)
 printf '</section>' >> $LISTFILE
 
 # table of contents

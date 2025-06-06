@@ -1,0 +1,1 @@
+[Sheffood](https://sheffood.org.uk/) do great work to highlight the social eating and food provisioning venues around Sheffield. See a map here: <https://sheffood.org.uk/food-ladders-food-provision/> or a nicely layed out table of where to eat per-day-of-the week here: <https://www.instagram.com/p/DAylBlxtAP5/> (hopefully still there).

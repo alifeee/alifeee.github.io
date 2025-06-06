@@ -19,22 +19,12 @@
       h3 a {
         text-decoration: none;
       }
-      h3:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: -1rem;
-        border-top: 1px solid white;
-        z-index: -1;
-      }
 
       /* weather */
       figure.weather {
         max-width: 90vw;
         width: 30rem;
-        margin: 0;
+        margin: auto;
         text-align: center;
       }
       .weather img {
@@ -57,6 +47,73 @@
         display: flex;
         justify-content: space-between;
       }
+
+      /* just like favourites page */
+      main {
+        max-width: unset;
+      }
+
+      .introduction {
+        max-width: 40rem;
+        margin: auto;
+      }
+
+      .fade {
+        font-size: 1rem;
+        opacity: 0.5;
+      }
+      h2 {
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      h2 a {
+        text-decoration: none;
+      }
+      h2 a:hover {
+        text-decoration: underline;
+      }
+      .last-edited {
+        opacity: 50%;
+        margin: 0 0 0 0;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      dt {
+        margin-top: 1rem;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      main hr {
+        margin: 4rem 0;
+      }
+      main section h2 {
+        position: sticky;
+        top: -1px;
+        background-color: var(--background);
+        z-index: 1;
+        padding: 1rem;
+        box-shadow: 0px 10px 10px -10px black;
+      }
+      .rss {
+        filter: invert(54%) sepia(46%) saturate(4069%) hue-rotate(344deg)
+          brightness(95%) contrast(100%);
+      }
+
+      .favourites {
+        break-inside: avoid;
+        column-fill: balance;
+      }
+      .favourites * {
+        break-inside: avoid;
+      }
+
+      .favourites article {
+        max-width: 40rem;
+        margin: auto;
+      }
     </style>
   </head>
   <body>
@@ -67,424 +124,293 @@
     </header>
 
     <main>
-      <h2>Sheffield</h2>
-      <p class="aside">
-        page last edited: 2025-05-06 (<a
-          href="https://github.com/alifeee/alifeee.github.io/commits/main/sheffield/index.html"
-          >see changelog</a
-        >)
-      </p>
-      <p>
-        <span class="aside">(mostly)</span> everything I know or want to know
-        about Sheffield. Information from but not exclusively 1 (my own Internet
-        research) and 2 (gossip)
-      </p>
-      <p class="aside">
-        this page is created mostly for myself, but I hope you find it useful.
-      </p>
-
-      <h3>Table of Contents</h3>
-      <ul>
-        <li>!!! <a href="#the-weather">the weather right now</a> !!!</li>
-        <li>!!! <a href="#live-events">live events calendar</a> !!!</li>
-        <li><a href="#eating">social eating and food provisioning</a></li>
-        <li><a href="#where-is">where is/is there "this specific thing"</a></li>
-        <li>
-          <a href="#pop-up-events"
-            >pop up events that I always want to keep an eye on</a
-          >
-        </li>
-        <li><a href="#lists">lists of places I consider interesting</a></li>
-        <li><a href="#instagrams">list of Instagram pages</a></li>
-        <li><a href="#events">list of cool events</a></li>
-        <li><a href="#event-pages">list of events pages</a></li>
-        <li><a href="#information">list of pages providing information</a></li>
-        <li><a href="#rss-feeds">list of Sheffield RSS feeds</a></li>
-      </ul>
-
-      <h3 id="the-weather">
-        the weather right now <a href="#the-weather">🔗</a>
-      </h3>
-      <figure class="weather">
-        <img
-          src="https://server.alifeee.net/static/weather/sheffield.bmp"
-          alt="live weather visualisation for sheffield"
-          title="live weather visualisation for sheffield"
-          height="128"
-          width="296"
-        />
-        <figcaption>
-          <span>now</span>
-          <details>
-            <summary>(?)</summary>
-            generated every 15 minutes on
-            <a href="https://server.alifeee.net/">my server</a>
-            with
-            <a href="https://github.com/alifeee/weather_landscape/"
-              >weather_landscape</a
-            >
-          </details>
-          <span>later</span>
-        </figcaption>
-      </figure>
-
-      <h3 id="live-events">
-        live events calendar <a href="live-events">🔗</a>
-      </h3>
-      <p>
-        for more context:
-        <a href="https://server.alifeee.net/sheffield/events/"
-          >https://server.alifeee.net/sheffield/events/</a
-        >
-      </p>
-      <iframe
-        src="https://server.alifeee.net/sheffield/events/next_seven_days"
-        style="
-          width: 100%;
-          height: 30rem;
-          background: white;
-          overflow: scroll;
-          word-wrap: normal;
-        "
-      ></iframe>
-
-      <h3 id="eating">
-        social eating and food provisioning <a href="#eating">🔗</a>
-      </h3>
-      <p>
-        <a href="https://sheffood.org.uk/">Sheffood</a> do great work to
-        highlight the social eating and food provisioning venues around
-        Sheffield. See a map here:
-        <a href="https://sheffood.org.uk/food-ladders-food-provision/"
-          >https://sheffood.org.uk/food-ladders-food-provision/</a
-        >
-        or a nicely layed out table of where to eat per-day-of-the week here:
-        <a href="https://www.instagram.com/p/DAylBlxtAP5/"
-          >https://www.instagram.com/p/DAylBlxtAP5/</a
-        >
-        (hopefully still there).
-      </p>
-
-      <h3 id="where-is">
-        where is/is there "this specific thing" <a href="#where-is">🔗</a>
-      </h3>
-      <ul>
-        <li>
-          makerspace ->
-          <a href="https://www.sheffieldhackspace.org.uk/"
-            >Sheffield Hackspace</a
-          >
-          (on
-          <a href="https://sheffield.coop/wiki/Sheffield_Hackspace"
-            >sheffield coops</a
-          >, on
-          <a href="https://www.alt-sheff.org/news/sheffield-hackspace/"
-            >alt-sheff</a
-          >), <a href="https://access-space.org/">Access Space</a> (as of
-          2024-10-12, currently closed)
-        </li>
-        <li>
-          board game cafe ->
-          <a href="https://www.treehousesheffield.com/">The Treehouse</a>
-        </li>
-        <li>community garden -> ???</li>
-        <li>archive -> ???</li>
-        <li>car boot sale -> ???</li>
-        <li>plant shop -> various exist</li>
-      </ul>
-
-      <h3 id="pop-up-events">
-        pop up events that I always want to keep an eye on
-        <a href="#pop-up-events">🔗</a>
-      </h3>
-      <ul>
-        <li>kilo sales</li>
-        <li>dancing ?</li>
-        <li>
-          Festival of Debate:
-          <a href="https://festivalofdebate.com/2025-festival"
-            >https://festivalofdebate.com/2025-festival</a
-          >
-        </li>
-        <li>
-          Sheffield DocFest:
-          <a href="https://www.sheffdocfest.com/"
-            >https://www.sheffdocfest.com/</a
-          >
-        </li>
-      </ul>
-
-      <h3 id="lists">
-        lists of places I consider interesting <a href="#lists">🔗</a>
-      </h3>
-      <ul>
-        <li>
-          cafés
-          <ul>
-            <li>
-              Lego Café (<a href="https://buildersbrewcafe.com/"
-                >Builder's Brew</a
-              >)
-            </li>
-            <li>
-              Figtree sandwich bar (I haven't been nor can I find out anything
-              about it)
-            </li>
-          </ul>
-        </li>
-        <li>
-          museums
-          <ul>
-            <li>Kelham Island Museum (massive steam engines etc)</li>
-            <li>
-              National Video Games Museum (haven't been because it costs money)
-            </li>
-            <li>National Emergency Services museum (haven't been)</li>
-            <li>Graves Gallery (quite nice to hang around in)</li>
-            <li>
-              Turner Museum of Glass (basically just a university library)
-            </li>
-          </ul>
-        </li>
-        <li>
-          gardens
-          <ul>
-            <li>winter gardens</li>
-            <li>botanic(al?) gardens</li>
-          </ul>
-        </li>
-        <li>
-          miscellaneous
-          <ul>
-            <li>Sheffield hackspace</li>
-            <li>central library</li>
-            <li>la biblioteka (bookshop)</li>
-            <li>ryan vintage</li>
-            <li>the treehouse board game café</li>
-            <li>
-              red brick market (google it because I don't want to link to the
-              Instagram profile, I like it though)
-            </li>
-            <li>
-              <a href="https://filmunit.sites.sheffield.ac.uk/"
-                >film unit cinema</a
-              >
-            </li>
-            <li>
-              ScrapDragon waste material sales:
-              <a href="https://www.scrapdragonsheffield.com/"
-                >https://www.scrapdragonsheffield.com/</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3 id="instagrams">
-        list of Instagram pages <a href="#instagrams">🔗</a>
-      </h3>
-      <p>
-        these are mainly sporadic events, but also more generic "Sheffield"
-        focused pages
-      </p>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/ourfaveplaces/"
-            >ourfaveplaces (collection)</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/queercomedysheff/"
-            >queercomedysheff (comedy)</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/communitykino/"
-            >communitykino (inactive?)</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/cutupcollective/"
-            >cutupcollective (collage)</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/social.pickle/"
-            >social.pickle (pickling)</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/redbrickmarket_sheffield/"
-            >redbrickmarket_sheffield (shopping/etsy IRL)</a
-          >
-        </li>
-      </ul>
-
-      <h3 id="events">list of cool events <a href="#events">🔗</a></h3>
-      <ul>
-        <li>
-          <a href="https://linktr.ee/cutupcollective">CutUpCollective</a>
-          (sporadic)
-        </li>
-        <li>LGBTQ+ book club (last Wed of month)</li>
-        <li>
-          <a href="https://linktr.ee/communitykino">Community Kino</a>
-          (sporadic)
-        </li>
-        <li>Hackspace open evenings (Mon, Thu, Sat)</li>
-        <li>Rainbow Gamers @ Treehouse (last Sun of month)</li>
-        <li>Social Gaming @ Treehouse (third Sun of month)</li>
-        <li>Game Night in the Library (monthly ???)</li>
-        <li>Socialist party meetings (weekly on Thursdays)</li>
-        <li>
-          <a href="https://www.y-open.org.uk/">Yorkshire OPEN</a> (monthly on
-          the first Thursday, in Leeds)
-        </li>
-        <li>
-          <a href="https://www.instagram.com/queercomedysheff/"
-            >Queer Comedy Sheff</a
-          >
-        </li>
-        <li>
-          <a href="https://battlescar.co.uk/">https://battlescar.co.uk/</a>
-        </li>
-        <li>
-          Queer coworking, Fridays 9:30-4pm
-          <a href="https://linktr.ee/playdatesheffield"
-            >https://linktr.ee/playdatesheffield</a
-          >
-        </li>
-        <li>
-          Pattern club
-          <a href="https://patternclub.org/sheffield/"
-            >https://patternclub.org/sheffield/</a
-          >
-        </li>
-        <li>
-          Ceilidh society:
-          <a href="https://www.ceilidhsoc.org/">https://www.ceilidhsoc.org/</a>
-        </li>
-      </ul>
-
-      <h3 id="event-pages">
-        list of events pages <a href="#event-pages">🔗</a>
-      </h3>
-      <ul>
-        <li>
-          general
-          <ul>
-            <li>
-              <a
-                href="https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/"
-                >All events in Sheffield</a
-              >
-              (from VisitSheffield) - I want to make this into a machine
-              readable feed, and also a feed much easier to read (with each
-              event taking up less height/screen space)
-            </li>
-            <li>
-              <a href="https://opentechcalendar.co.uk/area/40-sheffield"
-                >Open Tech Calendar (Sheffield)</a
-              >
-            </li>
-            <li>
-              <a href="https://www.alt-sheff.org/events/">alt-sheff</a>
-            </li>
-          </ul>
-        </li>
-        specific
-        <ul>
-          <li>
-            <a href="https://www.treehousesheffield.com/events"
-              >Treehouse board game cafe events</a
-            >
-          </li>
-          <li>
-            <a href="https://patriotgames.uk/events-calendar"
-              >Patriot Games events calendar</a
-            >
-          </li>
-        </ul>
-      </ul>
-
-      <h3 id="information">
-        list of pages providing information <a href="#information">🔗</a>
-      </h3>
-      <ul>
-        <li>
-          <a href="https://www.alt-sheff.org/">alt-sheff</a>
-        </li>
-        <li>
-          <a href="https://sheffield.coop/wiki/Main_Page">Sheffield co-ops</a>
-        </li>
-        <li>
-          <a href="https://diggersanddreamers.org.uk/communities/the-north"
-            >Housing co-operatives</a
-          >
-        </li>
-        <li>
-          Now Then Magazine:
-          <a href="https://nowthenmagazine.com/"
-            >https://nowthenmagazine.com/</a
-          >
-        </li>
-      </ul>
-
-      <h3 id="rss-feeds">
-        list of Sheffield RSS feeds <a href="#rss-feeds">🔗</a>
-      </h3>
-      <ul>
-        <li>
-          alt-sheff events feed:
-          <a href="https://www.alt-sheff.org/events/feed"
-            >https://www.alt-sheff.org/events/feed</a
-          >
-        </li>
-        <li>
-          alt-sheff news feed:
-          <a href="https://www.alt-sheff.org/news/feed"
-            >https://www.alt-sheff.org/news/feed</a
-          >
-        </li>
-        <li>
-          Treehouse board game cafe events (a horror of
+      <section class="introduction">
+        <h2>Sheffield</h2>
+        <p>
+          <span class="aside">(mostly)</span> everything I know or want to know
+          about Sheffield. Information from but not exclusively 1 (my own
+          Internet research) and 2 (gossip).
           <a
-            href="https://gist.github.com/alifeee/2eb9ac2296a698dc8a05d4ed531d8d36"
-            >my own concoction)</a
-          >:
-          <a href="https://server.alifeee.net/static/treehouse.xml"
-            >https://server.alifeee.net/static/treehouse.xml</a
+            href="https://github.com/alifeee/alifeee.github.io/commits/main/sheffield/index.html"
+            >see changelog</a
           >
-        </li>
-        <li>
-          Treehouse board game cafe blog:
-          <a href="https://www.treehousesheffield.com/blog/rss.xml"
-            >https://www.treehousesheffield.com/blog/rss.xml</a
-          >
-        </li>
-        <li>
-          Sheffield libraries:
-          <a href="http://shefflibraries.blogspot.com/feeds/posts/default"
-            >http://shefflibraries.blogspot.com/feeds/posts/default</a
-          >
-        </li>
-        <li>
-          National Video Games Museum blog:
-          <a href="https://thenvm.org/feed">https://thenvm.org/feed</a>
-        </li>
-        <li>
-          Sheffield Hackspace's blog:
-          <a href="https://www.sheffieldhackspace.org.uk/feed.xml"
-            >https://www.sheffieldhackspace.org.uk/feed.xml</a
-          >
-        </li>
-        <li>
-          Now Then Magazine Feed:
-          <a href="https://feeds.nowthenmagazine.com/sheffield"
-            >https://feeds.nowthenmagazine.com/sheffield</a
-          >
-        </li>
-      </ul>
+        </p>
+        <p class="aside">
+          this page is created mostly for myself, but I hope you find it useful.
+        </p>
+        <!-- !!start content!! -->
+<ul class="contents"><li><a href="#1!! live events calendar !!!">1!! live events calendar !!!</a></li><li><a href="#1!! the weather right now !!!">1!! the weather right now !!!</a></li><li><a href="#events">events</a></li><li><a href="#list of Sheffield RSS feeds">list of Sheffield RSS feeds</a></li><li><a href="#lists of places I consider interesting">lists of places I consider interesting</a></li><li><a href="#other pages">other pages</a></li><li><a href="#pop up events that I always want to keep an eye on">pop up events that I always want to keep an eye on</a></li><li><a href="#social eating and food provisioning">social eating and food provisioning</a></li><li><a href="#where is "this specific thing"">where is "this specific thing"</a></li></ul><hr /></section>
+<section class="favourites">  <article>
+  <h2 id="1!! live events calendar !!!">
+    1!! live events calendar !!!
+    <a href="#1!! live events calendar !!!">#</a>
+    <span class=fade>
+    from <a href="1!! live events calendar !!!.md">1!! live events calendar !!!.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<p>for more context: <a href="https://server.alifeee.net/sheffield/events/">https://server.alifeee.net/sheffield/events/</a></p>
+<p><iframe
+src="https://server.alifeee.net/sheffield/events/next_seven_days"
+style="
+    width: 100%;
+    height: 30rem;
+    background: white;
+    overflow: scroll;
+    word-wrap: normal;
+"
+></iframe>
+</p>  <hr />
+  </article>
+  <article>
+  <h2 id="1!! the weather right now !!!">
+    1!! the weather right now !!!
+    <a href="#1!! the weather right now !!!">#</a>
+    <span class=fade>
+    from <a href="1!! the weather right now !!!.md">1!! the weather right now !!!.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<figure class="weather">
+    <img
+        src="https://server.alifeee.net/static/weather/sheffield.bmp"
+        alt="live weather visualisation for sheffield"
+        title="live weather visualisation for sheffield"
+        height="128"
+        width="296"
+    />
+    <figcaption>
+        <span>now</span>
+        <details>
+        <summary>(?)</summary>
+        generated every 15 minutes on
+        <a href="https://server.alifeee.net/">my server</a>
+        with
+        <a href="https://github.com/alifeee/weather_landscape/"
+            >weather_landscape</a
+        >
+        </details>
+        <span>later</span>
+    </figcaption>
+</figure>  <hr />
+  </article>
+  <article>
+  <h2 id="events">
+    events
+    <a href="#events">#</a>
+    <span class=fade>
+    from <a href="events.md">events.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<h3>unsorted list of events</h3>
+<ul>
+<li><a href="https://linktr.ee/cutupcollective">CutUpCollective</a> (sporadic)</li>
+<li>LGBTQ+ book club (last Wed of month)</li>
+<li><a href="https://linktr.ee/communitykino">Community Kino</a> (sporadic)</li>
+<li>Hackspace open evenings (Mon, Thu, Sat)</li>
+<li>Rainbow Gamers @ Treehouse (last Sun of month)</li>
+<li>Social Gaming @ Treehouse (third Sun of month)</li>
+<li>Game Night in the Library (monthly ???)</li>
+<li>Socialist party meetings (weekly on Thursdays)</li>
+<li><a href="https://www.y-open.org.uk/">Yorkshire OPEN</a> (monthly on the first
+  Thursday, in Leeds)</li>
+<li><a href="https://www.instagram.com/queercomedysheff/">Queer Comedy Sheff</a></li>
+<li><a href="https://battlescar.co.uk/">https://battlescar.co.uk/</a></li>
+<li>Queer coworking, Fridays 9:30-4pm
+  <a href="https://linktr.ee/playdatesheffield">https://linktr.ee/playdatesheffield</a></li>
+<li>Pattern club <a href="https://patternclub.org/sheffield/">https://patternclub.org/sheffield/</a></li>
+<li>Ceilidh society: <a href="https://www.ceilidhsoc.org/">https://www.ceilidhsoc.org/</a></li>
+</ul>
+<h3>events pages</h3>
+<ul>
+<li><a href="https://www.welcometosheffield.co.uk/visit/what-s-on/all-events/">All events in
+  Sheffield</a>
+  (from VisitSheffield) (I've parsed this into a machine readable feed! see <a href="#1!! live events calendar !!!">#1!! live events calendar !!!</a>)</li>
+<li><a href="https://opentechcalendar.co.uk/area/40-sheffield">Open Tech Calendar
+  (Sheffield)</a></li>
+<li><a href="https://www.alt-sheff.org/events/">alt-sheff</a></li>
+</ul>
+<h3>venues with calendars</h3>
+<ul>
+<li><a href="https://www.treehousesheffield.com/events">Treehouse board game café
+  events</a></li>
+<li><a href="https://patriotgames.uk/events-calendar">Patriot Games events
+  calendar</a></li>
+</ul>  <hr />
+  </article>
+  <article>
+  <h2 id="list of Sheffield RSS feeds">
+    list of Sheffield RSS feeds
+    <a href="#list of Sheffield RSS feeds">#</a>
+    <span class=fade>
+    from <a href="list of Sheffield RSS feeds.md">list of Sheffield RSS feeds.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<ul>
+<li>alt-sheff events feed: <a href="https://www.alt-sheff.org/events/feed">https://www.alt-sheff.org/events/feed</a></li>
+<li>alt-sheff news feed: <a href="https://www.alt-sheff.org/news/feed">https://www.alt-sheff.org/news/feed</a></li>
+<li>Treehouse board game cafe events (a horror of <a href="https://gist.github.com/alifeee/2eb9ac2296a698dc8a05d4ed531d8d36">my own
+  concoction)</a>:
+  <a href="https://server.alifeee.net/static/treehouse.xml">https://server.alifeee.net/static/treehouse.xml</a></li>
+<li>Treehouse board game cafe blog:
+  <a href="https://www.treehousesheffield.com/blog/rss.xml">https://www.treehousesheffield.com/blog/rss.xml</a></li>
+<li>Sheffield libraries:
+  <a href="http://shefflibraries.blogspot.com/feeds/posts/default">http://shefflibraries.blogspot.com/feeds/posts/default</a></li>
+<li>National Video Games Museum blog: <a href="https://thenvm.org/feed">https://thenvm.org/feed</a></li>
+<li>Sheffield Hackspace\'s blog:
+  <a href="https://www.sheffieldhackspace.org.uk/feed.xml">https://www.sheffieldhackspace.org.uk/feed.xml</a></li>
+<li>Now Then Magazine Feed:
+  <a href="https://feeds.nowthenmagazine.com/sheffield">https://feeds.nowthenmagazine.com/sheffield</a></li>
+</ul>  <hr />
+  </article>
+  <article>
+  <h2 id="lists of places I consider interesting">
+    lists of places I consider interesting
+    <a href="#lists of places I consider interesting">#</a>
+    <span class=fade>
+    from <a href="lists of places I consider interesting.md">lists of places I consider interesting.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<h3>cafés</h3>
+<ul>
+<li>Lego Café (<a href="https://buildersbrewcafe.com/">Builder\'s Brew</a>)</li>
+<li>Figtree sandwich bar (I haven\'t been nor can I find out anything
+  about it)</li>
+</ul>
+<h3>museums</h3>
+<ul>
+<li>Kelham Island Museum (massive steam engines etc)</li>
+<li>National Video Games Museum (haven\'t been because it costs money)</li>
+<li>National Emergency Services museum (haven\'t been)</li>
+<li>Graves Gallery (quite nice to hang around in)</li>
+<li>Turner Museum of Glass (basically just a university library)</li>
+</ul>
+<h3>gardens</h3>
+<ul>
+<li>winter gardens</li>
+<li>botanic(al?) gardens</li>
+</ul>
+<h3>independent businesses</h3>
+<ul>
+<li>The Treehouse Board Game Café</li>
+</ul>
+<h3>scrappy independent places</h3>
+<ul>
+<li>Sheffield Hackspace</li>
+<li>Gut Level</li>
+<li>Hatch</li>
+</ul>
+<h3>miscellaneous</h3>
+<ul>
+<li>Sheffield hackspace</li>
+<li>central library</li>
+<li>la biblioteka (bookshop)</li>
+<li>ryan vintage</li>
+<li>the treehouse board game café</li>
+<li>red brick market (google it because I don\'t want to link to the
+  Instagram profile, I like it though)</li>
+<li><a href="https://filmunit.sites.sheffield.ac.uk/">film unit cinema</a></li>
+<li>ScrapDragon waste material sales:
+  <a href="https://www.scrapdragonsheffield.com/">https://www.scrapdragonsheffield.com/</a></li>
+</ul>  <hr />
+  </article>
+  <article>
+  <h2 id="other pages">
+    other pages
+    <a href="#other pages">#</a>
+    <span class=fade>
+    from <a href="other pages.md">other pages.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<h3>other pages</h3>
+<ul>
+<li><a href="https://www.alt-sheff.org/">alt-sheff</a> (alternative news and events)</li>
+<li><a href="https://sheffield.coop/wiki/Main_Page">Sheffield co-ops</a> (co-op wiki)</li>
+<li><a href="https://diggersanddreamers.org.uk/communities/the-north">Housing
+  co-operatives</a></li>
+<li>Now Then Magazine: <a href="https://nowthenmagazine.com/">https://nowthenmagazine.com/</a></li>
+</ul>
+<h3>Instagram</h3>
+<p>these are mainly sporadic events, but also more generic "Sheffield" focused pages</p>
+<ul>
+<li><a href="https://www.instagram.com/ourfaveplaces/">ourfaveplaces</a> (collection)</li>
+<li><a href="https://www.instagram.com/queercomedysheff/">queercomedysheff</a> (comedy)</li>
+<li><a href="https://www.instagram.com/communitykino/">communitykino</a> (inactive?)</li>
+<li><a href="https://www.instagram.com/cutupcollective/">cutupcollective</a> (collage)</li>
+<li><a href="https://www.instagram.com/social.pickle/">social.pickle</a> (pickling)</li>
+<li><a href="https://www.instagram.com/redbrickmarket_sheffield/">redbrickmarket_sheffield</a> (shopping/etsy
+  IRL)</li>
+<li><a href="https://www.instagram.com/sheffradpride">sheffradpride</a> (radical pride)</li>
+<li><a href="https://www.instagram.com/shhmakers">shhmakers</a> (hackspace)</li>
+<li><a href="https://www.instagram.com/cooperation.sheffield">cooperation.sheffield</a> (community group)</li>
+<li><a href="https://www.instagram.com/mondo.radio">mondo.radio</a> (local indie radio)</li>
+<li><a href="https://www.instagram.com/forgeradio">forgeradio</a> (local student radio)</li>
+<li><a href="https://www.instagram.com/wellbeingcafesheff">wellbeingcafesheff</a> (communal eating)</li>
+<li><a href="https://www.instagram.com/sheffieldartistmakerexchange">sheffieldartistmakerexchange</a> (artists' collective)</li>
+<li><a href="https://www.instagram.com/gutlevelsheffield">gutlevelsheffield</a> (queer events venue)</li>
+<li><a href="https://www.instagram.com/independentsheff">independentsheff</a> (kinda-corporate page independent venue listing)</li>
+<li><a href="https://www.instagram.com/film.unit.sheffield">film.unit.sheffield</a> (student cinema [open to anyone])</li>
+<li><a href="https://www.instagram.com/peakqueeradventures">peakqueeradventures</a> (community group)</li>
+<li><a href="https://www.instagram.com/sidneyandmatilda">sidneyandmatilda</a> (music venue)</li>
+</ul>  <hr />
+  </article>
+  <article>
+  <h2 id="pop up events that I always want to keep an eye on">
+    pop up events that I always want to keep an eye on
+    <a href="#pop up events that I always want to keep an eye on">#</a>
+    <span class=fade>
+    from <a href="pop up events that I always want to keep an eye on.md">pop up events that I always want to keep an eye on.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<ul>
+<li>kilo sales</li>
+<li>dancing ?</li>
+<li>Festival of Debate: <a href="https://festivalofdebate.com/2025-festival">https://festivalofdebate.com/2025-festival</a></li>
+<li>Sheffield DocFest: <a href="https://www.sheffdocfest.com/">https://www.sheffdocfest.com/</a></li>
+</ul>  <hr />
+  </article>
+  <article>
+  <h2 id="social eating and food provisioning">
+    social eating and food provisioning
+    <a href="#social eating and food provisioning">#</a>
+    <span class=fade>
+    from <a href="social eating and food provisioning.md">social eating and food provisioning.md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<p><a href="https://sheffood.org.uk/">Sheffood</a> do great work to highlight the social eating and food provisioning venues around Sheffield. See a map here: <a href="https://sheffood.org.uk/food-ladders-food-provision/">https://sheffood.org.uk/food-ladders-food-provision/</a> or a nicely layed out table of where to eat per-day-of-the week here: <a href="https://www.instagram.com/p/DAylBlxtAP5/">https://www.instagram.com/p/DAylBlxtAP5/</a> (hopefully still there).</p>  <hr />
+  </article>
+  <article>
+  <h2 id="where is "this specific thing"">
+    where is "this specific thing"
+    <a href="#where is "this specific thing"">#</a>
+    <span class=fade>
+    from <a href="where is &quot;this specific thing&quot;.md">where is "this specific thing".md</a>
+    </span>
+  </h2>
+  <h3 class="last-edited">last edited: </h3>
+<ul>
+<li>makerspace -&gt; <a href="https://www.sheffieldhackspace.org.uk/">Sheffield
+    Hackspace</a> (on <a href="https://sheffield.coop/wiki/Sheffield_Hackspace">sheffield
+    coops</a>, on
+    <a href="https://www.alt-sheff.org/news/sheffield-hackspace/">alt-sheff</a>),
+    <a href="https://access-space.org/">Access Space</a> (as of 2024-10-12,
+    currently closed)</li>
+<li>board game cafe -&gt; <a href="https://www.treehousesheffield.com/">The
+    Treehouse</a></li>
+<li>community garden -&gt; ???</li>
+<li>archive -&gt; ???</li>
+<li>car boot sale -&gt; ???</li>
+<li>plant shop -&gt; various exist</li>
+</ul>  <hr />
+  </article>
+</section>
+      <!-- !!end content!! -->
     </main>
 
     <footer>

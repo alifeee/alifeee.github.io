@@ -52,6 +52,9 @@ jobs:
       # favourites page
       - name: make favourites page
         run: (cd favourites; ./build.sh)
+      # sheffield page
+      - name: make sheffield page
+        run: (cd sheffield; ./build.sh)
       # changelog on homepage
       - name: make changelog
         run: ./changelog_build.sh
