@@ -4,12 +4,21 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/changelog.xml' rel='self' />
-<updated>2025-06-06T00:00:00+00:00</updated>
+<updated>2025-07-30T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-07-30</title>
+    <link href="https://alifeee.co.uk/#2025-07-30" />
+    <id>https://alifeee.co.uk/#2025-07-30</id>
+    <updated>2025-07-30T00:00:00+00:00</updated>
+    <summary>
+add &quot;AI is for losers&quot; to [favourites](./favourites/#images) page and add Godot cheatsheet to [video games](./video_games/) page
+  </summary>
+</entry>
 <entry>
     <title>update 2025-06-06</title>
     <link href="https://alifeee.co.uk/#2025-06-06" />
