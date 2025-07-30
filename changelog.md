@@ -64,3 +64,6 @@
 
 2025-07-30
 : add "AI is for losers" to [favourites](./favourites/#images) page and add Godot cheatsheet to [video games](./video_games/) page
+
+2025-07-30 21:00
+: add ["slash finances"](./finances/) (first pass) — more to add later!
