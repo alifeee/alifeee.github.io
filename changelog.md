@@ -67,3 +67,6 @@
 
 2025-07-30 21:00
 : add ["slash finances"](./finances/) (first pass) — more to add later!
+
+2025-08-09
+: add 2022-2023 and 2023-2024 to ["slash finances"](./finances/). maybe I'll ignore it til next year now.
