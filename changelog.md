@@ -73,3 +73,6 @@
 
 2025-08-13
 : add link to the [TransPennine Express Soundboard](https://alifeee.co.uk/tpe-soundboard/) that I made to the "things I've made" section :]
+
+2025-08-26
+: add section on [Sheffield Council Open Data](/sheffield/#Sheffield Council Open Data) to my [Sheffield](/sheffield/) page. love open data ;] thanks to [David](https://about.cubictype.com/) to pointing me at it
