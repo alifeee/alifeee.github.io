@@ -39,7 +39,7 @@ for file in *.md; do
   safefile=$(echo "${file}" | sed 's/"/\&quot;/g')
 
   # create section
-  cat >> $LISTFILE << EOF
+cat >> $LISTFILE << EOF
   <article>
   <h2 id="${sectionname}">
     ${sectionname}
@@ -50,8 +50,13 @@ for file in *.md; do
   </h2>
   <h3 class="last-edited">last edited: ${last_edited}</h3>
 EOF
-  python3 -m markdown -x def_list "${file}" >> $LISTFILE
-  cat >> $LISTFILE << EOF
+  # parse markdown
+  #   plus some sed fixes for bad HTML parsing
+  python3 -m markdown -x def_list "${file}" \
+    | sed 's+&gt;+>+g' \
+    | sed -E 's+</?em>+*+g' \
+    >> $LISTFILE
+cat >> $LISTFILE << EOF
   <hr />
   </article>
 EOF

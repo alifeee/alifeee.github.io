@@ -76,3 +76,6 @@
 
 2025-08-26
 : add section on [Sheffield Council Open Data](/sheffield/#Sheffield Council Open Data) to my [Sheffield](/sheffield/) page. love open data ;] thanks to [David](https://about.cubictype.com/) to pointing me at it
+
+2025-09-15
+: added [bookmarklets](/favourites#bookmarklets) to my favourites page :]
