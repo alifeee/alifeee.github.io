@@ -79,3 +79,6 @@
 
 2025-09-15
 : added [bookmarklets](/favourites#bookmarklets) to my favourites page :]
+
+2025-09-24
+: add creepy dog to [favourite images](/favourites#images)
