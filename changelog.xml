@@ -4,12 +4,21 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/changelog.xml' rel='self' />
-<updated>2025-09-24T00:00:00+00:00</updated>
+<updated>2025-10-09T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-10-09</title>
+    <link href="https://alifeee.co.uk/#2025-10-09" />
+    <id>https://alifeee.co.uk/#2025-10-09</id>
+    <updated>2025-10-09T00:00:00+00:00</updated>
+    <summary>
+add [some bookmarks](https://github.com/alifeee/firefox-bookmarks/commit/debb64be960d8819e770eb60bec4d98b7f2673f6) to my [bookmarks page](https://alifeee.co.uk/bookmarks/)
+  </summary>
+</entry>
 <entry>
     <title>update 2025-09-24</title>
     <link href="https://alifeee.co.uk/#2025-09-24" />
