@@ -82,3 +82,6 @@
 
 2025-09-24
 : add creepy dog to [favourite images](/favourites#images)
+
+2025-10-09
+: add [some bookmarks](https://github.com/alifeee/firefox-bookmarks/commit/debb64be960d8819e770eb60bec4d98b7f2673f6) to my [bookmarks page](https://alifeee.co.uk/bookmarks/)
