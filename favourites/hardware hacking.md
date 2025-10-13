@@ -16,6 +16,7 @@ screwed around with old transport signs
 : <https://github.com/ConnectedHumber/Bus-Terminal-Signs>
 : <https://github.com/sheffieldhackspace/train-signs>
 : <https://github.com/alifeee/openbenches-train-sign>
+: <https://github.com/alifeee/bus-signs>
 : ![picture of transport sign and lots of electronics, showing Pong game](./images/hardware-hacking_bus-sign_pong.jpg)
 
 screwed around with CO2 monitors
