@@ -4,12 +4,21 @@
 
 <title>alifeee's website changelog</title>
 <link href='https://alifeee.co.uk/changelog.xml' rel='self' />
-<updated>2025-10-09T00:00:00+00:00</updated>
+<updated>2025-10-21T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://alifeee.co.uk/</id>
 <icon>https://alifeee.co.uk/profile-picture.png</icon>
+<entry>
+    <title>update 2025-10-21</title>
+    <link href="https://alifeee.co.uk/#2025-10-21" />
+    <id>https://alifeee.co.uk/#2025-10-21</id>
+    <updated>2025-10-21T00:00:00+00:00</updated>
+    <summary>
+add some places to my [Sheffield](/sheffield/#some%20of%20my%20google%20maps%20saved%20places) page from Google maps
+  </summary>
+</entry>
 <entry>
     <title>update 2025-10-09</title>
     <link href="https://alifeee.co.uk/#2025-10-09" />
