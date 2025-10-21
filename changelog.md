@@ -85,3 +85,6 @@
 
 2025-10-09
 : add [some bookmarks](https://github.com/alifeee/firefox-bookmarks/commit/debb64be960d8819e770eb60bec4d98b7f2673f6) to my [bookmarks page](https://alifeee.co.uk/bookmarks/)
+
+2025-10-21
+: add some places to my [Sheffield](/sheffield/#some%20of%20my%20google%20maps%20saved%20places) page from Google maps
