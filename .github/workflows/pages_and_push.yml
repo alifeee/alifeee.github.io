@@ -43,6 +43,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip3 install markdown
+          pip3 install toml2json
 
       ## automatic pages
       # sitemap
@@ -58,6 +59,9 @@ jobs:
       # changelog on homepage
       - name: make changelog
         run: ./changelog_build.sh
+      # linktree on homepage
+      - name: make linktree
+        run: ./linktree_build.sh
 
       # commit anything that changed
       - name: Commit changes

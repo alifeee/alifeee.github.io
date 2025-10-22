@@ -103,6 +103,77 @@
         }
       }
 
+      #linktree {
+        width: 100%;
+        max-width: 25rem;
+
+        margin: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 0.5rem;
+        border: 2rem solid black;
+
+        background-image: url("images/bgpinksmoke.gif");
+
+        border-image: url("images/BlockSprite_obsidian_3x3.png");
+        border-image-slice: 16 16 16 16;
+        border-image-repeat: repeat;
+        border-image-width: 2rem;
+        image-rendering: pixelated;
+      }
+      #linktree > * {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      #linktree h2 {
+        margin: 0 1rem 0.5rem;
+        padding-top: 0.25rem;
+      }
+      #linktree .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        gap: 0.75rem;
+
+        font-size: 0.75rem;
+      }
+      #linktree .links > div > * {
+        color: white;
+        text-decoration: none;
+      }
+      #linktree a:visited {
+        color: white;
+        text-decoration: none;
+      }
+      #linktree .links a:hover {
+        scale: 1.1;
+      }
+      #linktree .links > div > * {
+        display: grid;
+        grid-template-rows: auto auto;
+        transition: scale 0.1s;
+      }
+      #linktree .links > div > * > * {
+        align-self: center;
+        margin: auto;
+      }
+      #linktree img {
+        border-radius: 1rem;
+        width: 3rem;
+        height: 3rem;
+      }
+      #linktree hr {
+        border: none;
+        border-top: 1rem solid black;
+        border-top-width: 1rem;
+
+        border-image: url("images/tripwire.png");
+        border-image-slice: 8 0 0 0;
+        border-image-repeat: repeat;
+        border-image-width: 32px;
+        image-rendering: pixelated;
+
+        margin: 1rem 0 0;
+      }
+
       .contents {
         list-style: none;
         margin: 0;
@@ -408,10 +479,6 @@
         Some of those things are here. Some are on GitHub. Some are made of
         cardboard.
       </p>
-      <p>
-        Find my socials/etc on
-        <a href="https://linktr.ee/alifeee">linktr.ee/alifeee</a>
-      </p>
       <p style="margin: 0">skip down to:</p>
       <ul class="contents">
         <li>
@@ -445,6 +512,33 @@
           <a href="https://alifeee.co.uk/changelog.xml">changelog</a>
         </li>
       </ul>
+      <section id="linktree">
+        <h2>me elsewhere</h2>
+        <div class="links">
+          <!-- !!start linktree!! -->
+<div><a href="https://alifeee.net/"><img src="icons/linktree/profile.svg" alt=" icon"><span>website</span></a></div>
+<div><a href="mailto:alifeee@alifeee.net"><img src="icons/linktree/email.svg" alt="email icon"><span>email</span></a></div>
+<div><a href="https://blog.alifeee.co.uk/"><img src="icons/linktree/profile.svg" alt=" icon"><span>blog</span></a></div>
+<div><a href="https://blog.alifeee.co.uk/notes/"><img src="icons/linktree/profile.svg" alt=" icon"><span>notes</span></a></div>
+<div><a href="https://weeknotes.alifeee.co.uk/"><img src="icons/linktree/profile.svg" alt=" icon"><span>weeknotes</span></a></div>
+<div><a href="https://server.alifeee.net/"><img src="icons/linktree/profile.svg" alt=" icon"><span>server</span></a></div>
+<div><a href="https://mastodon.social/@alifeee"><img src="icons/linktree/mastodon.svg" alt="mastodon icon"><span>Mastodon</span></a></div>
+<div><a href="https://instagram.com/alifeeerenn"><img src="icons/linktree/instagram.svg" alt="instagram icon"><span>Instagram</span></a></div>
+<div><div href=""><img src="icons/linktree/discord.svg" alt="discord icon"><span>Discord</span></div></div>
+<div><a href="https://t.me/alifeeerenn"><img src="icons/linktree/telegram.svg" alt="telegram icon"><span>Telegram</span></a></div>
+<div><a href="https://signal.me/#eu/kIgXWNVUkaOSiIeC_kGA1KGIi8kcNdQEnY7tEq3S9DaJHrvr3dZNtIkNaPqid1Py"><img src="icons/linktree/signal.svg" alt="signal icon"><span>Signal</span></a></div>
+<div><a href="https://open.spotify.com/user/alifeeerenn"><img src="icons/linktree/spotify.svg" alt="spotify icon"><span>Spotify</span></a></div>
+<div><a href="https://ramblingreaders.org/user/alifeee/"><img src="https://assets.ramblingreaders.org/images/logos/small_R58keIh.jpg" alt="https://assets.ramblingreaders.org/images/logos/small_R58keIh.jpg icon"><span>Bookwyrm</span></a></div>
+<div><a href="https://movary.alifeee.net/users/alifeee"><img src="icons/linktree/movary.svg" alt="movary icon"><span>Movary</span></a></div>
+<div><a href="https://youtube.com/@alifeeer.2187"><img src="icons/linktree/youtube.svg" alt="youtube icon"><span>YouTube</span></a></div>
+<div><a href="https://steamcommunity.com/id/alifeee/"><img src="icons/linktree/steam.svg" alt="steam icon"><span>Steam</span></a></div>
+<div><a href="https://alfierenn.dev/"><img src="icons/linktree/profile.svg" alt=" icon"><span>portfolio</span></a></div>
+<div><a href="https://github.com/alifeee/"><img src="icons/linktree/github.svg" alt="github icon"><span>GitHub</span></a></div>
+<div><a href="https://alifeee.itch.io/"><img src="icons/linktree/itch_io.svg" alt="itch_io icon"><span>Itch.io</span></a></div>
+<div><a href="https://downpour.games/~alifeee"><img src="icons/linktree/downpour.svg" alt="downpour icon"><span>Downpour</span></a></div>
+          <!-- !!end linktree!! -->
+        </div>
+      </section>
       <section class="other-sites">
         <h2>Why not check out:</h2>
         <div class="other-sites-list">
@@ -769,29 +863,13 @@
 
     <footer>
       <div class="links">
-        <a href="https://blog.alifeee.co.uk">
-          <img alt="pen nib icon" src="./icons/pen-nib-solid.svg" />
-          <span class="text">Blog</span>
-        </a>
         <a href="./sitemap.html">
           <img alt="graph icon" src="./icons/sitemap-solid.svg" />
-          <span class="text">Sitemap</span>
-        </a>
-        <a href="https://linktr.ee/alifeee">
-          <img alt="link icon" src="./icons/linktree-logo-icon.svg" />
-          <span class="text">Linktree</span>
-        </a>
-        <a href="https://github.com/alifeee">
-          <img alt="GitHub icon" src="./icons/github.svg" />
-          <span class="text">GitHub</span>
+          <span class="text">sitemap</span>
         </a>
         <a href="mailto:alifeee@alifeee.net">
           <img alt="envelope icon" src="./icons/envelope-solid.svg" />
-          <span class="text">Email</span>
-        </a>
-        <a rel="me" href="https://mastodon.social/@alifeee">
-          <img alt="mastodon icon" src="./icons/mastodon.svg" />
-          <span class="text">Mastodon</span>
+          <span class="text">email</span>
         </a>
       </div>
       <a href="https://github.com/alifeee/alifeee.github.io"
