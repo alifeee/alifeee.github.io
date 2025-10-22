@@ -88,3 +88,6 @@
 
 2025-10-21
 : add some places to my [Sheffield](/sheffield/#some%20of%20my%20google%20maps%20saved%20places) page from Google maps
+
+2025-10-23
+: added a [linktree](#linktree)! very exciting! don't have to rely on that damn linktree company!
