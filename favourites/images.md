@@ -6,3 +6,6 @@
 
 ![drawing of a CCTV sign showing a dog with a camera for a face](./images/dog.svg)
 : At the best of times, I think CCTV is creepy. At the worst of times, it seems the CCTV company wants to be even creepier by letting the creepiest creepy dog-camera they can let you know of their creeping. I love the dog. This image is an SVG traced from [a picture](./images/dog.jpg).
+
+![drawing of a dog frowning](./images/dog2.jpg)
+: I just love this dog. I wish I could make this face.
