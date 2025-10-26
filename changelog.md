@@ -91,3 +91,6 @@
 
 2025-10-23
 : added a [linktree](#linktree)! very exciting! don't have to rely on that damn linktree company!
+
+2025-10-26
+: added [independent venue guide](/sheffield/#independent venue guide) to Sheffield page
