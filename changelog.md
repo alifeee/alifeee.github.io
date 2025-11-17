@@ -57,7 +57,7 @@
 : added a [micropython hackathon](/talks-and-workshops/#micropython-hackathon) to [/talks-and-workshops/](/talks-and-workshops/), and added some pictures to the [personal website workshop](/talks-and-workshops/#personal-website-workshop) (just promo pics)
 
 2025-05-29
-: added [hackspaces](/favourites/hackspaces), [openstreetmap](/favourites/openstreetmap), [dimensional analysis](/favourites/hackspaces) and [modded kindles](/favourites/modded%20kindles) to my [favourites](/favourites/) page!
+: added [hackspaces](/favourites#hackspaces), [openstreetmap](/favourites#openstreetmap), [dimensional analysis](/favourites#dimensional_analysis) and [modded kindles](/favourites#modded%20kindles) to my [favourites](/favourites/) page!
 
 2025-06-06
 : reformatted [sheffield](/sheffield/) page to be a bit easier to edit (now works like [favourites](/favourites) page
