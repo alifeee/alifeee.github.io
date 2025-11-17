@@ -2,13 +2,16 @@
 #  also run build scripts and push back to repository
 name: Build scripts & deploy Pages
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+# run manually (i.e., never)
+on: workflow_dispatch
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# on:
+#   # Runs on pushes targeting the default branch
+#   push:
+#     branches: ["main"]
+
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
